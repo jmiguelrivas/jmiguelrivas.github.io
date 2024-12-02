@@ -21,10 +21,25 @@ const s2025 = [
   },
 ]
 
-const routes = [...s2025].map(route => ({
-  name: route.name,
-  url: `../${route.url}.html`,
-  icon: route.icon,
-}))
+const sLOM = [
+  {
+    name: 'LOM',
+    url: 'lom/index',
+    icon: 'lock',
+    hidden: true,
+  },
+]
+
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString)
+const includeExtras = urlParams.get('extra') === 'true' ? true : false
+
+const routes = [...s2025, ...sLOM]
+  .filter(route => (includeExtras ? true : route.hidden !== true))
+  .map(route => ({
+    name: route.name,
+    url: `../${route.url}.html`,
+    icon: route.icon,
+  }))
 
 export { routes }

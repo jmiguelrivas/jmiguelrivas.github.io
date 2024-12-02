@@ -3,7 +3,7 @@ import { routes } from './routes.js'
 
 const template = `
   <nn-fila>
-    <nn-pilar size="50px">
+    <nn-pilar size="50px" class="navigation">
       <nav></nav>
     </nn-pilar>
     <nn-pilar size="100% - 50px" class="workarea">
