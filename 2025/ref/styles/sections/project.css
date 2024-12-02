@@ -1,0 +1,114 @@
+@import url("../main.css");
+@import url("../components/perspective.css");
+
+section.project {
+  & article {
+    & .container {
+      padding-block: 2rem;
+    }
+
+    & .cover {
+      height: 620px;
+      background-color: #232730;
+      /* #b3e86a; */
+      overflow: hidden;
+      position: relative;
+
+      & mr-perspective {
+        transition: transform 1000ms ease;
+        bottom: -100%;
+        left: -8%;
+        position: absolute;
+        z-index: 1;
+      }
+      
+      & .title {
+        text-transform: uppercase;
+        color: #ddd;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 3;
+        
+        & h2 {
+          margin: 0;
+          font-weight: 400;
+          font-size: 3rem;
+        }
+
+        & p {
+          margin: 0;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+      }
+
+      & .shade {
+        transition: opacity 1000ms ease;
+        background-color: #000;
+        position: absolute;
+        inset: 0;
+        opacity: .5;
+        z-index: 2;
+      }
+
+      &:hover {
+        & mr-perspective {
+          transform: translateY(-80px);
+        }
+
+        & .shade {
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+
+  & img {
+    max-width: 100%;
+  }
+
+  & blockquote {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 4rem 0;
+    color: var(--low-contrast-color);
+    text-align: center;
+  }
+
+  & h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    color: var(--accent-color);
+  }
+
+  & p {
+    line-height: 1.5;
+  }
+
+  & .timestamp {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--low-contrast-color);
+  }
+
+  & .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-block: 2.5rem;
+    gap: 2rem;
+    
+    & img {
+      width: calc(100% / 3 - 1.4rem);
+    }
+  }
+
+  & .drawings {
+    margin-block-end: 1rem;
+  }
+}

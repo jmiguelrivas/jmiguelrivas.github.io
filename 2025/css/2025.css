@@ -1,0 +1,60 @@
+@import url("../../global/css/main.css");
+
+.palumba {
+  svg {
+    width: 400px;
+  }
+
+  .eyes {
+    clip-path: path('M 23 5 L 55 5 L 55 15 L 23 15 Z');
+  }
+  
+  .eye-left, .eye-right {
+    transition: transform ease 200ms;
+  }
+  
+  &.mr-left {
+    .eye-right {
+      transform: translate(71px, 49px);
+    }
+    .eye-left {
+      transform: translate(40px, 49px);
+    }
+    .peak {
+      .base {
+        clip-path: path('M 9 4 C 11 2 18 4 14 9 C 5 10 6 12 0 14 C 2 7 4 7 9 4 Z');
+      }
+    }
+  }
+  
+  .center {
+    .eye-right {
+      transform: translate(81px, 49px);
+    }
+    .eye-left {
+      transform: translate(65px, 49px);
+    }
+    .peak {
+      transform: translate(16px, 4px);
+      .base {
+        clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
+      }
+    }
+  }
+  
+  &.mr-right {
+    .eye-right {
+      transform: translate(100px, 49px);
+    }
+    .eye-left {
+      transform: translate(74px, 49px);
+    }
+    .peak {
+      transform: translate(31px, 0px);
+      .base {
+        transform: translateX(11px);
+        clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
+      }
+    }
+  }
+}

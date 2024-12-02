@@ -1,0 +1,5 @@
+import './app.js'
+import './nano/pilar.js'
+import './nano/fila.js'
+import './nano/caja.js'
+import './nano/icono.js'

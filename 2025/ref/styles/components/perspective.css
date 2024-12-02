@@ -1,0 +1,53 @@
+mr-perspective {
+  --size: 1;
+  --depth: 4px * var(--size);
+  --height: 300px;
+  --perspective-height: calc(var(--height) * var(--size));
+  --perspective-width: calc(200px * var(--size));
+  --x-translation: calc(var(--height)/4 * var(--size));
+  --background-size: calc(200px * var(--size));
+
+  & .img {
+    display: inline-block;
+    width: var(--perspective-width);
+    height: var(--perspective-height);
+    margin-right: 90px;
+    background-color: #444;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: rotateX(45deg) rotateY(0deg) rotateZ(-45deg) translateX(var(--x-translation)) translateY(0px);
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: -8px 22px 12px rgba(0, 0, 0, 0.2);
+  
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      height: 100%;
+      width: var(--depth);
+      top: 0;
+      left: calc(var(--depth) * -1);
+      transform-origin: 100% 0;
+      transform: rotateY(-90deg);
+      background-size: var(--background-size);
+      background-image: inherit;
+      background-color: #eee;
+      opacity: .4;
+    }
+
+    &:after {
+      background-color: #bbb;
+      height: var(--depth);
+      width: 100%;
+      bottom: calc(var(--depth) * -1);
+      left: 0;
+      transform-origin: 0 0;
+      transform: rotateX(-90deg);
+    }
+  }
+}
