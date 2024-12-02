@@ -1,4 +1,4 @@
-import { nano } from './helpers.js'
+import { getPrefix } from './helpers.js'
 
 class Icono extends HTMLElement {
   constructor() {
@@ -6,4 +6,4 @@ class Icono extends HTMLElement {
   }
 }
 
-window.customElements.define(`${nano}icono`, Icono)
+window.customElements.define(getPrefix('icono'), Icono)

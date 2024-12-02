@@ -1,4 +1,4 @@
-import { nano } from './helpers.js'
+import { getPrefix } from './helpers.js'
 
 const sizes = [
   '1/20',
@@ -129,4 +129,4 @@ class Pilar extends HTMLElement {
   }
 }
 
-window.customElements.define(`${nano}pilar`, Pilar)
+window.customElements.define(getPrefix('pilar'), Pilar)

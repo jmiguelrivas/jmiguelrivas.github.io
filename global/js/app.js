@@ -7,24 +7,27 @@ const template = `
       <nav></nav>
     </nn-pilar>
     <nn-pilar size="100% - 50px" class="workarea">
+      <nn-desplazador></nn-desplazador>
     </nn-pilar>
   </nn-fila>
 `
 const data = {
   attrs: [],
   routes,
+  darkMode: true,
   tools: [
     {
       name: 'Toggle Theme',
-      fn: `
+      fn: function() {
+        data.darkMode = !data.darkMode
         const icono = this.querySelector('nn-icono')
         const body = document.body.classList
-        const isDarkMode = icono.className === 'moon-o'
-        icono.className = isDarkMode ? 'sun-o' : 'moon-o'
-        body.toggle('light', isDarkMode) 
-        body.toggle('dark', !isDarkMode) 
-      `,
-      icon: 'moon-o',
+        
+        icono.className = data.darkMode ? 'sun-o' : 'moon-o'
+        body.toggle('light', !data.darkMode)
+        body.toggle('dark', data.darkMode)
+      },
+      icon: 'sun-o',
     },
   ],
 }
@@ -82,9 +85,10 @@ class App extends HTMLElement {
             attrs: {
               class: 'btn-icon',
               title: item.name,
-              onclick: item.fn,
             },
           })
+
+          a.addEventListener('click', item.fn)
         }
 
         createNode({
@@ -108,7 +112,7 @@ class App extends HTMLElement {
   }
 
   insertSlot(slot) {
-    const caja = this.querySelector('.workarea')
+    const caja = this.querySelector('.workarea nn-desplazador')
     caja.innerHTML = slot
   }
 
@@ -118,6 +122,7 @@ class App extends HTMLElement {
     this.generateNavItems(data.routes)
     this.generateNavItems(data.tools)
     this.insertSlot(slot)
+    document.body.classList.add('dark')
   }
 }
 
