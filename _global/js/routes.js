@@ -63,7 +63,11 @@ const routes = [s2025, sLOM, sNano]
     ]
   })
   .flat(2)
-  .filter(route => (includeExtras ? true : route.hidden !== true))
+  .map(r => ({
+    ...r,
+    ...(r?.hidden ? {} : { hidden: false }),
+  }))
+  // .filter(r => includeExtras || !r.hidden)
   .map(route => {
     return route.separator
       ? { separator: true }
@@ -75,5 +79,5 @@ const routes = [s2025, sLOM, sNano]
   })
 
 routes.pop()
-
+// console.log(routes, includeExtras, !false)
 export { routes }
