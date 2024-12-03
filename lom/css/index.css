@@ -1,12 +1,5 @@
 @import url("../../_global/css/main.css");
 
-body,
-html {
-  padding: 0;
-  margin: 0;
-}
-
-
 .workarea {
   --amen: hsl(0deg 55% 40%);
   --es: hsl(30deg 55% 40%);
@@ -19,14 +12,10 @@ html {
   --me: hsl(270deg 55% 40%);
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
-  background: #222;
-  color: #fff;
-  font-family: "Gill Sans", sans-serif;
 
   h2 {
     font-size: 3rem;
     text-align: center;
-    letter-spacing: 2px;
     margin-block: 5rem 3rem;
   }
 
@@ -176,13 +165,13 @@ html {
     gap: 2px;
 
     button {
+      color: #fff;
       font-family: "Gill Sans", sans-serif;
       flex-grow: 1;
       flex-wrap: wrap;
       padding: 1rem;
       background: #aaa;
       border: 0;
-      color: #111;
       opacity: 0.8;
       font-weight: bold;
       transition: opacity ease 200ms;
@@ -192,12 +181,6 @@ html {
         opacity: 1;
         cursor: pointer;
       }
-    }
-  }
-
-  .controllers {
-    button {
-      color: #fff;
 
       &#all {
         background: #777;
