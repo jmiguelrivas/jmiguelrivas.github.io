@@ -1,4 +1,4 @@
-import { getPrefix, createNode } from '../../global/js/global.js'
+import { getPrefix, createNode } from '../../_global/js/global.js'
 import { tool } from './tools.js'
 
 const template = `

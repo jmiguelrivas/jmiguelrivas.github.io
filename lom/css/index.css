@@ -1,4 +1,4 @@
-@import url("../../global/css/main.css");
+@import url("../../_global/css/main.css");
 
 body,
 html {
@@ -19,19 +19,9 @@ html {
   --me: hsl(270deg 55% 40%);
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
-
-  #body {
-    background: #222;
-    color: #fff;
-    padding: 1rem;
-    font-family: "Gill Sans", sans-serif;
-
-    &.simple {
-      .controllers {
-        display: none;
-      }
-    }
-  }
+  background: #222;
+  color: #fff;
+  font-family: "Gill Sans", sans-serif;
 
   h2 {
     font-size: 3rem;
@@ -179,8 +169,7 @@ html {
     }
   }
 
-  .controllers,
-  .controllers-2 {
+  .controllers {
     display: flex;
     flex-wrap: wrap;
     width: 100%;

@@ -1,3 +1,3 @@
 import './palumba.js'
 import './resume.js'
-import '../../global/js/index.js'
+import '../../_global/js/index.js'

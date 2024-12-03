@@ -1,4 +1,4 @@
-import { getPrefix } from '../../global/js/global.js'
+import { getPrefix } from '../../_global/js/global.js'
 
 const template = `
   <svg width="800" height="800" viewBox="0 0 211.667 211.667" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
