@@ -8,10 +8,11 @@ function getPrefix(name) {
   return [modulePrefix, name].join('-')
 }
 
-function createNode({ type, parent, text, attrs }) {
+function createNode({ type, parent, text, attrs, innerHTML }) {
   const node = document.createElement(type || 'div')
 
   text && node.appendChild(document.createTextNode(text))
+  node.innerHTML = innerHTML ? innerHTML : ''
 
   if (attrs) {
     Object.entries(attrs).forEach(([key, value]) => {

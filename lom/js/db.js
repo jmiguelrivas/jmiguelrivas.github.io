@@ -760,12 +760,12 @@ const M20241125 = {
 }
 
 const users = {
-  // 1310: ['Talisa', 'Nico'],
-  // 1388: ['Koturno'],
+  1310: ['Talisa', 'Nico'],
+  1388: ['Koturno'],
 
   6103: ['Talisa', 'Nico'],
 
-  // 11169: ['Kolombo'],
+  11169: ['Kolombo'],
   11174: ['Kolombo'],
   11220: ['Koturno'],
   11222: ['Koturno'],

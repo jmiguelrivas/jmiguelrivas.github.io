@@ -61,6 +61,39 @@ const data = {
   },
 }
 
+const serversKeys = Object.keys(data.servers).map(i => +i)
+const fusedServers = Object.values(data.servers)
+  .flat()
+  .map(i => +i)
+
+const allServers = Object.entries(data.servers)
+  .map(([key, values]) => {
+    const fusion = values
+      .map(value => {
+        return [value, serversKeys.includes(+value) && data.servers[value]]
+      })
+      .flat(2)
+      .filter(e => e)
+      .sort((a, b) => a - b)
+
+    return {
+      key,
+      values: fusion,
+    }
+  })
+  .sort((a, b) => a.key.numVal - b.key.numVal)
+
+const uniqueServers = allServers
+  .filter(server => {
+    const currentServer = server.key
+    const belongsToFusion = fusedServers.includes(+currentServer)
+    return !belongsToFusion
+  })
+  .map(item => ({
+    key: getCountryCode(item.key),
+    values: item.values.map(value => getCountryCode(value)),
+  }))
+
 class Expanded extends HTMLElement {
   constructor() {
     super()
@@ -83,105 +116,70 @@ class Expanded extends HTMLElement {
     ].forEach(lang => {
       document.getElementById(lang).addEventListener('click', () => {
         data.language = lang
-        this.generateExpandedTable(data.language)
+        this.generateTable(data.language)
       })
     })
   }
 
-  generateExpandedTable(filterBy) {
-    const newServers = Object.keys(data.servers).map(i => +i)
-    const mergedServers = Object.values(data.servers)
-      .flat()
-      .map(i => +i)
-    const uniqueServers = newServers.filter(nS => !mergedServers.includes(nS))
-
-    let tableBody = this.querySelector('#merged-list')
+  generateTable(filterBy) {
+    const tableBody = this.querySelector('#merged-list')
     tableBody.innerHTML = ''
 
-    function printItem(item) {
-      let main
-      const acc = []
-
-			// const tr = createNode({
-			// 	type: 'tr',
-			// 	parent: tableBody,
-			// })
-
-      item.forEach(i => {
-        main = i[0]
-
-        const isFusion = newServers.includes(i[1].numVal)
-        if (isFusion) {
-          const fusion = data.servers[i[1].numVal]
-          acc.push(
-            `<span style="order:${i[1].numVal}" class="fusion ${i[1].code} ${
-              getTooltip(i[1]).class
-            }">${i[1].val} ${getTooltip(i[1]).msg}</span>`
+    const localServers =
+      filterBy === 'all'
+        ? uniqueServers
+        : uniqueServers.filter(
+            server =>
+              server.key.code === filterBy ||
+              server.values.some(val => val.code === filterBy)
           )
-          fusion.forEach(f => {
-            const fS = getCountryCode(f)
-            acc.push(
-              `<span style="order:${fS.numVal}" class="fusion ${fS.code}">${fS.val}</span>`
-            )
-          })
-        } else {
-          acc.push(
-            `<span class="${i[1].code} ${
-              getTooltip(i[1]).class
-            }" style="order:${i[1].numVal}">${i[1].val} ${
-              getTooltip(i[1]).msg
-            }</span>`
-          )
-        }
+
+    localServers.forEach(serv => {
+      const key = serv.key
+      const group = serv.values
+
+      const tr = createNode({
+        type: 'tr',
+        parent: tableBody,
       })
 
-      const isUnique = uniqueServers.includes(main.numVal)
-      const items = item.flat()
+      createNode({
+        type: 'td',
+        parent: tr,
+        attrs: {
+          class: [key.code, getTooltip(key).class].join(' '),
+        },
+        innerHTML: `${key.val} ${getTooltip(key).msg}`,
+      })
 
-      if (isUnique) {
-        tableBody.innerHTML += `
-				<tr>
-					<td class="${main.code} ${getTooltip(main).class}">${main.val} ${
-          getTooltip(main).msg
-        }</td>
-					<td class="merged"><div>${acc.join('')}</div></td>
-				</tr>`
-      } else if (
-        items[0].numVal === items[1].numVal &&
-        item.flat().length === 2
-      ) {
-        tableBody.innerHTML += `
-				<tr>
-					<td class="${main.code}">${main.val}</td>
-					<td class="merged ${main.code} ${getTooltip(main).class}">${main.val} ${
-          getTooltip(main).msg
-        }</td>
-				</tr>`
-      }
-    }
+      const tdGroup = createNode({
+        type: 'td',
+        parent: tr,
+        attrs: { class: 'merged' },
+      })
 
-    const merged = Object.entries(data.servers)
-      .map(([key, values]) => {
-        return values.map(value => {
-          return [getCountryCode(key), getCountryCode(value)]
+      const groupCell = createNode({
+        type: 'div',
+        parent: tdGroup,
+      })
+
+      group.forEach(cell => {
+        createNode({
+          type: 'span',
+          parent: groupCell,
+          attrs: {
+            class: ['fusion', cell.code, getTooltip(cell).class].join(' '),
+            style: `order:${cell.numVal}`,
+          },
+          innerHTML: `${cell.val} ${getTooltip(cell).msg}`,
         })
       })
-      .sort((a, b) => a[0][0].value - b[0][0].value)
-      .filter(serverList => {
-        if (filterBy && filterBy !== 'all') {
-          return serverList.some(serverRow => {
-            return serverRow.some(server => server.code === filterBy)
-          })
-        }
-        return true
-      })
-
-    merged.forEach(item => printItem(item))
+    })
   }
 
   connectedCallback() {
     this.innerHTML = template
-    this.generateExpandedTable()
+    this.generateTable('all')
     this.generateListeners()
   }
 }
