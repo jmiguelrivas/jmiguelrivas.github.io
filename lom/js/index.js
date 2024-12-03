@@ -50,14 +50,13 @@ const data = {
   },
 }
 
-
 const allMerges = Object.entries(data.servers).map(([key, values]) => {
   const servers = Object.entries(values).map(([mergeKey, mergeValues]) => {
     return {
       key: getCountryCode(mergeKey),
       values: mergeValues.map(val => getCountryCode(val)),
     }
-  }) 
+  })
 
   return {
     title: nameToDate(key),
@@ -97,7 +96,6 @@ class Simple extends HTMLElement {
     body.innerHTML = ''
 
     allMerges.forEach(merge => {
-
       createNode({
         type: 'h2',
         parent: body,
@@ -115,29 +113,29 @@ class Simple extends HTMLElement {
             </tr>
           </thead>
           <tbody id="table-body"></tbody>
-		    `
+		    `,
       })
 
       const tableBody = table.querySelector('#table-body')
-      
+
       const localServers =
-      filterBy === 'all'
-      ? merge.servers
-      : merge.servers.filter(
-        server =>
-          server.key.code === filterBy ||
-        server.values.some(val => val.code === filterBy)
-      )
+        filterBy === 'all'
+          ? merge.servers
+          : merge.servers.filter(
+              server =>
+                server.key.code === filterBy ||
+                server.values.some(val => val.code === filterBy)
+            )
 
       localServers.forEach(serv => {
         const key = serv.key
         const group = serv.values
-  
+
         const tr = createNode({
           type: 'tr',
           parent: tableBody,
         })
-  
+
         createNode({
           type: 'td',
           parent: tr,
@@ -146,18 +144,18 @@ class Simple extends HTMLElement {
           },
           innerHTML: `${key.val} ${getTooltip(key).msg}`,
         })
-  
+
         const tdGroup = createNode({
           type: 'td',
           parent: tr,
           attrs: { class: 'merged' },
         })
-  
+
         const groupCell = createNode({
           type: 'div',
           parent: tdGroup,
         })
-  
+
         group.forEach(cell => {
           createNode({
             type: 'span',
@@ -171,7 +169,6 @@ class Simple extends HTMLElement {
         })
       })
     })
-
   }
 
   connectedCallback() {
