@@ -78,7 +78,7 @@ mr-app {
   padding: 0;
   margin: 0;
   background-color: transparent;
-  color: #eee;
+  color: hsla(0,0%,100%,.4);
   text-decoration: none;
   width: 35px;
   height: 35px;

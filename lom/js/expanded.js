@@ -33,6 +33,8 @@ const template = `
 			</div>
 		</div>
 
+		<h2>Merged Servers</h2>
+
     <table>
 			<thead>
 				<tr>

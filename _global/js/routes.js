@@ -20,38 +20,30 @@ const s2025 = [
 
 const sLOM = [
   {
-    separator: true,
-    hidden: true,
-  },
-  {
     name: 'LOM Merged Servers Timeline',
     url: 'lom/index',
-    icon: 'lock',
+    icon: 'gamepad',
     hidden: true,
   },
   {
     name: 'LOM Merged Servers Timeline / Expanded',
     url: 'lom/expanded',
-    icon: 'lock',
+    icon: 'gamepad',
     hidden: true,
   },
 ]
 
 const sNano = [
   {
-    separator: true,
-    hidden: true,
-  },
-  {
     name: 'Grid System',
     url: 'nano/grid',
-    icon: 'lock',
+    icon: 'cube',
     hidden: true,
   },
   {
     name: 'Iconos',
     url: 'nano/iconos',
-    icon: 'lock',
+    icon: 'paint-brush',
     hidden: true,
   },
 ]
@@ -60,7 +52,17 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
-const routes = [...s2025, ...sLOM, ...sNano]
+const routes = [s2025, sLOM, sNano]
+  .map(r => {
+    return [
+      r,
+      {
+        separator: true,
+        hidden: true,
+      },
+    ]
+  })
+  .flat(2)
   .filter(route => (includeExtras ? true : route.hidden !== true))
   .map(route => {
     return route.separator
@@ -71,5 +73,7 @@ const routes = [...s2025, ...sLOM, ...sNano]
           icon: route.icon,
         }
   })
+
+routes.pop()
 
 export { routes }

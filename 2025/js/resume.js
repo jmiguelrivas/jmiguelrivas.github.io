@@ -233,7 +233,7 @@ class Resume extends HTMLElement {
         text: exp.date.split('/')[0],
         attrs: {
           datetime: exp.date,
-        }
+        },
       })
 
       const icono = createNode({

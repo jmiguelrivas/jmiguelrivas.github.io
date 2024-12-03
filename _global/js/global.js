@@ -11,8 +11,8 @@ function getPrefix(name) {
 function createNode({ type, parent, text, attrs, innerHTML }) {
   const node = document.createElement(type || 'div')
 
-  text && node.appendChild(document.createTextNode(text))
   node.innerHTML = innerHTML ? innerHTML : ''
+  text && node.appendChild(document.createTextNode(text))
 
   if (attrs) {
     Object.entries(attrs).forEach(([key, value]) => {
