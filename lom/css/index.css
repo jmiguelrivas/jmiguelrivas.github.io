@@ -155,11 +155,15 @@
   }
 
   .group {
-    mr-users > span {
-      display: flex;
-      gap: .5rem;
-      align-items: center;
-      justify-content: center;
+    mr-users {
+      width: 100%;
+
+      > span {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     button {
