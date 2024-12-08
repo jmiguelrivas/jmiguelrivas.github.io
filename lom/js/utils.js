@@ -2,14 +2,22 @@ import { usersDB } from './db.js'
 import { countryCodes } from './country-codes.js'
 
 function getTooltip(item) {
-  const names = item?.users?.map(user => user.name).join(',\n')
-  const classes = [...new Set(item?.users?.map(user => user?.group).flat())]
-  const icono = classes.includes('top') ? 'star' : classes.includes('friend') ? 'heart' : undefined
-  
-  return item?.users.length > 0 ?{
-    classes,
-    msg: item?.users ? `<nn-ayuda icono="${icono}">${names}</nn-ayuda>` : '',
-  } : {classes: [], msg: ''}
+  const names = item?.users?.map(user => `<li><nn-icono class="${user.group.includes('friend') ? 'heart' : 'star'}"></nn-icono> ${user.name}</li>`).join('')
+  const classes = [
+    'group',
+    ...new Set(item?.users?.map(user => user?.group).flat()),
+  ]
+
+  console.log(item)
+
+  return item?.users.length > 0
+    ? {
+        classes,
+        msg: item?.users
+          ? `<mr-users label="${item.val}">${names}</mr-users>`
+          : '',
+      }
+    : { classes: [], msg: '' }
 }
 
 function getCountryCode(str) {

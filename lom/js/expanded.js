@@ -13,6 +13,7 @@ import {
 } from './db.js'
 import { getCountryCode, getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
+import "./users.js"
 
 const template = `
   <nn-caja padding="4">
@@ -147,8 +148,8 @@ class Expanded extends HTMLElement {
     } else if (data.justTops) {
       localServers = uniqueServers.filter(
         server =>
-          server.key.users.some(user => user?.group) ||
-          server.values.some(server => server.users.some(user => user?.group))
+          server.key.users.some(user => user?.group?.includes('top')) ||
+          server.values.some(server => server.users.some(user => user?.group?.includes('top')))
       )
     } else {
       localServers = uniqueServers
@@ -169,7 +170,7 @@ class Expanded extends HTMLElement {
         attrs: {
           class: [key.code, ...getTooltip(key).classes].join(' '),
         },
-        innerHTML: `${key.val} ${getTooltip(key).msg}`,
+        innerHTML: getTooltip(key).msg ? getTooltip(key).msg : key.val,
       })
 
       const tdGroup = createNode({
@@ -184,14 +185,14 @@ class Expanded extends HTMLElement {
       })
 
       group.forEach(cell => {
-        createNode({
+        const span = createNode({
           type: 'span',
           parent: groupCell,
           attrs: {
             class: ['fusion', cell.code, ...getTooltip(cell).classes].join(' '),
             style: `order:${cell.numVal}`,
           },
-          innerHTML: `${cell.val} ${getTooltip(cell).msg}`,
+          innerHTML: getTooltip(cell).msg ? getTooltip(cell).msg : cell.val,
         })
       })
     })
