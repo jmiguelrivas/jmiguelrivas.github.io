@@ -36,7 +36,9 @@ class Users extends HTMLElement {
   updateLabel() {
     const attr = this.getAttribute('label')
     const span = this.querySelector('span')
-    span.innerHTML = attr + span.innerHTML
+    if (span) {
+      span.innerHTML = attr + span?.innerHTML
+    }
   }
 
   updateIcon() {
@@ -65,7 +67,7 @@ class Users extends HTMLElement {
       case 'icono':
         this.updateIcon()
         break
-        case 'label':
+      case 'label':
         this.updateLabel()
         break
     }
