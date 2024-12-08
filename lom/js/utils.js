@@ -26,7 +26,7 @@ function getCountryCode(str) {
       finalCode = 'MUSH'
     }
 
-    const users = usersDB.filter(user => user.server === +str)
+    const users = usersDB.filter(user => user.server.includes(+str))
 
     return {
       code: finalCode?.toLowerCase(),

@@ -38,6 +38,7 @@ const template = `
 const data = {
   attrs: [],
   language: 'all',
+  justTops: false,
   servers: {
     M20241125,
     M20241111_2,
@@ -126,14 +127,23 @@ class Simple extends HTMLElement {
 
       const tableBody = table.querySelector('#table-body')
 
-      const localServers =
-        filterBy === 'all'
-          ? merge.servers
-          : merge.servers.filter(
-              server =>
-                server.key.code === filterBy ||
-                server.values.some(val => val.code === filterBy)
-            )
+      let localServers
+
+      if (filterBy !== 'all') {
+        localServers = merge.servers.filter(
+          server =>
+            server.key.code === filterBy ||
+            server.values.some(val => val.code === filterBy)
+        )
+      } else if (data.justTops) {
+        localServers = merge.servers.filter(
+          server =>
+            server.key.users.some(user => user?.group?.includes('top')) ||
+            server.values.some(server => server.users.some(user => user?.group?.includes('top')))
+        )
+      } else {
+        localServers = merge.servers
+      }
 
       localServers.forEach(serv => {
         const key = serv.key
