@@ -65,7 +65,7 @@ class Users extends HTMLElement {
       case 'icono':
         this.updateIcon()
         break
-        case 'icono':
+        case 'label':
         this.updateLabel()
         break
     }

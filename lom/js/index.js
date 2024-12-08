@@ -12,6 +12,7 @@ import {
 } from './db.js'
 import { getCountryCode, getTooltip, nameToDate } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
+import "./users.js"
 
 const template = `
   <nn-caja padding="4">
@@ -160,7 +161,7 @@ class Simple extends HTMLElement {
           attrs: {
             class: [key.code, ...getTooltip(key).classes].join(' '),
           },
-          innerHTML: `${key.val} ${getTooltip(key).msg}`,
+          innerHTML: getTooltip(key).msg ? getTooltip(key).msg : key.val,
         })
 
         const tdGroup = createNode({
@@ -184,7 +185,7 @@ class Simple extends HTMLElement {
               ),
               style: `order:${cell.numVal}`,
             },
-            innerHTML: `${cell.val} ${getTooltip(cell).msg}`,
+            innerHTML: getTooltip(cell).msg ? getTooltip(cell).msg : cell.val,
           })
         })
       })

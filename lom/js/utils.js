@@ -8,8 +8,6 @@ function getTooltip(item) {
     ...new Set(item?.users?.map(user => user?.group).flat()),
   ]
 
-  console.log(item)
-
   return item?.users.length > 0
     ? {
         classes,
