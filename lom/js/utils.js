@@ -3,10 +3,12 @@ import { countryCodes } from './country-codes.js'
 
 function getTooltip(item) {
   const names = item?.users?.map(user => user.name).join(',\n')
-  const classes = item?.users?.some(user => user?.group) ? ['top'] : []
+  const classes = [...new Set(item?.users?.map(user => user?.group).flat())]
+  const icono = classes.includes('top') ? 'star' : classes.includes('friend') ? 'heart' : undefined
+  
   return item?.users.length > 0 ?{
     classes,
-    msg: item?.users ? `<nn-ayuda>${names}</nn-ayuda>` : '',
+    msg: item?.users ? `<nn-ayuda icono="${icono}">${names}</nn-ayuda>` : '',
   } : {classes: [], msg: ''}
 }
 

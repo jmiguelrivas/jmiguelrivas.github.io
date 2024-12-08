@@ -759,96 +759,162 @@ const M20241125 = {
   1526: [1527, 1528, 1529],
 }
 
-class Friend {
-  constructor(name, server, id) {
+class User {
+  constructor(name, server, id, group = []) {
     this.name = name
     this.server = server
     this.id = id
+    this.group = group
   }
 }
 
 const friends = [
-  new Friend('Talisa', 1310),
-  new Friend('Nico', 1310),
-  new Friend('Talisa', 6103),
-  new Friend('Nico', 6103),
-  new Friend('Koturno', 1388),
-  new Friend('Kolombo', 11169),
-  new Friend('Kolombo', 11174),
-  new Friend('Koturno', 11220),
-  new Friend('Koturno', 11222),
-  new Friend('Neo', 11256),
-  new Friend('Diego', 11257),
-  new Friend('Gustavo', 11310),
-  new Friend('Murilo', 11300),
-  new Friend('Fikret', 11323),
+  new User('Talisa', 1310, null, ['friend']),
+  new User('Nico', 1310, null, ['friend']),
+  new User('Talisa', 6103, null, ['friend']),
+  new User('Nico', 6103, null, ['friend']),
+  new User('Koturno', 1388, null, ['friend']),
+  new User('Kolombo', 11169, null, ['friend']),
+  new User('Kolombo', 11174, null, ['friend']),
+  new User('Koturno', 11220, null, ['friend']),
+  new User('Koturno', 11222, null, ['friend']),
+  new User('Neo', 11256, null, ['friend']),
+  new User('Diego', 11257, null, ['friend']),
+  new User('Gustavo', 11310, null, ['friend']),
+  new User('Murilo', 11300, null, ['friend']),
+  new User('Fikret', 11323, null, ['friend']),
 ]
 
-class Top {
-  constructor(name, id, server) {
-    this.name = name
-    this.id = id
-    this.server = server
-    this.group = "top"
+function addIndex(user, index) {
+  let indexGroup
+  if (index <= 9) {
+    indexGroup = 'top-10'
+  } else if (index <= 49) {
+    indexGroup = 'top-50'
+  } else if (index <= 79) {
+    indexGroup = 'top-80'
+  } else if (index <= 99) {
+    indexGroup = 'top-100'
   }
+
+  const result = user
+  result.group.push(indexGroup)
+  result.index = index
+
+  return result
 }
 
-const topUsers = [
-  new Top('BorinWu', "80F01", 1021),
-  new Top('concrete', "4070B", 1353),
-  new Top('Vegas', "A0B0F", 1026),
-  new Top('Zeko', "A0B0F", 1034),
-  new Top('Mocha', "8030E", 1121),
-  new Top('Calmaskitzo', "C0101", 1226),
-  new Top('Greed', "80101", 1280),
-  new Top('scottykg', "E0004", 1182),
-  new Top('MikeroDose', "E0E0D", 1108),
-  new Top('Mërk', "9190B", 1003),
-  new Top('Hollow', "5000B", 1024),
-  new Top('Chem_Addict', "F0C08", 1032),
-  new Top('MadHatterVII', "60306", 1321),
-  new Top('Code', "B0B08", 1024),
-  new Top('Imba', "A040D", 1032),
-  new Top('Enel', "80107", 1302),
-  new Top('Raven', "F0002", 1019),
-  new Top('MelonLord', "40200", 1323),
-  new Top('Famine', "8030B", 1117),
-  new Top('Shroomi', "B070D", 1250),
-  new Top('Iskander', "70C07", 1254),
-  new Top('Bird', "70C0D", 1302),
-  new Top('JHotTea', "70305", 1021),
-  new Top('HootyHoo', "D0E0C", 1254),
-  new Top('Deathwing', "B0605", 1216),
-  new Top('Bapesta', "A0F01", 1111),
-  new Top('---', "D030F", 1019),
-  new Top('---', "D0406", 1019),
-  new Top('MathsDebating', "C050D", 1310),
-  new Top('Remi', "C0F0B", 1173),
-  new Top('Fara', "E0808", 1180),
-  new Top('Babyboopz', "21400", 1019),
-  new Top('Gustavo', "E050E", 1107),
-  new Top('MrsMadHatter', "C070B", 1321),
-  new Top('moose', "E0908", 1170),
-  new Top('Solo', "90F06", 1114),
-  new Top('---', "E050C", 1019),
-  new Top('Algor', "E050F", 1111),
-  new Top('---', "40001", 1024),
-  new Top('Rafiki', "E0C09", 1226),
-  new Top('Luxury', "7080D", 11169),
-  new Top('GaryProbably', "21A00", 1035),
-  new Top('Trippy', "A0F04", 1108),
-  new Top('FuchsJäger', "90F0D", 1254),
-  new Top('Salt', "A0602", 1109),
-  new Top('---', "D0603", 1021),
-  new Top('Callous', "90E0B", 1321),
-  new Top('Mojikon', "1190A", 1006),
-  new Top('JustANobody', "80F09", 1215),
+const topUsersAM = [
+  new User('BorinWu', 1021, '80F01', ['top']),
+  new User('concrete', 1353, '4070B', ['top']),
+  new User('Vegas', 1026, 'A0B0F', ['top']),
+  new User('Zeko', 1034, 'A0B0F', ['top']),
+  new User('Mocha', 1121, '8030E', ['top']),
+  new User('Calmaskitzo', 1226, 'C0101', ['top']),
+  new User('Greed', 1280, '80101', ['top']),
+  new User('scottykg', 1182, 'E0004', ['top']),
+  new User('MikeroDose', 1108, 'E0E0D', ['top']),
+  new User('Mërk', 1003, '9190B', ['top']),
+  new User('Hollow', 1024, '5000B', ['top']),
+  new User('Chem_Addict', 1032, 'F0C08', ['top']),
+  new User('MadHatterVII', 1321, '60306', ['top']),
+  new User('Code', 1024, 'B0B08', ['top']),
+  new User('Imba', 1032, 'A040D', ['top']),
+  new User('Enel', 1302, '80107', ['top']),
+  new User('Raven', 1019, 'F0002', ['top']),
+  new User('MelonLord', 1323, '40200', ['top']),
+  new User('Famine', 1117, '8030B', ['top']),
+  new User('Shroomi', 1250, 'B070D', ['top']),
+  new User('Iskander', 1254, '70C07', ['top']),
+  new User('Bird', 1302, '70C0D', ['top']),
+  new User('JHotTea', 1021, '70305', ['top']),
+  new User('HootyHoo', 1254, 'D0E0C', ['top']),
+  new User('Deathwing', 1216, 'B0605', ['top']),
+  new User('Bapesta', 1111, 'A0F01', ['top']),
+  new User('---', 1019, 'D030F', ['top']),
+  new User('---', 1019, 'D0406', ['top']),
+  new User('MathsDebating', 1310, 'C050D', ['top']),
+  new User('Remi', 1173, 'C0F0B', ['top']),
+  new User('Fara', 1180, 'E0808', ['top']),
+  new User('Babyboopz', 1019, '21400', ['top']),
+  new User('Gustavo', 1107, 'E050E', ['top']),
+  new User('MrsMadHatter', 1321, 'C070B', ['top']),
+  new User('moose', 1170, 'E0908', ['top']),
+  new User('Solo', 1114, '90F06', ['top']),
+  new User('---', 1019, 'E050C', ['top']),
+  new User('Algor', 1111, 'E050F', ['top']),
+  new User('---', 1024, '40001', ['top']),
+  new User('Rafiki', 1226, 'E0C09', ['top']),
+  new User('Luxury', 11169, '7080D', ['top']),
+  new User('GaryProbably', 1035, '21A00', ['top']),
+  new User('Trippy', 1108, 'A0F04', ['top']),
+  new User('FuchsJäger', 1254, '90F0D', ['top']),
+  new User('Salt', 1109, 'A0602', ['top']),
+  new User('---', 1021, 'D0603', ['top']),
+  new User('Callous', 1321, '90E0B', ['top']),
+  new User('Mojikon', 1006, '1190A', ['top']),
+  new User('JustANobody', 1215, '80F09', ['top']),
+
+  new User('Archadios', 1281, 'F0E05', ['top']),
+  new User('Loki', 1024, '70504', ['top']),
+  new User('Kobe', 1031, 'E0D04', ['top']),
+  new User('CupondKween', 1024, 'A0E06', ['top']),
+  new User('Deserving', 1170, '50A06', ['top']),
+  new User('Cookie', 1004, '1130C', ['top']),
+  new User('Azure', 1339, '40202', ['top']),
+  new User('Deadpool', 1117, 'D0401', ['top']),
+  new User('Ravs', 1282, '90504', ['top']),
+  new User('Fuxi', 1107, '80506', ['top']),
+
+  new User('Midswift', 1031, 'F0B0E', ['top']),
+  new User('NrBaruca', 1107, 'F0E02', ['top']),
+  new User('Star', 1002, '61B0F', ['top']),
+  new User('NormalGuard', 1003, '41701', ['top']),
+  new User('Balmung', 1005, '40A0E', ['top']),
+  new User('DefenderKitty', 1019, 'A0107', ['top']),
+  new User('Dex', 1008, '4150A', ['top']),
+  new User('ShroomieC090C', 1121, 'C090C', ['top']),
+  new User('BlackCreme', 1122, '6070B', ['top']),
+  new User('Gibby', 1112, 'C0307', ['top']),
+
+  new User('mako', 1182, 'C0A01', ['top']),
+  new User('oobell', 1218, '8070F', ['top']),
+  new User('DrAmALoC248', 1108, '5040F', ['top']),
+  new User('shroomdada', 1005, '80901', ['top']),
+  new User('McFudge', 1111, '90601', ['top']),
+  new User('Beagle', 1215, '8000E', ['top']),
+  new User('Kaido', 1024, '90A02', ['top']),
+  new User('Leroy', 1280, 'C0D07', ['top']),
+  new User('Butgobbler', 1008, '6000B', ['top']),
+  new User('Aang', 1323, 'F0101', ['top']),
+
+  new User('Alteron', 1013, 'F0E0F', ['top']),
+  new User('Benimaru', 1403, '60607', ['top']),
+  new User('---', 1250, 'B0302', ['top']),
+  new User('Expert Guarda', 1254, '61304', ['top']),
+  new User('Sonic', 1027, 'B0507', ['top']),
+  new User('Debo', 1111, 'B0509', ['top']),
+  new User('Bill', 1003, 'F0207', ['top']),
+  new User('GrimmLord', 1027, 'B040A', ['top']),
+  new User('Space_Pod', 1121, 'E030D', ['top']),
+  new User('Mray', 1281, 'B0B0E', ['top']),
+  new User('RougeVifsy', 1033, 'F0800', ['top']),
+  new User('Huddy', 1339, '70A07', ['top']),
+  new User('InigoMontoya', 1031, 'A0505', ['top']),
+  new User('uhh', 1034, 'A0709', ['top']),
+  new User('Halfstep', 1111, 'B0C08', ['top']),
+  new User('j2reed', 1026, '50F0F', ['top']),
+  new User('Mythic', 1310, '01A0E', ['top']),
+  new User('---', 1473, 'E0108', ['top']),
+  new User('DraunTrager', 1117, 'C0C0D', ['top']),
+  new User('Chengvaj', 1003, '21206', ['top']),
+].map((user, index) => addIndex(user, index))
+
+const topUsersEU = [
+  // new User(, ['top']),
 ]
 
-const users = [
-  ...friends,
-  ...topUsers,
-]
+const users = [...friends, ...topUsersAM, ...topUsersEU]
 
 const untouchedServers = {
   // AMEN: [549,660],

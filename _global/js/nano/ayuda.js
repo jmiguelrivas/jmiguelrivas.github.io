@@ -6,7 +6,10 @@ const template = `
 `
 
 const data = {
-  content: ''
+  content: '',
+  attrs: {
+    name: 'icono',
+  }
 }
 
 class Ayuda extends HTMLElement {
@@ -21,8 +24,27 @@ class Ayuda extends HTMLElement {
     content.innerHTML = data.content
   }
 
+  updateIcon() {
+    const attr = this.getAttribute('icono')
+    const icono = this.querySelector('nn-icono')
+    icono.className = attr || 'star'
+  }
+
   connectedCallback() {
     this.updateTooltip()
+    this.updateIcon()
+  }
+
+  static get observedAttributes() {
+    return Object.values(data.attrs).map(e => e.name)
+  }
+
+  attributeChangedCallback(prop) {
+    switch (prop) {
+      case 'icono':
+        this.updateIcon()
+        break
+    }
   }
 }
 
