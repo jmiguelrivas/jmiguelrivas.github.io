@@ -29,6 +29,7 @@ const template = `
 				<button id="me">ME</button>
 				<button id="tr">TR</button>
 				<button id="ru">RU</button>
+        <button id="top">TOP</button>
 			</div>
 		</div>
     <div id="merged-list"></div>
@@ -86,8 +87,15 @@ class Simple extends HTMLElement {
     ].forEach(lang => {
       document.getElementById(lang).addEventListener('click', () => {
         data.language = lang
-        this.generateTable(data.language)
+        data.justTops = false
+        this.generateTable(data.language, data.justTops)
       })
+    })
+
+    document.getElementById('top').addEventListener('click', () => {
+      data.language = 'all'
+      data.justTops = true
+      this.generateTable(data.language, data.justTops)
     })
   }
 
@@ -140,7 +148,7 @@ class Simple extends HTMLElement {
           type: 'td',
           parent: tr,
           attrs: {
-            class: [key.code, getTooltip(key).class].join(' '),
+            class: [key.code, ...getTooltip(key).classes].join(' '),
           },
           innerHTML: `${key.val} ${getTooltip(key).msg}`,
         })
@@ -161,7 +169,9 @@ class Simple extends HTMLElement {
             type: 'span',
             parent: groupCell,
             attrs: {
-              class: ['fusion', cell.code, getTooltip(cell).class].join(' '),
+              class: ['fusion', cell.code, ...getTooltip(cell).classes].join(
+                ' '
+              ),
               style: `order:${cell.numVal}`,
             },
             innerHTML: `${cell.val} ${getTooltip(cell).msg}`,

@@ -759,22 +759,96 @@ const M20241125 = {
   1526: [1527, 1528, 1529],
 }
 
-const users = {
-  1310: ['Talisa', 'Nico'],
-  1388: ['Koturno'],
-
-  6103: ['Talisa', 'Nico'],
-
-  11169: ['Kolombo'],
-  11174: ['Kolombo'],
-  11220: ['Koturno'],
-  11222: ['Koturno'],
-  11256: ['Neo'],
-  11257: ['Diego'],
-  11310: ['Gustavo'],
-  11300: ['Murilo'],
-  11323: ['Fikret'],
+class Friend {
+  constructor(name, server, id) {
+    this.name = name
+    this.server = server
+    this.id = id
+  }
 }
+
+const friends = [
+  new Friend('Talisa', 1310),
+  new Friend('Nico', 1310),
+  new Friend('Talisa', 6103),
+  new Friend('Nico', 6103),
+  new Friend('Koturno', 1388),
+  new Friend('Kolombo', 11169),
+  new Friend('Kolombo', 11174),
+  new Friend('Koturno', 11220),
+  new Friend('Koturno', 11222),
+  new Friend('Neo', 11256),
+  new Friend('Diego', 11257),
+  new Friend('Gustavo', 11310),
+  new Friend('Murilo', 11300),
+  new Friend('Fikret', 11323),
+]
+
+class Top {
+  constructor(name, id, server) {
+    this.name = name
+    this.id = id
+    this.server = server
+    this.group = "top"
+  }
+}
+
+const topUsers = [
+  new Top('BorinWu', "80F01", 1021),
+  new Top('concrete', "4070B", 1353),
+  new Top('Vegas', "A0B0F", 1026),
+  new Top('Zeko', "A0B0F", 1034),
+  new Top('Mocha', "8030E", 1121),
+  new Top('Calmaskitzo', "C0101", 1226),
+  new Top('Greed', "80101", 1280),
+  new Top('scottykg', "E0004", 1182),
+  new Top('MikeroDose', "E0E0D", 1108),
+  new Top('Mërk', "9190B", 1003),
+  new Top('Hollow', "5000B", 1024),
+  new Top('Chem_Addict', "F0C08", 1032),
+  new Top('MadHatterVII', "60306", 1321),
+  new Top('Code', "B0B08", 1024),
+  new Top('Imba', "A040D", 1032),
+  new Top('Enel', "80107", 1302),
+  new Top('Raven', "F0002", 1019),
+  new Top('MelonLord', "40200", 1323),
+  new Top('Famine', "8030B", 1117),
+  new Top('Shroomi', "B070D", 1250),
+  new Top('Iskander', "70C07", 1254),
+  new Top('Bird', "70C0D", 1302),
+  new Top('JHotTea', "70305", 1021),
+  new Top('HootyHoo', "D0E0C", 1254),
+  new Top('Deathwing', "B0605", 1216),
+  new Top('Bapesta', "A0F01", 1111),
+  new Top('---', "D030F", 1019),
+  new Top('---', "D0406", 1019),
+  new Top('MathsDebating', "C050D", 1310),
+  new Top('Remi', "C0F0B", 1173),
+  new Top('Fara', "E0808", 1180),
+  new Top('Babyboopz', "21400", 1019),
+  new Top('Gustavo', "E050E", 1107),
+  new Top('MrsMadHatter', "C070B", 1321),
+  new Top('moose', "E0908", 1170),
+  new Top('Solo', "90F06", 1114),
+  new Top('---', "E050C", 1019),
+  new Top('Algor', "E050F", 1111),
+  new Top('---', "40001", 1024),
+  new Top('Rafiki', "E0C09", 1226),
+  new Top('Luxury', "7080D", 11169),
+  new Top('GaryProbably', "21A00", 1035),
+  new Top('Trippy', "A0F04", 1108),
+  new Top('FuchsJäger', "90F0D", 1254),
+  new Top('Salt', "A0602", 1109),
+  new Top('---', "D0603", 1021),
+  new Top('Callous', "90E0B", 1321),
+  new Top('Mojikon', "1190A", 1006),
+  new Top('JustANobody', "80F09", 1215),
+]
+
+const users = [
+  ...friends,
+  ...topUsers,
+]
 
 const untouchedServers = {
   // AMEN: [549,660],
@@ -826,5 +900,5 @@ export {
   M20240708,
   rangesArray,
   rangesObj,
-  users,
+  users as usersDB,
 }

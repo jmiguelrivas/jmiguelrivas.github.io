@@ -123,5 +123,5 @@ mr-app {
 
 /* -------------- layers */
 
-.tooltip { z-index: 3; }
+nn-ayuda, .tooltip { z-index: 3; }
 .navigation { z-index: 2; }

@@ -30,6 +30,7 @@ const template = `
 				<button id="me">ME</button>
 				<button id="tr">TR</button>
 				<button id="ru">RU</button>
+				<button id="top">TOP</button>
 			</div>
 		</div>
 
@@ -49,6 +50,7 @@ const template = `
 const data = {
   attrs: [],
   language: 'all',
+  justTops: false,
   servers: {
     ...M20240708,
     ...M20240722,
@@ -118,8 +120,15 @@ class Expanded extends HTMLElement {
     ].forEach(lang => {
       document.getElementById(lang).addEventListener('click', () => {
         data.language = lang
-        this.generateTable(data.language)
+        data.justTops = false
+        this.generateTable(data.language, data.justTops)
       })
+    })
+
+    document.getElementById('top').addEventListener('click', () => {
+      data.language = "all"
+      data.justTops = true
+      this.generateTable(data.language, data.justTops)
     })
   }
 
@@ -127,14 +136,23 @@ class Expanded extends HTMLElement {
     const tableBody = this.querySelector('#merged-list')
     tableBody.innerHTML = ''
 
-    const localServers =
-      filterBy === 'all'
-        ? uniqueServers
-        : uniqueServers.filter(
-            server =>
-              server.key.code === filterBy ||
-              server.values.some(val => val.code === filterBy)
-          )
+    let localServers
+
+    if (filterBy !== 'all') {
+      localServers = uniqueServers.filter(
+        server =>
+          server.key.code === filterBy ||
+          server.values.some(val => val.code === filterBy)
+      )
+    } else if (data.justTops) {
+      localServers = uniqueServers.filter(
+        server =>
+          server.key.users.some(user => user?.group) ||
+          server.values.some(server => server.users.some(user => user?.group))
+      )
+    } else {
+      localServers = uniqueServers
+    }
 
     localServers.forEach(serv => {
       const key = serv.key
@@ -149,7 +167,7 @@ class Expanded extends HTMLElement {
         type: 'td',
         parent: tr,
         attrs: {
-          class: [key.code, getTooltip(key).class].join(' '),
+          class: [key.code, ...getTooltip(key).classes].join(' '),
         },
         innerHTML: `${key.val} ${getTooltip(key).msg}`,
       })
@@ -170,7 +188,7 @@ class Expanded extends HTMLElement {
           type: 'span',
           parent: groupCell,
           attrs: {
-            class: ['fusion', cell.code, getTooltip(cell).class].join(' '),
+            class: ['fusion', cell.code, ...getTooltip(cell).classes].join(' '),
             style: `order:${cell.numVal}`,
           },
           innerHTML: `${cell.val} ${getTooltip(cell).msg}`,

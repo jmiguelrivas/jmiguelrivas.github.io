@@ -12,6 +12,7 @@
   --me: hsl(270deg 55% 40%);
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
+  --top: color-msg ease 1s alternate infinite;
 
   h2 {
     font-size: 3rem;
@@ -108,20 +109,11 @@
           background: var(--ru)
         }
 
-        &.tooltip,
-        .tooltip {
-          position: relative;
-          animation: color-msg ease 1s alternate infinite;
-
-          .msg {
-            position: absolute;
-            top: -20px;
-            right: 0;
-            background: #222;
-            border-radius: 10px;
-            padding: .5rem;
-          }
+        &.top,
+        .top {
+          animation: var(--top)
         }
+
       }
 
       &:nth-child(odd) {
@@ -229,6 +221,10 @@
 
       &#ru {
         background: var(--ru)
+      }
+
+      &#top {
+        animation: var(--top)
       }
     }
   }

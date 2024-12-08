@@ -1,11 +1,13 @@
-import { users } from './db.js'
+import { usersDB } from './db.js'
 import { countryCodes } from './country-codes.js'
 
 function getTooltip(item) {
-  return {
-    class: item?.users ? 'tooltip' : '',
-    msg: item?.users ? `<span class="msg">${item.users.join(', ')}</span>` : '',
-  }
+  const names = item?.users?.map(user => user.name).join(',\n')
+  const classes = item?.users?.some(user => user?.group) ? ['top'] : []
+  return item?.users.length > 0 ?{
+    classes,
+    msg: item?.users ? `<nn-ayuda>${names}</nn-ayuda>` : '',
+  } : {classes: [], msg: ''}
 }
 
 function getCountryCode(str) {
@@ -22,11 +24,13 @@ function getCountryCode(str) {
       finalCode = 'MUSH'
     }
 
+    const users = usersDB.filter(user => user.server === +str)
+
     return {
       code: finalCode?.toLowerCase(),
       val: [finalCode, serverId].join('-'),
       numVal: +str,
-      ...(users?.[+str] && { users: users[+str] }),
+      users,
     }
   }
 }
