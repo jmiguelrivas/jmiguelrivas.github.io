@@ -842,7 +842,7 @@ const topUsersAM = [
   new User(['Algor'], [1111], 'E050F'),
   new User(['---'], [1024], '40001'),
   new User(['Rafiki'], [1226], 'E0C09'),
-  new User(['Luxury'], [11169], '7080D'),
+  new User(['Luxury'], [11169, 11179], '7080D'),
   new User(['GaryProbably'], [1035], '21A00'),
   new User(['Trippy'], [1108], 'A0F04'),
   new User(['FuchsJäger'], [1254], '90F0D'),

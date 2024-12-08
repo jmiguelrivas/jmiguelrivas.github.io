@@ -149,6 +149,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        min-height: 70px;
       }
     }
   }
