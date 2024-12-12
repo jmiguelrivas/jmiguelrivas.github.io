@@ -9,6 +9,7 @@ import {
   M20240805,
   M20240722,
   M20240708,
+  M20241216,
   rangesObj,
 } from './db.js'
 import { getCountryCode, getTooltip } from './utils.js'
@@ -62,6 +63,7 @@ const data = {
     ...M20241111,
     ...M20241111_2,
     ...M20241125,
+    ...M20241216,
     ...rangesObj,
   },
 }

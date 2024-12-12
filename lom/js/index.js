@@ -1,5 +1,6 @@
 import '../../_global/js/index.js'
 import {
+  M20241216,
   M20241125,
   M20241111_2,
   M20241111,
@@ -41,6 +42,7 @@ const data = {
   language: 'all',
   justTops: false,
   servers: {
+    M20241216,
     M20241125,
     M20241111_2,
     M20241111,
