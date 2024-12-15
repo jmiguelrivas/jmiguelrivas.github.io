@@ -48,11 +48,20 @@ const sNano = [
   },
 ]
 
+const sFamily = [
+  {
+    name: 'Family Tree',
+    url: 'family/index',
+    icon: 'tree',
+    hidden: true,
+  },
+]
+
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
-const routes = [s2025, sLOM, sNano]
+const routes = [s2025, sLOM, sNano, sFamily]
   .map(r => {
     return [
       r,
