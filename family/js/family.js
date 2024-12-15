@@ -319,8 +319,8 @@ class Family extends HTMLElement {
     data.svg = d3
       .select("mr-family")
       .append("svg")
-      .attr("width", 1)
-      .attr("height", 1)
+      .attr("width", "100%")
+      .attr("height", "100%")
       .attr("class", "overlay printable")
       .call(data.zoom);
     data.svg

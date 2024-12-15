@@ -1,5 +1,91 @@
 @import url("../../_global/css/main.css");
 
-.workarea {
+mr-family {
+  svg {
+    width: 100%;
+    height: 100vh;
 
+    .person {
+      font: 14px sans-serif;
+      cursor: pointer;
+
+      &.asociado {
+        rect {
+          stroke: #2995ff;
+          stroke-dasharray: 7px;
+        }
+      }
+
+      &.pareja {
+        rect {
+          fill: #7D7D92;
+          stroke: #3A3885;
+        }
+
+        text {
+          fill: #2B2B31;
+        }
+      }
+
+      &.incompleto {
+        rect {
+          fill: #a34b4b;
+        }
+      }
+
+      text {
+        font: 12px "Montserrat";
+        font-weight: bold;
+        fill: #BBBBBB;
+
+        &.nickname {
+          font-size: 16px;
+          opacity: 1;
+
+          &:not(:empty) {
+            ~text {
+              opacity: 0;
+            }
+          }
+
+        }
+      }
+
+      rect {
+        fill: #2A2A37;
+        stroke: #393859;
+        stroke-width: 1px;
+        transition: ease 250ms;
+        transition-property: fill, stroke;
+      }
+
+      &.hover {
+        rect {
+          fill: #fff6a8;
+        }
+
+        text {
+          fill: #2A2A37;
+        }
+      }
+
+      &:hover {
+        text {
+          &.nickname:not(:empty) {
+            opacity: 0;
+
+            ~text {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .link {
+      fill: none;
+      stroke: rgb(232, 100, 100);
+      stroke-width: 2px;
+    }
+  }
 }
