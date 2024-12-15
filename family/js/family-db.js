@@ -3365,3 +3365,56 @@ export let familyDB = {
     },
   ]
 }
+
+// class Persona {
+//   constructor({id, name, familyName, children, group}) {
+//     this.id = id || ID()
+//     this.name = name
+//     this.familyName = familyName
+//     this.children = children
+//     this.group = group
+
+//     // console.log(12, this)
+//   }
+// }
+
+// export let familyDB = new Persona({
+//   name: ["Pedro", "Antonio"],
+//   familyName: [fn.ramirez, fn.rivas],
+//   children: [
+//     new Persona(
+//     {
+//       group: "pareja",
+//       name: ["Eleonora", "Del Carmen"],
+//       familyName: [fn.grullon],
+//       children: [
+//         new Persona({
+//           name: ["Amable"],
+//         })
+//       ]
+//     }),
+//   ]
+// })
+
+// const familyDBArray = [
+//   {
+//     id: 1,
+//     name: ["Pedro", "Antonio"],
+//     familyName: [fn.ramirez, fn.rivas],
+//   },
+//   {
+//     id: 2,
+//     name: ["Eleonora", "Del Carmen"],
+//     familyName: [fn.grullon],
+//     spouse: [1],
+//   },
+//   {
+//     id: 3,
+//     name: ["Amable"],
+//     parents: [1, 2],
+//   }
+// ]
+
+// function getFamilyName(){
+//   console.log(this)
+// }
