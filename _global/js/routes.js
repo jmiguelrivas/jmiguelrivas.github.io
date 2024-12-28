@@ -1,21 +1,21 @@
 const s2025 = [
-  {
-    name: 'Home',
-    url: '2025/index',
-    icon: 'home',
-    hidden: true,
-  },
+  // {
+  //   name: 'Home',
+  //   url: '2025/index',
+  //   icon: 'home',
+  //   hidden: true,
+  // },
   {
     name: 'Resume',
     url: '2025/resume',
     icon: 'user',
   },
-  {
-    name: 'Portfolio',
-    url: '2025/portfolio',
-    icon: 'book',
-    hidden: true,
-  },
+  // {
+  //   name: 'Portfolio',
+  //   url: '2025/portfolio',
+  //   icon: 'book',
+  //   hidden: true,
+  // },
 ]
 
 const sLOM = [
@@ -57,11 +57,25 @@ const sFamily = [
   },
 ]
 
+const sDocs = [
+  {
+    name: 'Docs',
+    url: 'docs/index',
+    icon: 'file-o',
+  },
+]
+
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
-const routes = [s2025, sLOM, sNano, sFamily]
+const routes = [
+  s2025,
+  sLOM,
+  sNano,
+  // sFamily,
+  sDocs,
+]
   .map(r => {
     return [
       r,
@@ -76,17 +90,18 @@ const routes = [s2025, sLOM, sNano, sFamily]
     ...r,
     ...(r?.hidden ? {} : { hidden: false }),
   }))
-  // .filter(r => includeExtras || !r.hidden)
+  // .filter(r => (includeExtras ? true : !r.hidden))
   .map(route => {
     return route.separator
-      ? { separator: true }
+      ? { separator: true, hidden: route.hidden }
       : {
           name: route.name,
           url: `../${route.url}.html${queryString}`,
           icon: route.icon,
+          hidden: route.hidden,
         }
   })
 
 routes.pop()
-// console.log(routes, includeExtras, !false)
+// console.log(routes, includeExtras)
 export { routes }

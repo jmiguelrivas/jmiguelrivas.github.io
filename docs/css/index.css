@@ -1,0 +1,24 @@
+@import url("../../_global/css/main.css");
+
+.workarea {
+  nn-caja {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    h2,
+    h3,
+    p,
+    nn-code {
+      margin: 0;
+    }
+
+    article {
+      background-color: #243332;
+      padding: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+  }
+}
