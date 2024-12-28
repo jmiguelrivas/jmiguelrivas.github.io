@@ -7,7 +7,7 @@ const s2025 = [
   // },
   {
     name: 'Resume',
-    url: '2025/resume',
+    url: '2025/index',
     icon: 'user',
   },
   // {
@@ -34,12 +34,12 @@ const sLOM = [
 ]
 
 const sNano = [
-  {
-    name: 'Grid System',
-    url: 'nano/grid',
-    icon: 'cube',
-    hidden: true,
-  },
+  // {
+  //   name: 'Grid System',
+  //   url: 'nano/grid',
+  //   icon: 'cube',
+  //   hidden: true,
+  // },
   {
     name: 'Iconos',
     url: 'nano/iconos',

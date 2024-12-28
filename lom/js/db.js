@@ -823,7 +823,10 @@ const friends = [
   new User(['Diego'], [11257], null, ['friend']),
   new User(['Gustavo'], [11310], null, ['friend']),
   new User(['Murilo'], [11300], null, ['friend']),
-  new User(['Fikret'], [11323], null, ['friend']),
+  new User(['Cleo'], [11323], null, ['friend']),
+  new User(['Max'], [11323], null, ['friend']),
+  new User(['Mandy'], [11323], null, ['friend']),
+  new User(['Magneto'], [11323], null, ['friend']),
   new User(['Ipek'], [36264], null, ['friend']),
 ]
 
