@@ -14,11 +14,12 @@
     }
 
     article {
-      background-color: #243332;
       padding: 1rem;
       display: flex;
       gap: 1rem;
       flex-direction: column;
+      border: 1px solid #454545;
+      border-radius: 5px;
     }
   }
 }

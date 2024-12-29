@@ -38,7 +38,7 @@ const template = `
 
 		<h2>Merged Servers</h2>
 
-    <table>
+    <table class="merged-table">
 			<thead>
 				<tr>
 					<th>NEW</th>

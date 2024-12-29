@@ -12,7 +12,7 @@
   --me: hsl(270deg 55% 40%);
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
-  --top: linear-gradient(131deg, rgba(34,34,196,1) 0%, rgba(179,0,255,1) 100%);
+  --top: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
 
   h2 {
     font-size: 3rem;
@@ -24,6 +24,16 @@
   tbody,
   tr {
     width: 100%;
+  }
+
+  .merged-table {
+
+    td,
+    th {
+      &:first-child {
+        width: 25%;
+      }
+    }
   }
 
   table {
@@ -53,6 +63,7 @@
         }
 
         color: #eee;
+        background-color: hsl(240 6% 17% / 1);
 
         &.amen,
         .amen {
@@ -116,21 +127,17 @@
 
       }
 
+      td,
+      th {
+        padding: 1rem;
+      }
+
       &:nth-child(odd) {
         opacity: 0.75;
       }
 
       &:nth-child(even) {
         opacity: 0.9;
-      }
-    }
-
-    td,
-    th {
-      padding: 1rem;
-
-      &:first-child {
-        width: 25%;
       }
     }
   }
@@ -158,7 +165,7 @@
     mr-users {
       width: 100%;
 
-      > span {
+      >span {
         display: flex;
         gap: .5rem;
         align-items: center;

@@ -20,14 +20,20 @@ const s2025 = [
 
 const sLOM = [
   {
-    name: 'LOM Merged Servers Timeline',
-    url: 'lom/index',
+    name: 'LOM Merged Servers',
+    url: 'lom/merged',
     icon: 'gamepad',
     hidden: true,
   },
   {
-    name: 'LOM Merged Servers Timeline / Expanded',
-    url: 'lom/expanded',
+    name: 'LOM Merged Servers Timeline',
+    url: 'lom/timeline',
+    icon: 'gamepad',
+    hidden: true,
+  },
+  {
+    name: 'LOM Parking',
+    url: 'lom/parking',
     icon: 'gamepad',
     hidden: true,
   },

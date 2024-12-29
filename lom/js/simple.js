@@ -34,7 +34,7 @@ const template = `
         <button id="top">TOP</button>
 			</div>
 		</div>
-    <div id="merged-list"></div>
+    <div id="merged-list" class="merged-table"></div>
   </nn-caja>
 `
 const data = {
