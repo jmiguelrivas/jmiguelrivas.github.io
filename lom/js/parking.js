@@ -1233,10 +1233,10 @@ const template = `
           <th>Pontos de modificação</th>
           <th>Recompensa de aventura</th>
 					<th>Taxa</th>
-					<th>0m-30m</th>
-					<th>30m-1h</th>
-					<th>1h-4h</th>
-					<th>4h-8h</th>
+					<th>0-30 (m)</th>
+					<th>30-60 (m)</th>
+					<th>61-240 (m)</th>
+					<th>241-480 (m)</th>
 					<th>Ganhancia 8h</th>
 					<th>Taxa 8h</th>
 					<th>Total 8h</th>

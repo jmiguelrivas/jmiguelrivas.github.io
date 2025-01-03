@@ -69,6 +69,11 @@ const sDocs = [
     url: 'docs/index',
     icon: 'file-o',
   },
+  {
+    name: 'Bounce Range',
+    url: 'docs/bounce-range',
+    icon: 'file-o',
+  },
 ]
 
 const queryString = window.location.search

@@ -987,6 +987,9 @@ const topUsersAM = [
   new User(['Shroomrix'], [1112], 'B020C'),
   new User(['captTeemo'], [1280], 'C0B04'),
   new User(['9030c'], [1182], '9030C'),
+
+  new User(['Ramos'], [1304], 'E050F'),
+  new User(['O Haio'], [1254], '61304'),
 ].map((user, index) => addIndex(user, index))
 
 const topUsersEU = [

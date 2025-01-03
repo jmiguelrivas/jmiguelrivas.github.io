@@ -21,5 +21,40 @@
       border: 1px solid #454545;
       border-radius: 5px;
     }
+
+    canvas {
+      background-color: #111;
+    }
+
+    table {
+      width: 100%;
+      text-align: center;
+
+      td,
+      th {
+        padding: 1rem;
+      }
+
+      th {
+        background-color: #444;
+      }
+
+      td {
+        background-color: #333;
+      }
+    }
+
+    dl {
+      display: flex;
+      gap: 1rem;
+
+      dt {
+        font-weight: bold;
+      }
+
+      dd {
+        margin: 0;
+      }
+    }
   }
 }
