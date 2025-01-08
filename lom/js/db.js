@@ -1090,7 +1090,7 @@ const topUsersEU = [
   new User(['ShanksLeRoux'], [30097], 'A0C08'),
   new User(['Freya'], [36132], '4090B'),
   new User(['freedom'], [33117], '0170D'),
-  new User(['Etozhetsve', 'NA_CWE'], [30098], 'C)B00'),
+  // new User(['Etozhetsve', 'NA_CWE'], [30098], 'C)B00'),
   new User(['F2P_Holoflux'], [33103], '50905'),
   new User(['GoblinSlayer'], [33061], '4010F'),
 ].map((user, index) => addIndex(user, index))
