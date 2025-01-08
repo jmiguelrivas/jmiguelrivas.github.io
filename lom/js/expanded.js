@@ -1,20 +1,8 @@
 import '../../_global/js/index.js'
-import {
-  M20241125,
-  M20241111_2,
-  M20241111,
-  M20240930,
-  M20240902,
-  M20240819,
-  M20240805,
-  M20240722,
-  M20240708,
-  M20241216,
-  rangesObj,
-} from './db.js'
+import { merges, rangesObj } from './db.js'
 import { getCountryCode, getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
-import "./users.js"
+import './users.js'
 
 const template = `
   <nn-caja padding="4">
@@ -49,21 +37,13 @@ const template = `
 		</table>
   </nn-caja>
 `
+
 const data = {
   attrs: [],
   language: 'all',
   justTops: false,
   servers: {
-    ...M20240708,
-    ...M20240722,
-    ...M20240805,
-    ...M20240819,
-    ...M20240902,
-    ...M20240930,
-    ...M20241111,
-    ...M20241111_2,
-    ...M20241125,
-    ...M20241216,
+    ...Object.assign({}, ...Object.values(merges)),
     ...rangesObj,
   },
 }
@@ -129,7 +109,7 @@ class Expanded extends HTMLElement {
     })
 
     document.getElementById('top').addEventListener('click', () => {
-      data.language = "all"
+      data.language = 'all'
       data.justTops = true
       this.generateTable(data.language, data.justTops)
     })
@@ -151,7 +131,9 @@ class Expanded extends HTMLElement {
       localServers = uniqueServers.filter(
         server =>
           server.key.users.some(user => user?.group?.includes('top')) ||
-          server.values.some(server => server.users.some(user => user?.group?.includes('top')))
+          server.values.some(server =>
+            server.users.some(user => user?.group?.includes('top'))
+          )
       )
     } else {
       localServers = uniqueServers

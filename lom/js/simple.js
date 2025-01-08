@@ -1,19 +1,8 @@
 import '../../_global/js/index.js'
-import {
-  M20241216,
-  M20241125,
-  M20241111_2,
-  M20241111,
-  M20240930,
-  M20240902,
-  M20240819,
-  M20240805,
-  M20240722,
-  M20240708,
-} from './db.js'
-import { getCountryCode, getTooltip, nameToDate } from './utils.js'
+import { merges } from './db.js'
+import { getCountryCode, getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
-import "./users.js"
+import './users.js'
 
 const template = `
   <nn-caja padding="4">
@@ -41,33 +30,20 @@ const data = {
   attrs: [],
   language: 'all',
   justTops: false,
-  servers: {
-    M20241216,
-    M20241125,
-    M20241111_2,
-    M20241111,
-    M20240930,
-    M20240902,
-    M20240819,
-    M20240805,
-    M20240722,
-    M20240708,
-  },
-}
+  allMerges: Object.entries(merges).map(([key, values]) => {
+    const servers = Object.entries(values).map(([mergeKey, mergeValues]) => {
+      return {
+        key: getCountryCode(mergeKey),
+        values: mergeValues.map(val => getCountryCode(val)),
+      }
+    })
 
-const allMerges = Object.entries(data.servers).map(([key, values]) => {
-  const servers = Object.entries(values).map(([mergeKey, mergeValues]) => {
     return {
-      key: getCountryCode(mergeKey),
-      values: mergeValues.map(val => getCountryCode(val)),
+      date: key,
+      servers,
     }
-  })
-
-  return {
-    title: nameToDate(key),
-    servers,
-  }
-})
+  }).sort((a, b) => new Date(b.date) - new Date(a.date)),
+}
 
 class Simple extends HTMLElement {
   constructor() {
@@ -107,11 +83,11 @@ class Simple extends HTMLElement {
     const body = this.querySelector('#merged-list')
     body.innerHTML = ''
 
-    allMerges.forEach(merge => {
+    data.allMerges.forEach(merge => {
       createNode({
         type: 'h2',
         parent: body,
-        innerHTML: `${merge.title}`,
+        innerHTML: `${merge.date}`,
       })
 
       const table = createNode({
@@ -142,7 +118,9 @@ class Simple extends HTMLElement {
         localServers = merge.servers.filter(
           server =>
             server.key.users.some(user => user?.group?.includes('top')) ||
-            server.values.some(server => server.users.some(user => user?.group?.includes('top')))
+            server.values.some(server =>
+              server.users.some(user => user?.group?.includes('top'))
+            )
         )
       } else {
         localServers = merge.servers

@@ -43,15 +43,4 @@ function getCountryCode(str) {
   }
 }
 
-function nameToDate(name) {
-  const year = name.substr(1, 4)
-  const month = name.substr(5, 2)
-  const day = name.substr(7, 2)
-  const id = name.substr(10, 1)
-  const date = id
-    ? `${year}-${month}-${day} (${id})`
-    : [year, month, day].join('-')
-  return name === 'rangesObj' ? 'Unmerged Servers' : date
-}
-
-export { getCountryCode, getTooltip, nameToDate }
+export { getCountryCode, getTooltip }
