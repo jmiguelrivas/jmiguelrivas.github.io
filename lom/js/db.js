@@ -1,3 +1,6 @@
+// import { getCountryCode } from "../js/utils.js"
+import { countryCodes } from './country-codes.js'
+
 const merges = {
   "2024-07-08": {
     1001: [1088],
@@ -1090,7 +1093,7 @@ const topUsersEU = [
   new User(['ShanksLeRoux'], [30097], 'A0C08'),
   new User(['Freya'], [36132], '4090B'),
   new User(['freedom'], [33117], '0170D'),
-  new User(['Etozhetsve', 'NA_CWE'], [30098], 'C)B00'),
+  // new User(['Etozhetsve', 'NA_CWE'], [30098], 'C)B00'),
   new User(['F2P_Holoflux'], [33103], '50905'),
   new User(['GoblinSlayer'], [33061], '4010F'),
 ].map((user, index) => addIndex(user, index))
@@ -1135,8 +1138,39 @@ const rangesObj = rangesArray.reduce(
   {}
 )
 
+const mergesList = Object.entries(merges).map(([date, merge]) => {
+  return Object.entries(merge).map(([newServer, servers]) => {
+    return servers.map(server => {
+      if (server) {
+        const serverId = `${server}`.slice(-3)
+        const code = `${server}`.replace(serverId, '')
+        let finalCode = countryCodes?.[code] || code
+    
+        if (+code === 11 && +serverId > 247) {
+          finalCode = 'ESPT'
+        } else if (+code === 39 && +serverId > 90) {
+          finalCode = 'TR'
+        } else if (+code === 30 && +serverId > 259) {
+          finalCode = 'MUSH'
+        }
+    
+        const localUsers = users.filter(user => user.server.includes(+server))
+    
+        return {
+          languageCode: finalCode?.toLowerCase(),
+          newServer: +newServer,
+          merge: date,
+          name: [finalCode, serverId].join('-'),
+          code: +server,
+          users: localUsers,
+        }
+      }
+    })
+  })
+}).flat(2)
+
 export {
-  merges,
+  mergesList,
   rangesArray,
   rangesObj,
   users as usersDB,

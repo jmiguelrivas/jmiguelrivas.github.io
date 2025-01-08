@@ -1,5 +1,5 @@
 import '../../_global/js/index.js'
-import { merges } from './db.js'
+import { mergesList } from './db.js'
 import { getCountryCode, getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
 import './users.js'
@@ -30,19 +30,21 @@ const data = {
   attrs: [],
   language: 'all',
   justTops: false,
-  allMerges: Object.entries(merges).map(([key, values]) => {
-    const servers = Object.entries(values).map(([mergeKey, mergeValues]) => {
-      return {
-        key: getCountryCode(mergeKey),
-        values: mergeValues.map(val => getCountryCode(val)),
-      }
-    })
+  allMerges: Object.values(Object.groupBy(mergesList, ({merge}) => merge))
+  
+  // Object.entries(merges).map(([key, values]) => {
+  //   const servers = Object.entries(values).map(([mergeKey, mergeValues]) => {
+  //     return {
+  //       key: getCountryCode(mergeKey),
+  //       values: mergeValues.map(val => getCountryCode(val)),
+  //     }
+  //   })
 
-    return {
-      date: key,
-      servers,
-    }
-  }).sort((a, b) => new Date(b.date) - new Date(a.date)),
+  //   return {
+  //     date: key,
+  //     servers,
+  //   }
+  // }).sort((a, b) => new Date(b.date) - new Date(a.date)),
 }
 
 class Simple extends HTMLElement {
@@ -83,7 +85,12 @@ class Simple extends HTMLElement {
     const body = this.querySelector('#merged-list')
     body.innerHTML = ''
 
+    console.log(1, data.allMerges)
+
     data.allMerges.forEach(merge => {
+      
+      console.log(2, merge)
+
       createNode({
         type: 'h2',
         parent: body,
