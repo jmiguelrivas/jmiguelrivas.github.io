@@ -855,19 +855,19 @@ class User {
 }
 
 const friends = [
-  new User(['Talisa'], [1310, 6103], null, ['friend']),
-  new User(['Nico'], [1310, 6103], null, ['friend']),
-  new User(['Kolombo'], [11169, 11174], null, ['friend']),
-  new User(['Koturno'], [1388, 11220, 11222], null, ['friend']),
-  new User(['Neo'], [11256], null, ['friend']),
-  new User(['Diego'], [11257], null, ['friend']),
-  new User(['Gustavo'], [11310], null, ['friend']),
-  new User(['Murilo'], [11300], null, ['friend']),
-  new User(['Cleo'], [11323], null, ['friend']),
-  new User(['Max'], [11323], null, ['friend']),
-  new User(['Mandy'], [11323], null, ['friend']),
-  new User(['Magneto'], [11323], null, ['friend']),
-  new User(['Ipek'], [36264], null, ['friend']),
+  // new User(['Talisa'], [1310, 6103], null, ['friend']),
+  // new User(['Nico'], [1310, 6103], null, ['friend']),
+  // new User(['Kolombo'], [11169, 11174], null, ['friend']),
+  // new User(['Koturno'], [1388, 11220, 11222], null, ['friend']),
+  // new User(['Neo'], [11256], null, ['friend']),
+  // new User(['Diego'], [11257], null, ['friend']),
+  // new User(['Gustavo'], [11310], null, ['friend']),
+  // new User(['Murilo'], [11300], null, ['friend']),
+  // new User(['Cleo'], [11323], null, ['friend']),
+  // new User(['Max'], [11323], null, ['friend']),
+  // new User(['Mandy'], [11323], null, ['friend']),
+  // new User(['Magneto'], [11323], null, ['friend']),
+  // new User(['Ipek'], [36264], null, ['friend']),
 ]
 
 function addIndex(user, index) {
@@ -931,7 +931,7 @@ const topUsersAM = [
   new User(['Algor'], [1111], 'E050F'),
   new User(['(EMPTY)'], [1024], '40001'),
   new User(['Rafiki'], [1226], 'E0C09'),
-  new User(['Luxury', 'seven'], [11169, 11179], '7080D'),
+  new User(['Luxury'], [11169, 11179], '7080D'),
   new User(['Cappn', 'duBBss', 'GaryProbably'], [1035], '21A00'),
   new User(['Trippy'], [1108], 'A0F04'),
   new User(['FuchsJäger'], [1254], '90F0D'),
@@ -939,7 +939,7 @@ const topUsersAM = [
   new User(['(?)'], [1021], 'D0603'),
   new User(['Callous'], [1321], '90E0B'),
   new User(['Mojikon'], [1006], '1190A'),
-  new User(['JustANobody'], [1215], '80F09'),
+  new User(['JustANobody', 'ZzBLAZE'], [1215], '80F09'),
   new User(['Archadius'], [1281], 'F0E05'),
   new User(['Loki'], [1024], '70504'),
   new User(['Kobe'], [1031], 'E0D04'),
@@ -947,10 +947,14 @@ const topUsersAM = [
   new User(['Deserving'], [1170], '50A06'),
   new User(['Cookie'], [1004], '1130C'),
   new User(['Azure'], [1339], '40202'),
-  new User(['Deadpool', 'Nuttcracker', 'Deathndecay'], [1117], 'D0401'),
+  new User(
+    ['Deadpool', 'Nuttcracker', 'Deathndecay', 'Angryboto'],
+    [1117],
+    'D0401'
+  ),
   new User(['Ravs', 'Holo', 'Eggshell'], [1282], '90504'),
   new User(['Fuxi'], [1107], '80506'),
-  new User(['Sroom7373', 'Midswift'], [1031], 'F0B0E'),
+  new User(['Sroom7373', 'Midswift', 'Psyzor'], [1031], 'F0B0E'),
   new User(['NrBaruca'], [1107], 'F0E02'),
   new User(['Star'], [1002], '61B0F'),
   new User(['NormalGuard'], [1003], '41701'),
@@ -971,6 +975,7 @@ const topUsersAM = [
   new User(['Butgobbler'], [1008], '6000B'),
   new User(['Aang', 'Nigel'], [1323], 'F0101'),
   new User(['Alteron'], [1013], 'F0E0F'),
+  new User(['---'], [1021], 'B0A03'),
 
   new User(['Benimaru'], [1403], '60607'),
   new User(['---'], [1250], 'B0302'),
@@ -1005,7 +1010,7 @@ const topUsersAM = [
   new User(['Akuma'], [1215], 'B0200'),
   new User(['Dahlia'], [1403], 'A0807'),
   new User(['Rich'], [1253], 'E0B0F'),
-  new User(['rdrck'], [1035], '01306'),
+  new User(['rdrck', 'Hya'], [1035], '01306'),
   new User(['Matty', 'Thing1'], [1218], '11F0B'),
   new User(['Rubop'], [1027], 'A110F'),
   new User(['ap33zy'], [1109], '9090C'),
@@ -1021,7 +1026,7 @@ const topUsersAM = [
   new User(['Poseidon'], [1112], 'C090D'),
   new User(['GingerKing'], [1033], '50F0A'),
   new User(['Ry'], [1030], '11C0A'),
-  new User(['Xyz'], [1031], 'D0D0D'),
+  new User(['Xyz', 'Ray'], [1031], 'D0D0D'),
   new User(['Brad'], [1282], '8010B'),
   new User(['Shroomrix'], [1112], 'B020C'),
   new User(['captTeemo'], [1280], 'C0B04'),
@@ -1029,6 +1034,13 @@ const topUsersAM = [
 
   new User(['Ramos'], [1304], 'E050F'),
   new User(['O Haio'], [1254], '61304'),
+  new User(['Barbie'], [1282], 'B0401'),
+  new User(['JuraphicSark'], [1002], 'D0D03'),
+  new User(['Sol'], [1304], '90807'),
+  new User(['Slovet'], [1027], 'E0806'),
+  new User(['YodaNBeer'], [1386], '60A03'),
+  new User(['Yasama'], [6119], 'C0603'),
+  new User(['Traub'], [1004], '5020E'),
 ].map((user, index) => addIndex(user, index))
 
 const topUsersEU = [
