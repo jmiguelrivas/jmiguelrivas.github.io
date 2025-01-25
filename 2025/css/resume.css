@@ -42,20 +42,29 @@
     margin: 0;
     font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
   }
 
   h2 {
     font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
   }
 
   h3 {
     margin: 0;
-    font-size: 1rem;
+    font-size: .87rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    display: flex;
+    gap: .5rem;
+  }
+
+  h4 {
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    /* margin: 0; */
   }
 
   dt {
@@ -105,12 +114,12 @@
     time {
       font-weight: 300;
       letter-spacing: 2px;
-      position: absolute;
+      /* position: absolute;
       top: 3px;
-      left: -3.5rem;
+      left: -3.5rem; */
       display: inline-block;
-      width: 40px;
-      text-align: right;
+      /* width: 40px; */
+      /* text-align: right; */
       font-size: .75rem;
       text-transform: uppercase;
     }
@@ -121,11 +130,93 @@
       left: -.25rem;
       font-size: .5rem;
     }
+  }
+}
 
-    h4 {
-      font-size: .75rem;
-      text-transform: uppercase;
-      font-weight: 300;
+@media print {
+  body,
+  html,
+  nn-desplazador {
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    &,
+    .mr-app {
+      background-color: #fff;
     }
+
+    overflow: auto;
+
+    mr-app {
+      .navigation {
+        display: none;
+      }
+
+      .workarea {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        background-color: transparent;
+
+        nn-desplazador {
+          overflow: auto;
+          max-height: none;
+
+          nn-caja {
+            padding: 0 1rem;
+          }
+
+          nn-icono {
+            display: none;
+          }
+
+          time {
+            position: static;
+          }
+
+          li,
+          p,
+          dd,
+          dt,
+          h2,
+          h4,
+          a {
+            color: #202028;
+          }
+
+          h1 {
+            font-size: 1.75rem;
+          }
+
+          h1,
+          h3 {
+            color: hsl(211deg 71% 41%);
+          }
+
+          /* h3,
+          header,
+          article:before,
+          li:empty {
+            border-color: #333 !important;
+          } */
+
+          header {
+            margin: 0 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @page {
+    size: 8.5in 14in;
+    margin: 5mm;
   }
 }

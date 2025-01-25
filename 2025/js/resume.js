@@ -17,7 +17,7 @@ const template = `
         <ul></ul>
       </nn-pilar>
       <nn-pilar size="65%" class="experience">
-        <h2 class="sr-only">Experience</h2>
+        <h2>Experience</h2>
     </nn-fila>
   </nn-caja>
 `
@@ -86,11 +86,19 @@ const data = {
       company: 'Teamup',
       position: 'Frontend Developer',
       description: [
-        'Implement foundational product design & design system concepts for reuse across the platform.',
-        'Build, maintain, and improve core customer-facing features that enable and support all of the product groups.',
-        'Develop tools that improve frontend development productivity and minimize developer friction.',
-        'Develop elegant and responsive user interfaces using the latest front-end technologies.',
-        'Work with Product, UX design, and backend development teams to radically simplify the user experience for non-technical users.',
+        // 'Implement foundational product design & design system concepts for reuse across the platform.',
+        // 'Build, maintain, and improve core customer-facing features that enable and support all of the product groups.',
+        // 'Develop tools that improve frontend development productivity and minimize developer friction.',
+        // 'Develop elegant and responsive user interfaces using the latest front-end technologies.',
+        // 'Work with Product, UX design, and backend development teams to radically simplify the user experience for non-technical users.',
+        // 'Implemented foundational product design and design system concepts for platform-wide reuse.',
+        // 'Developed tools to boost frontend development productivity and minimize friction.',
+
+        'Developed elegant, responsive user interfaces utilizing modern frontend technologies, including Vue 3 and UnoCSS, to deliver seamless user experiences.',
+        'Integrated RESTful APIs with frontend components, enabling efficient data communication and dynamic functionality.',
+        'Contributed to the creation of a UI frontend library used across the organization, promoting consistency and reusability in design and development.',
+        'Performed comprehensive component testing and validation using Storybook and Vitest, achieving high reliability and consistency across features.',
+        'Collaborated cross-functionally with Product Managers, UX Designers, and backend developers to simplify and enhance the user experience for non-technical audiences.',
       ],
     },
     {
@@ -98,9 +106,14 @@ const data = {
       company: 'Enovational',
       position: 'Frontend Developer',
       description: [
-        `Build government apps with ${tool.html}/${tool.slim}, ${tool.sass}, ${tool.bootstrap} and ${tool.jQuery}/${tool.vue} on a ${tool.rails} environment with ${tool.webpack}.`,
-        `Make sure applications are following conventions and extending them according to the complexity of the project and frameworks being used.`,
-        `Collaborate with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers and Business Analysts to improve usability.`,
+        // `Build government apps with ${tool.html}/${tool.slim}, ${tool.sass}, ${tool.bootstrap} and ${tool.jQuery}/${tool.vue} on a ${tool.rails} environment with ${tool.webpack}.`,
+        // `Make sure applications are following conventions and extending them according to the complexity of the project and frameworks being used.`,
+        // `Collaborate with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers and Business Analysts to improve usability.`,
+
+        'Developed government applications using HTML/Slim, SCSS, Bootstrap, and jQuery/Vue within a Ruby on Rails environment with Webpack.',
+        'Ensured adherence to coding standards and extended applications as per project complexity and frameworks.',
+        'Creation of a UI frontend library used across the organization, promoting consistency and reusability in design and development.',
+        'Worked closely with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers, and Business Analysts to enhance usability.',
       ],
     },
     {
@@ -108,9 +121,12 @@ const data = {
       company: 'Plant Therapy',
       position: 'Frontend Developer',
       description: [
-        `Build prototypes and landing pages with ${tool.pug}, ${tool.sass}, ${tool.jQuery} and ${tool.miva}.`,
-        `Maintain and optimize the website.`,
-        `Create wireframes and users flow with ${tool.illustrator}.`,
+        // `Build prototypes and landing pages with ${tool.pug}, ${tool.sass}, ${tool.jQuery} and ${tool.miva}.`,
+        // `Maintain and optimize the website.`,
+        // `Create wireframes and users flow with ${tool.illustrator}.`,
+        'Created prototypes and landing pages using Pug, SCSS, jQuery, and Miva.',
+        'Optimized and maintained website performance.',
+        'Designed wireframes and user flows using Adobe Illustrator.',
       ],
     },
     {
@@ -118,8 +134,11 @@ const data = {
       company: 'Pixel Perfect Tree',
       position: 'Frontend Developer',
       description: [
-        `Design and develop applications with ${tool.haml}, ${tool.sass}, ${tool.bootstrap}, ${tool.jQuery}/${tool.react} on a ${tool.rails} environment with ${tool.webpack}.`,
-        `Collaborate with Full Stack Developers and Project Managers to improve usability.`,
+        // `Design and develop applications with ${tool.haml}, ${tool.sass}, ${tool.bootstrap}, ${tool.jQuery}/${tool.react} on a ${tool.rails} environment with ${tool.webpack}.`,
+        // `Collaborate with Full Stack Developers and Project Managers to improve usability.`,
+
+        'Designed and developed applications with Haml, SCSS, Bootstrap, and jQuery/React on Ruby on Rails with Webpack.',
+        'Collaborated with Full Stack Developers and Project Managers to improve usability.'
       ],
     },
     {
@@ -127,11 +146,15 @@ const data = {
       company: 'Capital',
       position: 'Frontend Developer',
       description: [
-        `Build applications with ${tool.pug}, ${tool.sass}, ${tool.jQuery} on a ${tool.php} environment with ${tool.grunt}.`,
-        `Create wireframes and users flow with ${tool.illustrator}.`,
-        `Collaborate with Backend Developers, Designers and Project Managers to improve usability.`,
-        `Animate ad banners for websites with ${tool.flash}.`,
-        `Create motion graphics for social media with ${tool.flash}.`,
+        // `Build applications with ${tool.pug}, ${tool.sass}, ${tool.jQuery} on a ${tool.php} environment with ${tool.grunt}.`,
+        // `Create wireframes and users flow with ${tool.illustrator}.`,
+        // `Collaborate with Backend Developers, Designers and Project Managers to improve usability.`,
+        // `Animate ad banners for websites with ${tool.flash}.`,
+        // `Create motion graphics for social media with ${tool.flash}.`,
+        'Developed applications with Pug, SCSS, and jQuery on PHP environment with GruntJS.',
+        'Created wireframes and user flows using Adobe Illustrator.',
+        'Collaborated with Backend Developers, Designers, and Project Managers to enhance usability.',
+        'Animated ad banners and created motion graphics for social media using Adobe Flash.',
       ],
     },
     {
@@ -139,36 +162,43 @@ const data = {
       company: 'Avante Group',
       position: 'Frontend Developer',
       description: [
-        `Design and build applications with ${tool.html}, ${tool.css}, ${tool.jQuery} on a ${tool.php} environment.`,
+        // `Design and build applications with ${tool.html}, ${tool.css}, ${tool.jQuery} on a ${tool.php} environment.`,
+        'Designed and built applications using HTML, CSS, and jQuery within a PHP environment.',
+        'Optimized frontend performance to improve application speed and user experience.',
       ],
     },
-    {
-      date: '2013/05/01',
-      company: 'Several Solutions',
-      position: 'Graphic designer/Web Designer',
-      description: [
-        `Retouch pictures with ${tool.photoshop}`,
-        `Design yearbooks with ${tool.indesign} and ${tool.photoshop}`,
-        `Design applications UI with ${tool.illustrator}.`,
-        `Design social media assets with ${tool.illustrator}, ${tool.photoshop} and ${tool.indesign}.`,
-      ],
-    },
+    // {
+    //   date: '2013/05/01',
+    //   company: 'Several Solutions',
+    //   position: 'Graphic designer/Web Designer',
+    //   description: [
+    //     // `Retouch pictures with ${tool.photoshop}`,
+    //     // `Design yearbooks with ${tool.indesign} and ${tool.photoshop}`,
+    //     // `Design applications UI with ${tool.illustrator}.`,
+    //     // `Design social media assets with ${tool.illustrator}, ${tool.photoshop} and ${tool.indesign}.`,
+    //     'Retouched images and optimized visual assets using Adobe Photoshop.',
+    //     'Designed and produced yearbooks utilizing Adobe InDesign and Adobe Photoshop.',
+    //     'Created user interface designs for applications with Adobe Illustrator.',
+    //     'Developed social media assets, including graphics and layouts, using Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.',
+    //   ],
+    // },
     {
       date: '2009/09/01',
       company: 'ITLA',
       position: 'Asociates of Art, Multimedia',
       description: [
-        'Digital Illustration',
-        'Visual Communication',
-        'Bitmap Graphics',
-        'Vector Graphics',
-        'Desktop Publishing',
-        'Digital Video',
-        'Website Creation',
-        'Flash Animation with Action Script',
-        '3D Graphics & Animation',
-        'Digital Audio',
-        'Branding',
+        // 'Digital Illustration',
+        // 'Visual Communication',
+        // 'Bitmap Graphics',
+        // 'Vector Graphics',
+        // 'Desktop Publishing',
+        // 'Digital Video',
+        // 'Website Creation',
+        // 'Flash Animation with Action Script',
+        // '3D Graphics & Animation',
+        // 'Digital Audio',
+        // 'Branding',
+        'Specialized in Website Creation, Flash Animation with Action Script, Digital Illustration, Visual Communication, Bitmap Graphics, Vector Graphics, Desktop Publishing, and Digital Video.',
       ],
     },
   ],
@@ -227,15 +257,6 @@ class Resume extends HTMLElement {
         parent: experience,
       })
 
-      const time = createNode({
-        type: 'time',
-        parent: article,
-        text: exp.date.split('/')[0],
-        attrs: {
-          datetime: exp.date,
-        },
-      })
-
       const icono = createNode({
         type: 'nn-icono',
         parent: article,
@@ -254,6 +275,15 @@ class Resume extends HTMLElement {
         type: 'h4',
         parent: article,
         text: exp.position,
+      })
+
+      const time = createNode({
+        type: 'time',
+        parent: h3,
+        text: `(${exp.date.split('/')[0]})`,
+        attrs: {
+          datetime: exp.date,
+        },
       })
 
       const ul = createNode({
