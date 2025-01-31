@@ -10,12 +10,12 @@ const s2025 = [
     url: '2025/index',
     icon: 'user',
   },
-  // {
-  //   name: 'Portfolio',
-  //   url: '2025/portfolio',
-  //   icon: 'book',
-  //   hidden: true,
-  // },
+  {
+    name: 'Portfolio',
+    url: '2025/portfolio',
+    icon: 'book',
+    hidden: true,
+  },
 ]
 
 const sLOM = [

@@ -121,6 +121,10 @@ mr-app {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 /* -------------- layers */
 
 nn-ayuda, .tooltip { z-index: 3; }

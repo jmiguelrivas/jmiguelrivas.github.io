@@ -11,7 +11,7 @@ export const tool = {
   canvas: 'Canvas',
   svg: 'SVG',
 
-  css: 'CSS',
+  css: 'CSS/SCSS/UnoCSS',
   sass: 'SCSS',
   scss: 'SCSS',
   less: 'Less',
@@ -21,7 +21,7 @@ export const tool = {
   python: 'Python',
 
   javascript: 'Javascript',
-  vue: 'Vue',
+  vue: 'Vue2/Vue3',
   angular: 'Angular',
   react: 'React',
   svelte: 'Svelte',
@@ -30,6 +30,7 @@ export const tool = {
   json: 'JSON',
   typescript: 'TypeScript',
   vuex: 'Vuex',
+  vitest: 'Vitest',
   vueRouter: 'Vue Router',
   sizzle: 'Sizzle',
   lodash: 'Lodash',
