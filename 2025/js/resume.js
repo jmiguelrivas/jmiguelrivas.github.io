@@ -2,6 +2,8 @@ import { getPrefix, createNode } from '../../_global/js/global.js'
 import { tool } from './tools.js'
 
 const template = `
+  <h2>Resume</h2>
+
   <nn-caja padding="4" size="900">
     <header>
       <h1>Miguel Rivas</h1>
@@ -29,6 +31,7 @@ const data = {
     tool.javascript,
     tool.vue,
     tool.vitest,
+    tool.webComponents,
     tool.storybook,
     tool.git,
     // tool.pug,
@@ -94,7 +97,7 @@ const data = {
         // 'Developed tools to boost frontend development productivity and minimize friction.',
 
         'Developed elegant, responsive user interfaces utilizing modern frontend technologies, including Vue3 and UnoCSS, to deliver seamless user experiences.',
-        'Integrated RESTful APIs with frontend components, enabling efficient data communication and dynamic functionality.',
+        'Consuming a RESTful API with frontend components.',
         'Contributed to the creation of a UI frontend library used across the organization, promoting consistency and reusability in design and development.',
         'Performed comprehensive component testing and validation using Storybook and Vitest, achieving high reliability and consistency across features.',
         'Collaborated cross-functionally with Product Managers, UX Designers, and backend developers to simplify and enhance the user experience for non-technical audiences.',

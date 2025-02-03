@@ -1,20 +1,8 @@
 const s2025 = [
-  // {
-  //   name: 'Home',
-  //   url: '2025/index',
-  //   icon: 'home',
-  //   hidden: true,
-  // },
   {
-    name: 'Resume',
+    name: '2025',
     url: '2025/index',
     icon: 'user',
-  },
-  {
-    name: 'Portfolio',
-    url: '2025/portfolio',
-    icon: 'book',
-    hidden: true,
   },
 ]
 
