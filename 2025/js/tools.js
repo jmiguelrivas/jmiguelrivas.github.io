@@ -22,6 +22,8 @@ export const tool = {
 
   javascript: 'Javascript',
   vue: 'Vue2/Vue3',
+  vue2: 'Vue2',
+  vue3: 'Vue3',
   angular: 'Angular',
   react: 'React',
   svelte: 'Svelte',
@@ -48,6 +50,8 @@ export const tool = {
   tweenMax: 'TweenMax',
   redux: 'Redux',
   phaser: 'Phaser',
+
+  nodeModule: 'Node Module',
 
   gulp: 'Gulp',
   grunt: 'GruntJS',

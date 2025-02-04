@@ -3,7 +3,7 @@ import { tool } from './tools.js'
 
 const template = `
   <h2>Skills</h2>
-  <ul></ul>
+  <ul class="pill-container"></ul>
 `
 const data = {
   attrs: [],

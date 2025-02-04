@@ -204,6 +204,135 @@ mr-resume {
   }
 }
 
+nn-pilar.workarea {
+  details {
+    background-color: rgba(61, 61, 67, 0.2);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    dl,
+    ul,
+    blockquote {
+      margin: 0;
+    }
+
+    summary {
+      padding: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(71, 71, 107, 0.2);
+      }
+
+      +* {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  blockquote {
+    background-color: hsl(218 10% 22% / 1);
+    margin: 0;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding-inline-start: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pill-container {
+    padding: 0;
+    display: block;
+
+    li {
+      padding: 4px 12px;
+      background-color: var(--accent-color-2);
+      border-radius: 10px;
+      margin-right: .5rem;
+      color: #26220d;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: .5rem;
+      vertical-align: text-top;
+    }
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+}
+
+
 @media print {
 
   body,
