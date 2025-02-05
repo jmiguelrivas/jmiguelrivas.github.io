@@ -30,7 +30,6 @@ class Fila extends HTMLElement {
   updateAttr(attr) {
     this.removeCustomClass(attr.regex)
     const value = this.getAttribute(attr.name)
-    console.log(12, attr.name, value)
     attr && this.classList.add([attr.prefix, value].join('-'))
   }
 

@@ -66,7 +66,7 @@ const template = `
 
 <h3>3D Cube</h3>
 
-<p>The 3D Cube is a visualization tool designed to help designers better understand and manage the colors used in the application. By rendering colors in a 3D space, the cube provides an intuitive overview of color distribution and usage.</p>
+<p>The 3D Cube is a visualization tool created to help designers better understand and manage the colors used in the application. By rendering colors in a 3D space, the cube provides an intuitive overview of color distribution and usage.</p>
 
 <mr-cube></mr-cube>
 

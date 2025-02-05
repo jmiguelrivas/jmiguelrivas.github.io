@@ -2,7 +2,7 @@ import { getPrefix } from '../../_global/js/global.js'
 import * as THREE from '../../_global/modules/threejs/three.module.js'
 import { wikiColors } from '../../_global/js/wiki-colors.js'
 
-// import "../../_global/modules/OrbitControls.js"
+import { OrbitControls } from "../../_global/modules/OrbitControls.js"
 
 const template = `
   <div id="cube"></div>
@@ -20,6 +20,8 @@ const template = `
   </nn-fila>
 `
 
+const rad = Math.PI / 180;
+
 const data = {
   attrs: [],
   winHeight: undefined,
@@ -32,6 +34,13 @@ const data = {
   gridHelper: undefined,
   gridToggle: false,
   guidesToggle: true,
+
+  minPolarAngle: 0,
+  maxPolarAngle: 120 * rad,
+  minDistance: 120,
+  maxDistance: 500,
+
+  controls: undefined,
 }
 
 class Cube extends HTMLElement {
@@ -189,10 +198,10 @@ class Cube extends HTMLElement {
       1000
     )
     data.camera.position.z = 400
-    data.camera.position.y = 115
 
     data.scene = new THREE.Scene()
     data.scene.rotation.x = 100 / 1000
+    data.scene.position.y = -125
 
     this.createGuides()
     this.createCubes()
@@ -201,6 +210,15 @@ class Cube extends HTMLElement {
     this.resizeWindow()
     data.renderer.setAnimationLoop(this.animate)
     this.querySelector('#cube').appendChild(data.renderer.domElement)
+
+
+    data.controls = new OrbitControls(data.camera, data.renderer.domElement);
+
+    data.controls.minPolarAngle = data.minPolarAngle;
+    data.controls.maxPolarAngle = data.maxPolarAngle;
+
+    // data.controls.minDistance = data.minDistance;
+    data.controls.maxDistance = data.maxDistance;
 
     this.querySelector('#guides').addEventListener('click', () => {
       data.guidesToggle = !data.guidesToggle
