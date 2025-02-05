@@ -68,6 +68,8 @@ const template = `
 
 <p>The 3D Cube is a visualization tool designed to help designers better understand and manage the colors used in the application. By rendering colors in a 3D space, the cube provides an intuitive overview of color distribution and usage.</p>
 
+<mr-cube></mr-cube>
+
 <h4>Key Features:</h4>
 
 <ul>
@@ -76,8 +78,6 @@ const template = `
   <li>Offers an interactive preview to make color selection and refinement more efficient.</li>
   <li>This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.</li>
 </ul>
-
-<mr-cube></mr-cube>
 `
 const data = {
   attrs: [],
