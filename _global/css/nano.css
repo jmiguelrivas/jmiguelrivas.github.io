@@ -15,7 +15,7 @@ nn-fila {
     --gap: 0.50rem;
   }
 
-  &.gap-1 {
+  &.gap-3 {
     --gap: 75rem;
   }
 
@@ -377,9 +377,11 @@ nn-code {
   .nn-newline:before {
     content: "⤵";
   }
+
   .nn-space:before {
     content: "\2022";
   }
+
   .nn-tab:before {
     content: "→";
   }
@@ -398,22 +400,40 @@ nn-code {
     padding: 0;
   }
 
-  .nn-reserved { color: #88c8ff; }
-  .nn-boolean { color: #88c8ff; }
-  .nn-number { color: #e6b033; }
-  .nn-type { color: #3f7fc3; }
-  .nn-parenthesis { color: #e76464; }
-  
+  .nn-reserved {
+    color: #88c8ff;
+  }
+
+  .nn-boolean {
+    color: #88c8ff;
+  }
+
+  .nn-number {
+    color: #e6b033;
+  }
+
+  .nn-type {
+    color: #3f7fc3;
+  }
+
+  .nn-parenthesis {
+    color: #e76464;
+  }
+
   .nn-string,
-  .nn-string * { color: #2edb35; }
-  
+  .nn-string * {
+    color: #2edb35;
+  }
+
   .nn-comment,
-  .nn-comment * { color: #666; }
-  
+  .nn-comment * {
+    color: #666;
+  }
+
   .nn-space,
   .nn-tab,
   .nn-newline {
-    color: rgba(255,255,255,0.1) !important;
+    color: rgba(255, 255, 255, 0.1) !important;
     padding-inline: 0.1rem;
   }
 
@@ -421,12 +441,96 @@ nn-code {
   .nn-boolean:hover,
   .nn-number:hover,
   .nn-type:hover {
-    background: rgba(237,199,0, 0.13);
-    
+    background: rgba(237, 199, 0, 0.13);
+
   }
 
   .nn-string:hover * {
     background: transparent;
     color: inherit;
+  }
+}
+
+.btn {
+  &.sunglow {
+    --color: hsl(47deg, 100%, 57%);
+  }
+
+  &.shamrock {
+    --color: hsl(149deg, 61%, 51%);
+  }
+
+  /* &.white { color: #fff; bk-color: #;}
+  &.silver { color: #; bk-color: #;}
+  &.royal-purple { color: #; bk-color: #;}
+  &.persian-red { color: #; bk-color: #;}
+  &.denim { color: #; bk-color: #;}
+  &.gold-tips { color: #; bk-color: #;}
+  &.cod-grey { color: #; bk-color: #;}
+  &.gravel { color: #; bk-color: #;}
+  &.emerald { color: #; bk-color: #;}
+  &.burn-orange { color: #; bk-color: #;}
+  &.razzmatazz { color: #; bk-color: #;}
+  &.desert { color: #; bk-color: #;}
+  &.charcoal { color: #; bk-color: #;}
+  &.golden-brown { color: #; bk-color: #;}
+  &.sepia { color: #; bk-color: #;}
+  &.alizarin { color: #; bk-color: #;}
+  &.rust { color: #; bk-color: #;}
+  &.blush { color: #; bk-color: #;}
+  &.fire-brick { color: #; bk-color: #;}
+  &.milk-punch { color: #; bk-color: #;}
+  &.yukon-gold { color: #; bk-color: #;}
+  &.green-pea { color: #; bk-color: #;}
+  &.laurel { color: #; bk-color: #;}
+  &.elf-green { color: #; bk-color: #;}
+  &.lake { color: #; bk-color: #;}
+  &.cobalt-blue { color: #; bk-color: #;}
+  &.mariner { color: #; bk-color: #;}
+  &.fuchsia { color: #; bk-color: #;}
+  &.blue-violet { color: #; bk-color: #;}
+  &.purple-heart { color: #; bk-color: #;} */
+
+  font-size: 9pt;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  transition-property: background-color, box-shadow, border, color;
+  transition-duration: 500;
+  transition-timing-function: ease;
+  border-radius: 0;
+  min-height: 35px;
+  min-width: 35px;
+  width: 100%;
+  border-width: 0;
+
+  --color-70: color-mix(in srgb, black 70%, var(--color));
+  --color-10: color-mix(in srgb, black 15%, var(--color));
+  --color-20: color-mix(in srgb, black 30%, var(--color));
+
+  color: var(--color-70);
+  background-color: var(--color);
+  box-shadow: 0px 3px 0 var(--color-10);
+
+  &:active,
+  &.active,
+  &:hover {
+    background-color: var(--color-10);
+    box-shadow: 0px 3px 0 var(--color-20);
+  }
+
+  nn-icono {
+    pointer-events: none;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

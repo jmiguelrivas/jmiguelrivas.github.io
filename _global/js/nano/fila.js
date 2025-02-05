@@ -27,10 +27,11 @@ class Fila extends HTMLElement {
     )
   }
 
-  updateAttr(name, regex, prefix) {
-    this.removeCustomClass(regex)
-    const attr = this.getAttribute(name)
-    attr && this.classList.add([prefix, attr].join('-'))
+  updateAttr(attr) {
+    this.removeCustomClass(attr.regex)
+    const value = this.getAttribute(attr.name)
+    console.log(12, attr.name, value)
+    attr && this.classList.add([attr.prefix, value].join('-'))
   }
 
   connectedCallback() {

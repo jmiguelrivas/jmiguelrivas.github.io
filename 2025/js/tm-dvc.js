@@ -1,4 +1,5 @@
 import { getPrefix } from '../../_global/js/global.js'
+import { compressText } from '../../_global/js/nano/spirit.js'
 import { tool } from './tools.js'
 
 const tools = [
@@ -11,6 +12,42 @@ const tools = [
 ]
   .map(t => `<li>${t}</li>`)
   .join('')
+
+const vitest = `
+describe('DSNumberInput Unit Tests', () => {
+  let wrapper, el
+
+  beforeEach(() => {
+    wrapper = mount(DSNumberInput)
+
+    el = {
+      increaseBtn: wrapper.getByTestId('ds-number-input-increase-btn'),
+      decreaseBtn: wrapper.getByTestId('ds-number-input-decrease-btn'),
+      input: wrapper.getByTestId('ds-number-input-input').wrapperElement,
+    }
+
+    wrapper.setProps({
+      modelValue: ref(5),
+    })
+  })
+
+  test('should render component', () => {
+    expect(wrapper.exists()).toBe(true)
+  })
+
+  test('should increase the counter when the button is clicked', async () => {
+    await el.increaseBtn.trigger('click')
+    await nextTick()
+    expect(el.input.value).toBe('6')
+  })
+
+  test('should decrease the counter when the button is clicked', async () => {
+    await el.decreaseBtn.trigger('click')
+    await nextTick()
+    expect(el.input.value).toBe('4')
+  })
+})
+`
 
 const template = `
 <blockquote>
@@ -46,11 +83,13 @@ ${tools}
   <dd>Includes reusable logic and utility functions to reduce duplication and simplify development.</dd>
 </dl>
 
-<img src="" alt="storybook and vitest results">
-
 <h3>SpiritCode</h3>
 
 <p>This web component provides a visually appealing and interactive way to display code snippets for JavaScript, HTML, and CSS. Designed to enhance the standard code tag, it adds syntax highlighting with vibrant colors, making code easier to read and understand at a glance.</p>
+
+<nn-code>
+${compressText(vitest)}
+</nn-code>
 
 <h4>Key Features</h4>
 
@@ -58,8 +97,6 @@ ${tools}
   <li>Portability: Can be easily used within any web project, requiring minimal setup.</li>
   <li>Perfect for displaying code examples in documentation or tutorials.</li>
 </ul>
-
-<img src="" alt="preview of the component with some code">
 `
 const data = {
   attrs: [],

@@ -4,6 +4,22 @@ import { wikiColors } from '../../_global/js/wiki-colors.js'
 
 // import "../../_global/modules/OrbitControls.js"
 
+const template = `
+  <div id="cube"></div>
+  <nn-fila gap="2">
+    <nn-pilar>
+      <button role="button" class="btn shamrock" id="grid">
+        Toggle Grid
+      </button>
+    </nn-pilar>
+    <nn-pilar>
+      <button role="button" class="btn sunglow" id="guides">
+        Toggle Guides
+      </button>
+    </nn-pilar>
+  </nn-fila>
+`
+
 const data = {
   attrs: [],
   winHeight: undefined,
@@ -13,6 +29,9 @@ const data = {
   renderer: undefined,
   colors: Object.values(wikiColors),
   linesGroup: undefined,
+  gridHelper: undefined,
+  gridToggle: false,
+  guidesToggle: true,
 }
 
 class Cube extends HTMLElement {
@@ -134,8 +153,7 @@ class Cube extends HTMLElement {
 
     data.scene.add(data.linesGroup)
 
-    // const gridHelper = new THREE.GridHelper(255, 25)
-    // data.scene.add(gridHelper)
+    data.gridHelper = new THREE.GridHelper(255, 25)
   }
 
   createCubes() {
@@ -162,6 +180,8 @@ class Cube extends HTMLElement {
   }
 
   connectedCallback() {
+    this.innerHTML = template
+
     data.camera = new THREE.PerspectiveCamera(
       70,
       data.winWidth / data.winHeight,
@@ -180,7 +200,17 @@ class Cube extends HTMLElement {
     data.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     this.resizeWindow()
     data.renderer.setAnimationLoop(this.animate)
-    this.appendChild(data.renderer.domElement)
+    this.querySelector('#cube').appendChild(data.renderer.domElement)
+
+    this.querySelector('#guides').addEventListener('click', () => {
+      data.guidesToggle = !data.guidesToggle
+      data.guidesToggle ? data.scene.add(data.linesGroup) : data.scene.remove(data.linesGroup)
+    })
+
+    this.querySelector('#grid').addEventListener('click', () => {
+      data.gridToggle = !data.gridToggle
+      data.gridToggle ? data.scene.add(data.gridHelper) : data.scene.remove(data.gridHelper)
+    })
 
     window.addEventListener('resize', this.resizeWindow)
   }
