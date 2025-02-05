@@ -13,6 +13,31 @@ const tools = [
   .map(t => `<li>${t}</li>`)
   .join('')
 
+const features = [
+  [
+    'Reusable Vue 3 Components',
+    'A robust library of stylized components, ensuring a unified design system across all apps.',
+  ],
+  [
+    'Styling with UnoCSS',
+    'Lightweight and customizable utility-first CSS framework for seamless component styling.',
+  ],
+  [
+    'Unit Testing with Vitest',
+    'Ensures reliable and high-quality components through fast and modern testing capabilities.',
+  ],
+  [
+    'Documentation with Storybook',
+    'A fully integrated Storybook setup for visually showcasing and documenting components in isolation.',
+  ],
+  [
+    'Shared Composables and Utilities',
+    'Includes reusable logic and utility functions to reduce duplication and simplify development.',
+  ],
+]
+  .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
+  .join('')
+
 const vitest = `
 describe('DSNumberInput Unit Tests', () => {
   let wrapper, el
@@ -66,22 +91,9 @@ ${tools}
 
 <h4>Key Features</h4>
 
-<dl>
-  <dt>Reusable Vue 3 Components:</dt>
-  <dd>A robust library of stylized components, ensuring a unified design system across all apps.</dd>
-
-  <dt>Styling with UnoCSS:</dt>
-  <dd>Lightweight and customizable utility-first CSS framework for seamless component styling.</dd>
-
-  <dt>Unit Testing with Vitest:</dt>
-  <dd>Ensures reliable and high-quality components through fast and modern testing capabilities.</dd>
-
-  <dt>Documentation with Storybook:</dt>
-  <dd>A fully integrated Storybook setup for visually showcasing and documenting components in isolation.</dd>
-
-  <dt>Shared Composables and Utilities:</dt>
-  <dd>Includes reusable logic and utility functions to reduce duplication and simplify development.</dd>
-</dl>
+<ul>
+${features}
+</ul>
 
 <h3>SpiritCode</h3>
 
