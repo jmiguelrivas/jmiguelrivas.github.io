@@ -445,6 +445,8 @@ nn-pilar.workarea {
   }
 
   mr-cube {
+    background-color: #17161a;
+
     canvas {
       max-width: 100%;
     }

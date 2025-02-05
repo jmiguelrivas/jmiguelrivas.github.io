@@ -152,12 +152,10 @@ class Cube extends HTMLElement {
       })
       const mesh = new THREE.Mesh(geometry, material)
       mesh.position.x =
-        x * distanceBetweenCubes -
-        maxValue * distanceBetweenCubes * 0.5
+        x * distanceBetweenCubes - maxValue * distanceBetweenCubes * 0.5
       mesh.position.y = y * distanceBetweenCubes
       mesh.position.z =
-        z * distanceBetweenCubes -
-        maxValue * distanceBetweenCubes * 0.5
+        z * distanceBetweenCubes - maxValue * distanceBetweenCubes * 0.5
       mesh.name = value.spinalCase
       data.scene.add(mesh)
     }
@@ -179,7 +177,7 @@ class Cube extends HTMLElement {
     this.createGuides()
     this.createCubes()
 
-    data.renderer = new THREE.WebGLRenderer({ antialias: true })
+    data.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     this.resizeWindow()
     data.renderer.setAnimationLoop(this.animate)
     this.appendChild(data.renderer.domElement)
