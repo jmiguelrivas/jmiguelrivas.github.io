@@ -77,7 +77,7 @@ const template = `
   <li>This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.</li>
 </ul>
 
-<img src="" alt="preview of the 3D Cube">
+<mr-cube></mr-cube>
 `
 const data = {
   attrs: [],

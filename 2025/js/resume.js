@@ -2,8 +2,6 @@ import { getPrefix, createNode } from '../../_global/js/global.js'
 import { tool } from './tools.js'
 
 const template = `
-  <h2>Resume</h2>
-
   <nn-caja padding="4" size="900">
     <header>
       <h1>Miguel Rivas</h1>

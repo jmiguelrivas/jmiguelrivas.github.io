@@ -11,19 +11,21 @@
   </head>
   <body>
     <mr-app route="2025">
-      <nn-caja padding="4" size="900">
+      <header>
+        <mr-header></mr-header>
+      </header>
 
-        <header>
-          <mr-palumba direction="right"></mr-palumba>
-          <mr-palumba direction="left"></mr-palumba>
-        </header>
-        
-        <mr-skills>
-        </mr-skills>
-        
-        <section>
+      <section>
+        <mr-skills></mr-skills>
+      </section>
+
+      <section>
+        <nn-caja
+          padding="4"
+          size="900"
+        >
           <h2>Portfolio</h2>
-          
+
           <div class="accordion">
             <details>
               <summary>TeamUp / Provider App</summary>
@@ -39,26 +41,32 @@
               <summary>TeamUp / DaysmartVueComponents</summary>
               <mr-tm-dvc></mr-tm-dvc>
             </details>
-            
+
             <details>
               <summary>Enovational / Formability</summary>
               <mr-formability></mr-formability>
             </details>
 
             <details>
-              <summary>Enovational / Popkern</summary> 
+              <summary>Enovational / Popkern</summary>
               <mr-popkern></mr-popkern>
             </details>
-
           </div>
-        </section>
+        </nn-caja>
+      </section>
 
-        <mr-resume>
-        </mr-resume>
-          
-        <footer></footer>
+      <section>
+        <nn-caja
+          padding="4"
+          size="900"
+        >
+          <h2>Resume</h2>
 
-      </nn-caja>
+          <mr-resume> </mr-resume>
+        </nn-caja>
+      </section>
+
+      <footer></footer>
     </mr-app>
   </body>
 </html>
