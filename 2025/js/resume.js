@@ -8,7 +8,7 @@ const template = `
       <p>Frontend Developer</p>
     </header>
     <nn-fila>
-      <nn-pilar size="35%" class="skills">
+      <nn-pilar size="30%" class="skills">
         <h2>Contact</h2>
         <address>
           <dl></dl>
@@ -16,7 +16,7 @@ const template = `
         <h2>Skills</h2>
         <ul></ul>
       </nn-pilar>
-      <nn-pilar size="65%" class="experience">
+      <nn-pilar size="70%" class="experience">
         <h2>Experience</h2>
     </nn-fila>
   </nn-caja>
@@ -32,53 +32,26 @@ const data = {
     tool.webComponents,
     tool.storybook,
     tool.git,
-    // tool.pug,
-    // tool.slim,
-    // tool.haml,
-    // separator,
-    // separator,
-    // tool.vuex,
-    // tool.vueRouter,
-    // tool.svelte,
-    // tool.react,
-    // tool.redux,
-    // tool.angular,
-    // tool.jQuery,
-    // separator,
-    // separator,
-    // separator,
-    // tool.firebase,
-    // separator,
-    // tool.rails,
-    // separator,
-    // tool.grunt,
-    // tool.gulp,
-    // tool.webpack,
-    // separator,
-    // tool.bootstrap,
-    // separator,
-    // tool.figma,
-    // tool.photoshop,
-    // tool.gimp,
-    // tool.illustrator,
-    // tool.inkscape,
-    // tool.indesign,
-    // tool.scribus,
-    // tool.flash,
-    // tool.blender,
   ],
   contact: {
-    website: {
-      label: 'miguel-rivas.github.io',
-      url: 'https://miguel-rivas.github.io',
+    location: {
+      label: 'Spokane, WA',
+      url: 'https://www.google.com/maps/place/Spokane,+WA/@47.7080732,-117.6633178,10z',
     },
     email: {
       label: 'miguelrivas.kgym@simplelogin.fr',
       url: 'mailto:miguelrivas.kgym@simplelogin.fr',
     },
-    location: { label: 'Spokane, WA', url: 'Spokane, WA' },
     'cell-phone': { label: '202-983-0839', url: 'tel:2029830839' },
+    website: {
+      label: 'jmiguelrivas.github.io',
+      url: 'https://jmiguelrivas.github.io',
+    },
     github: { label: 'jmiguelrivas', url: 'https://github.com/jmiguelrivas' },
+    linkedin: {
+      label: 'jemiguelrivas',
+      url: 'https://www.linkedin.com/in/jemiguelrivas/',
+    },
   },
   experience: [
     {
@@ -120,6 +93,7 @@ const data = {
       date: '2017/07/01',
       company: 'Plant Therapy',
       position: 'Frontend Developer',
+      noPrint: true,
       description: [
         // `Build prototypes and landing pages with ${tool.pug}, ${tool.sass}, ${tool.jQuery} and ${tool.miva}.`,
         // `Maintain and optimize the website.`,
@@ -138,7 +112,7 @@ const data = {
         // `Collaborate with Full Stack Developers and Project Managers to improve usability.`,
 
         'Designed and developed applications with Haml, SCSS, Bootstrap, and jQuery/React on Ruby on Rails with Webpack.',
-        'Collaborated with Full Stack Developers and Project Managers to improve usability.'
+        'Collaborated with Full Stack Developers and Project Managers to improve usability.',
       ],
     },
     {
@@ -161,27 +135,29 @@ const data = {
       date: '2013/07/15',
       company: 'Avante Group',
       position: 'Frontend Developer',
+      noPrint: true,
       description: [
         // `Design and build applications with ${tool.html}, ${tool.css}, ${tool.jQuery} on a ${tool.php} environment.`,
         'Designed and built applications using HTML, CSS, and jQuery within a PHP environment.',
         'Optimized frontend performance to improve application speed and user experience.',
       ],
     },
-    // {
-    //   date: '2013/05/01',
-    //   company: 'Several Solutions',
-    //   position: 'Graphic designer/Web Designer',
-    //   description: [
-    //     // `Retouch pictures with ${tool.photoshop}`,
-    //     // `Design yearbooks with ${tool.indesign} and ${tool.photoshop}`,
-    //     // `Design applications UI with ${tool.illustrator}.`,
-    //     // `Design social media assets with ${tool.illustrator}, ${tool.photoshop} and ${tool.indesign}.`,
-    //     'Retouched images and optimized visual assets using Adobe Photoshop.',
-    //     'Designed and produced yearbooks utilizing Adobe InDesign and Adobe Photoshop.',
-    //     'Created user interface designs for applications with Adobe Illustrator.',
-    //     'Developed social media assets, including graphics and layouts, using Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.',
-    //   ],
-    // },
+    {
+      date: '2013/05/01',
+      company: 'Several Solutions',
+      position: 'Graphic designer/Web Designer',
+      noPrint: true,
+      description: [
+        // `Retouch pictures with ${tool.photoshop}`,
+        // `Design yearbooks with ${tool.indesign} and ${tool.photoshop}`,
+        // `Design applications UI with ${tool.illustrator}.`,
+        // `Design social media assets with ${tool.illustrator}, ${tool.photoshop} and ${tool.indesign}.`,
+        'Retouched images and optimized visual assets using Adobe Photoshop.',
+        'Designed and produced yearbooks utilizing Adobe InDesign and Adobe Photoshop.',
+        'Created user interface designs for applications with Adobe Illustrator.',
+        'Developed social media assets, including graphics and layouts, using Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.',
+      ],
+    },
     {
       date: '2009/09/01',
       company: 'ITLA',
@@ -255,6 +231,9 @@ class Resume extends HTMLElement {
       const article = createNode({
         type: 'article',
         parent: experience,
+        attrs: {
+          class: exp.noPrint ? 'no-print' : ''
+        }
       })
 
       const icono = createNode({

@@ -283,6 +283,18 @@ nn-caja {
   &.mw-900 {
     --max-width: 900px;
   }
+
+  &.mw-1000 {
+    --max-width: 1000px;
+  }
+
+  &.mw-1100 {
+    --max-width: 1100px;
+  }
+
+  &.mw-1200 {
+    --max-width: 1200px;
+  }
 }
 
 nn-desplazador {

@@ -239,7 +239,7 @@ class Cube extends HTMLElement {
   }
 
   resizeWindow() {
-    data.winWidth = Math.min(900, window.innerWidth)
+    data.winWidth = Math.min(1200, window.innerWidth)
     data.winHeight = data.winWidth * 0.75
     data.renderer.setSize(data.winWidth, data.winHeight)
     data.camera.aspect = data.winWidth / data.winHeight

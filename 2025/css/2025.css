@@ -1,78 +1,5 @@
 @import url("../../_global/css/main.css");
 
-mr-palumba {
-  display: block;
-
-  svg {
-    width: 400px;
-    margin: auto;
-    display: block;
-    transform: translate(25px, 30px);
-  }
-
-  .eyes {
-    clip-path: path('M 23 5 L 55 5 L 55 15 L 23 15 Z');
-  }
-
-  .eye-left,
-  .eye-right {
-    transition: transform ease 200ms;
-  }
-
-  &.mr-left {
-    .eye-right {
-      transform: translate(71px, 49px);
-    }
-
-    .eye-left {
-      transform: translate(40px, 49px);
-    }
-
-    .peak {
-      .base {
-        clip-path: path('M 9 4 C 11 2 18 4 14 9 C 5 10 6 12 0 14 C 2 7 4 7 9 4 Z');
-      }
-    }
-  }
-
-  .center {
-    .eye-right {
-      transform: translate(81px, 49px);
-    }
-
-    .eye-left {
-      transform: translate(65px, 49px);
-    }
-
-    .peak {
-      transform: translate(16px, 4px);
-
-      .base {
-        clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
-      }
-    }
-  }
-
-  &.mr-right {
-    .eye-right {
-      transform: translate(100px, 49px);
-    }
-
-    .eye-left {
-      transform: translate(74px, 49px);
-    }
-
-    .peak {
-      transform: translate(31px, 0px);
-
-      .base {
-        transform: translateX(11px);
-        clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
-      }
-    }
-  }
-}
-
 nn-pilar.workarea {
   details {
     background-color: rgba(61, 61, 67, 0.2);
@@ -215,12 +142,14 @@ nn-pilar.workarea {
   }
 
   section {
-    padding: 2rem 0;
+    >nn-caja>h2 {
+      margin: 0 0 2rem;
+    }
   }
 
   mr-header {
     display: flex;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 90px);
     min-height: 720px;
     flex-flow: column;
     align-items: center;
@@ -235,6 +164,7 @@ nn-pilar.workarea {
     justify-content: center;
     position: relative;
     padding: 5rem 1rem;
+    margin: 70px 0;
 
     &:before,
     &:after {
@@ -287,7 +217,7 @@ nn-pilar.workarea {
   mr-resume {
     nn-caja {
       box-shadow: 0 0 14px #000;
-      margin: 3rem 0;
+
       background-color: #fff;
 
       li,
@@ -376,6 +306,7 @@ nn-pilar.workarea {
         text-transform: uppercase;
         font-weight: 300;
         letter-spacing: 0;
+        margin-bottom: .5rem;
       }
 
       dt {
@@ -424,12 +355,7 @@ nn-pilar.workarea {
         time {
           font-weight: 300;
           letter-spacing: 2px;
-          /* position: absolute;
-          top: 3px;
-          left: -3.5rem; */
           display: inline-block;
-          /* width: 40px; */
-          /* text-align: right; */
           font-size: .75rem;
           text-transform: uppercase;
         }
@@ -451,6 +377,79 @@ nn-pilar.workarea {
       max-width: 100%;
     }
   }
+
+  mr-palumba {
+    display: block;
+
+    svg {
+      width: 400px;
+      margin: auto;
+      display: block;
+      transform: translate(25px, 30px);
+    }
+
+    .eyes {
+      clip-path: path('M 23 5 L 55 5 L 55 15 L 23 15 Z');
+    }
+
+    .eye-left,
+    .eye-right {
+      transition: transform ease 200ms;
+    }
+
+    &.mr-left {
+      .eye-right {
+        transform: translate(71px, 49px);
+      }
+
+      .eye-left {
+        transform: translate(40px, 49px);
+      }
+
+      .peak {
+        .base {
+          clip-path: path('M 9 4 C 11 2 18 4 14 9 C 5 10 6 12 0 14 C 2 7 4 7 9 4 Z');
+        }
+      }
+    }
+
+    .center {
+      .eye-right {
+        transform: translate(81px, 49px);
+      }
+
+      .eye-left {
+        transform: translate(65px, 49px);
+      }
+
+      .peak {
+        transform: translate(16px, 4px);
+
+        .base {
+          clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
+        }
+      }
+    }
+
+    &.mr-right {
+      .eye-right {
+        transform: translate(100px, 49px);
+      }
+
+      .eye-left {
+        transform: translate(74px, 49px);
+      }
+
+      .peak {
+        transform: translate(31px, 0px);
+
+        .base {
+          transform: translateX(11px);
+          clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
+        }
+      }
+    }
+  }
 }
 
 @keyframes waves {
@@ -464,6 +463,10 @@ nn-pilar.workarea {
 }
 
 @media print {
+
+  .no-print {
+    display: none !important;
+  }
 
   body,
   html,
@@ -487,45 +490,48 @@ nn-pilar.workarea {
         display: none;
       }
 
-      .workarea {
+      nn-pilar.workarea {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        width: 100%;
+        width: 100% !important;
         flex-basis: 100%;
-        max-width: 100%;
+        max-width: 100% !important;
         background-color: transparent;
 
-        nn-desplazador {
+
+        >nn-desplazador {
           overflow: auto;
           max-height: none;
 
-          nn-caja {
-            padding: 0 1rem;
-          }
-
-          nn-icono {
+          >header,
+          >section.skills,
+          >section.portfolio,
+          >section.resume>nn-caja>h2,
+          >footer {
             display: none;
           }
 
-          time {
-            position: static;
-          }
+          >section.resume {
+            >nn-caja {
+              padding: 0.25in;
+            }
 
-          h1 {
-            font-size: 1.75rem;
-          }
+            nn-caja,
+            mr-resume {
+              width: 100%;
+              display: block;
+              padding: 0;
+            }
 
-          /* h3,
-          header,
-          article:before,
-          li:empty {
-            border-color: #333 !important;
-          } */
+            nn-caja {
+              max-width: 100%;
+            }
 
-          header {
-            margin: 0 0 1rem;
+            mr-resume>nn-caja {
+              box-shadow: none;
+            }
           }
         }
       }
@@ -533,7 +539,7 @@ nn-pilar.workarea {
   }
 
   @page {
-    size: 8.5in 14in;
+    size: 8.5in 11in;
     margin: 5mm;
   }
 }

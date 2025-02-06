@@ -47,6 +47,7 @@ const template = `
   spinalCase: "${color.spinalCase}",
   titleName: "${color.titleCase}",
   pascalCase: "${color.pascalCase}",
+  camelCase: "${color.camelCase}",
   
   /* Color Properties */
   red: ${color.red},
