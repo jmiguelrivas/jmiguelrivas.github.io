@@ -300,6 +300,8 @@ nn-caja {
 nn-desplazador {
   --nn-track-color: hsl(0deg 0% 14%);
   --nn-thumb-color: hsl(0deg 0% 43%);
+  
+  scroll-behavior: smooth;
 
   overflow: auto;
   padding: 0;

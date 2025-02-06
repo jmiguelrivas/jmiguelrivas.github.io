@@ -1,8 +1,32 @@
 const s2025 = [
+  // {
+  //   name: '2025',
+  //   url: '2025/index',
+  //   icon: 'user',
+  // },
   {
-    name: '2025',
+    name: 'Header',
     url: '2025/index',
-    icon: 'user',
+    icon: 'home',
+    id: 'header',
+  },
+  {
+    name: 'Skills',
+    url: '2025/index',
+    icon: 'wrench',
+    id: 'skills',
+  },
+  {
+    name: 'Portfolio',
+    url: '2025/index',
+    icon: 'book',
+    id: 'portfolio',
+  },
+  {
+    name: 'Resume',
+    url: '2025/index',
+    icon: 'drivers-license',
+    id: 'resume',
   },
 ]
 
@@ -70,10 +94,10 @@ const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
 const routes = [
   s2025,
-  sLOM,
-  sNano,
+  // sLOM,
+  // sNano,
   // sFamily,
-  sDocs,
+  // sDocs,
 ]
   .map(r => {
     return [
@@ -95,7 +119,7 @@ const routes = [
       ? { separator: true, hidden: route.hidden }
       : {
           name: route.name,
-          url: `../${route.url}.html${queryString}`,
+          url: `../${route.url}.html${route?.id ? '#' + route.id : ''}${queryString}`,
           icon: route.icon,
           hidden: route.hidden,
         }
