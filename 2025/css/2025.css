@@ -147,6 +147,12 @@ nn-pilar.workarea {
     }
   }
 
+  .download-btn {
+    max-width: 300px;
+    margin: 2rem auto;
+    display: flex;
+  }
+
   mr-header {
     display: flex;
     height: calc(100vh - 90px);
@@ -449,6 +455,65 @@ nn-pilar.workarea {
         }
       }
     }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1c1c1e;
+    padding: 2rem;
+    gap: .5rem;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    p {
+      margin: 0;
+    }
+  
+    .heart {
+      position: relative;
+      display: inline-block;
+      transform: rotate(45deg);
+      margin-inline: .25rem;
+      animation: beating-heart .2s linear infinite alternate;
+  
+      &,
+      &:before,
+      &:after {
+        display: inline-block;
+        background-color: #d73333;
+        width: .5rem;
+        height: .5rem;
+      }
+  
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+  
+      &:before {
+        top: -50%;
+        left: 0;
+      }
+  
+      &:after {
+        top: 0;
+        left: -50%;
+      }
+    }
+  }
+
+}
+
+@keyframes beating-heart {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1.15);
   }
 }
 

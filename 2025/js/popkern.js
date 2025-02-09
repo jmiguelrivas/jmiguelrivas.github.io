@@ -8,6 +8,43 @@ const tools = [tool.vue2, tool.sass, tool.rails, tool.nodeModule]
   .map(t => `<li>${t}</li>`)
   .join('')
 
+const features = [
+  [
+    'Centralized Component Library',
+    'Provides reusable Vue components and styles to ensure a consistent look and feel across apps.',
+  ],
+  [
+    'Visual Documentation',
+    'Integrated as a Ruby Gem, Popkern offers built-in visual documentation to showcase and preview components, making it easier for developers and designers to collaborate.',
+  ],
+  [
+    'Node Module Distribution',
+    'All code is packaged into a Node module, ensuring easy integration and updates across projects.',
+  ],
+  [
+    'Color Database with Contrast Testing',
+    'Includes a robust color database that dynamically tests contrast ratios for accessibility across six different backgrounds (three for light mode and three for dark mode), ensuring compliance with WCAG standards and delivering an inclusive user experience.',
+  ],
+  [
+    'Serves as the backbone for unified design and development workflows, enhancing productivity and accessibility across the organization’s ecosystem.',
+  ],
+]
+  .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
+  .join('')
+
+const cubeFeatures = [
+  ['Enables designers to visualize the current color palette within the app.'],
+  ['Highlights unused colors to assist in defining new, balanced color sets.'],
+  [
+    'Offers an interactive preview to make color selection and refinement more efficient.',
+  ],
+  [
+    'This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.',
+  ],
+]
+  .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
+  .join('')
+
 const template = `
 <blockquote>
   Enovational is a data-driven web and app development company that span a wide spectrum of audiences, technologies, and platforms, from consumer facing mobile apps to large government and enterprise custom web applications.
@@ -24,11 +61,7 @@ const template = `
 <h4>Key Features</h4>
 
 <ul>
-  <li>Centralized Component Library: Provides reusable Vue components and styles to ensure a consistent look and feel across apps.</li>
-  <li>Visual Documentation: Integrated as a Ruby Gem, Popkern offers built-in visual documentation to showcase and preview components, making it easier for developers and designers to collaborate.</li>
-  <li>Node Module Distribution: All code is packaged into a Node module, ensuring easy integration and updates across projects.</li>
-  <li>Color Database with Contrast Testing: Includes a robust color database that dynamically tests contrast ratios for accessibility across six different backgrounds (three for light mode and three for dark mode), ensuring compliance with WCAG standards and delivering an inclusive user experience.</li>
-  <li>Serves as the backbone for unified design and development workflows, enhancing productivity and accessibility across the organization’s ecosystem.</li>
+${features}
 </ul>
 
 <h3>Color Database</h3>
@@ -74,11 +107,12 @@ const template = `
 <h4>Key Features:</h4>
 
 <ul>
-  <li>Enables designers to visualize the current color palette within the app.</li>
-  <li>Highlights unused colors to assist in defining new, balanced color sets.</li>
-  <li>Offers an interactive preview to make color selection and refinement more efficient.</li>
-  <li>This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.</li>
+  ${cubeFeatures}
 </ul>
+
+<h3>My Role</h3>
+
+<p>I created the node module and gem to actively maintained consistency across the organization's frontend and keep all the components visually documented.</p>
 `
 const data = {
   attrs: [],

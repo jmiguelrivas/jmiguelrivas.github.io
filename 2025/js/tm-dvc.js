@@ -13,6 +13,20 @@ const tools = [
   .map(t => `<li>${t}</li>`)
   .join('')
 
+  const contributions = [
+    'DSIcon',
+    'DSLineClamp',
+    'DSDateRangeInput',
+    'DSNumberInput',
+    'DSPersonComboboxInput',
+    'DSTimeInput',
+    'Time::FormKit',
+    'Checkbox::FormKit (select all implementation)',
+    'SpiritCode::WebComponent',
+  ]
+    .map(t => `<li>${t}</li>`)
+    .join('')
+
 const features = [
   [
     'Reusable Vue 3 Components',
@@ -108,6 +122,14 @@ ${compressText(vitest)}
 <ul>
   <li>Portability: Can be easily used within any web project, requiring minimal setup.</li>
   <li>Perfect for displaying code examples in documentation or tutorials.</li>
+</ul>
+
+<h3>My Role</h3>
+
+<p>Create/Migrate (from option API to composition API), test and document vue components and composables. Key contributions include:</p>
+
+<ul>
+  ${contributions}
 </ul>
 `
 const data = {

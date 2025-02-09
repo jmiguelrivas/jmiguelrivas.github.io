@@ -5,6 +5,15 @@ const tools = [tool.vue3, tool.unoCss, tool.storybook]
   .map(t => `<li>${t}</li>`)
   .join('')
 
+const contributions = [
+  'Payment list functionality',
+  'On-demand service implementation',
+  'Management profile forms',
+  'Schedule calendar integration',
+]
+  .map(t => `<li>${t}</li>`)
+  .join('')
+
 const features = [
   [
     'Personalized Profile Management',
@@ -44,20 +53,25 @@ const template = `
 </blockquote>
 
 <h3>Consumer App</h3>
+
 <ul class="pill-container">
   ${tools}
 </ul>
 
 <img src="./img/ondemand.png" alt="on-demand's index">
 
-<p>
-  Stay in control of your fitness journey with a powerful and intuitive app designed to simplify your experience. Whether you’re an individual member or managing a family’s fitness needs, this app offers everything you need to manage profiles, memberships, payments, and more—all in one place.
-</p>
-
 <h4>Key Features</h4>
 
 <ul>
   ${features}
+</ul>
+
+<h3>My Role</h3>
+
+<p>Implemented frontend features and integrated a RESTful API developed by the backend team. Key contributions include:</p>
+
+<ul>
+  ${contributions}
 </ul>
 `
 const data = {

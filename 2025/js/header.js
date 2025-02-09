@@ -4,9 +4,9 @@ import { tool } from './tools.js'
 const template = `
   <mr-palumba direction="left"></mr-palumba>
   <h1>
-    Hello!<br>
     I'm <strong>Miguel Rivas</strong><br>
-    a <em>Frontend Developer</em>
+    a <em>Frontend Developer</em><br>
+    <small>Living in Spokane, WA</small>.
   </h1>
 `
 const data = {

@@ -5,6 +5,16 @@ const tools = [tool.vue3, tool.unoCss, tool.storybook]
   .map(t => `<li>${t}</li>`)
   .join('')
 
+const contributions = [
+  'Instructor Hours Report',
+  'Pay Rates (creation, editing, listing, and reporting)',
+  'Penalty Management for No-Shows (creation, editing, listing, and reporting)',
+  'Advanced Calendar Management',
+  'Membership Management (creation, editing, sorting, listing, category sorting,and detailed membership view)',
+]
+  .map(t => `<li>${t}</li>`)
+  .join('')
+
 const template = `
 <blockquote>
   TeamUp is a fitness management software designed to empower service providers in franchises, studios, gyms, and boxes.
@@ -42,6 +52,14 @@ const template = `
   <dt>Penalty Management for No-Shows:</dt>
   <dd>Reduce missed appointments with automated penalties for members who fail to attend scheduled classes. Keep your schedule optimized and ensure accountability among members.</dd>
 </dl>
+
+<h3>My Role</h3>
+
+<p>Implemented frontend features and integrated a RESTful API developed by the backend team. Key contributions include:</p>
+
+<ul>
+  ${contributions}
+</ul>
 `
 const data = {
   attrs: [],

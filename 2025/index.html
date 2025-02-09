@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      .loading {
+        display: flex;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: #232a33;
+        transition: toplinear 200ms;
+        z-index: 10;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loading:before {
+        content: 'Loading...';
+        font-size: 1.5rem;
+      }
+
+      .loading.hide {
+        top: -100vh;
+      }
+    </style>
     <meta charset="utf-8" />
     <meta
       http-equiv="X-UA-Compatible"
@@ -15,7 +40,6 @@
       content="Miguel Rivas Portfolio"
     />
     <title>Miguel Rivas</title>
-
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -92,26 +116,32 @@
       property="og:image:height"
       content="630"
     />
-
-    <script
-      type="module"
-      src="./js/2025.js"
-    ></script>
     <link
       rel="stylesheet"
       href="./css/2025.css"
     />
+    <script
+      type="module"
+      src="./js/2025.js"
+    ></script>
+    <script>
+      window.addEventListener('load', () => {
+        document.querySelector('.loading').classList.add('hide')
+      })
+    </script>
   </head>
   <body>
+    <div class="loading"></div>
     <mr-app route="2025">
       <header id="header">
         <mr-header></mr-header>
       </header>
 
-      <section id="skills" class="skills">
-        <nn-caja padding="4">
-          <mr-skills></mr-skills>
-        </nn-caja>
+      <section
+        id="skills"
+        class="skills"
+      >
+        <mr-skills></mr-skills>
       </section>
 
       <section class="portfolio">
@@ -154,10 +184,19 @@
         <nn-caja padding="4">
           <h2 id="resume">Resume</h2>
           <mr-resume> </mr-resume>
+          <a
+            class="btn sunglow download-btn"
+            href="./docs/MiguelRivas_Resume_2025.pdf"
+            download
+            >Download Resume</a
+          >
         </nn-caja>
       </section>
 
-      <footer></footer>
+      <footer>
+        <p>Built with <span class="heart"></span> by Miguel Rivas</p>
+        <time datetime="2025/02/09">2025.02.09</time>
+      </footer>
     </mr-app>
   </body>
 </html>
