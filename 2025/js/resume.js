@@ -39,8 +39,8 @@ const data = {
       url: 'https://www.google.com/maps/place/Spokane,+WA/@47.7080732,-117.6633178,10z',
     },
     email: {
-      label: 'miguelrivas.kgym@simplelogin.fr',
-      url: 'mailto:miguelrivas.kgym@simplelogin.fr',
+      label: 'miguelrivas.kkqym@simplelogin.fr',
+      url: 'mailto:miguelrivas.kkqym@simplelogin.fr',
     },
     'cell-phone': { label: '202-983-0839', url: 'tel:2029830839' },
     website: {
