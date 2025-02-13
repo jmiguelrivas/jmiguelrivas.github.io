@@ -382,6 +382,10 @@ nn-pilar.workarea {
     canvas {
       max-width: 100%;
     }
+
+    .btn {
+      width: 100%;
+    }
   }
 
   mr-palumba {
@@ -469,6 +473,10 @@ nn-pilar.workarea {
 
     p {
       margin: 0;
+    }
+
+    a {
+      color: var(--accent-color);
     }
   
     .heart {

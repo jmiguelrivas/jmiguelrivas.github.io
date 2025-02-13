@@ -8,6 +8,7 @@ const template = `
     a <em>Frontend Developer</em><br>
     <small>Living in Spokane, WA</small>.
   </h1>
+  <a class="btn sunglow" href="https://github.com/jmiguelrivas/jmiguelrivas.github.io/blob/main/README.md" target="_blank">Learn more about the research behind this website</a>
 `
 const data = {
   attrs: [],

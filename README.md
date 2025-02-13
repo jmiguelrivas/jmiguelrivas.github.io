@@ -1,11 +1,6 @@
-# How to Run
+# Portfolio 2025
 
-To run Brave while bypassing CORS restrictions:
-```bash
-brave-browser --args --user-data-dir="$HOME/brave-dev-data" --disable-web-security "file:///home/beemo/projects/miguel-rivas.github.io/2025/index.html"
-```
-
-## 2025
+## Experiments / First Draft
 
 This project aims to push the following boundaries:
 
@@ -142,3 +137,10 @@ This approach could allow for better adaptability to different regions while mai
 ---
 
 This project embraces open-source principles, multilingual integration, and the innovative use of CSS and writing systems to push the boundaries of web development.
+
+## How to run this project
+
+To run Brave while bypassing CORS restrictions:
+```bash
+brave-browser --args --user-data-dir="$HOME/brave-dev-data" --disable-web-security "file:///home/beemo/projects/miguel-rivas.github.io/2025/index.html"
+```
