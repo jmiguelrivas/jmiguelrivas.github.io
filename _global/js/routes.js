@@ -76,13 +76,13 @@ const sFamily = [
 ]
 
 const sDocs = [
+  // {
+  //   name: 'Docs',
+  //   url: 'docs/index',
+  //   icon: 'file-o',
+  // },
   {
-    name: 'Docs',
-    url: 'docs/index',
-    icon: 'file-o',
-  },
-  {
-    name: 'Bounce Range',
+    name: 'Bounce Range / Research',
     url: 'docs/bounce-range',
     icon: 'file-o',
   },
@@ -97,7 +97,7 @@ const routes = [
   // sLOM,
   // sNano,
   // sFamily,
-  // sDocs,
+  sDocs,
 ]
   .map(r => {
     return [

@@ -1,5 +1,21 @@
 import { getPrefix } from '../../_global/js/global.js'
-// import { compressText } from '../../_global/js/nano/spirit.js'
+import { compressText } from '../../_global/js/nano/spirit.js'
+
+const fn = compressText(`
+function limitBounce({ min, max, value } = {}) {
+  const degreesToRadians = Math.PI / 180
+  /*
+    I'm using the absolute value to prevent the sine function from oscillating into negative values:
+    [1, 0, -1, 0] -> [1, 0, 1, 0]
+   
+    Next, I multiply by the maximum value to expand the range:
+    [1, 0, 1, 0] -> [300, 0, 300, 0]
+   
+    Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+  */
+  return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
+}
+`)
 
 const data = {
   attrs: [],
@@ -8,9 +24,11 @@ const data = {
     <nn-caja padding="4">
       <h2>Bounce Range</h2>
 
+      <p>This experiment aims to simplify a range that oscillates between a minimum and maximum value using a loop that runs from 0 to infinity, leveraging trigonometric functions.</p>
+
       <dl>
         <dt>Max:</dt>
-        <dd>150</dd>
+        <dd>300</dd>
         <dt>Min:</dt>
         <dd>0</dd>
         <dt>Test Range:</dt>
@@ -21,7 +39,9 @@ const data = {
 
       <canvas heigh="300"></canvas>
 
-      <table/>
+      <nn-code>${fn}</nn-code>
+
+      <table>
         <thead>
           <tr>
             <th>Index</th>
@@ -40,7 +60,17 @@ const data = {
 }
 
 function limitBounce({ min, max, value } = {}) {
-  return (Math.abs(Math.sin(value * (Math.PI / 180))) * (max - min)) + min
+  const degreesToRadians = Math.PI / 180
+  /*
+    I'm using the absolute value to prevent the sine function from oscillating into negative values:
+    [1, 0, -1, 0] -> [1, 0, 1, 0]
+   
+    Next, I multiply by the maximum value to expand the range:
+    [1, 0, 1, 0] -> [300, 0, 300, 0]
+   
+    Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+  */
+  return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
 }
 
 class BounceRange extends HTMLElement {
@@ -54,7 +84,7 @@ class BounceRange extends HTMLElement {
     const tableBody = this.querySelector('tbody')
 
     const max = 150
-    const min = 1
+    const min = 0
     const increment = 90 / (max - 1) // so we can have 1024 steps in order to reach 90, otherwise it's going to be too fast
 
     tableBody.innerHTML = ''
@@ -89,7 +119,7 @@ class BounceRange extends HTMLElement {
 
   drawCanvas() {
     const xElement = document.getElementById('x-axis')
-    
+
     const canvas = document.querySelector('canvas')
     const ctx = canvas.getContext('2d')
 
@@ -98,7 +128,7 @@ class BounceRange extends HTMLElement {
 
     let counter = 0
     let x = 0
-    let min = canvas.width / 2
+    let min = 0 //canvas.width / 2
     let max = 300
 
     setInterval(() => {
