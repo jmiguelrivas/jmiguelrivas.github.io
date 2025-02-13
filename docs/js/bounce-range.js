@@ -9,12 +9,21 @@ function limitBounce({ min, max, value } = {}) {
     [1, 0, -1, 0] -> [1, 0, 1, 0]
    
     Next, I multiply by the maximum value to expand the range:
-    [1, 0, 1, 0] -> [300, 0, 300, 0]
+    [1, 0, 1, 0] -> [max, 0, max, 0]
    
     Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+    [max, 0, max, 0] -> [max, min, max, min]
   */
   return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
 }
+`)
+
+const counterCode = compressText(`
+const max = 300
+const min = 0
+/* 90 is the peak value for the sine function; beyond that, it begins to decrease. */
+const maxSineValue = 90
+const increment = maxSineValue / (max - 1)
 `)
 
 const data = {
@@ -41,6 +50,12 @@ const data = {
 
       <nn-code>${fn}</nn-code>
 
+      <p>I adjusted the counter to slow down how quickly it reaches the limits. Now, the number of steps required to reach the maximum value is equal to the maximum itself.</p>
+
+      <p>For example, if the maximum is 1200, it will take 1200 steps to reach the limit.</p>
+
+      <nn-code>${counterCode}</nn-code>
+
       <table>
         <thead>
           <tr>
@@ -66,9 +81,10 @@ function limitBounce({ min, max, value } = {}) {
     [1, 0, -1, 0] -> [1, 0, 1, 0]
    
     Next, I multiply by the maximum value to expand the range:
-    [1, 0, 1, 0] -> [300, 0, 300, 0]
+    [1, 0, 1, 0] -> [max, 0, max, 0]
    
     Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+    [max, 0, max, 0] -> [max, min, max, min]
   */
   return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
 }
