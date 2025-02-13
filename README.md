@@ -1,22 +1,25 @@
-# How to run
+# How to Run
 
-to run brave bypassing CORS restrictions:
+To run Brave while bypassing CORS restrictions:
 ```bash
 brave-browser --args --user-data-dir="$HOME/brave-dev-data" --disable-web-security "file:///home/beemo/projects/miguel-rivas.github.io/2025/index.html"
 ```
 
 ## 2025
 
-this project is trying to push the following boundaries
+This project aims to push the following boundaries:
 
-### As open source as the code can be
+### As Open Source as Possible
 
-`Vue`, `React` and `Angular` has been replace with `Web Components`, because of this you are gonna be able to see the full structure when you inspect the elements in the website.
+`Vue`, `React`, and `Angular` have been replaced with `Web Components`. Because of this, you will be able to see the full structure when inspecting elements on the website.
 
-### No preprocesor of any kind
-`Sass`, `Less`, `Jade/Pug`, `HAML` because there is also no local server (`Webpack`). `Sass` and `Less` are now just using `CSS Variables` and `CSS Nesting`.
+### No Preprocessor of Any Kind
 
-loop before with `Sass`:
+Technologies like `Sass`, `Less`, `Jade/Pug`, and `HAML` are not used, as there is also no local server (`Webpack`). Instead, `CSS Variables` and `CSS Nesting` replace `Sass` and `Less` functionalities.
+
+#### Looping in Sass vs. CSS
+
+**Sass Loop Example:**
 ```scss
 $css-width: (
   (1, 20),
@@ -35,7 +38,7 @@ $css-width: (
 nn-column {
   @each $value in $css-width {
     $class: fraction-2-class($value);
-    $size: "#{math.div(nth($value, 1), nth($value, 2)) * 100}%)";
+    $size: "#{math.div(nth($value, 1), nth($value, 2)) * 100}%";
 
     &.#{$class} {
       flex-basis: unquote($size);
@@ -45,8 +48,7 @@ nn-column {
 }
 ```
 
-and the `CSS output` would be something like this:
-
+**CSS Output Example:**
 ```css
 nn-column.n1d20 {
   flex-basis: 5%;
@@ -70,26 +72,26 @@ nn-column.n1d16 {
 }
 ```
 
-now with `CSS` the loop was rethinked:
-
+**Rewritten CSS Approach:**
 ```css
 nn-pilar {
   --size: 0;
   flex-basis: var(--size);
   max-width: var(--size);
 
-  /* I tried to avoid extra calc if the final value is an integer */
+  /* Avoid extra calculations when the final value is an integer */
   &.n1d20 { --size: 5%; }
   &.n1d19 { --size: calc(1/19*100%); }
   &.n1d18 { --size: calc(1/18*100%); }
   &.n1d17 { --size: calc(1/17*100%); }
   &.n1d16 { --size: calc(1/16*100%); }
   &.n1d15 { --size: calc(1/15*100%); }
+}
 ```
 
-### Integration of more languages in our every day
+### Integration of Multiple Languages
 
-Now you are gonna be able to see the inclusion of new dictionaries not just english into the every day components:
+This project introduces new dictionaries beyond just English for everyday components:
 
 ```
 nn-container [en] -> nn-caja [es]
@@ -97,39 +99,46 @@ nn-row [en] -> nn-fila [es]
 nn-column [en] -> nn-pilar [es]
 ```
 
-Ideally I would like to see more `Esperanto` in the future since it was created to be international, but at the moment I have found words in Esperanto to be either similar to what we have or more complicated to remember `class [en] -> klasso [eo]`
+Ideally, Esperanto could be included in the future since it was created to be an international language. However, many Esperanto words either resemble existing ones or are more complex to remember. For example:
+- `class` [English] -> `klasso` [Esperanto]
 
-These are the dictionaries I'm considering:
+**Dictionaries Considered:**
 - Portuguese
 - Galician
 - Catalan
 - Spanish
 - Italian
 - Esperanto
-- Romanina
+- Romanian
 - French
 
-I'm trying to avoid languages that are attached to a different alphabets like `Russian:Cyrillic` since the transliteration could change according to the language that is making the translation. for example, you are gonna find the singer `Жанна Фриске` in Spotify the following ways:
+Languages using different alphabets, like `Russian: Cyrillic`, are avoided due to transliteration inconsistencies. For example, the singer `Жанна Фриске` appears on Spotify in multiple ways:
 - Жанна Фриске
 - Zhanna Friske
 - Jeanna Friske
 - Janna Friske
 
-Also, trying to avoid special characters in the naming, things like:
-- Acute
-- Grave
-- Dieresis
-- Tilde
-- Circumflex
-- Anti-circumflex
-- Cedilla
-- Superior Ring
+Additionally, special characters such as:
+- Acute (á)
+- Grave (à)
+- Dieresis (ä)
+- Tilde (ñ)
+- Circumflex (ê)
+- Anti-circumflex (ȭ)
+- Cedilla (ç)
+- Superior Ring (å)
 
-At the moment that you remove one of these simbols you could change the meaning of the word. For Example `Papá` [Father] -> `Papa` [`Potato` or `Pope`]
-
-I feel that some inspiration came from `Emojicode` were they are experimenting with using images to represent code. For example in order to have a keyword `new` to create a new element you would use 🆕 and now you don't need to worry about using `new` as a name for a variable. Ideally in the future I would like something like this but with character that were designed and implemented for every day development use.
-
-I feel that it's pretty interesting how the are separating the writing language from the code and now people from all over the world they could explain the code in a different way. For example, you have a grid icon to represent and array. some people could say `array` others could say `grid` and others could go with `matrix` it would be adapted to the region where you are.
+are avoided, as removing them can change word meanings. Example:
+- `Papá` [Father] -> `Papa` [Potato or Pope]
 
 ### The integration of new icons
-something that I would like to see more is the used of complex writing systems (like Kanjis) as icons. For example instead of having a bird from `fontawesome` I would have something like `鸟` from chinese simplified (if you are close enough you are gonna be able to see the siloutte of the bird embedded in the character). but this is still just an idea it does require some training for people who are not familiar with these characters to see what they visually represent.
+
+Something that I would like to see more is the used of complex writing systems (like Kanjis) as icons.
+
+For example instead of having a bird from `fontawesome` I would have something like `鸟` from chinese simplified (if you are close enough you are gonna be able to see the siloutte of the bird embedded in the character). but this is still just an idea it does require some training for people who are not familiar with these characters to see what they visually represent.
+
+This approach could allow for better adaptability to different regions while maintaining universal comprehension.
+
+---
+
+This project embraces open-source principles, multilingual integration, and the innovative use of CSS and writing systems to push the boundaries of web development.
