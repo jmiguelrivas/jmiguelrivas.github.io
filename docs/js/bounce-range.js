@@ -83,7 +83,7 @@ class BounceRange extends HTMLElement {
 
     const tableBody = this.querySelector('tbody')
 
-    const max = 150
+    const max = 300
     const min = 0
     const increment = 90 / (max - 1) // so we can have 1024 steps in order to reach 90, otherwise it's going to be too fast
 
