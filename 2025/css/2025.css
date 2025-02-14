@@ -1,8 +1,65 @@
 @import url("../../_global/css/main.css");
 
 nn-pilar.workarea {
+  --bk-color: rgb(39 39 49);
+
+  dialog {
+    padding: 0;
+    max-width: 900px;
+    background-color: var(--bk-color);
+    z-index: 5;
+    color: var(--color-foreground);
+    border: 1px solid #515151;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    dl,
+    ul,
+    blockquote {
+      margin: 0;
+    }
+
+    .bird-icon-preview {
+      font-size: 10rem;
+      text-align: center;
+      background-color: #171922;
+      padding: 1rem;
+      color: #ffcf24;
+    }
+
+    em {
+      background-color: #1d2033;
+      padding: .2rem 0.3rem;
+      color: #ced33c;
+      font-style: normal;
+    }
+
+    footer {
+      padding: 1rem;
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nn-desplazador {
+      max-height: calc(100vh - 205px);
+
+      nn-caja {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+      }
+    }
+  }
+
   details {
-    background-color: rgba(61, 61, 67, 0.2);
+    background-color: var(--bk-color);
 
     h1,
     h2,
@@ -461,7 +518,7 @@ nn-pilar.workarea {
     }
   }
 
-  footer {
+  .page-footer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -478,14 +535,14 @@ nn-pilar.workarea {
     a {
       color: var(--accent-color);
     }
-  
+
     .heart {
       position: relative;
       display: inline-block;
       transform: rotate(45deg);
       margin-inline: .25rem;
       animation: beating-heart .2s linear infinite alternate;
-  
+
       &,
       &:before,
       &:after {
@@ -494,19 +551,19 @@ nn-pilar.workarea {
         width: .5rem;
         height: .5rem;
       }
-  
+
       &:before,
       &:after {
         content: "";
         position: absolute;
         border-radius: 50%;
       }
-  
+
       &:before {
         top: -50%;
         left: 0;
       }
-  
+
       &:after {
         top: 0;
         left: -50%;
@@ -520,6 +577,7 @@ nn-pilar.workarea {
   0% {
     transform: rotate(45deg) scale(1);
   }
+
   100% {
     transform: rotate(45deg) scale(1.15);
   }
