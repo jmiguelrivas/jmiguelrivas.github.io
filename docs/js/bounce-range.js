@@ -30,7 +30,7 @@ const data = {
   attrs: [],
   slot: undefined,
   template: `
-    <nn-caja padding="4">
+    <nn-caja padding="4" size="1200">
       <h2>Bounce Range</h2>
 
       <p>This experiment aims to simplify a range that oscillates between a minimum and maximum value using a loop that runs from 0 to infinity, leveraging trigonometric functions.</p>
@@ -60,10 +60,9 @@ const data = {
         <thead>
           <tr>
             <th>Index</th>
-            <th>Counter</th>
-            <th>Counter in Radians</th>
+            <th>Counter::Degrees</th>
+            <th>Counter::Radians</th>
             <th>sin( Counter )</th>
-            <th>[ sin( Counter ) ]</th>
             <th>Fn</th>
           </tr>
         </thead>
@@ -109,7 +108,7 @@ class BounceRange extends HTMLElement {
     for (let c = 0; index < 300; c += increment) {
       const counterRadians = c * (Math.PI / 180)
       const sine = Math.sin(counterRadians)
-      const sinePos = Math.abs(sine)
+      // const sinePos = Math.abs(sine)
       const fn = limitBounce({
         min: min,
         max: max,
@@ -122,7 +121,6 @@ class BounceRange extends HTMLElement {
 			<td>${c.toFixed(2)}</td>
 			<td>${counterRadians.toFixed(2)}</td>
 			<td>${sine.toFixed(2)}</td>
-			<td>${sinePos.toFixed(2)}</td>
 			<td>${fn.toFixed(2)}</td>
 		</tr>
 	`

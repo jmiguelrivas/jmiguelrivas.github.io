@@ -138,18 +138,7 @@ ${compressText(`class [English] -> klasso [Esperanto]`)}
 </nn-code>
 
 <p>
-  Languages using different alphabets, like <em>Russian: Cyrillic</em>, are avoided due to transliteration inconsistencies. For example, the singer <em>Жанна Фриске</em> appears on Spotify in multiple ways:
-</p>
-
-<ul>
-  <li>Жанна Фриске</li>
-  <li>Zhanna Friske</li>
-  <li>Jeanna Friske</li>
-  <li>Janna Friske</li>
-</ul>
-
-<p>
-  Additionally, special marks such as:
+  Languages using different alphabets, like <em>Russian: Cyrillic</em>, are avoided due to transliteration inconsistencies. Also, special marks such as:
 </p>
 
 <ul>
@@ -162,14 +151,6 @@ ${compressText(`class [English] -> klasso [Esperanto]`)}
   <li>Cedilla (ç)</li>
   <li>Superior Ring (å)</li>
 </ul>
-
-<p>
-  are avoided, as removing them can change word meanings. Example:
-</p>
-
-<nn-code>
-${compressText(`Papá [Father] -> Papa [Potato or Pope]`)}
-</nn-code>
 
 <h3>
   The integration of new icons (Pending)

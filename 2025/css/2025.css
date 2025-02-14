@@ -24,6 +24,19 @@ nn-pilar.workarea {
       margin: 0;
     }
 
+    h2 {
+      font-size: 30px;
+      text-align: center;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  
+    h4 {
+      font-size: 16px;
+    }
+
     .bird-icon-preview {
       font-size: 10rem;
       text-align: center;
@@ -53,7 +66,7 @@ nn-pilar.workarea {
       nn-caja {
         display: flex;
         flex-flow: column;
-        gap: 1rem;
+        gap: 1.5rem;
       }
     }
   }
