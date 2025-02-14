@@ -5,7 +5,7 @@ nn-pilar.workarea {
 
   dialog {
     padding: 0;
-    max-width: 900px;
+    width: min(900px, calc(100vw - 150px));
     background-color: var(--bk-color);
     z-index: 5;
     color: var(--color-foreground);
