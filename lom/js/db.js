@@ -920,6 +920,7 @@ class UserMestre extends User {
 }
 
 const friends = [
+  new User(['DKiingG7'], [11042], null, ['friend']),
   // new User(['Talisa'], [1310, 6103], null, ['friend']),
   // new User(['Nico'], [1310, 6103], null, ['friend']),
   // new User(['Kolombo'], [11169, 11174], null, ['friend']),
@@ -995,7 +996,7 @@ const topUsersAM = [
   new UserTop(['Algor'], [1111], 'E050F'),
   new UserTop(['(EMPTY)'], [1024], '40001'),
   new UserTop(['Rafiki'], [1226], 'E0C09'),
-  new UserTop(['Luxury'], [11169, 11179], '7080D'),
+  new UserTop(['Luxury'], [11179], '7080D'),
   new UserTop(['Cappn', 'duBBss', 'GaryProbably'], [1035], '21A00'),
   new UserTop(['Trippy'], [1108], 'A0F04'),
   new UserTop(['FuchsJäger'], [1254], '90F0D'),
@@ -1096,7 +1097,7 @@ const topUsersAM = [
   new UserTop(['captTeemo'], [1280], 'C0B04'),
   new UserTop(['9030c'], [1182], '9030C'),
 
-  new UserTop(['Ramos'], [1304], 'E050F'),
+  new UserTop(['Ramos'], [11180], 'E050F'),
   new UserTop(['O Haio'], [1254], '61304'),
   new UserTop(['Barbie'], [1282], 'B0401'),
   new UserTop(['JuraphicSark'], [1002], 'D0D03'),
