@@ -28,11 +28,11 @@ nn-pilar.workarea {
       font-size: 30px;
       text-align: center;
     }
-  
+
     h3 {
       font-size: 18px;
     }
-  
+
     h4 {
       font-size: 16px;
     }
@@ -473,7 +473,8 @@ nn-pilar.workarea {
     }
 
     .eye-left,
-    .eye-right {
+    .eye-right,
+    .peak {
       transition: transform ease 200ms;
     }
 
@@ -493,7 +494,7 @@ nn-pilar.workarea {
       }
     }
 
-    .center {
+    /* .center {
       .eye-right {
         transform: translate(81px, 49px);
       }
@@ -509,9 +510,10 @@ nn-pilar.workarea {
           clip-path: path('M 10 4 C 11 2 18 4 18 9 C 8 10 8 12 8 19 C 8 7 8 7 10 4 Z');
         }
       }
-    }
+    } */
 
-    &.mr-right {
+    &.mr-right,
+    &:hover {
       .eye-right {
         transform: translate(100px, 49px);
       }

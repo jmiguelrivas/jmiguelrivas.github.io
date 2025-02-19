@@ -160,7 +160,7 @@ class BounceRange extends HTMLElement {
       ctx.fillStyle = '#fff'
       ctx.arc(x, 150, 8, 0, 2 * Math.PI)
       ctx.fill()
-    }, 20)
+    }, 50)
   }
 }
 
