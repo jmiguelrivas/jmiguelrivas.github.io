@@ -2,7 +2,7 @@ import { getPrefix } from '../../_global/js/global.js'
 import * as THREE from '../../_global/modules/threejs/three.module.js'
 import { wikiColors } from '../../_global/js/wiki-colors.js'
 
-import { OrbitControls } from "../../_global/modules/OrbitControls.js"
+import { OrbitControls } from '../../_global/modules/OrbitControls.js'
 
 const template = `
   <div id="cube"></div>
@@ -20,7 +20,7 @@ const template = `
   </nn-fila>
 `
 
-const rad = Math.PI / 180;
+const rad = Math.PI / 180
 
 const data = {
   attrs: [],
@@ -209,42 +209,46 @@ class Cube extends HTMLElement {
 
     data.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     this.resizeWindow()
-    data.renderer.setAnimationLoop(this.animate)
     this.querySelector('#cube').appendChild(data.renderer.domElement)
 
+    data.controls = new OrbitControls(data.camera, data.renderer.domElement)
 
-    data.controls = new OrbitControls(data.camera, data.renderer.domElement);
-
-    data.controls.minPolarAngle = data.minPolarAngle;
-    data.controls.maxPolarAngle = data.maxPolarAngle;
+    data.controls.minPolarAngle = data.minPolarAngle
+    data.controls.maxPolarAngle = data.maxPolarAngle
 
     // data.controls.minDistance = data.minDistance;
-    data.controls.maxDistance = data.maxDistance;
+    data.controls.maxDistance = data.maxDistance
 
     this.querySelector('#guides').addEventListener('click', () => {
       data.guidesToggle = !data.guidesToggle
-      data.guidesToggle ? data.scene.add(data.linesGroup) : data.scene.remove(data.linesGroup)
+      data.guidesToggle
+        ? data.scene.add(data.linesGroup)
+        : data.scene.remove(data.linesGroup)
     })
 
     this.querySelector('#grid').addEventListener('click', () => {
       data.gridToggle = !data.gridToggle
-      data.gridToggle ? data.scene.add(data.gridHelper) : data.scene.remove(data.gridHelper)
+      data.gridToggle
+        ? data.scene.add(data.gridHelper)
+        : data.scene.remove(data.gridHelper)
     })
 
-    document.querySelector(".popkern-details").addEventListener("toggle", function() {
-      const isOpen = this.hasAttribute('open')
-      data.active = isOpen
-    })
+    document
+      .querySelector('.popkern-details')
+      .addEventListener('toggle', function () {
+        data.active = this.hasAttribute('open')
+
+        if (data.active) {
+          data.renderer.setAnimationLoop(time => {
+            data.scene.rotation.y = time / 5000
+            data.renderer.render(data.scene, data.camera)
+          })
+        } else {
+          data.renderer.setAnimationLoop(null)
+        }
+      })
 
     window.addEventListener('resize', this.resizeWindow)
-  }
-
-  
-  animate(time) {
-    if(data.active){
-      data.scene.rotation.y = time / 5000
-      data.renderer.render(data.scene, data.camera)
-    }
   }
 
   resizeWindow() {
