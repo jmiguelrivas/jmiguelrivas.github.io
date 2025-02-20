@@ -34,6 +34,7 @@ const data = {
   gridHelper: undefined,
   gridToggle: false,
   guidesToggle: true,
+  active: false,
 
   minPolarAngle: 0,
   maxPolarAngle: 120 * rad,
@@ -230,12 +231,20 @@ class Cube extends HTMLElement {
       data.gridToggle ? data.scene.add(data.gridHelper) : data.scene.remove(data.gridHelper)
     })
 
+    document.querySelector(".popkern-details").addEventListener("toggle", function() {
+      const isOpen = this.hasAttribute('open')
+      data.active = isOpen
+    })
+
     window.addEventListener('resize', this.resizeWindow)
   }
 
+  
   animate(time) {
-    data.scene.rotation.y = time / 5000
-    data.renderer.render(data.scene, data.camera)
+    if(data.active){
+      data.scene.rotation.y = time / 5000
+      data.renderer.render(data.scene, data.camera)
+    }
   }
 
   resizeWindow() {

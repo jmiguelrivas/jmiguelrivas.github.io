@@ -1,5 +1,9 @@
 @import url("../../_global/css/main.css");
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 nn-pilar.workarea {
   --bk-color: rgb(39 39 49);
 
@@ -73,6 +77,7 @@ nn-pilar.workarea {
 
   details {
     background-color: var(--bk-color);
+    overflow: hidden;
 
     h1,
     h2,
@@ -104,6 +109,17 @@ nn-pilar.workarea {
         padding: 1rem;
       }
     }
+  }
+
+  details::details-content {
+    block-size: 0;
+    transition-property: block-size, content-visibility;
+    transition-duration: 1000ms;
+    transition-behavior: allow-discrete;
+  }
+
+  details[open]::details-content {
+    block-size: auto;
   }
 
   dl {
