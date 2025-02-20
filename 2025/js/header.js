@@ -175,7 +175,6 @@ ${compressText(`class [English] -> klasso [Esperanto]`)}
 </p>
 `
 
-{/* <mr-palumba direction="right"></mr-palumba> */}
 const template = `
   <mr-palumba direction="left"></mr-palumba>
   <h1>
