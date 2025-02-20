@@ -35,7 +35,7 @@ function getCountryCode(str) {
       finalCode = 'ESPT'
     } else if (+code === 39 && +serverId > 90) {
       finalCode = 'TR'
-    } else if (+code === 30 && +serverId > 259) {
+    } else if (+code === 30 && +serverId === 260) {
       finalCode = 'MUSH'
     }
 
