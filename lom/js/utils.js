@@ -2,13 +2,20 @@ import { usersDB } from './db.js'
 import { countryCodes } from './country-codes.js'
 
 function getTooltip(item) {
-  const names = item?.users?.map(user => `<li><nn-icono class="star"></nn-icono> ${user.name}</li>`).join('')
+  const names = item?.users
+    ?.map(
+      user =>
+        `<li><nn-icono class="${user.id ? 'star' : 'user'}"></nn-icono> ${
+          user.name
+        }</li>`
+    )
+    .join('')
   const classes = [
     'group',
     ...new Set(item?.users?.map(user => user?.group).flat()),
   ]
 
-  return item?.users.length > 0
+  return item?.users?.length > 0
     ? {
         classes,
         msg: item?.users

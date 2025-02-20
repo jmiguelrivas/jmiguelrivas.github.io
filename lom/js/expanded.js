@@ -140,8 +140,14 @@ class Expanded extends HTMLElement {
     }
 
     localServers.forEach(serv => {
-      const key = serv.key
+      const key = { ...serv.key }
       const group = serv.values
+
+      key['users'] = [...key['users'], ...group.map(s => s.users)].flat()
+
+      // key['users'].push(...group.map(s => s.users).flat())]
+      // key['users'].filter(e => e.id)
+      // console.log(key.numVal, key)
 
       const tr = createNode({
         type: 'tr',

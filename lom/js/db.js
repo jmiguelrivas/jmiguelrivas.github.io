@@ -792,7 +792,7 @@ const merges = {
     1435: [1441],
     1447: [1449],
     1450: [1451, 1454],
-    1461: [1463, 1464, 1465],
+    // 1461: [1463, 1464, 1465],
     1473: [1474, 1478],
     1483: [1485],
     1488: [1489],
@@ -800,9 +800,9 @@ const merges = {
     1549: [1555, 1557, 1558, 1559],
     1550: [1553, 1554, 1556, 1560],
     1551: [1552, 11257, 11258, 11259, 11260],
-    1604: [1609, 1610, 11290, 11288],
+    // 1604: [1609, 1610, 11290, 11288],
     1606: [1608, 1612, 11285, 11286],
-    1607: [1605, 1611, 11284, 11287, 11289],
+    // 1607: [1605, 1611, 11284, 11287, 11289],
     1613: [1614, 1619, 11292, 11298],
     1615: [1617, 1621, 11293, 11295, 11297],
     1616: [1618, 1620, 11291, 11294, 11296],
@@ -912,9 +912,10 @@ class UserMestre extends User {
 
 const friends = [
   new User(['DKiingG7'], [11042], null, ['friend']),
+  new User(['AhkTaar'], [30001], null, ['friend']),
   // new User(['Talisa'], [1310, 6103], null, ['friend']),
   // new User(['Nico'], [1310, 6103], null, ['friend']),
-  // new User(['Kolombo'], [11169, 11174], null, ['friend']),
+  // new User(['Doruk'], [11174], null, ['friend']),
   // new User(['Koturno'], [1388, 11220, 11222], null, ['friend']),
   // new User(['Neo'], [11256], null, ['friend']),
   // new User(['Diego'], [11257], null, ['friend']),
@@ -947,7 +948,7 @@ function addIndex(user, index) {
 }
 
 const topUsersAM = [
-  new UserTop(['BorinWu'], [1021], '80F01'),
+  new UserTop(['BorinWu'], [1094], '80F01'),
   new UserTop(['concrete'], [1353], '4070B'),
   new UserTop(['Vegas'], [1026], 'A0B0F'),
   new UserTop(['Zeko'], [1034], 'A0B0F'),
