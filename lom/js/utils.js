@@ -1,7 +1,7 @@
 import { usersDB } from './db.js'
 import { countryCodes } from './country-codes.js'
 
-function getTooltip(item) {
+function getTooltip(item, group = 0) {
   const names = item?.users
     ?.map(
       user =>
@@ -19,7 +19,9 @@ function getTooltip(item) {
     ? {
         classes,
         msg: item?.users
-          ? `<mr-users label="${item.val}">${names}</mr-users>`
+          ? `<mr-users label="${[item.val, group ? `(${group})` : null].join(
+              ' '
+            )}">${names}</mr-users>`
           : '',
       }
     : { classes: [], msg: '' }

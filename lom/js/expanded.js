@@ -160,7 +160,9 @@ class Expanded extends HTMLElement {
         attrs: {
           class: [key.code, ...getTooltip(key).classes].join(' '),
         },
-        innerHTML: getTooltip(key).msg ? getTooltip(key).msg : key.val,
+        innerHTML: getTooltip(key).msg
+          ? getTooltip(key, group.length + 1).msg
+          : [key.val, `(${group.length + 1})`].join(' '),
       })
 
       const tdGroup = createNode({
