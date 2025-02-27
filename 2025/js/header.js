@@ -176,13 +176,48 @@ ${compressText(`class [English] -> klasso [Esperanto]`)}
 `
 
 const template = `
-  <mr-palumba direction="left"></mr-palumba>
-  <h1>
-    I'm <strong>Miguel Rivas</strong><br>
-    a <em>Frontend Developer</em><br>
-    <small>Living in Spokane, WA</small>.
-  </h1>
-  <button class="btn sunglow show-dialog-btn">Learn more about the research behind this website</button>
+  <div class="mountain-02"></div>
+  <div class="mountain-01"></div>
+
+  <div class="buildings-02">
+   <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <div class="buildings-01">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  
+  <div class="content">
+    <mr-palumba direction="left"></mr-palumba>
+    <div class="monument">
+      <div class="sign">
+        <h1>
+          I'm <strong>Miguel Rivas</strong><br>
+          a <em>Frontend Developer</em><br>
+          <small>Living in Spokane, WA</small>.
+        </h1>
+        <button class="btn sunglow show-dialog-btn">Research behind this website</button>
+      </div>
+    </div>
+  </div>
 
   <dialog>
     <nn-desplazador>
