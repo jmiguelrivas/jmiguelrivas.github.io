@@ -235,6 +235,7 @@ nn-pilar.workarea {
     background-image: url(../img/pattern_stars.svg);
     background-position: 0 0;
     animation: stars 40s linear infinite;
+    overflow: hidden;
   }
 
   mr-header {
@@ -270,7 +271,7 @@ nn-pilar.workarea {
         z-index: -1;
       }
     }
-    
+
     .sign {
       background-color: #172926;
       border: 6px #2f5751 solid;
