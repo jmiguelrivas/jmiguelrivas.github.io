@@ -251,47 +251,47 @@ nn-pilar.workarea {
       z-index: 3;
       max-width: 430px;
       margin: auto;
+    }
 
-      .monument {
-        height: 530px;
+    .monument {
+      height: 530px;
+      z-index: -1;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        background-color: #8b938e;
+        height: calc(100% + 24px);
+        width: 29px;
+        position: absolute;
+        bottom: 0;
+        right: calc(50% - 14px);
         z-index: -1;
-        position: relative;
+      }
+    }
+    
+    .sign {
+      background-color: #172926;
+      border: 6px #2f5751 solid;
+      border-radius: 15px;
+      padding: 2rem 1rem;
+    }
 
-        &:before {
-          content: "";
-          display: block;
-          background-color: #8b938e;
-          height: calc(100% + 24px);
-          width: 29px;
-          position: absolute;
-          bottom: 0;
-          right: calc(50% - 14px);
-          z-index: -1;
-        }
+    h1 {
+      text-align: center;
+      color: #bedaeb;
+      font-size: 20px;
 
-        .sign {
-          background-color: #172926;
-          border: 6px #2f5751 solid;
-          border-radius: 15px;
-          padding: 2rem 1rem;
-        }
+      strong {
+        font-size: 150%;
+        font-weight: bold;
+      }
 
-        h1 {
-          text-align: center;
-          color: #bedaeb;
-          font-size: 20px;
-
-          strong {
-            font-size: 150%;
-            font-weight: bold;
-          }
-
-          em {
-            font-style: normal;
-            font-size: 125%;
-            font-weight: bold;
-          }
-        }
+      em {
+        font-style: normal;
+        font-size: 125%;
+        font-weight: bold;
       }
     }
   }
