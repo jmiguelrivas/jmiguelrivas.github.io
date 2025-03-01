@@ -20,7 +20,9 @@ const template = `
 				<button id="me">ME</button>
 				<button id="tr">TR</button>
 				<button id="ru">RU</button>
-        <button id="top">TOP</button>
+				<div id="honor">MENTION</div>
+				<div id="mestre">ELITE</div>
+				<button id="top">TOP 100</button>
 			</div>
 		</div>
     <div id="merged-list" class="merged-table"></div>

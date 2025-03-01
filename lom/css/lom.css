@@ -13,6 +13,8 @@
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
   --top: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
+  --mestre: linear-gradient(131deg, rgb(71 138 212) 0%, rgb(23 55 88) 100%);
+  --mention: linear-gradient(131deg, rgb(226, 203, 160) 0%, rgb(155, 112, 73) 100%);
 
   h2 {
     font-size: 3rem;
@@ -120,11 +122,24 @@
           background: var(--ru)
         }
 
+        &.honor,
+        .honor {
+          &:not(.top):not(.mestre) {
+            background: var(--mention)
+          }
+        }
+
+        &.mestre,
+        .mestre {
+          &:not(.top) {
+            background: var(--mestre)
+          }
+        }
+
         &.top,
         .top {
           background: var(--top)
         }
-
       }
 
       td,
@@ -231,8 +246,27 @@
     gap: 2px;
 
     button {
+
+      &:hover,
+      &.active {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+
+    div {
+
+      &:hover,
+      &.active {
+        cursor: not-allowed;
+      }
+    }
+
+    button,
+    div {
       color: #fff;
       font-family: "Gill Sans", sans-serif;
+      font-size: 14px;
       flex-grow: 1;
       flex-wrap: wrap;
       padding: 1rem;
@@ -241,12 +275,7 @@
       opacity: 0.8;
       font-weight: bold;
       transition: opacity ease 200ms;
-
-      &:hover,
-      &.active {
-        opacity: 1;
-        cursor: pointer;
-      }
+      text-align: center;
 
       &#all {
         background: #777;
@@ -298,6 +327,19 @@
       }
 
       &#top {
+        background: var(--top)
+      }
+
+      &#honor {
+        background: var(--mention)
+      }
+
+      &#mestre {
+        background: var(--mestre)
+      }
+
+      &.top,
+      .top {
         background: var(--top)
       }
     }

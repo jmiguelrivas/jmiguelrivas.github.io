@@ -20,7 +20,9 @@ const template = `
 				<button id="me">ME</button>
 				<button id="tr">TR</button>
 				<button id="ru">RU</button>
-				<button id="top">TOP</button>
+				<div id="honor">MENTION</div>
+				<div id="mestre">ELITE</div>
+				<button id="top">TOP 100</button>
 			</div>
 		</div>
 
@@ -113,6 +115,12 @@ class Expanded extends HTMLElement {
       data.justTops = true
       this.generateTable(data.language, data.justTops)
     })
+
+    // document.getElementById('mestre').addEventListener('click', () => {
+    //   data.language = 'all'
+    //   data.justTops = true
+    //   this.generateTable(data.language, data.justTops)
+    // })
   }
 
   generateTable(filterBy) {

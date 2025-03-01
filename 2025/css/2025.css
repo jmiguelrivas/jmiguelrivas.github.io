@@ -382,7 +382,6 @@ mr-skills {
   position: relative;
   z-index: 3;
 
-  /* &:before, */
   &:after {
     content: "";
     display: block;
@@ -392,10 +391,6 @@ mr-skills {
     height: 70px;
     animation: infinite linear waves 7s;
   }
-
-  /* &:before {
-    top: -70px;
-  } */
 
   &:after {
     bottom: -70px;
