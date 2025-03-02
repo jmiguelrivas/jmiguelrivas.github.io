@@ -1,5 +1,5 @@
 import '../../_global/js/index.js'
-import { merges, rangesObj } from './db.js'
+import { merges } from './db.js'
 import { getCountryCode, getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
 import './users.js'
@@ -39,15 +39,30 @@ const template = `
 		</table>
   </nn-caja>
 `
+function removeDuplicates(matrix) {
+  return [...new Set(matrix)]
+}
+
+function flatObjects(matrix) {
+  const result = {}
+  matrix.forEach(s => {
+    Object.entries(s).forEach(([k, v]) => {
+      if (result?.[k]) {
+        result[k].push(...v)
+        result[k] = removeDuplicates(result[k])
+      } else {
+        result[k] = v
+      }
+    })
+  })
+  return result
+}
 
 const data = {
   attrs: [],
   language: 'all',
   justTops: false,
-  servers: {
-    ...Object.assign({}, ...Object.values(merges)),
-    ...rangesObj,
-  },
+  servers: flatObjects(Object.values(merges)),
 }
 
 const serversKeys = Object.keys(data.servers).map(i => +i)
@@ -150,12 +165,8 @@ class Expanded extends HTMLElement {
     localServers.forEach(serv => {
       const key = { ...serv.key }
       const group = serv.values
-
+      
       key['users'] = [...key['users'], ...group.map(s => s.users)].flat()
-
-      // key['users'].push(...group.map(s => s.users).flat())]
-      // key['users'].filter(e => e.id)
-      // console.log(key.numVal, key)
 
       const tr = createNode({
         type: 'tr',

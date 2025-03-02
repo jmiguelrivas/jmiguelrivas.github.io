@@ -990,25 +990,6 @@ const friends = [
   // new User(['Ipek'], [36264], null, ['friend']),
 ]
 
-function addIndex(user, index) {
-  let indexGroup
-  if (index <= 9) {
-    indexGroup = 'top-10'
-  } else if (index <= 49) {
-    indexGroup = 'top-50'
-  } else if (index <= 79) {
-    indexGroup = 'top-80'
-  } else if (index <= 99) {
-    indexGroup = 'top-100'
-  }
-
-  const result = user
-  result.index = index
-  result.name = [result.id, result.name].join(' :: ')
-
-  return result
-}
-
 const topUsersAM = [
   new UserTop(['BorinWu'], [1094], '80F01'),
   new UserTop(['concrete'], [1353], '4070B'),
@@ -1111,7 +1092,7 @@ const topUsersAM = [
   new UserTop(['Poseidon'], [1112], 'C090D'),
   new UserTop(['Wimm'], [1121], '31E0F'),
   new UserTop(['WaterFrog'], [1021], '9040C'),
-].map((user, index) => addIndex(user, index))
+]
 
 const reiMestre = [
   new UserMestre(['Doruk'], [11174], '40301'),
@@ -1119,7 +1100,7 @@ const reiMestre = [
   new UserMestre(['n17'], [11174], 'C0400'),
   new UserMestre(['n17 2'], [11174], '4040C'),
   new UserMestre(['KROONOS'], [11220], '50103'),
-  new UserMestre(['Mina'], [1493], '4060A'),
+  new UserMestre(['Mina'], [11245], '4060A'),
   // new UserMestre(['PöséjdoN'], [], ''),
   // new UserMestre(['PhunGuy'], [], ''),
   // new UserMestre(['GingerKing'], [], ''),
@@ -1164,7 +1145,7 @@ const reiMestre = [
   // new UserMestre(['佛系'], [], ''),
   // new UserMestre(['iLychéeé'], [], ''),
   // new UserMestre(['Snoodle'], [], ''),
-].map((user, index) => addIndex(user, index))
+]
 
 const honorMention = [
   new UserHonorMention(['Gogeta'], [11174], '2190B'),
@@ -1346,7 +1327,7 @@ const topUsersEU = [
   // new User(['Etozhetsve', 'NA_CWE'], [30098], 'C)B00'),
   new User(['F2P_Holoflux'], [33103], '50905'),
   new User(['GoblinSlayer'], [33061], '4010F'),
-].map((user, index) => addIndex(user, index))
+]
 
 const users = [
   ...friends,
@@ -1354,44 +1335,10 @@ const users = [
   ...topUsersEU,
   ...reiMestre,
   ...honorMention,
-]
+].map(user => {
+  const result = user
+  result.name = [result.id, result.name].filter(e => e).join(' :: ')
+  return result
+})
 
-const untouchedServers = {
-  // AMEN: [549,660],
-  // ES: [],
-  // PT: [],
-  // ESPT: [257,354],
-  // EUEN: [211,259],
-  // MUSH: [260,260],
-  // DE: [186,227],
-  // FR: [222,264],
-  // ME: [78,90],
-  // TR: [91,125],
-  // RU: [111,212],
-}
-
-const arrayRange = (start, stop, step) =>
-  Array.from(
-    { length: (stop - start) / step + 1 },
-    (value, index) => start + index * step
-  )
-
-const rangesArray = Object.entries(untouchedServers)
-  .map(([key, values]) => {
-    const server =
-      values?.[0] && values[1]
-        ? arrayRange(values[0], values[1], 1).map(
-            value => `${countryCodes[key]}${value < 100 ? `0${value}` : value}`
-          )
-        : undefined
-    return server && server
-  })
-  .filter(item => item)
-  .flat()
-
-const rangesObj = rangesArray.reduce(
-  (acc, value) => ({ ...acc, [+value]: [+value] }),
-  {}
-)
-
-export { merges, rangesArray, rangesObj, users as usersDB }
+export { merges, users as usersDB }
