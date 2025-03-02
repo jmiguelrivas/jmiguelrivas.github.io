@@ -4,7 +4,7 @@ export const elites = [
   new UserElite(['Doruk'], [11174], '40301'),
   new UserElite(['LimRabei'], [11174], '90709'),
   new UserElite(['n17'], [11174], 'C0400'),
-  new UserElite(['n17 2'], [11174], '4040C'),
+  new UserElite(['Thanos'], [11174], '4040C'),
   new UserElite(['KROONOS'], [11220], '50103'),
   new UserElite(['Mina'], [11245], '4060A'),
   // new UserElite(['PöséjdoN'], [], ''),
