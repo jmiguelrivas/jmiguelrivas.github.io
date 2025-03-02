@@ -1,30 +1,13 @@
 import '../../_global/js/index.js'
-import { merges } from './db.js'
+import { merges } from './db-merges.js'
 import { getCountryCode, getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
+import { filters } from './comp-filters.js'
 import './users.js'
 
 const template = `
   <nn-caja padding="4">
-		<div class="nav">
-			<div class="controllers">
-				<button id="all">ALL</button>
-				<button id="amen">AMEN</button>
-				<button id="es">ES</button>
-				<button id="espt">ESPT</button>
-				<button id="pt">PT</button>
-				<button id="euen">EUEN</button>
-				<button id="mush">MUSH</button>
-				<button id="de">DE</button>
-				<button id="fr">FR</button>
-				<button id="me">ME</button>
-				<button id="tr">TR</button>
-				<button id="ru">RU</button>
-				<div id="honor">MENTION</div>
-				<div id="mestre">ELITE</div>
-				<button id="top">TOP 100</button>
-			</div>
-		</div>
+		${filters}
 
 		<h2>Merged Servers</h2>
 
@@ -61,7 +44,7 @@ function flatObjects(matrix) {
 const data = {
   attrs: [],
   language: 'all',
-  justTops: false,
+  statusFilter: undefined,
   servers: flatObjects(Object.values(merges)),
 }
 
@@ -120,22 +103,28 @@ class Expanded extends HTMLElement {
     ].forEach(lang => {
       document.getElementById(lang).addEventListener('click', () => {
         data.language = lang
-        data.justTops = false
-        this.generateTable(data.language, data.justTops)
+        data.statusFilter = undefined
+        this.generateTable(data.language, data.statusFilter)
       })
+    })
+
+    document.getElementById('honor').addEventListener('click', () => {
+      data.language = 'all'
+      data.statusFilter = 'honor'
+      this.generateTable(data.language, data.statusFilter)
+    })
+
+    document.getElementById('elite').addEventListener('click', () => {
+      data.language = 'all'
+      data.statusFilter = 'elite'
+      this.generateTable(data.language, data.statusFilter)
     })
 
     document.getElementById('top').addEventListener('click', () => {
       data.language = 'all'
-      data.justTops = true
-      this.generateTable(data.language, data.justTops)
+      data.statusFilter = 'top'
+      this.generateTable(data.language, data.statusFilter)
     })
-
-    // document.getElementById('mestre').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.justTops = true
-    //   this.generateTable(data.language, data.justTops)
-    // })
   }
 
   generateTable(filterBy) {
@@ -150,12 +139,14 @@ class Expanded extends HTMLElement {
           server.key.code === filterBy ||
           server.values.some(val => val.code === filterBy)
       )
-    } else if (data.justTops) {
+    } else if (data.statusFilter) {
       localServers = uniqueServers.filter(
         server =>
-          server.key.users.some(user => user?.group?.includes('top')) ||
+          server.key.users.some(user =>
+            user?.group?.includes(data.statusFilter)
+          ) ||
           server.values.some(server =>
-            server.users.some(user => user?.group?.includes('top'))
+            server.users.some(user => user?.group?.includes(data.statusFilter))
           )
       )
     } else {
@@ -165,7 +156,7 @@ class Expanded extends HTMLElement {
     localServers.forEach(serv => {
       const key = { ...serv.key }
       const group = serv.values
-      
+
       key['users'] = [...key['users'], ...group.map(s => s.users)].flat()
 
       const tr = createNode({

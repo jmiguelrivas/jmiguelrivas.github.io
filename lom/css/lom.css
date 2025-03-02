@@ -13,7 +13,7 @@
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
   --top: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
-  --mestre: linear-gradient(131deg, rgb(71 138 212) 0%, rgb(23 55 88) 100%);
+  --elite: linear-gradient(131deg, rgb(71 138 212) 0%, rgb(23 55 88) 100%);
   --mention: linear-gradient(131deg, rgb(226, 203, 160) 0%, rgb(155, 112, 73) 100%);
 
   h2 {
@@ -124,15 +124,15 @@
 
         &.honor,
         .honor {
-          &:not(.top):not(.mestre) {
+          &:not(.top):not(.elite) {
             background: var(--mention)
           }
         }
 
-        &.mestre,
-        .mestre {
+        &.elite,
+        .elite {
           &:not(.top) {
-            background: var(--mestre)
+            background: var(--elite)
           }
         }
 
@@ -334,8 +334,8 @@
         background: var(--mention)
       }
 
-      &#mestre {
-        background: var(--mestre)
+      &#elite {
+        background: var(--elite)
       }
 
       &.top,
