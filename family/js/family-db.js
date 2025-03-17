@@ -98,6 +98,7 @@ const fn = {
   tuletta: 'Tuletta',
 
   villar: 'Villar',
+  veloz: 'Veloz',
 }
 
 export let globalIDcount = 0
@@ -3306,19 +3307,27 @@ export let familyDB = {
                             {
                               ...ID(),
                               group: 'pareja',
-                              name: [],
-                              familyName: [],
+                              name: ['Nolberta'],
+                              familyName: [fn.jimenez, fn.veloz],
                               children: [
                                 {
                                   ...ID(),
                                   name: ['Edily'],
-                                  familyName: [fn.perez, fn.null],
+                                  familyName: [fn.perez, fn.jimenez],
                                 },
                                 {
                                   ...ID(),
                                   name: ['Norbelis'],
-                                  familyName: [fn.perez, fn.null],
+                                  familyName: [fn.perez, fn.jimenez],
                                 },
+                              ],
+                            },
+                            {
+                              ...ID(),
+                              group: 'pareja',
+                              name: ['María'],
+                              familyName: [],
+                              children: [
                                 {
                                   ...ID(),
                                   name: ['Juan', 'Antonio'],
