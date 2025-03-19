@@ -245,6 +245,7 @@ nn-pilar.workarea {
     align-items: center;
     justify-content: center;
     position: relative;
+    display: block;
 
     .content {
       position: relative;
@@ -426,6 +427,7 @@ mr-skills {
 }
 
 section.resume mr-resume {
+  display: block;
   --border-color: #bbb;
 
   nn-caja {
@@ -582,6 +584,7 @@ section.resume mr-resume {
 }
 
 mr-cube {
+  display: block;
   background-color: #17161a;
 
   canvas {
