@@ -40,6 +40,7 @@ const fn = {
   gutierrez: 'Gutiérrez',
 
   hernandez: 'Hernández',
+  herrera: 'Herrera',
 
   infante: 'Infante',
 
@@ -1394,6 +1395,21 @@ export let familyDB = {
                                   ...ID(),
                                   name: ['Emely', 'Del Rosario'],
                                   familyName: [fn.molina, fn.minaya],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      group: 'pareja',
+                                      name: ['Amhed', 'Ayub'],
+                                      familyName: [fn.herrera],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ['Ian', 'Tufic'],
+                                          familyName: [fn.herrera, fn.molina],
+                                        },
+                                      ],
+                                    },
+                                  ],
                                 },
                                 {
                                   ...ID(),
