@@ -7,9 +7,9 @@ const template = `
       <nav></nav>
     </nn-pilar>
     <nn-pilar size="100% - 50px" class="workarea">
-      <main>
-        <nn-desplazador></nn-desplazador>
-      </main>
+      <nn-desplazador>
+        <main></main>
+      </nn-desplazador>
     </nn-pilar>
   </nn-fila>
 `
@@ -114,7 +114,7 @@ class App extends HTMLElement {
   }
 
   insertSlot(slot) {
-    const caja = this.querySelector('.workarea > main > nn-desplazador')
+    const caja = this.querySelector('.workarea > nn-desplazador > main')
     caja.innerHTML = slot
   }
 
