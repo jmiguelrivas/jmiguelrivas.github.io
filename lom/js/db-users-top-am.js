@@ -105,4 +105,5 @@ export const topAM = [
   new UserTop(['Ramos'], [11180], 'E050F'),
   new UserTop(['NiiLoC'], [1488], 'A0F06'),
   new UserTop(['JuraphicSark'], [1002], 'D0D03'),
+  new UserTop(['Luxury'], [11179], '7080D'),
 ]

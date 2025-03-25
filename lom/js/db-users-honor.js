@@ -1,7 +1,10 @@
 import { UserHonorMention } from './classes.js'
 
 const AM = [
-  new UserHonorMention(['Gogeta'], [11174], '2190B'),
+  new UserHonorMention(['n17'], [11178], 'C0400'),
+  new UserHonorMention(['Gogeta'], [11178], '2190B'),
+
+
   new UserHonorMention(['MadHatterVII'], [1321], '60306'),
   new UserHonorMention(['Raven'], [1019], 'F0002'),
   new UserHonorMention(['JHotTea'], [1021], '70305'),
@@ -62,7 +65,7 @@ const AM = [
   new UserHonorMention(['Sol'], [1304], '90807'),
   new UserHonorMention(['YodaNBeer'], [1386], '60A03'),
   new UserHonorMention(['Yasama'], [6119], 'C0603'),
-  new UserHonorMention(['Luxury'], [11179], '7080D'),
+  
   new UserHonorMention(['Enel'], [1302], '80107'),
   new UserHonorMention(['Furybound'], [1388], 'C010A'),
   // new UserHonorMention(['Matty', 'Thing1'], [1218], '11F0B'),

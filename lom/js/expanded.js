@@ -157,7 +157,7 @@ class Expanded extends HTMLElement {
       const key = { ...serv.key }
       const group = serv.values
 
-      key['users'] = [...key['users'], ...group.map(s => s.users)].flat()
+      // key['users'] = [...key['users'], ...group.map(s => s.users)].flat()
 
       const tr = createNode({
         type: 'tr',
