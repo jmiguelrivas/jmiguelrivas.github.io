@@ -1,23 +1,35 @@
 import { UserElite } from './classes.js'
 
 export const elites = [
-  new UserElite(['Doruk'], [11174], '40301'),
-  new UserElite(['LimRabei'], [11174], '90709'),
-  new UserElite(['kirito'], [11174], 'C080F'),
 
-  new UserElite(['Thanos'], [11178], '4040C'),
-  new UserElite(['Mutiris'], [11178], '40501'),
-  
   new UserElite(['ERROR404'], [11169], 'A0107'),
   new UserElite(['Virus'], [11169], 'C0508'),
 
   new UserElite(['Luffy'], [11169], '8010A'),
   new UserElite(['Savage'], [11169], 'C0800'),
   new UserElite(['Skull'], [11169], '11F08'),
-  new UserElite(['BabaYaga'], [11169], 'E0F0B'),
+
+  new UserElite(['BabaYaga'], [11173], 'E0F0B'),
+  new UserElite(['Benimaru'], [11173], '81302'),
+  
+  new UserElite(['Doruk'], [11174], '40301'),
+  new UserElite(['LimRabei'], [11174], '90709'),
+  new UserElite(['kirito'], [11174], 'C080F'),
+  new UserElite(['Fenix'], [11174], '31003'),
+  new UserElite(['Ummabel'], [11174], '8090b'),
+  new UserElite(['Hakan'], [11174], '4010F'),
+  new UserElite(['Evos Phoenix'], [11174], '7150F'),
+
+  new UserElite(['Toddynho'], [11176], '40300'),
+  new UserElite(['(EMPTY)'], [11176], 'B0D03'),
+
+  new UserElite(['Thanos'], [11178], '4040C'),
+  new UserElite(['Mutiris'], [11178], '40501'),
   
   new UserElite(['KROONOS'], [11220], '50103'),
+
   new UserElite(['Mina'], [11245], '4060A'),
+  
   // new UserElite(['PöséjdoN'], [], ''),
   // new UserElite(['PhunGuy'], [], ''),
   // new UserElite(['GingerKing'], [], ''),
