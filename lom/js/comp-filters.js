@@ -13,9 +13,10 @@ export const filters = `
     <button id="me">ME</button>
     <button id="tr">TR</button>
     <button id="ru">RU</button>
-    <button id="honor">HONOR</button>
+    <button id="master">MASTER</button>
     <button id="elite">ELITE</button>
     <button id="top">TOP 100</button>
-  </div>
-</div>
-`
+    </div>
+    </div>
+    `
+  // <button id="honor">HONOR</button>

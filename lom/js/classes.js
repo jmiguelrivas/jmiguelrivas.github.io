@@ -27,4 +27,11 @@ class UserElite extends User {
   }
 }
 
-export { User, UserHonorMention, UserElite, UserTop }
+class UserMaster extends User {
+  constructor(name, server, id) {
+    super(name, server, id)
+    this.group = ['master']
+  }
+}
+
+export { User, UserHonorMention, UserElite, UserTop, UserMaster }

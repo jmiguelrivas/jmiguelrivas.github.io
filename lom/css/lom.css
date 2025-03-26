@@ -12,9 +12,16 @@
   --me: hsl(270deg 55% 40%);
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
+  
+  /* --master: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
+  --elite: linear-gradient(131deg, rgb(202 155 31) 0%, rgb(246 216 83) 100%);
+  --top: linear-gradient(131deg, rgb(214, 184, 255) 0%, rgb(176, 241, 255) 100%);
+  --mention: linear-gradient(131deg, rgb(226, 203, 160) 0%, rgb(155, 112, 73) 100%); */
+
   --top: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
-  --elite: linear-gradient(131deg, rgb(71 138 212) 0%, rgb(23 55 88) 100%);
-  --mention: linear-gradient(131deg, rgb(226, 203, 160) 0%, rgb(155, 112, 73) 100%);
+  --elite: linear-gradient(131deg, rgb(75 146 81) 0%, rgb(24 90 48) 100%);
+  --master: linear-gradient(131deg, rgb(174 39 122) 0%, rgb(212 64 154) 100%);
+
 
   h2 {
     font-size: 3rem;
@@ -122,10 +129,17 @@
           background: var(--ru)
         }
 
-        &.honor,
+        /* &.honor,
         .honor {
           &:not(.top):not(.elite) {
             background: var(--mention)
+          }
+        } */
+
+        &.master,
+        .master {
+          &:not(.top):not(.elite) {
+            background: var(--master)
           }
         }
 
@@ -326,20 +340,20 @@
         background: var(--ru)
       }
 
-      &#top {
-        background: var(--top)
-      }
-
-      &#honor {
+      
+      /* &#honor {
         background: var(--mention)
+      } */
+
+      &#master {
+        background: var(--master)
       }
 
       &#elite {
         background: var(--elite)
       }
 
-      &.top,
-      .top {
+      &#top {
         background: var(--top)
       }
     }

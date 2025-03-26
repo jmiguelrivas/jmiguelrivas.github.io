@@ -108,9 +108,15 @@ class Expanded extends HTMLElement {
       })
     })
 
-    document.getElementById('honor').addEventListener('click', () => {
+    // document.getElementById('honor').addEventListener('click', () => {
+    //   data.language = 'all'
+    //   data.statusFilter = 'honor'
+    //   this.generateTable(data.language, data.statusFilter)
+    // })
+
+    document.getElementById('master').addEventListener('click', () => {
       data.language = 'all'
-      data.statusFilter = 'honor'
+      data.statusFilter = 'master'
       this.generateTable(data.language, data.statusFilter)
     })
 
