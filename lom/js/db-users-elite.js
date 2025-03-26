@@ -16,7 +16,7 @@ export const elites = [
   new UserElite(['Nimbus'], [11178], '4040C'),
   new UserElite(['Mutiris'], [11178], '40501'),
   
-  new UserElite(['KROONOS'], [11220], '50103'),
+  new UserElite(['KROONOS'], [11222], '50103'),
 
   new UserElite(['Mina'], [11245], '4060A'),
   
