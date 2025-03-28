@@ -13,6 +13,8 @@ export const elites = [
   new UserElite(['kirito'], [11174], 'C080F'),
   new UserElite(['Ummabel'], [11174], '8090b'),
 
+  new UserElite(['(EMPTY)'], [11176], 'B0D03'),
+
   new UserElite(['Nimbus'], [11178], '4040C'),
   new UserElite(['Mutiris'], [11178], '40501'),
   

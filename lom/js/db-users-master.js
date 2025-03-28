@@ -6,7 +6,6 @@ export const masters = [
   new UserMaster(['Evos Phoenix'], [11174], '7150F'),
   
   new UserMaster(['Toddynho'], [11176], '40300'),
-  new UserMaster(['(EMPTY)'], [11176], 'B0D03'),
 
   new UserMaster(['Iskender'], [11222], 'B0705'),
 ]
