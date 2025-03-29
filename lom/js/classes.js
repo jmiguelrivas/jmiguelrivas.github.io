@@ -7,31 +7,24 @@ class User {
 }
 
 class UserTop extends User {
-  constructor(name, server, id) {
+  constructor(name, server, id, death) {
     super(name, server, id)
-    this.group = ['top']
-  }
-}
-
-class UserHonorMention extends User {
-  constructor(name, server, id) {
-    super(name, server, id)
-    this.group = ['honor']
+    this.group = death ? ['honor'] : ['top']
   }
 }
 
 class UserElite extends User {
-  constructor(name, server, id) {
+  constructor(name, server, id, death) {
     super(name, server, id)
-    this.group = ['elite']
+    this.group = death ? ['honor'] : ['elite']
   }
 }
 
 class UserMaster extends User {
-  constructor(name, server, id) {
+  constructor(name, server, id, death) {
     super(name, server, id)
-    this.group = ['master']
+    this.group = death ? ['honor'] : ['master']
   }
 }
 
-export { User, UserHonorMention, UserElite, UserTop, UserMaster }
+export { User, UserElite, UserTop, UserMaster }
