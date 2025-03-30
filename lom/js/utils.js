@@ -3,12 +3,10 @@ import { countryCodes } from './country-codes.js'
 
 function getTooltip(item, group = 0) {
   const names = item?.users
-    ?.map(
-      user =>
-        `<li><nn-icono class="${user.id ? 'star' : 'user'}"></nn-icono> ${
-          user.name
-        }</li>`
-    )
+    ?.map(user => {
+      let rank = user.group.join(" ")
+      return `<li><small class="pill ${rank}">${rank}</small> ${user.name}</li>`
+    })
     .join('')
   const classes = [
     'group',

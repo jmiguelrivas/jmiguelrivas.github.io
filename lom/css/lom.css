@@ -16,8 +16,9 @@
   /* --master: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
   --elite: linear-gradient(131deg, rgb(202 155 31) 0%, rgb(246 216 83) 100%);
   --top: linear-gradient(131deg, rgb(214, 184, 255) 0%, rgb(176, 241, 255) 100%);
-  --mention: linear-gradient(131deg, rgb(226, 203, 160) 0%, rgb(155, 112, 73) 100%); */
+   */
 
+  --mention: linear-gradient(131deg, rgb(226, 203, 160) 0%, rgb(155, 112, 73) 100%);
   --top: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
   --elite: linear-gradient(131deg, rgb(75 146 81) 0%, rgb(24 90 48) 100%);
   --master: linear-gradient(131deg, rgb(174 39 122) 0%, rgb(212 64 154) 100%);
@@ -43,6 +44,11 @@
         width: 25%;
       }
     }
+  }
+
+  .pill {
+    padding: 4px 8px;
+    border-radius: 6px;
   }
 
   table {
@@ -129,12 +135,12 @@
           background: var(--ru)
         }
 
-        /* &.honor,
+        &.honor,
         .honor {
           &:not(.top):not(.elite) {
             background: var(--mention)
           }
-        } */
+        }
 
         &.master,
         .master {
