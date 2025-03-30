@@ -39,7 +39,7 @@ export const topAM = [
   new UserTop(['Fuxi'], [1107], '80506'),
   new UserTop(['8wide'], [1091], 'A0E06'),
   new UserTop(['Squonk'], [1182], 'E0004'),
-  new UserTop(['SpankA', 'GaryProbably'], [1035], '21A00'),
+  new UserTop(['SpankA'], [1035], '21A00'), // 'GaryProbably'
   new UserTop(['Morji'], [1004], '2130F'),
   new UserTop(['Mythic'], [1310], '01A0E'),
   new UserTop(['(EMPTY)'], [1024], '40001'),
@@ -62,7 +62,7 @@ export const topAM = [
   new UserTop(['KitKat'], [1253], 'E0B0F'),
   new UserTop(['Feeshy'], [1003], '50305'),
   new UserTop(['Rafiki'], [1226], 'E0C09'),
-  new UserTop(['JustANobody', 'ZzBLAZE'], [1215], '80F09'),
+  new UserTop(['JustANobody'], [1215], '80F09'), // 'ZzBLAZE'
   new UserTop(['Harfle'], [1254], '90F0D'),
   new UserTop(['Bojangles'], [1369], 'B0002'),
   new UserTop(['Matty'], [1218], '8070F'),
@@ -117,7 +117,7 @@ export const topAM = [
   new UserTop(['MadHatterVII'], [1321], '60306', 1),
   new UserTop(['Raven'], [1019], 'F0002', 1),
   new UserTop(['JHotTea'], [1021], '70305', 1),
-  new UserTop(['HootyHoo', 'BuzzKillington'], [1254], 'D0E0C', 1),
+  new UserTop(['HootyHoo'], [1254], 'D0E0C', 1), // 'BuzzKillington'
   new UserTop(['Remi'], [1173], 'C0F0B', 1),
   new UserTop(['Babyboopz'], [1019], '21400', 1),
   new UserTop(['Gustavo'], [1107], 'E050E', 1),
@@ -158,7 +158,7 @@ export const topAM = [
   new UserTop(['Beachy'], [1111], '90505', 1),
   new UserTop(['ap33zy'], [1109], '9090C', 1),
   new UserTop(['Shroomish'], [1339], '90F08', 1),
-  new UserTop(['Mavis', 'DieEasy'], [1113], '70D05', 1),
+  new UserTop(['Mavis'], [1113], '70D05', 1), // 'DieEasy'
   new UserTop(['Sura0116'], [1032], '70302', 1),
   new UserTop(['Doc'], [1021], 'C0D0D'),
   new UserTop(['Simcraft'], [1302], '0120C', 1),
