@@ -1,6 +1,7 @@
 import '../../_global/js/index.js'
 import { merges } from './db-merges.js'
 import { getPrefix, createNode } from '../../_global/js/global.js'
+import { getCountryCode } from './utils.js'
 import './users.js'
 
 const template = `
@@ -55,42 +56,34 @@ class Gaps extends HTMLElement {
     const servers = [
       {
         title: 'AMEN (1)',
-        tag: 'amen',
         servers: Array.from({ length: 1999 - 1001 + 1 }, (_, i) => i + 1001),
       },
       {
         title: 'ES (6)',
-        tag: 'es',
         servers: Array.from({ length: 6999 - 6001 + 1 }, (_, i) => i + 6001),
       },
       {
         title: 'PT/ESPT (11)',
-        tag: 'pt',
         servers: Array.from({ length: 11999 - 11001 + 1 }, (_, i) => i + 11001),
       },
       {
         title: 'EUEN/MUSH (30)',
-        tag: 'euen',
         servers: Array.from({ length: 30999 - 30001 + 1 }, (_, i) => i + 30001),
       },
       {
         title: 'DE (33)',
-        tag: 'de',
         servers: Array.from({ length: 33999 - 33001 + 1 }, (_, i) => i + 33001),
       },
       {
         title: 'FR (36)',
-        tag: 'fr',
         servers: Array.from({ length: 36999 - 36001 + 1 }, (_, i) => i + 36001),
       },
       {
         title: 'ME/TR (39)',
-        tag: 'me',
         servers: Array.from({ length: 39999 - 39001 + 1 }, (_, i) => i + 39001),
       },
       {
         title: 'RU (42)',
-        tag: 'ru',
         servers: Array.from({ length: 42999 - 42001 + 1 }, (_, i) => i + 42001),
       },
     ]
@@ -116,8 +109,11 @@ class Gaps extends HTMLElement {
           type: 'li',
           parent: ul,
           attrs: {
-            class: [isMissing ? 'missing' : '', serv.tag].join(' '),
-            title: isMissing ? 'missing' : '',
+            class: [
+              isMissing ? 'missing' : '',
+              getCountryCode(server).code,
+            ].join(' '),
+            title: isMissing ? 'not merge / missing' : '',
           },
           innerHTML: server,
         })
