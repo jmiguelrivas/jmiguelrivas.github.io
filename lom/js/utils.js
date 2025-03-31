@@ -4,7 +4,7 @@ import { countryCodes } from './country-codes.js'
 function getTooltip(item, group = 0) {
   const names = item?.users
     ?.map(user => {
-      let rank = user.group.join(" ")
+      let rank = user.group.join(' ')
       return `<li><small class="pill ${rank}">${rank}</small> ${user.name}</li>`
     })
     .join('')
@@ -27,8 +27,9 @@ function getTooltip(item, group = 0) {
 
 function getCountryCode(str) {
   if (str) {
+    const code =
+      `${str}`.length === 5 ? `${str}`.slice(0, 2) : `${str}`.slice(0, 1)
     const serverId = `${str}`.slice(-3)
-    const code = `${str}`.replace(serverId, '')
     let finalCode = countryCodes?.[code] || code
 
     if (+code === 11 && +serverId > 247) {
