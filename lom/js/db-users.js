@@ -12,16 +12,27 @@ const users = [...friends, ...topAM, ...topEU, ...elites, ...masters].map(
   }
 )
 
-console.log('----------------------- REPEATED UID::BEGIN')
-users.forEach(i => {
-  const hasInstances = users.filter(j => j.id === i.id) //&& j.server[0] === i.server[0]
-  if (hasInstances.length > 1) {
-    console.log('-----------------------------')
-    hasInstances.forEach((instance, index) => {
-      console.log(index, instance.name, instance.server.join(','))
-    })
-  }
-})
-console.log('----------------------- REPEATED UID::END')
+function checkDuplicates() {
+  console.log('----------------------- REPEATED UID::BEGIN')
+  
+  // const duplicates = []
+  
+  users.forEach(i => {
+    const hasInstances = users.filter(j => j.id === i.id) //&& j.server[0] === i.server[0]
+    if (hasInstances.length > 1) {
+      console.log('-----------------------------')
+      hasInstances.forEach((instance, index) => {
+        // duplicates.push(`${index} ${instance.name} ${instance.server.join(',')}`)
+        console.log(index, instance.name, instance.server.join(','))
+      })
+    }
+  })
+
+  // duplicates.forEach(i => console.log(i))
+
+  console.log('----------------------- REPEATED UID::END')
+}
+
+checkDuplicates()
 
 export { users as usersDB }

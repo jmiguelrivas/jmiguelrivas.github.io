@@ -81,7 +81,6 @@ export const topEU = [
   new UserTop(['Haruashi'], [33040], '80F0B'),
   new UserTop(['Lavax'], [33079], '9030E'),
   new UserTop(['Tehman'], [36100], '70B05'),
-  new UserTop(['Nimbus'], [11178], '4040C'),
 
   new UserTop(['Ado'], [33035], 'B010C', 1),
   new UserTop(['Ozan'], [30008], '11304', 1),

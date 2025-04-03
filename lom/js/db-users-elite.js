@@ -1,6 +1,8 @@
 import { UserElite } from './classes.js'
 
 export const elites = [
+  new UserElite(['DaniloLima'], [1183], 'B0500'),
+  
   new UserElite(['Furybound'], [1388], 'C010A'),
   new UserElite(['Wolfman'], [1388], '8010D'),
 
@@ -38,11 +40,9 @@ export const elites = [
   new UserElite(['Chicka'], [1435], '40207'),
   new UserElite(['KingKurt99'], [1353], 'C0603'),
   new UserElite(['HornyGoat'], [1030], '21601'),
-  // new UserElite(['LowKey'], [1024], '70504'),
   new UserElite(['WetMonster'], [1004], 'D0D02'),
   new UserElite(['Mister'], [1304], '70202'),
   new UserElite(['ManuVlz'], [1006], 'A080B'),
-  // new UserElite(['Beagle'], [1215], '8000E'),
   new UserElite(['Grandma'], [1488], 'A0A03'),
   new UserElite(['D2Junkie'], [1403], 'C0005'),
   new UserElite(['jessica'], [1170], 'D020C'),
@@ -55,15 +55,12 @@ export const elites = [
   new UserElite(['Ledreams'], [1013], '61109'),
   new UserElite(['Hostile'], [1170], 'A020C'),
   new UserElite(['xEvilReeFx'], [1013], '70E0A'),
-  // new UserElite(['Doc'], [1021], 'C0D0D'),
   new UserElite(['AKSO'], [1404], '60C07'),
   new UserElite(['Sklari'], [1004], '5140E'),
   new UserElite(['Kite'], [1355], '80703'),
   new UserElite(['MagnusBWulf'], [1531], 'D090A'),
-  // new UserElite(['Oya'], [1321], 'E070D'),
   new UserElite(['MELLO'], [1513], 'E0509'),
   new UserElite(['Lord_Aku'], [1169], '40707'),
-  // new UserElite(['Cheng'], [1003], '21206'),
   new UserElite(['Rafiki'], [1215], 'B040D'),
   new UserElite(['Hoddy'], [1338], '7020D'),
   new UserElite(['Rynwell'], [1310], 'D090B'),
@@ -76,8 +73,6 @@ export const elites = [
   new UserElite(['Chauusan'], [1369], '8000A'),
   new UserElite(['EmÇ_GabriF'], [1121], '60E0A'),
   new UserElite(['Boof'], [1117], 'E0A0B'),
-  // new UserElite(['BigBoyBruce'], [1250], 'B0302'),
-  // new UserElite(['Kaido'], [1024], '90A02'),
   new UserElite(['GrimPickle'], [1549], '80403'),
   new UserElite(['MrFatJoe'], [1114], '40108'),
   new UserElite(['Shion'], [1034], 'C0B07'),
@@ -169,7 +164,6 @@ export const elites = [
   new UserElite(['War'], [1117], '01604'),
   new UserElite(['KalamityJane'], [1013], 'D0509'),
   new UserElite(['Jimmie'], [1435], '40209'),
-  // new UserElite(['Matty__'], [1218], '8070F'),
   new UserElite(['Alankasha'], [1403], '70905'),
   new UserElite(['Balangateta'], [1421], 'C0F06'),
   new UserElite(['Brochachin'], [1561], 'A0202'),
@@ -219,6 +213,4 @@ export const elites = [
   new UserElite(['ZFighter'], [1370], 'C0A01'),
   new UserElite(['DemonicSoul'], [1369], '5030D'),
   new UserElite(['Dazie'], [1639], '01602'),
-
-    // new UserElite(['Lollipop'], [1282], 'B0401'),
 ]
