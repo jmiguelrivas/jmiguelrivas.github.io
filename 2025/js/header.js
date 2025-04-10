@@ -176,8 +176,9 @@ ${compressText(`class [English] -> klasso [Esperanto]`)}
 `
 
 const template = `
-  <div class="mountain-02"></div>
-  <div class="mountain-01"></div>
+  <mr-mountain class="mountain-01">
+    <img src="./img/tree.svg" class="tree t1">
+  </mr-mountain>
 
   <div class="buildings-02">
    <span></span>

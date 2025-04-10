@@ -20,6 +20,7 @@ export const elites = [
   new UserElite(['LimRabei'], [11174], '90709'),
   new UserElite(['kirito'], [11174], 'C080F'),
   new UserElite(['Ummabel'], [11174], '8090b'),
+  new UserElite(['Fenix'], [11174], '31003'),
 
   new UserElite(['Douglas'], [11176], 'B0D03'),
   new UserElite(['Colt75'], [11176], '71B0B'),
@@ -28,8 +29,9 @@ export const elites = [
   new UserElite(['n17'], [11178], 'C0400', 1),
   new UserElite(['Gogeta'], [11178], '2190B', 1),
 
-  new UserElite(['KROONOS'], [11222], '50103'),
+  new UserElite(['Kroonos'], [11222], '50103'),
   new UserElite(['Azeroth'], [11222], 'B0604'),
+  new UserElite(['Pegasus'], [11222], 'A090B'),
 
   new UserElite(['Mina'], [11245], '4060A'),
 

@@ -4,6 +4,18 @@
   interpolate-size: allow-keywords;
 }
 
+.paper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: url('../img/paper.webp') center center repeat;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
 nn-pilar.workarea {
   --bk-color: rgb(39 39 49);
 
@@ -239,7 +251,7 @@ nn-pilar.workarea {
   }
 
   mr-header {
-    height: calc(100vh - 90px);
+    height: calc(1190px - 90px);
     min-height: 720px;
     flex-flow: column;
     align-items: center;
@@ -298,25 +310,40 @@ nn-pilar.workarea {
     }
   }
 
-  .mountain-01,
-  .mountain-02 {
-    position: absolute;
-    bottom: 0;
-    height: 670px;
-    width: 60%;
-    background-color: #1e282b;
-    right: 5%;
-    border-radius: 50% 50% 0 0;
-  }
+  mr-mountain {
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
 
-  .mountain-02 {
-    height: 650px;
-    right: 0%;
-  }
+    /* .tree {
+      position: absolute;
+      z-index: 1;
+    } */
 
-  .mountain-01 {
-    height: 550px;
-    left: 0%;
+    svg {
+      position: absolute;
+      left: -30%;
+      bottom: 0;
+
+      .p1 {
+        fill: #40654d;
+      }
+
+      .p2 {
+        fill: #d3d3d3;
+        /* #417d51; */
+      }
+
+      .p3 {
+        fill: #d3d3d3;
+        /* #56755e; */
+      }
+
+      .p4 {
+        fill: #215930;
+      }
+    }
   }
 
   .buildings-01,

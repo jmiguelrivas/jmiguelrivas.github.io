@@ -1,7 +1,6 @@
 import { UserMaster } from './classes.js'
 
 export const masters = [
-  new UserMaster(['Fenix'], [11174], '31003'),
   new UserMaster(['Hakan'], [11174], '4010F'),
   new UserMaster(['Evos Phoenix'], [11174], '7150F'),
 
@@ -23,7 +22,7 @@ export const masters = [
   new UserMaster(['Celestial'], [11169], '61701'),
   new UserMaster(['Bleck'], [11169], '51704'),
   new UserMaster(['Jogador70506'], [11169], '70506'),
-  new UserMaster(['Helviis'], [11169], '41500'),
+  new UserMaster(['Helviis'], [11172], '41500'),
   new UserMaster(['Zarama'], [11169], 'C0B0B'),
   new UserMaster(['LordFralda'], [11169], '81F02'),
   new UserMaster(['Eraldo18'], [11169], '91609'),
