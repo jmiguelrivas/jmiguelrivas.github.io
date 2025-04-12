@@ -191,6 +191,7 @@ const template = `
       ${banner}
     </div>
     ${trees}
+    <mr-palumba direction="left"></mr-palumba>
   </mr-mountain>
 
   <div class="buildings-02">
@@ -219,7 +220,7 @@ const template = `
   </div>
 
   
-  <div class="title">
+  <div class="content">
     <h1>
       Miguel Rivas
     </h1>
@@ -247,20 +248,6 @@ const template = `
 const data = {
   attrs: [],
 }
-
-{/* <div class="content">
-<mr-palumba direction="left"></mr-palumba>
-<div class="monument">
-  <div class="sign">
-    <h1>
-      I'm <strong>Miguel Rivas</strong><br>
-      a <em>Frontend Developer</em><br>
-      <small>Living in Spokane, WA</small>.
-    </h1>
-    <button class="btn sunglow show-dialog-btn">Research behind this website</button>
-  </div>
-</div>
-</div> */}
 
 class Header extends HTMLElement {
   constructor() {

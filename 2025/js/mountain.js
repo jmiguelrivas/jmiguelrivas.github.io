@@ -5,6 +5,7 @@ const template = `
    width="526.50299mm"
    height="297mm"
    viewBox="0 0 526.50299 297"
+   class="mountain"
   >
   <g>
     <path

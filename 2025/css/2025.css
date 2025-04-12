@@ -248,7 +248,6 @@ nn-pilar.workarea {
     background-position: 0 0;
     animation: stars 40s linear infinite;
     overflow: hidden;
-    background-color: #454b75;
     position: relative;
   }
 
@@ -259,64 +258,15 @@ nn-pilar.workarea {
     align-items: center;
     justify-content: center;
     display: block;
-
-    /* .content {
-      position: relative;
-      text-align: center;
-      z-index: 3;
-      max-width: 430px;
-      margin: auto;
-    }
-
-    .monument {
-      height: 530px;
-      z-index: -1;
-      position: relative;
-
-      &:before {
-        content: "";
-        display: block;
-        background-color: #8b938e;
-        height: calc(100% + 24px);
-        width: 29px;
-        position: absolute;
-        bottom: 0;
-        right: calc(50% - 14px);
-        z-index: -1;
-      }
-    }
-
-    .sign {
-      background-color: #172926;
-      border: 6px #2f5751 solid;
-      border-radius: 15px;
-      padding: 2rem 1rem;
-    }
-
-    h1 {
-      text-align: center;
-      color: #bedaeb;
-      font-size: 20px;
-
-      strong {
-        font-size: 150%;
-        font-weight: bold;
-      }
-
-      em {
-        font-style: normal;
-        font-size: 125%;
-        font-weight: bold;
-      }
-    } */
   }
 
-  .title {
+  .content {
     position: absolute;
     top: 20vh;
     width: 100%;
     text-align: center;
     padding: 1rem;
+    z-index: 5;
 
     h1 {
       font-size: 4rem;
@@ -331,8 +281,9 @@ nn-pilar.workarea {
       max-width: 600px;
       line-height: 1.5;
     }
-    
-    h1, h2 {
+
+    h1,
+    h2 {
       margin: 0;
     }
   }
@@ -343,7 +294,7 @@ nn-pilar.workarea {
     overflow: hidden;
     height: 1120px;
 
-    svg {
+    .mountain {
       position: absolute;
       left: -620px;
       bottom: 0;
@@ -376,24 +327,31 @@ nn-pilar.workarea {
       .letter-1 {
         transform: rotate(-6deg);
       }
+
       .letter-2 {
         transform: rotate(2deg);
       }
+
       .letter-4 {
         transform: rotate(4deg);
       }
+
       .letter-5 {
         transform: rotate(-1deg);
       }
+
       .letter-6 {
         transform: rotate(2deg);
       }
+
       .letter-7 {
         transform: rotate(-7deg);
       }
+
       .letter-8 {
         opacity: 0;
       }
+
       .letter-9 {
         transform: rotate(3deg);
       }
@@ -1490,14 +1448,17 @@ mr-cube {
   }
 }
 
-/* mr-palumba {
+mr-palumba {
   display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  inset: auto auto 957px 479px;
 
   svg {
-    width: 400px;
-    margin: auto;
+    width: 200px;
+    height: 200px;
     display: block;
-    transform: translate(95px, 57px);
   }
 
   .eyes {
@@ -1544,7 +1505,7 @@ mr-cube {
       }
     }
   }
-} */
+}
 
 .page-footer {
   display: flex;
