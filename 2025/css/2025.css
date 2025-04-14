@@ -1602,24 +1602,26 @@ section.resume mr-resume {
   header.header {
     .buildings-01 {
       height: 50px;
+
       >span {
         &:nth-child(odd) {
           height: 100px;
         }
-  
+
         &:nth-child(even) {
           height: 75px;
         }
       }
     }
-  
+
     .buildings-02 {
       height: 50px;
+
       >span {
         &:nth-child(odd) {
           height: 125px;
         }
-  
+
         &:nth-child(even) {
           height: 150px;
         }
@@ -1636,10 +1638,11 @@ section.resume mr-resume {
       h1 {
         font-size: 2.5rem;
       }
-    }    
+    }
   }
 
   section.resume {
+
     h2,
     mr-resume {
       display: none;
@@ -1670,6 +1673,10 @@ section.resume mr-resume {
 
     overflow: auto;
 
+    aside.paper {
+      display: none;
+    }
+
     mr-app {
       .navigation {
         display: none;
@@ -1690,33 +1697,37 @@ section.resume mr-resume {
           overflow: auto;
           max-height: none;
 
-          >header,
-          >section.skills,
-          >section.portfolio,
-          >section.resume>nn-caja>h2,
-          >footer {
-            display: none;
-          }
+          main {
 
-          >section.resume {
-            >nn-caja {
-              padding: 0.25in;
+            >header.header,
+            >section.skills,
+            >section.portfolio,
+            >section.resume>nn-caja>h2,
+            >footer {
+              display: none;
             }
 
-            nn-caja,
-            mr-resume {
-              width: 100%;
-              display: block;
-              padding: 0;
+            >section.resume {
+              >nn-caja {
+                padding: 0.25in;
+              }
+
+              nn-caja,
+              mr-resume {
+                width: 100%;
+                display: block;
+                padding: 0;
+              }
+
+              nn-caja {
+                max-width: 100%;
+              }
+
+              mr-resume>nn-caja {
+                box-shadow: none;
+              }
             }
 
-            nn-caja {
-              max-width: 100%;
-            }
-
-            mr-resume>nn-caja {
-              box-shadow: none;
-            }
           }
         }
       }
