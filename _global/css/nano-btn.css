@@ -1,0 +1,91 @@
+.btn {
+  --color: attr(data-color type(<color>));
+
+  /* Old browsers support::BEGIN */
+  &.sunglow {
+    --color: hsl(47deg, 100%, 57%);
+  }
+
+  &.shamrock {
+    --color: hsl(149deg, 61%, 51%);
+  }
+
+  /* Old browsers support::END */
+
+  /* &.white { color: #fff; bk-color: #;}
+  &.silver { color: #; bk-color: #;}
+  &.royal-purple { color: #; bk-color: #;}
+  &.persian-red { color: #; bk-color: #;}
+  &.denim { color: #; bk-color: #;}
+  &.gold-tips { color: #; bk-color: #;}
+  &.cod-grey { color: #; bk-color: #;}
+  &.gravel { color: #; bk-color: #;}
+  &.emerald { color: #; bk-color: #;}
+  &.burn-orange { color: #; bk-color: #;}
+  &.razzmatazz { color: #; bk-color: #;}
+  &.desert { color: #; bk-color: #;}
+  &.charcoal { color: #; bk-color: #;}
+  &.golden-brown { color: #; bk-color: #;}
+  &.sepia { color: #; bk-color: #;}
+  &.alizarin { color: #; bk-color: #;}
+  &.rust { color: #; bk-color: #;}
+  &.blush { color: #; bk-color: #;}
+  &.fire-brick { color: #; bk-color: #;}
+  &.milk-punch { color: #; bk-color: #;}
+  &.yukon-gold { color: #; bk-color: #;}
+  &.green-pea { color: #; bk-color: #;}
+  &.laurel { color: #; bk-color: #;}
+  &.elf-green { color: #; bk-color: #;}
+  &.lake { color: #; bk-color: #;}
+  &.cobalt-blue { color: #; bk-color: #;}
+  &.mariner { color: #; bk-color: #;}
+  &.fuchsia { color: #; bk-color: #;}
+  &.blue-violet { color: #; bk-color: #;}
+  &.purple-heart { color: #; bk-color: #;} */
+
+  font-size: 9pt;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  transition-property: background-color,
+  box-shadow,
+  border,
+  color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  border-radius: 0;
+  min-height: 35px;
+  min-width: 35px;
+  padding: .5rem;
+  border-width: 0;
+
+  --color-70: color-mix(in srgb, black 70%, var(--color));
+  --color-10: color-mix(in srgb, black 15%, var(--color));
+  --color-20: color-mix(in srgb, black 30%, var(--color));
+
+  color: var(--color-70);
+  background-color: var(--color);
+  box-shadow: 0px 3px 0 var(--color-10);
+
+  &:active,
+  &.active,
+  &:hover {
+    background-color: var(--color-10);
+    box-shadow: 0px 3px 0 var(--color-20);
+  }
+
+  nn-icono {
+    pointer-events: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,162 @@
+.download-btn {
+  max-width: 300px;
+  margin: 2rem auto;
+  display: flex;
+}
+
+section.resume mr-resume {
+  display: block;
+  --border-color: #bbb;
+
+  nn-caja {
+    box-shadow: 0 0 14px #000;
+    background-color: #fff;
+
+    li,
+    p,
+    dd,
+    dt,
+    h2,
+    h4,
+    nn-icono,
+    a {
+      color: #202028;
+      word-break: break-word;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: hsl(211deg 71% 41%);
+    }
+
+    h2,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      margin-block-end: var(--space-between-block-items);
+    }
+
+    ul,
+    dl,
+    article {
+      margin: 0;
+      margin-block-end: var(--space-between-block-items);
+    }
+
+    p,
+    li,
+    dt,
+    dd {
+      font-style: normal;
+      font-weight: 400;
+      margin: 0;
+      margin-block-end: var(--space-between-inline-items);
+      font-size: 0.75rem;
+    }
+
+    ul {
+      padding-left: var(--space-between-block-items);
+      display: block;
+    }
+
+    dl {
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      /* letter-spacing: 2px; */
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      text-align: left;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 400;
+      font-size: .87rem;
+      text-transform: uppercase;
+      display: flex;
+      gap: .5rem;
+    }
+
+    h4 {
+      font-size: .75rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin-bottom: .5rem;
+    }
+
+    dt {
+      font-style: normal;
+      font-size: .75rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 1px dotted var(--border-color);
+      padding: 1.5rem 0;
+      margin-block-end: 2rem;
+
+      p {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: 400;
+        /* color: #939393; */
+      }
+    }
+
+    article {
+      padding-left: 1rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 1.45rem;
+        left: -.05rem;
+        height: calc(100% - .5rem);
+        border-left: 1px dotted var(--border-color);
+      }
+
+      time {
+        font-weight: 400;
+        letter-spacing: 2px;
+        display: inline-block;
+        font-size: .75rem;
+        text-transform: uppercase;
+      }
+
+      nn-icono {
+        position: absolute;
+        top: .25rem;
+        left: -.25rem;
+        font-size: .5rem;
+        color: var(--border-color);
+      }
+    }
+  }
+}
