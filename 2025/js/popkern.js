@@ -1,6 +1,12 @@
-import { getPrefix } from '../../_global/js/global.js'
-import { gColor } from '../../_global/js/gcolor.js'
-import { tool } from './tools.js'
+import {
+  getPrefix
+} from '../../_global/js/global.js'
+import {
+  gColor
+} from '../../_global/js/gcolor.js'
+import {
+  tool
+} from './tools.js'
 
 const color = new gColor('purple-heart', '#7d32b0')
 
@@ -9,43 +15,43 @@ const tools = [tool.vue2, tool.sass, tool.rails, tool.nodeModule]
   .join('')
 
 const features = [
-  [
-    'Centralized Component Library',
-    'Provides reusable Vue components and styles to ensure a consistent look and feel across apps.',
-  ],
-  [
-    'Visual Documentation',
-    'Integrated as a Ruby Gem, Popkern offers built-in visual documentation to showcase and preview components, making it easier for developers and designers to collaborate.',
-  ],
-  [
-    'Node Module Distribution',
-    'All code is packaged into a Node module, ensuring easy integration and updates across projects.',
-  ],
-  [
-    'Color Database with Contrast Testing',
-    'Includes a robust color database that dynamically tests contrast ratios for accessibility across six different backgrounds (three for light mode and three for dark mode), ensuring compliance with WCAG standards and delivering an inclusive user experience.',
-  ],
-  [
-    'Serves as the backbone for unified design and development workflows, enhancing productivity and accessibility across the organization’s ecosystem.',
-  ],
-]
+    [
+      'Centralized Component Library',
+      'Provides reusable Vue components and styles to ensure a consistent look and feel across apps.',
+    ],
+    [
+      'Visual Documentation',
+      'Integrated as a Ruby Gem, Popkern offers built-in visual documentation to showcase and preview components, making it easier for developers and designers to collaborate.',
+    ],
+    [
+      'Node Module Distribution',
+      'All code is packaged into a Node module, ensuring easy integration and updates across projects.',
+    ],
+    [
+      'Color Database with Contrast Testing',
+      'Includes a robust color database that dynamically tests contrast ratios for accessibility across six different backgrounds (three for light mode and three for dark mode), ensuring compliance with WCAG standards and delivering an inclusive user experience.',
+    ],
+    [
+      'Serves as the backbone for unified design and development workflows, enhancing productivity and accessibility across the organization’s ecosystem.',
+    ],
+  ]
   .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
   .join('')
 
 const cubeFeatures = [
-  ['Enables designers to visualize the current color palette within the app.'],
-  ['Highlights unused colors to assist in defining new, balanced color sets.'],
-  [
-    'Offers an interactive preview to make color selection and refinement more efficient.',
-  ],
-  [
-    'This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.',
-  ],
-]
+    ['Enables designers to visualize the current color palette within the app.'],
+    ['Highlights unused colors to assist in defining new, balanced color sets.'],
+    [
+      'Offers an interactive preview to make color selection and refinement more efficient.',
+    ],
+    [
+      'This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.',
+    ],
+  ]
   .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
   .join('')
 
-const template = `
+const template = /*html*/ `
 <blockquote>
   Enovational is a data-driven web and app development company that span a wide spectrum of audiences, technologies, and platforms, from consumer facing mobile apps to large government and enterprise custom web applications.
 </blockquote>
@@ -61,7 +67,7 @@ const template = `
 <h4>Key Features</h4>
 
 <ul>
-${features}
+  ${features}
 </ul>
 
 <h3>Color Database</h3>
@@ -74,14 +80,14 @@ ${features}
 <p>Would produce the following attributes:</p>
 
 <nn-code>
-{
+  {
   /* Name properties */
   label: "${color.label}",
   spinalCase: "${color.spinalCase}",
   titleName: "${color.titleCase}",
   pascalCase: "${color.pascalCase}",
   camelCase: "${color.camelCase}",
-  
+
   /* Color Properties */
   red: ${color.red},
   blue: ${color.blue},
@@ -90,12 +96,12 @@ ${features}
   lightness: ${color.lightness},
   opacity: ${color.opacity},
   saturation: ${color.saturation},
-  
+
   /* Formatted Representations */
   hex: "${color.hex}",
   hsl: "${color.hsl}",
   rgb: "${color.rgb}",
-}
+  }
 </nn-code>
 
 <h3>3D Cube</h3>
@@ -130,4 +136,6 @@ class Popkern extends HTMLElement {
 
 window.customElements.define(getPrefix('popkern'), Popkern)
 
-export { data }
+export {
+  data
+}

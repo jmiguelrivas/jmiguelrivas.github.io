@@ -1,23 +1,29 @@
-import { getPrefix } from '../../_global/js/global.js'
+import {
+  getPrefix
+} from '../../_global/js/global.js'
 import * as THREE from '../../_global/modules/threejs/three.module.js'
-import { wikiColors } from '../../_global/js/wiki-colors.js'
+import {
+  wikiColors
+} from '../../_global/js/wiki-colors.js'
 
-import { OrbitControls } from '../../_global/modules/OrbitControls.js'
+import {
+  OrbitControls
+} from '../../_global/modules/OrbitControls.js'
 
-const template = `
-  <div id="cube"></div>
-  <nn-fila gap="2">
-    <nn-pilar>
-      <button role="button" class="btn shamrock" id="grid">
-        Toggle Grid
-      </button>
-    </nn-pilar>
-    <nn-pilar>
-      <button role="button" class="btn sunglow" id="guides">
-        Toggle Guides
-      </button>
-    </nn-pilar>
-  </nn-fila>
+const template = /*html*/ `
+<div id="cube"></div>
+<nn-fila gap="2">
+  <nn-pilar>
+    <button id="grid" role="button" class="btn shamrock" data-color="hsl(149deg, 61%, 51%)">
+      Toggle Grid
+    </button>
+  </nn-pilar>
+  <nn-pilar>
+    <button id="guides" role="button" class="btn sunglow" data-color="hsl(47deg, 100%, 57%)">
+      Toggle Guides
+    </button>
+  </nn-pilar>
+</nn-fila>
 `
 
 const rad = Math.PI / 180
@@ -55,111 +61,36 @@ class Cube extends HTMLElement {
     })
     const points = []
     points.push(new THREE.Vector3(origin[0], origin[1], origin[2]))
-    points.push(
-      new THREE.Vector3(destination[0], destination[1], destination[2])
-    )
+    points.push(new THREE.Vector3(destination[0], destination[1], destination[2]))
     const lineGeometry = new THREE.BufferGeometry().setFromPoints(points)
     const line = new THREE.Line(lineGeometry, lineMaterial)
     return line
   }
 
   createGuides() {
-    const red = this.createLine(
-      '255,0,0',
-      [-255 / 2, 0, -255 / 2],
-      [255 / 2, 0, -255 / 2]
-    )
-    const blue = this.createLine(
-      '0,0,255',
-      [-255 / 2, 0, -255 / 2],
-      [-255 / 2, 0, 255 / 2]
-    )
-    const green = this.createLine(
-      '0,255,0',
-      [-255 / 2, 0, -255 / 2],
-      [-255 / 2, 255, -255 / 2]
-    )
-    const cyan = this.createLine(
-      '0,255,255',
-      [-255 / 2, 0, -255 / 2],
-      [-255 / 2, 255, 255 / 2]
-    )
-    const magenta = this.createLine(
-      '255,0,255',
-      [-255 / 2, 0, -255 / 2],
-      [255 / 2, 0, 255 / 2]
-    )
-    const yellow = this.createLine(
-      '255,255,0',
-      [-255 / 2, 0, -255 / 2],
-      [255 / 2, 255, -255 / 2]
-    )
-    const white = this.createLine(
-      '255,255,255',
-      [-255 / 2, 0, -255 / 2],
-      [255 / 2, 255, 255 / 2]
-    )
+    const red = this.createLine('255,0,0', [-255 / 2, 0, -255 / 2], [255 / 2, 0, -255 / 2])
+    const blue = this.createLine('0,0,255', [-255 / 2, 0, -255 / 2], [-255 / 2, 0, 255 / 2])
+    const green = this.createLine('0,255,0', [-255 / 2, 0, -255 / 2], [-255 / 2, 255, -255 / 2])
+    const cyan = this.createLine('0,255,255', [-255 / 2, 0, -255 / 2], [-255 / 2, 255, 255 / 2])
+    const magenta = this.createLine('255,0,255', [-255 / 2, 0, -255 / 2], [255 / 2, 0, 255 / 2])
+    const yellow = this.createLine('255,255,0', [-255 / 2, 0, -255 / 2], [255 / 2, 255, -255 / 2])
+    const white = this.createLine('255,255,255', [-255 / 2, 0, -255 / 2], [255 / 2, 255, 255 / 2])
 
     const boxGroup = new THREE.Group()
     boxGroup.add(
-      this.createLine(
-        '80,80,80',
-        [255 / 2, 0, -255 / 2],
-        [255 / 2, 255, -255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [255 / 2, 0, -255 / 2],
-        [255 / 2, 0, 255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [255 / 2, 0, 255 / 2],
-        [255 / 2, 255, 255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [-255 / 2, 0, 255 / 2],
-        [255 / 2, 0, 255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [-255 / 2, 255, -255 / 2],
-        [255 / 2, 255, -255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [-255 / 2, 255, -255 / 2],
-        [-255 / 2, 255, 255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [-255 / 2, 0, 255 / 2],
-        [-255 / 2, 255, 255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [255 / 2, 255, -255 / 2],
-        [255 / 2, 255, 255 / 2]
-      ),
-      this.createLine(
-        '80,80,80',
-        [255 / 2, 255, 255 / 2],
-        [-255 / 2, 255, 255 / 2]
-      )
+      this.createLine('80,80,80', [255 / 2, 0, -255 / 2], [255 / 2, 255, -255 / 2]),
+      this.createLine('80,80,80', [255 / 2, 0, -255 / 2], [255 / 2, 0, 255 / 2]),
+      this.createLine('80,80,80', [255 / 2, 0, 255 / 2], [255 / 2, 255, 255 / 2]),
+      this.createLine('80,80,80', [-255 / 2, 0, 255 / 2], [255 / 2, 0, 255 / 2]),
+      this.createLine('80,80,80', [-255 / 2, 255, -255 / 2], [255 / 2, 255, -255 / 2]),
+      this.createLine('80,80,80', [-255 / 2, 255, -255 / 2], [-255 / 2, 255, 255 / 2]),
+      this.createLine('80,80,80', [-255 / 2, 0, 255 / 2], [-255 / 2, 255, 255 / 2]),
+      this.createLine('80,80,80', [255 / 2, 255, -255 / 2], [255 / 2, 255, 255 / 2]),
+      this.createLine('80,80,80', [255 / 2, 255, 255 / 2], [-255 / 2, 255, 255 / 2])
     )
 
     data.linesGroup = new THREE.Group()
-    data.linesGroup.add(
-      red,
-      blue,
-      green,
-      cyan,
-      magenta,
-      yellow,
-      white,
-      boxGroup
-    )
+    data.linesGroup.add(red, blue, green, cyan, magenta, yellow, white, boxGroup)
 
     data.scene.add(data.linesGroup)
 
@@ -179,11 +110,9 @@ class Cube extends HTMLElement {
         color: value.hex,
       })
       const mesh = new THREE.Mesh(geometry, material)
-      mesh.position.x =
-        x * distanceBetweenCubes - maxValue * distanceBetweenCubes * 0.5
+      mesh.position.x = x * distanceBetweenCubes - maxValue * distanceBetweenCubes * 0.5
       mesh.position.y = y * distanceBetweenCubes
-      mesh.position.z =
-        z * distanceBetweenCubes - maxValue * distanceBetweenCubes * 0.5
+      mesh.position.z = z * distanceBetweenCubes - maxValue * distanceBetweenCubes * 0.5
       mesh.name = value.spinalCase
       data.scene.add(mesh)
     }
@@ -192,12 +121,7 @@ class Cube extends HTMLElement {
   connectedCallback() {
     this.innerHTML = template
 
-    data.camera = new THREE.PerspectiveCamera(
-      70,
-      data.winWidth / data.winHeight,
-      0.01,
-      1000
-    )
+    data.camera = new THREE.PerspectiveCamera(70, data.winWidth / data.winHeight, 0.01, 1000)
     data.camera.position.z = 400
 
     data.scene = new THREE.Scene()
@@ -207,7 +131,10 @@ class Cube extends HTMLElement {
     this.createGuides()
     this.createCubes()
 
-    data.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+    data.renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true
+    })
     this.resizeWindow()
     this.querySelector('#cube').appendChild(data.renderer.domElement)
 
@@ -221,32 +148,26 @@ class Cube extends HTMLElement {
 
     this.querySelector('#guides').addEventListener('click', () => {
       data.guidesToggle = !data.guidesToggle
-      data.guidesToggle
-        ? data.scene.add(data.linesGroup)
-        : data.scene.remove(data.linesGroup)
+      data.guidesToggle ? data.scene.add(data.linesGroup) : data.scene.remove(data.linesGroup)
     })
 
     this.querySelector('#grid').addEventListener('click', () => {
       data.gridToggle = !data.gridToggle
-      data.gridToggle
-        ? data.scene.add(data.gridHelper)
-        : data.scene.remove(data.gridHelper)
+      data.gridToggle ? data.scene.add(data.gridHelper) : data.scene.remove(data.gridHelper)
     })
 
-    document
-      .querySelector('.popkern-details')
-      .addEventListener('toggle', function () {
-        data.active = this.hasAttribute('open')
+    document.querySelector('.popkern-details').addEventListener('toggle', function() {
+      data.active = this.hasAttribute('open')
 
-        if (data.active) {
-          data.renderer.setAnimationLoop(time => {
-            data.scene.rotation.y = time / 5000
-            data.renderer.render(data.scene, data.camera)
-          })
-        } else {
-          data.renderer.setAnimationLoop(null)
-        }
-      })
+      if (data.active) {
+        data.renderer.setAnimationLoop(time => {
+          data.scene.rotation.y = time / 5000
+          data.renderer.render(data.scene, data.camera)
+        })
+      } else {
+        data.renderer.setAnimationLoop(null)
+      }
+    })
 
     window.addEventListener('resize', this.resizeWindow)
   }
@@ -262,4 +183,6 @@ class Cube extends HTMLElement {
 
 window.customElements.define(getPrefix('cube'), Cube)
 
-export { data }
+export {
+  data
+}

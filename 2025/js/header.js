@@ -229,7 +229,7 @@ const template = `
     </h2>
     <p>Passionate frontend developer with a strong focus on building custom web applications mostly using Vue2 and Vue3 with deep knowledge about Web Components.</p>
     <p>With years of experience across various industries, I've contributed to UI libraries, optimized performance, and collaborated closely with cross functional teams to deliver seamless user experiences. My expertise includes modern frontend frameworks, component-driven development, and testing methodologies using tools like Storybook and Vitest.</p>
-    <button class="btn sunglow show-dialog-btn">Research behind this website</button>
+    <button class="btn show-dialog-btn sunglow" data-color="hsl(47deg, 100%, 57%)">Research behind this website</button>
   </div>
 
   <dialog>
@@ -240,8 +240,8 @@ const template = `
     </nn-desplazador>
 
     <footer>
-      <a class="btn shamrock" href="https://github.com/jmiguelrivas/jmiguelrivas.github.io" target="_blank">Check this project in Github</a>
-      <button autofocus class="btn sunglow hide-dialog-btn">Close Dialog</button>
+      <a class="btn shamrock" data-color="hsl(149deg, 61%, 51%)" href="https://github.com/jmiguelrivas/jmiguelrivas.github.io" target="_blank">Check this project in Github</a>
+      <button autofocus class="btn sunglow hide-dialog-btn" data-color="hsl(47deg, 100%, 57%)">Close Dialog</button>
     </footer>
   </dialog>
 `

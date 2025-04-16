@@ -300,7 +300,7 @@ nn-caja {
 nn-desplazador {
   --nn-track-color: hsl(0deg 0% 14%);
   --nn-thumb-color: hsl(0deg 0% 43%);
-  
+
   scroll-behavior: smooth;
 
   overflow: auto;
@@ -466,6 +466,9 @@ nn-code {
 }
 
 .btn {
+  --color: attr(data-color type(<color>));
+
+  /* Old browsers support::BEGIN */
   &.sunglow {
     --color: hsl(47deg, 100%, 57%);
   }
@@ -473,6 +476,8 @@ nn-code {
   &.shamrock {
     --color: hsl(149deg, 61%, 51%);
   }
+
+  /* Old browsers support::END */
 
   /* &.white { color: #fff; bk-color: #;}
   &.silver { color: #; bk-color: #;}
@@ -516,7 +521,10 @@ nn-code {
   font-weight: bold;
   letter-spacing: 1pt;
   text-transform: uppercase;
-  transition-property: background-color, box-shadow, border, color;
+  transition-property: background-color,
+  box-shadow,
+  border,
+  color;
   transition-duration: 200ms;
   transition-timing-function: ease;
   border-radius: 0;

@@ -1,37 +1,40 @@
-import { getPrefix, createNode } from './global.js'
-import { routes } from './routes.js'
+import {
+  getPrefix,
+  createNode
+} from './global.js'
+import {
+  routes
+} from './routes.js'
 
-const template = `
-  <nn-fila>
-    <nn-pilar size="50px" class="navigation">
-      <nav></nav>
-    </nn-pilar>
-    <nn-pilar size="100% - 50px" class="workarea">
-      <nn-desplazador>
-        <main></main>
-      </nn-desplazador>
-    </nn-pilar>
-  </nn-fila>
+const template = /*html*/ `
+<nn-fila>
+  <nn-pilar size="50px" class="navigation">
+    <nav></nav>
+  </nn-pilar>
+  <nn-pilar size="100% - 50px" class="workarea">
+    <nn-desplazador>
+      <main></main>
+    </nn-desplazador>
+  </nn-pilar>
+</nn-fila>
 `
 const data = {
   attrs: [],
   routes,
   darkMode: true,
-  tools: [
-    {
-      name: 'Toggle Theme',
-      fn: function() {
-        data.darkMode = !data.darkMode
-        const icono = this.querySelector('nn-icono')
-        const body = document.body.classList
-        
-        icono.className = data.darkMode ? 'sun-o' : 'moon-o'
-        body.toggle('light', !data.darkMode)
-        body.toggle('dark', data.darkMode)
-      },
-      icon: 'sun-o',
+  tools: [{
+    name: 'Toggle Theme',
+    fn: function() {
+      data.darkMode = !data.darkMode
+      const icono = this.querySelector('nn-icono')
+      const body = document.body.classList
+
+      icono.className = data.darkMode ? 'sun-o' : 'moon-o'
+      body.toggle('light', !data.darkMode)
+      body.toggle('dark', data.darkMode)
     },
-  ],
+    icon: 'sun-o',
+  }, ],
 }
 
 class App extends HTMLElement {
@@ -130,4 +133,6 @@ class App extends HTMLElement {
 
 window.customElements.define(getPrefix('app'), App)
 
-export { data }
+export {
+  data
+}
