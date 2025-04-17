@@ -1,4 +1,4 @@
-import { getPrefix } from './helpers.js'
+import { getPrefix } from './nano_helpers.js'
 
 const template = `
   <nn-icono class="star"></nn-icono>

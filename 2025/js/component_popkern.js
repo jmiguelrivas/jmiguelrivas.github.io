@@ -3,7 +3,7 @@ import {
 } from '../../0_global/js/global.js'
 import {
   gColor
-} from '../../0_global/js/gcolor.js'
+} from '../../0_global/js/class_gcolor.js'
 import {
   tool
 } from './db_tools.js'

@@ -8,7 +8,7 @@ export const topAM = [
   // new UserTop(['ExpertGuard'], [1254], '61304'),
 
   new UserTop(['Vegas'], [1026], 'A0B0F'),
-  new UserTop(['Zeko'], [1034], 'A0B0F'),
+  new UserTop(['Zeko'], [1034], '80E06'),
   new UserTop(['BorinWu'], [1094], '80F01'),
   new UserTop(['concrete'], [1353], '4070B'),
   new UserTop(['pheel'], [1323], '40200'),

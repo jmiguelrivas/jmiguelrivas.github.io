@@ -1,4 +1,4 @@
-import { getPrefix } from './helpers.js'
+import { getPrefix } from './nano_helpers.js'
 
 class Desplazador extends HTMLElement {
   constructor() {

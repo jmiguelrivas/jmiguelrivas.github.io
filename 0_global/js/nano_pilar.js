@@ -1,4 +1,4 @@
-import { getPrefix } from './helpers.js'
+import { getPrefix } from './nano_helpers.js'
 
 const sizes = [
   '1/20',

@@ -4,7 +4,7 @@ import {
 import * as THREE from '../../0_global/modules/threejs/three.module.js'
 import {
   wikiColors
-} from '../../0_global/js/wiki-colors.js'
+} from '../../0_global/js/db_wiki-colors.js'
 
 import {
   OrbitControls
@@ -133,7 +133,7 @@ class Cube extends HTMLElement {
 
     data.renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true
+      alpha: true,
     })
     this.resizeWindow()
     this.querySelector('#cube').appendChild(data.renderer.domElement)

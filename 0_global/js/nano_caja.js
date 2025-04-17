@@ -1,21 +1,21 @@
-import { getPrefix } from './helpers.js'
+import { getPrefix } from './nano_helpers.js'
 
 const data = {
   attrs: [
     {
-      name: 'gap',
-      regex: /gap-(\d)*/g,
-      prefix: 'gap',
+      name: 'padding',
+      regex: /p-(\d)*/g,
+      prefix: 'p',
     },
     {
-      name: 'padding-inline',
-      regex: /pi-(\d)*/g,
-      prefix: 'pi',
+      name: 'size',
+      regex: /mw-(\d)*/g,
+      prefix: 'mw',
     },
   ],
 }
 
-class Fila extends HTMLElement {
+class Caja extends HTMLElement {
   constructor() {
     super()
   }
@@ -27,10 +27,10 @@ class Fila extends HTMLElement {
     )
   }
 
-  updateAttr(attr) {
-    this.removeCustomClass(attr.regex)
-    const value = this.getAttribute(attr.name)
-    attr && this.classList.add([attr.prefix, value].join('-'))
+  updateAttr({ name, regex, prefix }) {
+    this.removeCustomClass(regex)
+    const attr = this.getAttribute(name)
+    attr && this.classList.add([prefix, attr].join('-'))
   }
 
   connectedCallback() {
@@ -47,6 +47,6 @@ class Fila extends HTMLElement {
   }
 }
 
-window.customElements.define(getPrefix('fila'), Fila)
+window.customElements.define(getPrefix('caja'), Caja)
 
 export { data }

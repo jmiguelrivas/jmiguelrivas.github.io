@@ -1,5 +1,5 @@
 import { getPrefix } from '../../0_global/js/global.js'
-import { compressText } from '../../0_global/js/nano/spirit.js'
+import { compressText } from '../../0_global/js/nano_spirit.js'
 
 const docs = [
   {

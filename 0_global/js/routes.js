@@ -32,14 +32,14 @@ const s2025 = [
 
 const sLOM = [
   {
-    name: 'LOM Merged Servers',
-    url: 'lom/merged',
+    name: 'LOM Merged Servers Timeline',
+    url: 'lom/timeline',
     icon: 'gamepad',
     hidden: true,
   },
   {
-    name: 'LOM Merged Servers Timeline',
-    url: 'lom/timeline',
+    name: 'LOM Merged Servers',
+    url: 'lom/merged',
     icon: 'gamepad',
     hidden: true,
   },
