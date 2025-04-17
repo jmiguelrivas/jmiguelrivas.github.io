@@ -1,4 +1,4 @@
-import { getPrefix, createNode } from '../../_global/js/global.js'
+import { getPrefix, createNode } from '../../0_global/js/global.js'
 import { iconos } from './db-iconos.js'
 
 const template = `

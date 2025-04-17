@@ -1,4 +1,4 @@
-@import url("../../_global/css/main.css");
+@import url("../../0_global/css/main.css");
 
 .workarea {
   --amen: hsl(0deg 55% 40%);
@@ -68,25 +68,19 @@
   }
 
   .honor {
-    &:not(.top):not(.elite) {
-      background: var(--mention)
-    }
+    background: var(--mention)
   }
 
-  .master {
-    &:not(.top):not(.elite) {
-      background: var(--master)
-    }
+  .pill.master {
+    background: var(--master)
   }
 
-  .elite {
-    &:not(.top) {
-      background: var(--elite)
-    }
+  .pill.elite {
+    background: var(--elite)
   }
 
 
-  .top {
+  .pill.top {
     background: var(--top)
   }
 
@@ -332,10 +326,9 @@
         background: var(--ru)
       }
 
-
       /* &#honor {
         background: var(--mention)
-      } */
+      }
 
       &#master {
         background: var(--master)
@@ -347,7 +340,7 @@
 
       &#top {
         background: var(--top)
-      }
+      } */
     }
   }
 

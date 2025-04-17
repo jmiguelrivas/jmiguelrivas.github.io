@@ -1,10 +1,10 @@
-@import url("../../_global/css/main.css");
-@import url("./2025-global.css");
-@import url("./2025-header.css");
-@import url("./2025-skills.css");
-@import url("./2025-portfolio.css");
-@import url("./2025-resume.css");
-@import url("./2025-footer.css");
+@import url("../../0_global/css/main.css");
+@import url("./2025_global.css");
+@import url("./2025_header.css");
+@import url("./2025_skills.css");
+@import url("./2025_portfolio.css");
+@import url("./2025_resume.css");
+@import url("./2025_footer.css");
 
 .pill-container {
   padding: 0;

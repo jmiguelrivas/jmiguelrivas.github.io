@@ -1,2 +1,2 @@
-import '../../_global/js/index.js'
+import '../../0_global/js/index.js'
 import './iconos.js'
