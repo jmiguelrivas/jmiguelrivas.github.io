@@ -21,20 +21,22 @@ const template = /*html*/ `
 const data = {
   attrs: [],
   routes,
-  darkMode: true,
-  tools: [{
-    name: 'Toggle Theme',
-    fn: function() {
-      data.darkMode = !data.darkMode
-      const icono = this.querySelector('nn-icono')
-      const body = document.body.classList
+  // darkMode: true,
+  tools: [
+    // {
+    // name: 'Toggle Theme',
+    // fn: function() {
+    // data.darkMode = !data.darkMode
+    // const icono = this.querySelector('nn-icono')
+    // const body = document.body.classList
 
-      icono.className = data.darkMode ? 'sun-o' : 'moon-o'
-      body.toggle('light', !data.darkMode)
-      body.toggle('dark', data.darkMode)
-    },
-    icon: 'sun-o',
-  }, ],
+    // icono.className = data.darkMode ? 'sun-o' : 'moon-o'
+    // body.toggle('light', !data.darkMode)
+    // body.toggle('dark', data.darkMode)
+    // },
+    // icon: 'sun-o',
+    // },
+  ],
 }
 
 class App extends HTMLElement {
