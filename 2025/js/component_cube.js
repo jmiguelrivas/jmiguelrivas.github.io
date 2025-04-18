@@ -1,7 +1,7 @@
 import {
   getPrefix
 } from '../../0_global/js/global.js'
-import * as THREE from '../../0_global/modules/threejs/three.module.js'
+import * as THREE from '../../0_global/modules/three.module.min.js';
 import {
   wikiColors
 } from '../../0_global/js/db_wiki-colors.js'

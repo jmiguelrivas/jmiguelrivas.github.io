@@ -3,6 +3,8 @@ import { User } from './classes.js'
 export const friends = [
   // new User(['DKiingG7'], [11042], null, ['friend']),
   // new User(['AhkTaar'], [30001], null, ['friend']),
+  // new User(['GameOverLabs'], [6041], '80D0C', ['friend']),
+
   // new User(['Talisa'], [1310, 6103], null, ['friend']),
   // new User(['Nico'], [1310, 6103], null, ['friend']),
   // new User(['Neo'], [11256], null, ['friend']),
