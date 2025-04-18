@@ -94,6 +94,14 @@ const sDocs = [
   },
 ]
 
+const others = [
+  {
+    name: 'Calendar',
+    url: 'calendar/calendar',
+    icon: 'file-o',
+  },
+]
+
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const includeExtras = urlParams.get('extra') === 'true' ? true : false
@@ -104,6 +112,7 @@ const routes = [
   // sFamily,
   sDocs,
   sLOM,
+  others,
 ]
   .map(r => {
     return [
