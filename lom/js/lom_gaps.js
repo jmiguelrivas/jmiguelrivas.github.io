@@ -1,6 +1,6 @@
 import '../../0_global/js/index.js'
 import { merges } from './db_merges.js'
-import { getPrefix, createNode } from '../../0_global/js/global.js'
+import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { getCountryCode } from './utils.js'
 import './component_users.js'
 

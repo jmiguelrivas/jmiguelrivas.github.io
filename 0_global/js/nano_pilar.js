@@ -1,5 +1,10 @@
 import { getPrefix } from './nano_helpers.js'
 
+function parseSize(size) {
+  const [num, denom] = size.split('/').map(Number)
+  return { str: size, value: num / denom }
+}
+
 const sizes = [
   '1/20',
   '1/19',
@@ -40,29 +45,27 @@ const sizes = [
   '11/12',
   '19/20',
   '1/1',
-].map(size => ({
-  str: size,
-  value: size.split('/').reduce((a, b) => a / b),
-}))
+].map(parseSize)
 
 function formatClass(fraction) {
   return (
     fraction &&
     fraction.str
       .split('/')
-      .reduce((numerator, denominator) =>
-        ['n', numerator, 'd', denominator].join('')
-      )
+      .reduce((numerator, denominator) => ['n', numerator, 'd', denominator].join(''))
   )
 }
 
+const sizeValueMap = new Map(sizes.map(s => [s.value, s]))
+const sizeStrMap = new Map(sizes.map(s => [s.str, s]))
+
 function percent2Class(percent) {
-  const percentValue = percent.split('%')[0] / 100
-  return formatClass(sizes.find(size => size.value === percentValue))
+  const percentValue = parseFloat(percent) / 100
+  return formatClass(sizeValueMap.get(percentValue))
 }
 
 function fraction2Class(fraction) {
-  return formatClass(sizes.find(size => size.str === fraction))
+  return formatClass(sizeStrMap.get(fraction))
 }
 
 class Pilar extends HTMLElement {
@@ -72,40 +75,34 @@ class Pilar extends HTMLElement {
 
   removeCustomClass(regex) {
     ;[...this.classList].forEach(
-      currentClass =>
-        regex.test(currentClass) && this.classList.remove(currentClass)
+      currentClass => regex.test(currentClass) && this.classList.remove(currentClass)
     )
   }
 
   updateAttr(name, regex) {
     this.removeCustomClass(regex)
-
     const size = this.getAttribute(name)
+    if (!size) return
 
     const isCalc = /[-+*]/g.test(size)
-    const hasPercent = /(\d)*%/g.test(size)
-    const hasFraction = /(\d)*\/(\d)*/g.test(size)
-    const isStyle =
-      /([mc]m)|(ex)|(ch)|(v[wh])|(v(min|max))|(p[ctx])|(r?em)|[-+*]/g.test(size)
-
-    let newClass, newStyle
+    const hasPercent = /\d+%/.test(size)
+    const hasFraction = /\d+\/\d+/.test(size)
+    const isStyle = /([mc]m|ex|ch|v[wh]|v(min|max)|p[ctx]|r?em|[-+*])/.test(size)
 
     if (hasPercent && !isStyle) {
-      newClass = percent2Class(size)
-    } else if (hasFraction && !isStyle) {
-      newClass = fraction2Class(size)
+      const newClass = percent2Class(size)
+      if (newClass) this.classList.add(newClass)
+      return
     }
 
-    if (isStyle && isCalc) {
-      newStyle = `calc(${size})`
-    } else if (isStyle) {
-      // px sizes
-      newStyle = size
+    if (hasFraction && !isStyle) {
+      const newClass = fraction2Class(size)
+      if (newClass) this.classList.add(newClass)
+      return
     }
 
-    if (newClass) {
-      this.classList.add(newClass)
-    } else if (newStyle) {
+    if (isStyle) {
+      const newStyle = isCalc ? `calc(${size})` : size
       this.style.width = newStyle
       this.style.maxWidth = newStyle
       this.style.flexBasis = newStyle
@@ -113,7 +110,7 @@ class Pilar extends HTMLElement {
   }
 
   connectedCallback() {
-    this.updateAttr('size', /n(\d)*d(\d)*/g)
+    this.updateAttr('size', /\d+\/\d+/)
   }
 
   static get observedAttributes() {
@@ -123,7 +120,7 @@ class Pilar extends HTMLElement {
   attributeChangedCallback(prop) {
     switch (prop) {
       case 'size':
-        this.updateAttr('size', /n(\d)*d(\d)*/g)
+        this.updateAttr('size', /\d+\/\d+/)
         break
     }
   }

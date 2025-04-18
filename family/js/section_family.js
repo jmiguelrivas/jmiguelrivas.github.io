@@ -1,4 +1,4 @@
-import { getPrefix } from '../../0_global/js/global.js'
+import { getPrefix } from '../../0_global/js/global_helpers.js'
 import "../../0_global/modules/d3.js";
 import { familyDB as familyData } from "./db_family.js";
 

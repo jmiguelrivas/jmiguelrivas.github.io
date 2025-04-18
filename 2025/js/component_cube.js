@@ -1,6 +1,6 @@
 import {
   getPrefix
-} from '../../0_global/js/global.js'
+} from '../../0_global/js/global_helpers.js'
 import * as THREE from '../../0_global/modules/three.module.min.js';
 import {
   wikiColors

@@ -1,6 +1,6 @@
 import {
   getPrefix
-} from '../../0_global/js/global.js'
+} from '../../0_global/js/global_helpers.js'
 import {
   gColor
 } from '../../0_global/js/class_gcolor.js'

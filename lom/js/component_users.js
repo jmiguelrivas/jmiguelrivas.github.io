@@ -1,4 +1,4 @@
-import { getPrefix } from '../../0_global/js/global.js'
+import { getPrefix } from '../../0_global/js/global_helpers.js'
 
 const template = `
   <span>

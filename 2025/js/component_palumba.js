@@ -1,6 +1,6 @@
 import {
   getPrefix
-} from '../../0_global/js/global.js'
+} from '../../0_global/js/global_helpers.js'
 
 const template = /*html*/ `
 <svg width="380" height="340" viewBox="0 0 211.667 211.667" xmlns="http://www.w3.org/2000/svg">

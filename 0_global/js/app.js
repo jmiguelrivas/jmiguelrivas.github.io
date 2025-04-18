@@ -1,7 +1,7 @@
 import {
   getPrefix,
   createNode
-} from './global.js'
+} from './global_helpers.js'
 import {
   routes
 } from './routes.js'

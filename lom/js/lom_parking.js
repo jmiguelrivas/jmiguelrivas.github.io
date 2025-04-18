@@ -1,5 +1,5 @@
 import '../../0_global/js/index.js'
-import { getPrefix, createNode } from '../../0_global/js/global.js'
+import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 
 const list = [
   {

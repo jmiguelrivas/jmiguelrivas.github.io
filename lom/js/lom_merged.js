@@ -1,7 +1,7 @@
 import '../../0_global/js/index.js'
 import { merges } from './db_merges.js'
 import { getCountryCode, getTooltip } from './utils.js'
-import { getPrefix, createNode } from '../../0_global/js/global.js'
+import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { filters } from './component_filters.js'
 import './component_users.js'
 
