@@ -1,13 +1,33 @@
 @import url("../../0_global/css/main.css");
 
 .calendar {
-  .controllers {
-    display: flex;
-    justify-content: space-between;
+  .controls {
     margin: auto;
     margin-block-end: 2rem;
-    gap: 1rem;
-    width: 300px;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .tabs {
+      display: flex;
+      flex-grow: 1;
+      gap: .5rem;
+      max-width: 330px;
+      button {
+        flex-grow: 1;
+      }
+    }
+    
+    .date-changer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-basis: 330px;
+      h1 {
+        margin: 0;
+      }
+    }
   }
 
   .day {
@@ -29,6 +49,11 @@
 
     &.event {
       border: 1px solid var(--accent-color);
+    }
+
+    &.current {
+      background-color: var(--accent-color);
+      color: #222;
     }
   }
 

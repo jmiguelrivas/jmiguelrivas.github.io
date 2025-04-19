@@ -2,8 +2,8 @@ import '../../0_global/js/index.js'
 // import React from '../../0_global/modules/react.js'
 // import ReactDOMClient from '../../0_global/modules/react-dom-client.js'
 
-import React, { useState } from "https://esm.sh/react@19";
-import { createRoot } from "https://esm.sh/react-dom@19/client";
+import React, { useState } from 'https://esm.sh/react@19'
+import { createRoot } from 'https://esm.sh/react-dom@19/client'
 
 import '../../0_global/modules/dayjs.min.js'
 
@@ -79,7 +79,8 @@ function get13MonthDate(date) {
   }
 }
 
-function generateDualCalendar(year) {
+function generateDualCalendar(date) {
+  const year = date
   const start = dayjs(`${year}-04-01`)
   const end = dayjs(`${year + 1}-03-31`)
   const days = []
@@ -113,11 +114,16 @@ const chunkIntoMonths = data => {
 const Day = ({ gregorian, custom }) => {
   const dayGregorian = `${gregorian.$M + 1}/${gregorian.$D}`
 
-  const localEvent = events.filter(item => item.day == gregorian.$D && item.month == gregorian.$M + 1).map(item => item.title).join(', ')
+  const currentDay = dayjs().isSame(gregorian, 'day')
+
+  const localEvent = events
+    .filter(item => item.day == gregorian.$D && item.month == gregorian.$M + 1)
+    .map(item => item.title)
+    .join(', ')
 
   return (
     <div
-      className={["day", localEvent && 'event'].join(' ')}
+      className={['day', localEvent && 'event', currentDay && 'current'].join(' ')}
       title={localEvent}
     >
       <span className="custom">{custom}</span>
@@ -126,63 +132,99 @@ const Day = ({ gregorian, custom }) => {
   )
 }
 
-const Year = () => {
-  const [year, setYear] = useState(dayjs().year());
-  
-  const weeks = chunkIntoWeeks(generateDualCalendar(year));
-  const months = chunkIntoMonths(weeks);
-
-  const changeYear = (amount) => {
-    setYear(prev => dayjs(`${prev}-01-01`).subtract(amount, 'year').year());
-  };
-
+const Controls = ({ date, changeDate }) => {
   return (
-    <div className="calendar">
-      <div className="controllers">
+    <div className="controls">
+      <div className="tabs">
+        <button
+          className="btn shamrock"
+          role="button"
+        >
+          Week
+        </button>
+        <button
+          className="btn shamrock"
+          role="button"
+        >
+          Month
+        </button>
+        <button
+          className="btn shamrock"
+          role="button"
+        >
+          Year
+        </button>
+      </div>
+      <div className="date-changer">
         <button
           role="button"
-          onClick={() => changeYear(1)}
+          className="btn sunglow"
+          onClick={() => changeDate(1)}
         >
           <nn-icono class="arrow-chevron left" />
         </button>
-        <h1>{year}</h1>
+        <h1>{date}</h1>
         <button
           role="button"
-          onClick={() => changeYear(-1)}
+          className="btn sunglow"
+          onClick={() => changeDate(-1)}
         >
           <nn-icono class="arrow-chevron right" />
         </button>
-      </div>
-      <div className="year">
-        {months.map((month, mi) => (
-          <div
-            key={mi}
-            className="month"
-          >
-            <h2 className="month-name">{month[0][0].custom.monthName}</h2>
-            {month.map((week, wi) => (
-              <div
-                key={wi}
-                className="week"
-              >
-                {week.map((day, di) => (
-                  <Day
-                    key={di}
-                    gregorian={day.gregorian}
-                    custom={day.custom.day}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-        ))}
       </div>
     </div>
   )
 }
 
+const Year = ({ months }) => {
+  return (
+    <div className="year">
+      {months.map((month, mi) => (
+        <div
+          key={mi}
+          className="month"
+        >
+          <h2 className="month-name">{month[0][0].custom.monthName}</h2>
+          {month.map((week, wi) => (
+            <div
+              key={wi}
+              className="week"
+            >
+              {week.map((day, di) => (
+                <Day
+                  key={di}
+                  gregorian={day.gregorian}
+                  custom={day.custom.day}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 const App = () => {
-  return <Year />
+  const [date, setDate] = useState(dayjs())
+
+  const year = date.year()
+  const weeks = chunkIntoWeeks(generateDualCalendar(year))
+  const months = chunkIntoMonths(weeks)
+
+  const changeYear = amount => {
+    setDate(prev => prev.subtract(amount, 'year'))
+  }
+
+  return (
+    <div className="calendar">
+      <Controls
+        date={year}
+        changeDate={changeYear}
+      />
+      <Year months={months} />
+    </div>
+  )
 }
 
 const root = createRoot(document.getElementById('root'))
