@@ -19,6 +19,40 @@ const MONTHS_13 = [
   ['Sonho', 'Amets'], //	dream – the liminal month, dreaming forward
 ]
 
+const events = [
+  {
+    month: 5,
+    day: 5,
+    title: 'Event 1',
+  },
+  {
+    month: 10,
+    day: 10,
+    title: 'Event 2',
+  },
+  {
+    month: 11,
+    day: 18,
+    title: 'Event 3',
+  },
+
+  {
+    month: 1,
+    day: 1,
+    title: 'New Year',
+  },
+  {
+    month: 7,
+    day: 4,
+    title: 'US Independence',
+  },
+  {
+    month: 12,
+    day: 25,
+    title: 'Christmas Day',
+  },
+]
+
 function get13MonthDate(date) {
   const year = date.year()
   const start = dayjs(`${year}-04-01`)
@@ -77,10 +111,17 @@ let weeks = chunkIntoWeeks(generateDualCalendar(year))
 let months = chunkIntoMonths(weeks)
 
 const Day = ({ gregorian, custom }) => {
+  const dayGregorian = `${gregorian.$M + 1}/${gregorian.$D}`
+
+  const localEvent = events.filter(item => item.day == gregorian.$D && item.month == gregorian.$M + 1).map(item => item.title).join(', ')
+
   return (
-    <div className="day">
+    <div
+      className={`day ${localEvent ? 'event' : ''}`}
+      title={localEvent}
+    >
       <span className="custom">{custom}</span>
-      <span className="gregorian">{gregorian}</span>
+      <span className="gregorian">{dayGregorian}</span>
     </div>
   )
 }
@@ -109,14 +150,14 @@ const Year = () => {
           role="button"
           onClick={() => reduceYear(1)}
         >
-          p
+          <nn-icono className="arrow-chevron left" />
         </button>
         <h1>{year}</h1>
         <button
           role="button"
           onClick={() => reduceYear(-1)}
         >
-          n
+          <nn-icono className="arrow-chevron right" />
         </button>
       </div>
       <div className="year">
@@ -134,7 +175,7 @@ const Year = () => {
                 {week.map((day, di) => (
                   <Day
                     key={di}
-                    gregorian={`${day.gregorian.$M + 1}/${day.gregorian.$D}`}
+                    gregorian={day.gregorian}
                     custom={day.custom.day}
                   />
                 ))}

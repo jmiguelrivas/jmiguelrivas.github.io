@@ -3,8 +3,12 @@
 .calendar {
   .controllers {
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    margin-block-end: 1rem;
+
+    button {
+      display: none;
+    }
   }
 
   .day {
@@ -22,6 +26,10 @@
 
     .gregorian {
       font-size: 10px;
+    }
+
+    &.event {
+      border: 1px solid var(--accent-color);
     }
   }
 
