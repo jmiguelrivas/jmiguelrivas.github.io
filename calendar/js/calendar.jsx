@@ -132,42 +132,98 @@ const Day = ({ gregorian, custom }) => {
   )
 }
 
-const Controls = ({ date, changeDate }) => {
+const Controls = ({
+  date,
+  currentWeekNumber,
+  currentMonthName,
+  changeYear,
+  changeMonth,
+  changeWeek,
+  view,
+  changeView,
+}) => {
   return (
     <div className="controls">
       <div className="tabs">
         <button
           className="btn shamrock"
           role="button"
+          onClick={() => changeView('week')}
         >
           Week
         </button>
         <button
           className="btn shamrock"
           role="button"
+          onClick={() => changeView('month')}
         >
           Month
         </button>
         <button
           className="btn shamrock"
           role="button"
+          onClick={() => changeView('year')}
         >
           Year
         </button>
       </div>
+
+      {view === 'week' && (
+        <>
+          <div className="date-changer week-counter">
+            <button
+              role="button"
+              className="btn sunglow"
+              onClick={() => changeWeek(1)}
+            >
+              <nn-icono class="arrow-chevron left" />
+            </button>
+            <h1>{currentWeekNumber}</h1>
+            <button
+              role="button"
+              className="btn sunglow"
+              onClick={() => changeWeek(-1)}
+            >
+              <nn-icono class="arrow-chevron right" />
+            </button>
+          </div>
+        </>
+      )}
+      {(view === 'month' || view === 'week') && (
+        <>
+          <div className="date-changer">
+            <button
+              role="button"
+              className="btn sunglow"
+              onClick={() => changeMonth(1)}
+            >
+              <nn-icono class="arrow-chevron left" />
+            </button>
+            <h1>{currentMonthName}</h1>
+            <button
+              role="button"
+              className="btn sunglow"
+              onClick={() => changeMonth(-1)}
+            >
+              <nn-icono class="arrow-chevron right" />
+            </button>
+          </div>
+        </>
+      )}
+
       <div className="date-changer">
         <button
           role="button"
           className="btn sunglow"
-          onClick={() => changeDate(1)}
+          onClick={() => changeYear(1)}
         >
           <nn-icono class="arrow-chevron left" />
         </button>
-        <h1>{date}</h1>
+        <h1>{date.year()}</h1>
         <button
           role="button"
           className="btn sunglow"
-          onClick={() => changeDate(-1)}
+          onClick={() => changeYear(-1)}
         >
           <nn-icono class="arrow-chevron right" />
         </button>
@@ -178,7 +234,7 @@ const Controls = ({ date, changeDate }) => {
 
 const Year = ({ months }) => {
   return (
-    <div className="year">
+    <div className="year-view">
       {months.map((month, mi) => (
         <div
           key={mi}
@@ -205,24 +261,104 @@ const Year = ({ months }) => {
   )
 }
 
+const Month = ({ currentMonth }) => {
+  return (
+    <div className="month month-view">
+      {currentMonth.map((week, wi) => (
+        <div
+          key={wi}
+          className="week"
+        >
+          {week.map((day, di) => (
+            <Day
+              key={di}
+              gregorian={day.gregorian}
+              custom={day.custom.day}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+const Week = ({ currentWeek }) => {
+  return (
+    <div className="month month-view">
+      <div className="week">
+        {currentWeek.map((day, di) => (
+          <Day
+            key={di}
+            gregorian={day.gregorian}
+            custom={day.custom.day}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 const App = () => {
   const [date, setDate] = useState(dayjs())
 
   const year = date.year()
-  const weeks = chunkIntoWeeks(generateDualCalendar(year))
+  const calendar = generateDualCalendar(year)
+  const weeks = chunkIntoWeeks(calendar)
   const months = chunkIntoMonths(weeks)
+
+  const currentDay = calendar.find(day => day.gregorian.isSame(date, 'day'))
+  const currentMonth = months.find(month => dayjs().isSame(month[0][0].gregorian, 'month'))
+  const currentWeek = weeks.find(week => week[0].gregorian.isSame(date, 'week'))
+
+  // console.log(currentDay)
+  const currentMonthName = currentDay.custom.monthName
+  const currentWeekNumber = weeks.indexOf(currentWeek) + 1
+
+  const [view, setView] = useState('year')
 
   const changeYear = amount => {
     setDate(prev => prev.subtract(amount, 'year'))
   }
 
+  const changeMonth = amount => {
+    setDate(prev => prev.subtract(amount, 'month'))
+  }
+
+  const changeWeek = amount => {
+    setDate(prev => prev.subtract(amount, 'week'))
+  }
+
+  const changeView = newview => {
+    setView(view => newview)
+  }
+
   return (
     <div className="calendar">
       <Controls
-        date={year}
-        changeDate={changeYear}
+        view={view}
+        date={date}
+        currentMonthName={currentMonthName}
+        currentWeekNumber={currentWeekNumber}
+        changeYear={changeYear}
+        changeMonth={changeMonth}
+        changeWeek={changeWeek}
+        changeView={changeView}
       />
-      <Year months={months} />
+      {view === 'year' && (
+        <>
+          <Year months={months} />
+        </>
+      )}
+      {view === 'month' && (
+        <>
+          <Month currentMonth={currentMonth} />
+        </>
+      )}
+      {view === 'week' && (
+        <>
+          <Week currentWeek={currentWeek} />
+        </>
+      )}
     </div>
   )
 }
