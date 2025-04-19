@@ -5,29 +5,29 @@ const s2025 = [
   //   icon: 'user',
   // },
   {
-    name: 'Header',
+    name: 'Home',
     url: '2025/index',
     icon: 'home',
-    id: 'header',
+    // id: 'header',
   },
-  {
-    name: 'Skills',
-    url: '2025/index',
-    icon: 'wrench',
-    id: 'skills',
-  },
-  {
-    name: 'Portfolio',
-    url: '2025/index',
-    icon: 'book',
-    id: 'portfolio',
-  },
-  {
-    name: 'Resume',
-    url: '2025/index',
-    icon: 'drivers-license',
-    id: 'resume',
-  },
+  // {
+  //   name: 'Skills',
+  //   url: '2025/index',
+  //   icon: 'wrench',
+  //   id: 'skills',
+  // },
+  // {
+  //   name: 'Portfolio',
+  //   url: '2025/index',
+  //   icon: 'book',
+  //   id: 'portfolio',
+  // },
+  // {
+  //   name: 'Resume',
+  //   url: '2025/index',
+  //   icon: 'drivers-license',
+  //   id: 'resume',
+  // },
 ]
 
 const sLOM = [
@@ -101,6 +101,12 @@ const others = [
     icon: 'calendar',
     tags: ['react 19'],
   },
+  {
+    name: 'Color Cube',
+    url: 'cube/cube',
+    icon: 'cube',
+    tags: ['web-components', 'threejs'],
+  },
 ]
 
 const queryString = window.location.search
@@ -109,11 +115,11 @@ const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
 const routes = [
   s2025,
-  sNano,
-  // sFamily,
+  others,
   sDocs,
   sLOM,
-  others,
+  // sFamily,
+  sNano,
 ]
   .map(r => {
     return [
