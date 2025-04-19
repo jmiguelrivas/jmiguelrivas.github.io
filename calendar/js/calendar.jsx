@@ -1,6 +1,10 @@
 import '../../0_global/js/index.js'
-import React from '../../0_global/modules/react.js'
-import ReactDOMClient from '../../0_global/modules/react-dom-client.js'
+// import React from '../../0_global/modules/react.js'
+// import ReactDOMClient from '../../0_global/modules/react-dom-client.js'
+
+import React, { useState } from "https://esm.sh/react@19";
+import { createRoot } from "https://esm.sh/react-dom@19/client";
+
 import '../../0_global/modules/dayjs.min.js'
 
 const MONTHS_13 = [
@@ -68,7 +72,7 @@ function get13MonthDate(date) {
   const month = Math.floor(daysSinceStart / 28)
   const day = (daysSinceStart % 28) + 1
   return {
-    monthName: MONTHS_13[month]?.[0] || 'Reset Day',
+    monthName: MONTHS_13[month]?.[0] || 'Reset',
     monthNumber: month < 13 ? month + 1 : null,
     day: day,
     year: refYear,
@@ -106,10 +110,6 @@ const chunkIntoMonths = data => {
   return months
 }
 
-let year = dayjs().year()
-let weeks = chunkIntoWeeks(generateDualCalendar(year))
-let months = chunkIntoMonths(weeks)
-
 const Day = ({ gregorian, custom }) => {
   const dayGregorian = `${gregorian.$M + 1}/${gregorian.$D}`
 
@@ -126,38 +126,31 @@ const Day = ({ gregorian, custom }) => {
   )
 }
 
-const reduceYear = amount => {
-  year = dayjs(`${year}-01-01`).subtract(amount, 'year').year()
-  weeks = chunkIntoWeeks(generateDualCalendar(year))
-  months = chunkIntoMonths(weeks)
-
-  console.log(year)
-}
-
-// const Week = () => {
-//   return <h1>Week</h1>
-// }
-
-// const Month = () => {
-//   return <h1>Month</h1>
-// }
-
 const Year = () => {
+  const [year, setYear] = useState(dayjs().year());
+  
+  const weeks = chunkIntoWeeks(generateDualCalendar(year));
+  const months = chunkIntoMonths(weeks);
+
+  const changeYear = (amount) => {
+    setYear(prev => dayjs(`${prev}-01-01`).subtract(amount, 'year').year());
+  };
+
   return (
     <div className="calendar">
       <div className="controllers">
         <button
           role="button"
-          onClick={() => reduceYear(1)}
+          onClick={() => changeYear(1)}
         >
-          <nn-icono className="arrow-chevron left" />
+          <nn-icono class="arrow-chevron left" />
         </button>
         <h1>{year}</h1>
         <button
           role="button"
-          onClick={() => reduceYear(-1)}
+          onClick={() => changeYear(-1)}
         >
-          <nn-icono className="arrow-chevron right" />
+          <nn-icono class="arrow-chevron right" />
         </button>
       </div>
       <div className="year">
@@ -192,5 +185,5 @@ const App = () => {
   return <Year />
 }
 
-const root = ReactDOMClient.createRoot(document.getElementById('root'))
+const root = createRoot(document.getElementById('root'))
 root.render(<App />)

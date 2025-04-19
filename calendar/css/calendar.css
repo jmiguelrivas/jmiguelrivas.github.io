@@ -3,12 +3,9 @@
 .calendar {
   .controllers {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-block-end: 1rem;
-
-    button {
-      display: none;
-    }
+    gap: 4rem;
   }
 
   .day {
@@ -37,7 +34,7 @@
     display: flex;
     gap: .5rem;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .month {
