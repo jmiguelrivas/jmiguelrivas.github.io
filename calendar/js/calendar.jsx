@@ -21,6 +21,7 @@ const MONTHS_13 = [
   ['Neve', 'Elur'], //	snow – deep winter
   ['Gelo', 'Izoztu'], //	freeze – frost, stillness
   ['Sonho', 'Amets'], //	dream – the liminal month, dreaming forward
+  ['Transição'], //	dream – the liminal month, dreaming forward
 ]
 
 const events = [
@@ -59,7 +60,7 @@ const events = [
 
 function get13MonthDate(date) {
   const year = date.year()
-  const start = dayjs(`${year}-04-01`)
+  const start = dayjs(`${year}-03-20`)
   let refYear = year
 
   let daysSinceStart = date.diff(start, 'day')
@@ -72,7 +73,7 @@ function get13MonthDate(date) {
   const month = Math.floor(daysSinceStart / 28)
   const day = (daysSinceStart % 28) + 1
   return {
-    monthName: MONTHS_13[month]?.[0] || 'Reset',
+    monthName: MONTHS_13[month]?.[0],
     monthNumber: month < 13 ? month + 1 : null,
     day: day,
     year: refYear,
@@ -81,7 +82,7 @@ function get13MonthDate(date) {
 
 function generateDualCalendar(date) {
   const year = date.year()
-  const startOfCycle = dayjs(`${year}-04-01`)
+  const startOfCycle = dayjs(`${year}-03-20`)
   let start, end
 
   // if date is before April 1st, it belongs to the previous custom year
