@@ -327,7 +327,7 @@ const App = () => {
 
   const currentDay = calendar.find(day => day.gregorian.isSame(date, 'day'))
   const currentMonth = months.find(month =>
-    month.some(week => week.some(day => date.isSame(day.gregorian, 'month')))
+    month.some(week => week.some(day => date.isSame(day.gregorian, 'day')))
   )
   const currentWeek = weeks.find(week => week.some(day => day.gregorian.isSame(date, 'day')))
 
