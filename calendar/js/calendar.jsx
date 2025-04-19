@@ -307,8 +307,15 @@ const App = () => {
   const months = chunkIntoMonths(weeks)
 
   const currentDay = calendar.find(day => day.gregorian.isSame(date, 'day'))
-  const currentMonth = months.find(month => dayjs().isSame(month[0][0].gregorian, 'month'))
-  const currentWeek = weeks.find(week => week[0].gregorian.isSame(date, 'week'))
+  // const currentMonth = months.find(month => dayjs().isSame(month[0][0].gregorian, 'month'))
+  const currentMonth = months.find(month =>
+    month.some(week => week.some(day => date.isSame(day.gregorian, 'month')))
+  )
+  // const currentWeek = weeks.find(week => week[0].gregorian.isSame(date, 'week'))
+
+  const currentWeek = weeks.find(week =>
+    week.some(day => date.isSame(day.gregorian, 'week'))
+  )
 
   // console.log(currentDay)
   const currentMonthName = currentDay.custom.monthName
