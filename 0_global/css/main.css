@@ -110,7 +110,11 @@ mr-app {
 
     .tags {
       display: flex;
-      gap: .5rem;;
+      gap: .5rem;
+
+      &:empty {
+        display: none;
+      }
     }
   }
 
