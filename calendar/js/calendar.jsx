@@ -70,7 +70,7 @@ function get13MonthDate(date) {
   return {
     monthName: MONTHS_13[month]?.[0] || 'Reset Day',
     monthNumber: month < 13 ? month + 1 : null,
-    day: month < 13 ? day : 1,
+    day: day,
     year: refYear,
   }
 }
