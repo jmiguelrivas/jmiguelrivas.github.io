@@ -150,12 +150,20 @@ const Controls = ({
   changeYear,
   changeMonth,
   changeWeek,
+  resetToToday,
   view,
   changeView,
 }) => {
   return (
     <div className="controls">
       <div className="tabs">
+        <button
+          className="btn royal-purple"
+          role="button"
+          onClick={resetToToday}
+        >
+          Now
+        </button>
         <button
           className="btn shamrock"
           role="button"
@@ -320,7 +328,7 @@ const App = () => {
   const currentMonth = months.find(month =>
     month.some(week => week.some(day => date.isSame(day.gregorian, 'month')))
   )
-  const currentWeek = weeks.find(week => week.some(day => date.isSame(day.gregorian, 'week')))
+  const currentWeek = weeks.find(week => week.some(day => day.gregorian.isSame(date, 'day')))
 
   const currentMonthName = currentDay.custom.monthName
   const currentWeekNumber = weeks.indexOf(currentWeek) + 1
@@ -346,6 +354,10 @@ const App = () => {
     setView(view => newview)
   }
 
+  const resetToToday = () => {
+    setDate(dayjs())
+  }
+
   return (
     <div className="calendar">
       <Controls
@@ -357,6 +369,7 @@ const App = () => {
         changeMonth={changeMonth}
         changeWeek={changeWeek}
         changeView={changeView}
+        resetToToday={resetToToday}
       />
       {view === 'year' && (
         <>

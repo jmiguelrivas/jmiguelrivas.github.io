@@ -1,22 +1,10 @@
 body {
   --sunglow: hsl(47deg, 100%, 57%);
   --shamrock: hsl(149deg, 61%, 51%);
+  --royal-purple: hsl(262.83deg 41.07% 43.92%);
 }
 
 .btn {
-  --color: attr(data-color type(<color>));
-
-  /* Old browsers support::BEGIN */
-  &.sunglow {
-    --color: var(--sunglow);
-  }
-
-  &.shamrock {
-    --color: var(--shamrock);
-  }
-
-  /* Old browsers support::END */
-
   font-size: 9pt;
   text-align: center;
   text-decoration: none;
@@ -29,9 +17,9 @@ body {
   letter-spacing: 1pt;
   text-transform: uppercase;
   transition-property: background-color,
-  box-shadow,
-  border,
-  color;
+    box-shadow,
+    border,
+    color;
   transition-duration: 200ms;
   transition-timing-function: ease;
   border-radius: 0;
@@ -75,19 +63,41 @@ body {
   display: inline-block;
   vertical-align: middle;
   background-color: var(--color);
-  
+
+  &.royal-purple {
+    --color: var(--royal-purple);
+  }
+}
+
+.pill,
+.btn {
+  --color: attr(data-color type(<color>));
+
+  /* Old browsers support::BEGIN */
+
+  &.royal-purple {
+    --color: var(--royal-purple);
+  }
+
   &.sunglow {
     --color: var(--sunglow);
   }
-  
+
   &.shamrock {
     --color: var(--shamrock);
   }
+
+  &.royal-purple {
+    color: #fff;
+  }
+
+  /* Old browsers support::END */
 }
+
 /* 
   --white : ;
   --silver : ;
-  --royal-purple : ;
+  
   --persian-red : ;
   --denim : ;
   --gold-tips : ;
@@ -115,5 +125,3 @@ body {
   --fuchsia : ;
   --blue-violet : ;
   --purple-heart : ; */
-
-
