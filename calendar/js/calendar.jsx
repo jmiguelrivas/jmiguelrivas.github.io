@@ -117,7 +117,7 @@ const Day = ({ gregorian, custom }) => {
 
   return (
     <div
-      className={`day ${localEvent ? 'event' : ''}`}
+      className={["day", localEvent && 'event'].join(' ')}
       title={localEvent}
     >
       <span className="custom">{custom}</span>

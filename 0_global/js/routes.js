@@ -98,7 +98,7 @@ const others = [
   {
     name: 'Calendar',
     url: 'calendar/calendar',
-    icon: 'file-o',
+    icon: 'calendar',
   },
 ]
 

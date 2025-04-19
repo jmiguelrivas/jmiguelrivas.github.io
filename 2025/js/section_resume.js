@@ -28,6 +28,8 @@ const data = {
     tool.css,
     tool.javascript,
     tool.vue,
+    tool.react,
+    tool.redux,
     tool.vitest,
     tool.webComponents,
     tool.storybook,
