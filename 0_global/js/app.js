@@ -29,7 +29,6 @@ const data = {
     // data.darkMode = !data.darkMode
     // const icono = this.querySelector('nn-icono')
     // const body = document.body.classList
-
     // icono.className = data.darkMode ? 'sun-o' : 'moon-o'
     // body.toggle('light', !data.darkMode)
     // body.toggle('dark', data.darkMode)
@@ -37,6 +36,11 @@ const data = {
     // icon: 'sun-o',
     // },
   ],
+}
+
+const colorTagDict = {
+  wip: 'sunglow',
+  react: 'shamrock',
 }
 
 class App extends HTMLElement {
@@ -71,7 +75,6 @@ class App extends HTMLElement {
             parent: li,
             attrs: {
               class: 'btn-icon active',
-              title: item.name,
             },
           })
         } else if (item?.url) {
@@ -81,7 +84,6 @@ class App extends HTMLElement {
             attrs: {
               class: 'btn-icon',
               href: item.url,
-              title: item.name,
               target: '_self',
             },
           })
@@ -91,20 +93,38 @@ class App extends HTMLElement {
             parent: li,
             attrs: {
               class: 'btn-icon',
-              title: item.name,
             },
           })
 
           a.addEventListener('click', item.fn)
         }
 
-        createNode({
+        const tooltip = createNode({
           type: 'span',
           parent: a,
           text: item.name,
           attrs: {
             class: 'tooltip',
           },
+        })
+
+        const tags = createNode({
+          type: 'span',
+          parent: tooltip,
+          attrs: {
+            class: 'tags',
+          },
+        })
+
+        item?.tags?.forEach(tag => {
+          createNode({
+            type: 'span',
+            parent: tags,
+            text: tag,
+            attrs: {
+              class: ['pill', colorTagDict[tag]].join(' '),
+            },
+          })
         })
 
         createNode({

@@ -99,6 +99,7 @@ const others = [
     name: '13 Months Calendar',
     url: 'calendar/calendar',
     icon: 'calendar',
+    tags: ['react', 'wip'],
   },
 ]
 
@@ -137,6 +138,7 @@ const routes = [
           url: `../${route.url}.html${route?.id ? '#' + route.id : ''}${queryString}`,
           icon: route.icon,
           hidden: route.hidden,
+          tags: route.tags,
         }
   })
 

@@ -1,47 +1,21 @@
+body {
+  --sunglow: hsl(47deg, 100%, 57%);
+  --shamrock: hsl(149deg, 61%, 51%);
+}
+
 .btn {
   --color: attr(data-color type(<color>));
 
   /* Old browsers support::BEGIN */
   &.sunglow {
-    --color: hsl(47deg, 100%, 57%);
+    --color: var(--sunglow);
   }
 
   &.shamrock {
-    --color: hsl(149deg, 61%, 51%);
+    --color: var(--shamrock);
   }
 
   /* Old browsers support::END */
-
-  /* &.white { color: #fff; bk-color: #;}
-  &.silver { color: #; bk-color: #;}
-  &.royal-purple { color: #; bk-color: #;}
-  &.persian-red { color: #; bk-color: #;}
-  &.denim { color: #; bk-color: #;}
-  &.gold-tips { color: #; bk-color: #;}
-  &.cod-grey { color: #; bk-color: #;}
-  &.gravel { color: #; bk-color: #;}
-  &.emerald { color: #; bk-color: #;}
-  &.burn-orange { color: #; bk-color: #;}
-  &.razzmatazz { color: #; bk-color: #;}
-  &.desert { color: #; bk-color: #;}
-  &.charcoal { color: #; bk-color: #;}
-  &.golden-brown { color: #; bk-color: #;}
-  &.sepia { color: #; bk-color: #;}
-  &.alizarin { color: #; bk-color: #;}
-  &.rust { color: #; bk-color: #;}
-  &.blush { color: #; bk-color: #;}
-  &.fire-brick { color: #; bk-color: #;}
-  &.milk-punch { color: #; bk-color: #;}
-  &.yukon-gold { color: #; bk-color: #;}
-  &.green-pea { color: #; bk-color: #;}
-  &.laurel { color: #; bk-color: #;}
-  &.elf-green { color: #; bk-color: #;}
-  &.lake { color: #; bk-color: #;}
-  &.cobalt-blue { color: #; bk-color: #;}
-  &.mariner { color: #; bk-color: #;}
-  &.fuchsia { color: #; bk-color: #;}
-  &.blue-violet { color: #; bk-color: #;}
-  &.purple-heart { color: #; bk-color: #;} */
 
   font-size: 9pt;
   text-align: center;
@@ -89,3 +63,57 @@
     cursor: pointer;
   }
 }
+
+.pill {
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: #26220d;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: var(--color);
+  
+  &.sunglow {
+    --color: var(--sunglow);
+  }
+  
+  &.shamrock {
+    --color: var(--shamrock);
+  }
+}
+/* 
+  --white : ;
+  --silver : ;
+  --royal-purple : ;
+  --persian-red : ;
+  --denim : ;
+  --gold-tips : ;
+  --cod-grey : ;
+  --gravel : ;
+  --emerald : ;
+  --burn-orange : ;
+  --razzmatazz : ;
+  --desert : ;
+  --charcoal : ;
+  --golden-brown : ;
+  --sepia : ;
+  --alizarin : ;
+  --rust : ;
+  --blush : ;
+  --fire-brick : ;
+  --milk-punch : ;
+  --yukon-gold : ;
+  --green-pea : ;
+  --laurel : ;
+  --elf-green : ;
+  --lake : ;
+  --cobalt-blue : ;
+  --mariner : ;
+  --fuchsia : ;
+  --blue-violet : ;
+  --purple-heart : ; */
+
+
