@@ -40,7 +40,7 @@ const data = {
 
 const colorTagDict = {
   wip: 'sunglow',
-  react: 'shamrock',
+  'react 19': 'shamrock',
 }
 
 class App extends HTMLElement {

@@ -99,7 +99,7 @@ const others = [
     name: '13 Months Calendar',
     url: 'calendar/calendar',
     icon: 'calendar',
-    tags: ['react', 'wip'],
+    tags: ['react 19'],
   },
 ]
 
@@ -109,7 +109,7 @@ const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
 const routes = [
   s2025,
-  // sNano,
+  sNano,
   // sFamily,
   sDocs,
   sLOM,
