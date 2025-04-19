@@ -101,7 +101,7 @@ mr-app {
     font-size: 12px;
     left: 100%;
     white-space: nowrap;
-    padding: 4px 8px;
+    padding: 8px;
     display: flex;
     visibility: hidden;
     gap: .5rem;
@@ -144,9 +144,9 @@ img {
 
 nn-ayuda,
 .tooltip {
-  z-index: 3;
+  z-index: 11;
 }
 
 .navigation {
-  z-index: 2;
+  z-index: 10;
 }
