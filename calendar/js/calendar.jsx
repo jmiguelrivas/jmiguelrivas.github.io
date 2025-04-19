@@ -80,9 +80,19 @@ function get13MonthDate(date) {
 }
 
 function generateDualCalendar(date) {
-  const year = date
-  const start = dayjs(`${year}-04-01`)
-  const end = dayjs(`${year + 1}-03-31`)
+  const year = date.year()
+  const startOfCycle = dayjs(`${year}-04-01`)
+  let start, end
+
+  // if date is before April 1st, it belongs to the previous custom year
+  if (date.isBefore(startOfCycle)) {
+    start = startOfCycle.subtract(1, 'year')
+    end = startOfCycle.subtract(1, 'year').add(1, 'year').subtract(1, 'day')
+  } else {
+    start = startOfCycle
+    end = startOfCycle.add(1, 'year').subtract(1, 'day')
+  }
+
   const days = []
   let current = start
 
@@ -92,6 +102,7 @@ function generateDualCalendar(date) {
     days.push({ gregorian, custom })
     current = current.add(1, 'day')
   }
+
   return days
 }
 
@@ -174,7 +185,7 @@ const Controls = ({
             <button
               role="button"
               className="btn sunglow"
-              onClick={() => changeWeek(1)}
+              onClick={() => changeWeek(-1)}
             >
               <nn-icono class="arrow-chevron left" />
             </button>
@@ -182,7 +193,7 @@ const Controls = ({
             <button
               role="button"
               className="btn sunglow"
-              onClick={() => changeWeek(-1)}
+              onClick={() => changeWeek(1)}
             >
               <nn-icono class="arrow-chevron right" />
             </button>
@@ -195,7 +206,7 @@ const Controls = ({
             <button
               role="button"
               className="btn sunglow"
-              onClick={() => changeMonth(1)}
+              onClick={() => changeMonth(-1)}
             >
               <nn-icono class="arrow-chevron left" />
             </button>
@@ -203,7 +214,7 @@ const Controls = ({
             <button
               role="button"
               className="btn sunglow"
-              onClick={() => changeMonth(-1)}
+              onClick={() => changeMonth(1)}
             >
               <nn-icono class="arrow-chevron right" />
             </button>
@@ -215,7 +226,7 @@ const Controls = ({
         <button
           role="button"
           className="btn sunglow"
-          onClick={() => changeYear(1)}
+          onClick={() => changeYear(-1)}
         >
           <nn-icono class="arrow-chevron left" />
         </button>
@@ -223,7 +234,7 @@ const Controls = ({
         <button
           role="button"
           className="btn sunglow"
-          onClick={() => changeYear(-1)}
+          onClick={() => changeYear(1)}
         >
           <nn-icono class="arrow-chevron right" />
         </button>
@@ -301,38 +312,34 @@ const Week = ({ currentWeek }) => {
 const App = () => {
   const [date, setDate] = useState(dayjs())
 
-  const year = date.year()
-  const calendar = generateDualCalendar(year)
+  const calendar = generateDualCalendar(date)
   const weeks = chunkIntoWeeks(calendar)
   const months = chunkIntoMonths(weeks)
 
   const currentDay = calendar.find(day => day.gregorian.isSame(date, 'day'))
-  // const currentMonth = months.find(month => dayjs().isSame(month[0][0].gregorian, 'month'))
   const currentMonth = months.find(month =>
     month.some(week => week.some(day => date.isSame(day.gregorian, 'month')))
   )
-  // const currentWeek = weeks.find(week => week[0].gregorian.isSame(date, 'week'))
+  const currentWeek = weeks.find(week => week.some(day => date.isSame(day.gregorian, 'week')))
 
-  const currentWeek = weeks.find(week =>
-    week.some(day => date.isSame(day.gregorian, 'week'))
-  )
-
-  // console.log(currentDay)
   const currentMonthName = currentDay.custom.monthName
   const currentWeekNumber = weeks.indexOf(currentWeek) + 1
 
   const [view, setView] = useState('year')
 
   const changeYear = amount => {
-    setDate(prev => prev.subtract(amount, 'year'))
+    setDate(prev => prev.add(amount, 'year'))
   }
 
   const changeMonth = amount => {
-    setDate(prev => prev.subtract(amount, 'month'))
+    setDate(prev => prev.add(amount, 'month'))
   }
 
   const changeWeek = amount => {
-    setDate(prev => prev.subtract(amount, 'week'))
+    setDate(prev => {
+      const newDate = prev.add(amount, 'week')
+      return newDate
+    })
   }
 
   const changeView = newview => {
