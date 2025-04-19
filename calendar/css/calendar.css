@@ -3,9 +3,11 @@
 .calendar {
   .controllers {
     display: flex;
-    justify-content: center;
-    margin-block-end: 1rem;
-    gap: 4rem;
+    justify-content: space-between;
+    margin: auto;
+    margin-block-end: 2rem;
+    gap: 1rem;
+    width: 300px;
   }
 
   .day {

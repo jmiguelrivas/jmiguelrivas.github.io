@@ -96,7 +96,7 @@ const sDocs = [
 
 const others = [
   {
-    name: 'Calendar',
+    name: '13 Months Calendar',
     url: 'calendar/calendar',
     icon: 'calendar',
   },
