@@ -252,6 +252,22 @@ const Controls = ({
   )
 }
 
+const Header = ({ days }) => {
+  const labels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'].slice(0, days)
+  return (
+    <div className="header">
+      {labels.map((day, i) => (
+        <div
+          className="day-header"
+          key={i}
+        >
+          {day}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 const Year = ({ months }) => {
   return (
     <div className="year-view">
@@ -261,6 +277,7 @@ const Year = ({ months }) => {
           className="month"
         >
           <h2 className="month-name">{month[0][0].custom.monthName}</h2>
+          <Header days={month[0].length} />
           {month.map((week, wi) => (
             <div
               key={wi}
@@ -284,6 +301,7 @@ const Year = ({ months }) => {
 const Month = ({ currentMonth }) => {
   return (
     <div className="month month-view">
+      <Header days={currentMonth[0].length} />
       {currentMonth.map((week, wi) => (
         <div
           key={wi}
@@ -305,6 +323,7 @@ const Month = ({ currentMonth }) => {
 const Week = ({ currentWeek }) => {
   return (
     <div className="month month-view">
+      <Header days={currentWeek.length} />
       <div className="week">
         {currentWeek.map((day, di) => (
           <Day
