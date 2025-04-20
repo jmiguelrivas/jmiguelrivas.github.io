@@ -1,0 +1,144 @@
+@import url("../../0_global/css/main.css");
+
+.calendar {
+  .controls {
+    margin: auto;
+    margin-block-end: 2rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .tabs {
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 1;
+      gap: .5rem;
+      max-width: 330px;
+
+      button {
+        flex-grow: 1;
+      }
+    }
+
+    .date-changer {
+      display: flex;
+      justify-content: space-between;
+      gap: .5rem;
+      flex-basis: 200px;
+      align-items: center;
+
+      &.week-counter {
+        flex-basis: 140px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .year-view {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .header {
+      height: 22px;
+      font-size: 10px;
+    }
+  }
+
+  .month-view {
+    height: calc(100vh - 100px);
+    min-height: 370px;
+
+    .day {
+      .custom {
+        font-size: 21px;
+      }
+
+      .gregorian {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    gap: .5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 50px;
+  }
+
+  .day-header {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #3a424c;
+  }
+
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    background: #333;
+    padding: 3px 5px;
+    border-radius: 5px;
+    flex-basis: 35px;
+    justify-content: center;
+
+    .custom {
+      font-size: 11px;
+    }
+
+    .gregorian {
+      font-size: 10px;
+    }
+
+    &.event {
+      border: 1px solid var(--accent-color);
+    }
+
+    &.current {
+      background-color: var(--accent-color);
+      color: #222;
+    }
+  }
+
+  .week {
+    display: flex;
+    gap: .5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .month {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 1rem;
+    flex-basis: 330px;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .month-name {
+    margin: 0;
+    margin-block-end: .5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--accent-color);
+  }
+}

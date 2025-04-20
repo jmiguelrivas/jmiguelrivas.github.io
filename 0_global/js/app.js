@@ -41,8 +41,10 @@ const data = {
 const colorTagDict = {
   wip: 'sunglow',
   'react 19': 'shamrock',
-  threejs: 'royal-purple',
   'web-components': 'shamrock',
+  'vue 2': 'shamrock',
+  threejs: 'royal-purple',
+  konva: 'royal-purple',
 }
 
 class App extends HTMLElement {

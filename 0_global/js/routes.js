@@ -107,6 +107,12 @@ const others = [
     icon: 'cube',
     tags: ['web-components', 'threejs'],
   },
+  {
+    name: 'Avatar Builder',
+    url: 'avatar-builder/avatar-builder',
+    icon: 'cube',
+    tags: ['vue 2', 'konva'],
+  },
 ]
 
 const queryString = window.location.search
