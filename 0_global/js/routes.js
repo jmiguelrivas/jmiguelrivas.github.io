@@ -108,16 +108,16 @@ const others = [
     tags: ['web-components', 'threejs'],
   },
   {
-    name: 'Avatar Builder',
-    url: 'avatar-builder/avatar-builder',
+    name: 'DrLogic',
+    url: 'drlogic/drlogic',
     icon: 'cube',
-    tags: ['vue 2', 'konva'],
+    tags: ['vue 2'],
   },
 ]
 
 const queryString = window.location.search
-const urlParams = new URLSearchParams(queryString)
-const includeExtras = urlParams.get('extra') === 'true' ? true : false
+// const urlParams = new URLSearchParams(queryString)
+// const includeExtras = urlParams.get('extra') === 'true' ? true : false
 
 const routes = [
   s2025,
