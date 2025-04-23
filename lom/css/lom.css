@@ -1,13 +1,18 @@
 @import url("../../0_global/css/main.css");
 
 .workarea {
-  --amen: hsl(0deg 55% 40%);
-  --es: hsl(30deg 55% 40%);
-  --espt: hsl(60deg 55% 40%);
-  --pt: hsl(150deg 55% 40%);
-  --euen: hsl(190deg 55% 40%);
-  --mush: hsl(210deg 55% 40%);
-  --de: hsl(230deg 55% 40%);
+  --cn: hsl(0deg 55% 40%);
+  --amen: hsl(10deg 55% 40%);
+  --vn: hsl(30deg 55% 40%);
+  --es: hsl(50deg 55% 40%);
+  --id: hsl(70deg 55% 40%);
+  --en: hsl(90deg 55% 40%);
+  --espt: hsl(120deg 55% 40%);
+  --pt: hsl(160deg 55% 40%);
+  --th: hsl(190deg 55% 40%);
+  --euen: hsl(210deg 55% 40%);
+  --mush: hsl(220deg 55% 40%);
+  --de: hsl(240deg 55% 40%);
   --fr: hsl(250deg 55% 40%);
   --me: hsl(270deg 55% 40%);
   --tr: hsl(295deg 55% 40%);
@@ -22,6 +27,22 @@
   --top: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
   --elite: linear-gradient(131deg, rgb(75 146 81) 0%, rgb(24 90 48) 100%);
   --master: linear-gradient(131deg, rgb(174 39 122) 0%, rgb(212 64 154) 100%);
+
+  .cn {
+    background: var(--cn)
+  }
+  .vn {
+    background: var(--vn)
+  }
+  .id {
+    background: var(--id)
+  }
+  .th {
+    background: var(--th)
+  }
+  .en {
+    background: var(--en)
+  }
 
   .amen {
     background: var(--amen)
@@ -269,7 +290,7 @@
       flex-grow: 1;
       flex-wrap: wrap;
       padding: 1rem;
-      background: #aaa;
+      /* background: #aaa; */
       border: 0;
       opacity: 0.8;
       font-weight: bold;
@@ -280,66 +301,6 @@
         background: #777;
         color: #fff;
       }
-
-      &#amen {
-        background: var(--amen)
-      }
-
-      &#es {
-        background: var(--es)
-      }
-
-      &#espt {
-        background: var(--espt)
-      }
-
-      &#pt {
-        background: var(--pt)
-      }
-
-      &#euen {
-        background: var(--euen)
-      }
-
-      &#mush {
-        background: var(--mush)
-      }
-
-      &#de {
-        background: var(--de)
-      }
-
-      &#fr {
-        background: var(--fr)
-      }
-
-      &#me {
-        background: var(--me)
-      }
-
-      &#tr {
-        background: var(--tr)
-      }
-
-      &#ru {
-        background: var(--ru)
-      }
-
-      /* &#honor {
-        background: var(--mention)
-      }
-
-      &#master {
-        background: var(--master)
-      }
-
-      &#elite {
-        background: var(--elite)
-      }
-
-      &#top {
-        background: var(--top)
-      } */
     }
   }
 

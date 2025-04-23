@@ -27,25 +27,26 @@ function getTooltip(item, group = 0) {
 
 function getCountryCode(str) {
   if (str) {
-    const code =
-      `${str}`.length === 5 ? `${str}`.slice(0, 2) : `${str}`.slice(0, 1)
-    const serverId = `${str}`.slice(-3)
-    let finalCode = countryCodes?.[code] || code
+    const parts = str.split('_') 
+    let code = parts[0]
+      // `${str}`.length === 5 ? `${str}`.slice(0, 2) : `${str}`.slice(0, 1)
+    const serverId = parts[1] //`${str}`.slice(-3)
+    // let finalCode = countryCodes?.[code] || code
 
-    if (+code === 11 && +serverId > 247) {
-      finalCode = 'ESPT'
-    } else if (+code === 39 && +serverId > 90) {
-      finalCode = 'TR'
-    } else if (+code === 30 && +serverId >= 262) {
-      finalCode = 'MUSH'
+    if (code === "PT" && +serverId > 247) {
+      code = 'ESPT'
+    } else if (code === 'ME' && +serverId > 90) {
+      code = 'TR'
+    } else if (code === 'EUEN' && +serverId >= 262) {
+      code = 'MUSH'
     }
 
     const users = usersDB.filter(user => user.server.includes(+str))
 
     return {
-      code: finalCode?.toLowerCase(),
-      val: [finalCode, serverId].join('-'),
-      numVal: +str,
+      code: code?.toLowerCase(),
+      val: [code, serverId].join('-'),
+      numVal: countryCodes?.[code],
       users,
     }
   }

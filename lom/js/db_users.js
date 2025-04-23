@@ -33,6 +33,6 @@ function checkDuplicates() {
   console.log('----------------------- REPEATED UID::END')
 }
 
-checkDuplicates()
+// checkDuplicates()
 
 export { users as usersDB }

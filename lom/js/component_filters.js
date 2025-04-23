@@ -1,24 +1,23 @@
 export const filters = `
 <div class="nav">
   <div class="controllers">
-    <button id="all">ALL</button>
-    <button id="amen">AMEN</button>
-    <button id="vn">VN</button>
-    <button id="es">ES</button>
-    <button id="en">EN</button>
-    <button id="espt">ESPT</button>
-    <button id="pt">PT</button>
-    <button id="euen">EUEN</button>
-    <button id="mush">MUSH</button>
-    <button id="de">DE</button>
-    <button id="fr">FR</button>
-    <button id="me">ME</button>
-    <button id="tr">TR</button>
-    <button id="ru">RU</button>
-
-    <button id="cn">CN</button>
-    <button id="id">ID</button>
+    <button class="all">ALL</button>
+    <button class="cn">CN</button>
+    <button class="amen">AMEN</button>
+    <button class="vn">VN</button>
+    <button class="es">ES</button>
+    <button class="id">ID</button>
+    <button class="en">EN</button>
+    <button class="espt">ESPT</button>
+    <button class="pt">PT</button>
+    <button class="th">TH</button>
+    <button class="euen">EUEN</button>
+    <button class="mush">MUSH</button>
+    <button class="de">DE</button>
+    <button class="fr">FR</button>
+    <button class="me">ME</button>
+    <button class="tr">TR</button>
+    <button class="ru">RU</button>
     </div>
-    </div>
+  </div>
     `
-  // <button id="honor">HONOR</button>

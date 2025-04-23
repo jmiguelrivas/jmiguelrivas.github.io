@@ -48,16 +48,14 @@ const data = {
   servers: flatObjects(Object.values(merges)),
 }
 
-const serversKeys = Object.keys(data.servers).map(i => +i)
-const fusedServers = Object.values(data.servers)
-  .flat()
-  .map(i => +i)
+const serversKeys = Object.keys(data.servers)
+const fusedServers = Object.values(data.servers).flat()
 
 const allServers = Object.entries(data.servers)
   .map(([key, values]) => {
     const fusion = values
       .map(value => {
-        return [value, serversKeys.includes(+value) && data.servers[value]]
+        return [value, serversKeys.includes(value) && data.servers[value]]
       })
       .flat(2)
       .filter(e => e)
@@ -65,15 +63,16 @@ const allServers = Object.entries(data.servers)
 
     return {
       key,
+      keyVal: getCountryCode(key).numVal,
       values: fusion,
     }
   })
-  .sort((a, b) => a.key.numVal - b.key.numVal)
+  .sort((a, b) => +a.keyVal - +b.keyVal)
 
 const uniqueServers = allServers
   .filter(server => {
     const currentServer = server.key
-    const belongsToFusion = fusedServers.includes(+currentServer)
+    const belongsToFusion = fusedServers.includes(currentServer)
     return !belongsToFusion
   })
   .map(item => ({
@@ -81,7 +80,7 @@ const uniqueServers = allServers
     values: item.values.map(value => getCountryCode(value)),
   }))
 
-class Expanded extends HTMLElement {
+class Timeline extends HTMLElement {
   constructor() {
     super()
   }
@@ -100,37 +99,18 @@ class Expanded extends HTMLElement {
       'me',
       'tr',
       'ru',
+      'vn',
+      'cn',
+      'id',
+      'en',
+      'th',
     ].forEach(lang => {
-      document.getElementById(lang).addEventListener('click', () => {
+      document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
         data.statusFilter = undefined
         this.generateTable(data.language, data.statusFilter)
       })
     })
-
-    // document.getElementById('honor').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'honor'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
-
-    // document.getElementById('master').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'master'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
-
-    // document.getElementById('elite').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'elite'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
-
-    // document.getElementById('top').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'top'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
   }
 
   generateTable(filterBy) {
@@ -141,16 +121,12 @@ class Expanded extends HTMLElement {
 
     if (filterBy !== 'all') {
       localServers = uniqueServers.filter(
-        server =>
-          server.key.code === filterBy ||
-          server.values.some(val => val.code === filterBy)
+        server => server.key.code === filterBy || server.values.some(val => val.code === filterBy)
       )
     } else if (data.statusFilter) {
       localServers = uniqueServers.filter(
         server =>
-          server.key.users.some(user =>
-            user?.group?.includes(data.statusFilter)
-          ) ||
+          server.key.users.some(user => user?.group?.includes(data.statusFilter)) ||
           server.values.some(server =>
             server.users.some(user => user?.group?.includes(data.statusFilter))
           )
@@ -213,6 +189,6 @@ class Expanded extends HTMLElement {
   }
 }
 
-window.customElements.define(getPrefix('expanded'), Expanded)
+window.customElements.define(getPrefix('timeline'), Timeline)
 
 export { data }

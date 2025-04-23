@@ -51,37 +51,18 @@ class Simple extends HTMLElement {
       'me',
       'tr',
       'ru',
+      'vn',
+      'cn',
+      'id',
+      'en',
+      'th',
     ].forEach(lang => {
-      document.getElementById(lang).addEventListener('click', () => {
+      document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
         data.statusFilter = undefined
         this.generateTable(data.language, data.statusFilter)
       })
     })
-
-    // document.getElementById('honor').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'honor'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
-
-    // document.getElementById('master').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'master'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
-
-    // document.getElementById('elite').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'elite'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
-
-    // document.getElementById('top').addEventListener('click', () => {
-    //   data.language = 'all'
-    //   data.statusFilter = 'top'
-    //   this.generateTable(data.language, data.statusFilter)
-    // })
   }
 
   generateTable(filterBy) {
@@ -115,20 +96,14 @@ class Simple extends HTMLElement {
 
       if (filterBy !== 'all') {
         localServers = merge.servers.filter(
-          server =>
-            server.key.code === filterBy ||
-            server.values.some(val => val.code === filterBy)
+          server => server.key.code === filterBy || server.values.some(val => val.code === filterBy)
         )
       } else if (data.statusFilter) {
         localServers = merge.servers.filter(
           server =>
-            server.key.users.some(user =>
-              user?.group?.includes(data.statusFilter)
-            ) ||
+            server.key.users.some(user => user?.group?.includes(data.statusFilter)) ||
             server.values.some(server =>
-              server.users.some(user =>
-                user?.group?.includes(data.statusFilter)
-              )
+              server.users.some(user => user?.group?.includes(data.statusFilter))
             )
         )
       } else {
@@ -169,9 +144,7 @@ class Simple extends HTMLElement {
             type: 'span',
             parent: groupCell,
             attrs: {
-              class: ['fusion', cell.code, ...getTooltip(cell).classes].join(
-                ' '
-              ),
+              class: ['fusion', cell.code, ...getTooltip(cell).classes].join(' '),
               style: `order:${cell.numVal}`,
             },
             innerHTML: getTooltip(cell).msg ? getTooltip(cell).msg : cell.val,
