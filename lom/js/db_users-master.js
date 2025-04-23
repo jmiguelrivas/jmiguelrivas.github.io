@@ -1,7 +1,6 @@
 import { UserMaster } from './classes.js'
 
 export const masters = [
-  new UserMaster(['Hakan'], [11174], '4010F'),
   new UserMaster(['Evos Phoenix'], [11174], '7150F'),
 
   new UserMaster(['Toddynho'], [11176], '40300'),

@@ -1,6 +1,8 @@
 import { UserTop } from './classes.js'
 
 export const topEU = [
+  new UserTop(['Prophet'], [10122], 'A0607'), // CS: 11120
+
   new UserTop(['RudiRatios'], [33002], '01004'),
   new UserTop(['BROMMMM'], [30042], 'C0209'),
   new UserTop(['Massl'], [33002], 'D030D'),

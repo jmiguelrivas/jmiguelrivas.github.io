@@ -1,3 +1,5 @@
+import { merges as mergesRush } from './db_merges_rush.js'
+
 export const merges = {
   '2024-07-08': {
     1001: [1088],
@@ -1011,6 +1013,8 @@ export const merges = {
     42296: [42297],
     42298: [42299, 42300],
   },
+
+  ...mergesRush,
 }
 
 // const M20241216_OLD = {

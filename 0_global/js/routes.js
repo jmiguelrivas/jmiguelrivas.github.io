@@ -107,12 +107,12 @@ const others = [
     icon: 'cube',
     tags: ['web-components', 'threejs'],
   },
-  {
-    name: 'DrLogic',
-    url: 'drlogic/drlogic',
-    icon: 'cube',
-    tags: ['vue 2'],
-  },
+  // {
+  //   name: 'DrLogic',
+  //   url: 'drlogic/drlogic',
+  //   icon: 'cube',
+  //   tags: ['vue 2'],
+  // },
 ]
 
 const queryString = window.location.search

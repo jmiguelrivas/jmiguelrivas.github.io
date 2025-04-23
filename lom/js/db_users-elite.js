@@ -17,6 +17,7 @@ export const elites = [
   new UserElite(['Luffy'], [11173], '8010A'),
 
   new UserElite(['Doruk'], [11174], '40301'),
+  new UserElite(['Hakan'], [11174], '4010F'),
   new UserElite(['LimRabei'], [11174], '90709'),
   new UserElite(['kirito'], [11174], 'C080F'),
   new UserElite(['Ummabel'], [11174], '8090b'),
