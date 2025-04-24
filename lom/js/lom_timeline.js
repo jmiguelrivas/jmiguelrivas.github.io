@@ -52,14 +52,14 @@ const serversKeys = Object.keys(data.servers)
 const fusedServers = Object.values(data.servers).flat()
 
 const allServers = Object.entries(data.servers)
-  .map(([key, values]) => {
-    const fusion = values
-      .map(value => {
+.map(([key, values]) => {
+  const fusion = values
+  .map(value => {
         return [value, serversKeys.includes(value) && data.servers[value]]
       })
       .flat(2)
       .filter(e => e)
-      .sort((a, b) => a - b)
+      .sort()
 
     return {
       key,

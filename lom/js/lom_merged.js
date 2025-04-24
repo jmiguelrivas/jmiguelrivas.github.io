@@ -17,12 +17,14 @@ const data = {
   statusFilter: undefined,
   allMerges: Object.entries(merges)
     .map(([key, values]) => {
-      const servers = Object.entries(values).map(([mergeKey, mergeValues]) => {
-        return {
-          key: getCountryCode(mergeKey),
-          values: mergeValues.map(val => getCountryCode(val)),
-        }
-      })
+      const servers = Object.entries(values)
+        .map(([mergeKey, mergeValues]) => {
+          return {
+            key: getCountryCode(mergeKey),
+            values: mergeValues.sort().map(val => getCountryCode(val)),
+          }
+        })
+        .sort((a, b) => a.key.numVal - b.key.numVal)
 
       return {
         date: key,
