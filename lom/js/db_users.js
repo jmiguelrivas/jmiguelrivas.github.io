@@ -1,22 +1,25 @@
-import { elites } from './db_users-elite.js'
-import { friends } from './db_users-friends.js'
-import { topAM } from './db_users-top-am.js'
-import { topEU } from './db_users-top-eu.js'
-import { masters } from './db_users-master.js'
+import { am } from './db_users-am.js'
+import { eu } from './db_users-eu.js'
+import { sea } from './db_users-sea.js'
+import { rank } from './enum_rank.js'
 
-const users = [...friends, ...topAM, ...topEU, ...elites, ...masters].map(
-  user => {
-    const result = user
-    result.name = [result.id, result.name].filter(e => e).join(' :: ')
-    return result
+const users = [...am, ...eu, ...sea].sort((a, b) => {
+  if (a.langNumber !== b.langNumber) {
+    return a.langNumber - b.langNumber
   }
-)
+  if(a.server[0] !== b.server[0]){
+    return a.server[0].localeCompare(b.server[0])
+  }
+  if (a.maxRank !== b.maxRank) {
+    return rank[a.maxRank] - rank[b.maxRank]
+  }
+})
 
 function checkDuplicates() {
   console.log('----------------------- REPEATED UID::BEGIN')
-  
+
   // const duplicates = []
-  
+
   users.forEach(i => {
     const hasInstances = users.filter(j => j.id === i.id) //&& j.server[0] === i.server[0]
     if (hasInstances.length > 1) {

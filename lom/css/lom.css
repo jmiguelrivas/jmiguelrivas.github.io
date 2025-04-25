@@ -18,6 +18,8 @@
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
 
+  --creator: linear-gradient(131deg, rgb(202 31 173) 0%, rgb(14 173 145) 100%);
+
   /* --master: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
   --elite: linear-gradient(131deg, rgb(202 155 31) 0%, rgb(246 216 83) 100%);
   --top: linear-gradient(131deg, rgb(214, 184, 255) 0%, rgb(176, 241, 255) 100%);
@@ -104,9 +106,12 @@
     background: var(--elite)
   }
 
-
   .pill.top {
     background: var(--top)
+  }
+
+  .pill.creator {
+    background: var(--creator)
   }
 
 
@@ -322,6 +327,21 @@
     display: flex;
     flex-flow: column;
     gap: 2px;
+  }
+
+  .date-rank-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .names-group {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .table-pill-container {

@@ -49,6 +49,12 @@ const sLOM = [
     icon: 'gamepad',
     hidden: true,
   },
+  {
+    name: 'LOM Users',
+    url: 'lom/users',
+    icon: 'gamepad',
+    hidden: true,
+  },
   // {
   //   name: 'LOM Parking',
   //   url: 'lom/parking',

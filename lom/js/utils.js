@@ -4,13 +4,12 @@ import { countryCodes } from './enum_country-codes.js'
 function getTooltip(item, group = 0) {
   const names = item?.users
     ?.map(user => {
-      let rank = user.group.join(' ')
-      return `<li><small class="pill ${rank}">${rank}</small> ${user.name}</li>`
+      return `<li><small class="pill ${user.maxRank}">${user.maxRank}</small> ${user.label}</li>`
     })
     .join('')
   const classes = [
     'group',
-    ...new Set(item?.users?.map(user => user?.group).flat()),
+    ...new Set(item?.users?.map(user => user.maxRank).flat()),
   ]
 
   return item?.users?.length > 0
