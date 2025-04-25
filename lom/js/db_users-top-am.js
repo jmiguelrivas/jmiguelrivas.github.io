@@ -9,7 +9,7 @@ export const topAM = [
 
   new UserTop(['Vegas'], ['AMEN_026'], 'A0B0F'),
   new UserTop(['Zeko'], ['AMEN_034'], '80E06'),
-  new UserTop(['BorinWu'], ['AMEN_094'], '80F01'),
+  new UserTop(['BoringWu'], ['AMEN_094'], '80F01'),
   new UserTop(['concrete'], ['AMEN_353'], '4070B'),
   new UserTop(['pheel'], ['AMEN_323'], '40200'),
   new UserTop(['MathsDebating'], ['AMEN_310'], 'C050D'),

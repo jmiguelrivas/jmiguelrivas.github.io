@@ -82,6 +82,18 @@ const merges = deepMerge(mergesSea, mergesGlobal)
 
 const serversArray = flatObjects(Object.values(merges))
 
+function mergeAllServers(serverMap) {
+  const combined = []
+
+  for (const [key, values] of Object.entries(serverMap)) {
+    combined.push(key, ...values)
+  }
+
+  return removeDuplicates(combined).sort() // Remove duplicates
+}
+
+const spreadServers = mergeAllServers(serversArray)
+
 const serversKeys = Object.keys(serversArray).sort()
 
 const fusedServers = Object.values(serversArray).flat()
@@ -131,4 +143,4 @@ const mergesArray = Object.entries(merges)
   })
   .sort((a, b) => new Date(b.date) - new Date(a.date))
 
-export { servers, mergesArray, merges }
+export { servers, mergesArray, spreadServers }

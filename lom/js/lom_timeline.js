@@ -2,12 +2,12 @@ import '../../0_global/js/index.js'
 import { servers } from './db_merges.js'
 import { getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
-import { filters } from './component_filters.js'
+import { createFilters, langs } from './component_filters.js'
 import './component_users.js'
 
 const template = `
   <nn-caja padding="4">
-		${filters}
+		${createFilters()}
 
 		<h2>Merged Servers</h2>
 
@@ -35,27 +35,11 @@ class Timeline extends HTMLElement {
   }
 
   generateListeners() {
-    ;[
-      'all',
-      'amen',
-      'es',
-      'pt',
-      'espt',
-      'euen',
-      'mush',
-      'de',
-      'fr',
-      'me',
-      'tr',
-      'ru',
-      'vn',
-      'cn',
-      'id',
-      'en',
-      'th',
-    ].forEach(lang => {
+    langs.forEach(lang => {
       document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
+        document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
+
         this.generateTable(data.language)
       })
     })
@@ -64,6 +48,8 @@ class Timeline extends HTMLElement {
   generateTable(filterBy) {
     const tableBody = this.querySelector('#merged-list')
     tableBody.innerHTML = ''
+
+    document.querySelector('.nav button.' + data.language).classList.add('active')
 
     let localServers
 

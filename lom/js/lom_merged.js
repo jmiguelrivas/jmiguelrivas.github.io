@@ -2,12 +2,12 @@ import '../../0_global/js/index.js'
 import { mergesArray } from './db_merges.js'
 import { getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
-import { filters } from './component_filters.js'
+import { createFilters, langs } from './component_filters.js'
 import './component_users.js'
 
 const template = `
   <nn-caja padding="4">
-    ${filters}
+    ${createFilters()}
     <div id="merged-list" class="merged-table"></div>
   </nn-caja>
 `
@@ -23,27 +23,10 @@ class Simple extends HTMLElement {
   }
 
   generateListeners() {
-    ;[
-      'all',
-      'amen',
-      'es',
-      'pt',
-      'espt',
-      'euen',
-      'mush',
-      'de',
-      'fr',
-      'me',
-      'tr',
-      'ru',
-      'vn',
-      'cn',
-      'id',
-      'en',
-      'th',
-    ].forEach(lang => {
+    langs.forEach(lang => {
       document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
+        document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
         this.generateTable(data.language)
       })
     })
@@ -52,6 +35,8 @@ class Simple extends HTMLElement {
   generateTable(filterBy) {
     const body = this.querySelector('#merged-list')
     body.innerHTML = ''
+
+    document.querySelector('.nav button.' + data.language).classList.add('active')
 
     data.mergesArray.forEach(merge => {
       createNode({
@@ -86,16 +71,16 @@ class Simple extends HTMLElement {
         localServers = merge.servers
       }
 
-      if(localServers.length > 0) {
+      if (localServers.length > 0) {
         localServers.forEach(serv => {
           const key = serv.key
           const group = serv.values
-  
+
           const tr = createNode({
             type: 'tr',
             parent: tableBody,
           })
-  
+
           createNode({
             type: 'td',
             parent: tr,
@@ -104,18 +89,18 @@ class Simple extends HTMLElement {
             },
             innerHTML: getTooltip(key).msg ? getTooltip(key).msg : key.label,
           })
-  
+
           const tdGroup = createNode({
             type: 'td',
             parent: tr,
             attrs: { class: 'merged' },
           })
-  
+
           const groupCell = createNode({
             type: 'div',
             parent: tdGroup,
           })
-  
+
           group.forEach(cell => {
             createNode({
               type: 'span',
@@ -138,12 +123,11 @@ class Simple extends HTMLElement {
           type: 'td',
           parent: tr,
           attrs: {
-            colspan: 2
+            colspan: 2,
           },
           innerHTML: 'No Merges Found',
         })
       }
-
     })
   }
 
