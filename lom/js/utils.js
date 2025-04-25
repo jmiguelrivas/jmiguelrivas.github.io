@@ -17,7 +17,7 @@ function getTooltip(item, group = 0) {
     ? {
         classes,
         msg: item?.users
-          ? `<mr-users label="${[item.val, group ? `(${group})` : null].join(
+          ? `<mr-users label="${[item.label, group ? `(${group})` : null].join(
               ' '
             )}">${names}</mr-users>`
           : '',
@@ -28,25 +28,23 @@ function getTooltip(item, group = 0) {
 function getCountryCode(str) {
   if (str) {
     const parts = str.split('_') 
-    let code = parts[0]
-      // `${str}`.length === 5 ? `${str}`.slice(0, 2) : `${str}`.slice(0, 1)
-    const serverId = parts[1] //`${str}`.slice(-3)
-    // let finalCode = countryCodes?.[code] || code
+    let id = parts[0]
+    const serverId = parts[1]
 
-    if (code === "PT" && +serverId > 247) {
-      code = 'ESPT'
-    } else if (code === 'ME' && +serverId > 90) {
-      code = 'TR'
-    } else if (code === 'EUEN' && +serverId >= 262) {
-      code = 'MUSH'
+    if (id === "PT" && +serverId > 247) {
+      id = 'ESPT'
+    } else if (id === 'ME' && +serverId > 90) {
+      id = 'TR'
+    } else if (id === 'EUEN' && +serverId >= 262) {
+      id = 'MUSH'
     }
 
-    const users = usersDB.filter(user => user.server.includes(+str))
+    const users = usersDB.filter(user => user.server.includes(str))
 
     return {
-      code: code?.toLowerCase(),
-      val: [code, serverId].join('-'),
-      numVal: countryCodes?.[code],
+      id: id?.toLowerCase(),
+      label: [id, serverId].join('-'),
+      numericId: countryCodes?.[id],
       users,
     }
   }

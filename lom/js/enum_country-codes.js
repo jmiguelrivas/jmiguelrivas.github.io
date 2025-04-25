@@ -1,6 +1,7 @@
 const countryCodes = {
   CN: 1,
   AMEN: 1,
+  KO: 2,
   VN: 4,
   ES: 6,
   ID: 7,

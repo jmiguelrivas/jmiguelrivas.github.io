@@ -1,6 +1,6 @@
 import '../../0_global/js/index.js'
-import { merges } from './db_merges.js'
-import { getCountryCode, getTooltip } from './utils.js'
+import { servers } from './db_merges.js'
+import { getTooltip } from './utils.js'
 import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { filters } from './component_filters.js'
 import './component_users.js'
@@ -22,63 +22,12 @@ const template = `
 		</table>
   </nn-caja>
 `
-function removeDuplicates(matrix) {
-  return [...new Set(matrix)]
-}
-
-function flatObjects(matrix) {
-  const result = {}
-  matrix.forEach(s => {
-    Object.entries(s).forEach(([k, v]) => {
-      if (result?.[k]) {
-        result[k].push(...v)
-        result[k] = removeDuplicates(result[k])
-      } else {
-        result[k] = v
-      }
-    })
-  })
-  return result
-}
 
 const data = {
   attrs: [],
   language: 'all',
-  statusFilter: undefined,
-  servers: flatObjects(Object.values(merges)),
+  servers,
 }
-
-const serversKeys = Object.keys(data.servers)
-const fusedServers = Object.values(data.servers).flat()
-
-const allServers = Object.entries(data.servers)
-.map(([key, values]) => {
-  const fusion = values
-  .map(value => {
-        return [value, serversKeys.includes(value) && data.servers[value]]
-      })
-      .flat(2)
-      .filter(e => e)
-      .sort()
-
-    return {
-      key,
-      keyVal: getCountryCode(key).numVal,
-      values: fusion,
-    }
-  })
-  .sort((a, b) => +a.keyVal - +b.keyVal)
-
-const uniqueServers = allServers
-  .filter(server => {
-    const currentServer = server.key
-    const belongsToFusion = fusedServers.includes(currentServer)
-    return !belongsToFusion
-  })
-  .map(item => ({
-    key: getCountryCode(item.key),
-    values: item.values.map(value => getCountryCode(value)),
-  }))
 
 class Timeline extends HTMLElement {
   constructor() {
@@ -107,8 +56,7 @@ class Timeline extends HTMLElement {
     ].forEach(lang => {
       document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
-        data.statusFilter = undefined
-        this.generateTable(data.language, data.statusFilter)
+        this.generateTable(data.language)
       })
     })
   }
@@ -120,26 +68,16 @@ class Timeline extends HTMLElement {
     let localServers
 
     if (filterBy !== 'all') {
-      localServers = uniqueServers.filter(
-        server => server.key.code === filterBy || server.values.some(val => val.code === filterBy)
-      )
-    } else if (data.statusFilter) {
-      localServers = uniqueServers.filter(
-        server =>
-          server.key.users.some(user => user?.group?.includes(data.statusFilter)) ||
-          server.values.some(server =>
-            server.users.some(user => user?.group?.includes(data.statusFilter))
-          )
+      localServers = data.servers.filter(
+        server => server.key.id === filterBy || server.values.some(val => val.id === filterBy)
       )
     } else {
-      localServers = uniqueServers
+      localServers = data.servers
     }
 
     localServers.forEach(serv => {
       const key = { ...serv.key }
       const group = serv.values
-
-      // key['users'] = [...key['users'], ...group.map(s => s.users)].flat()
 
       const tr = createNode({
         type: 'tr',
@@ -150,11 +88,11 @@ class Timeline extends HTMLElement {
         type: 'td',
         parent: tr,
         attrs: {
-          class: [key.code, ...getTooltip(key).classes].join(' '),
+          class: [key.id, ...getTooltip(key).classes].join(' '),
         },
         innerHTML: getTooltip(key).msg
           ? getTooltip(key, group.length + 1).msg
-          : [key.val, `(${group.length + 1})`].join(' '),
+          : [key.label, `(${group.length + 1})`].join(' '),
       })
 
       const tdGroup = createNode({
@@ -173,10 +111,10 @@ class Timeline extends HTMLElement {
           type: 'span',
           parent: groupCell,
           attrs: {
-            class: ['fusion', cell.code, ...getTooltip(cell).classes].join(' '),
-            style: `order:${cell.numVal}`,
+            class: ['fusion', cell.id, ...getTooltip(cell).classes].join(' '),
+            style: `order:${cell.numericId}`,
           },
-          innerHTML: getTooltip(cell).msg ? getTooltip(cell).msg : cell.val,
+          innerHTML: getTooltip(cell).msg ? getTooltip(cell).msg : cell.label,
         })
       })
     })

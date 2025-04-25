@@ -36,6 +36,8 @@ const data = {
   spreadServers: [],
 }
 
+console.log(data.servers)
+
 data.spreadServers = removeDuplicates(
   Object.entries(data.servers)
     .map(([key, values]) => {

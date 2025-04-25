@@ -1,4 +1,4 @@
-export const merges = {
+export default {
   '2024-08-05': {
     CN_001: ['CN_004'],
     CN_002: ['CN_006'],
