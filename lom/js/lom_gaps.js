@@ -77,7 +77,7 @@ class Gaps extends HTMLElement {
       {
         title: 'EN (10)',
         filter: 'en',
-        servers: generateRange('EN', 7001, 7999),
+        servers: generateRange('EN', 10001, 10999),
       },
       {
         title: 'PT/ESPT (11)',
