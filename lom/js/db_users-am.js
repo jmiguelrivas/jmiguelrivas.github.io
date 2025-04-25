@@ -312,7 +312,7 @@ export const am = [
   new User(['ClearTy'], ['AMEN_112'], 'E020D', [['elite', null]]),
   new User(['Locust61'], ['AMEN_122'], '60808', [['elite', null]]),
   new User(['Yahiko'], ['AMEN_323'], '60D0E', [['elite', null]]),
-  new User(['Pirolão'], ['AMEN_623'], '60909', [['elite', null]]),
+  new User(['Pirolão'], ['AMEN_623'], '60909', [['elite', null], ['creator', null]]),
   new User(['Mashle'], ['AMEN_310'], '60C07', [['elite', null]]),
   new User(['EpicFail'], ['AMEN_280'], 'A040B', [['elite', null]]),
   new User(['Atait'], ['AMEN_386'], 'F0D01', [['elite', null]]),
@@ -510,7 +510,7 @@ export const am = [
   new User(['DKiingG7'], ['PT_042'], null, [['creator', null]]),
   new User(['AhkTaar'], ['EUEN_001'], null, [['creator', null]]),
   new User(['GameOverLabs'], ['ES_041'], '80D0C', [['creator', null]]),
-  new User(['Pirolão'], ['AMEN_623'], null, [['creator', null]]),
+
   new User(['Sloothix'], ['AMEN_003'], null, [['creator', null]]),
 ]
 
