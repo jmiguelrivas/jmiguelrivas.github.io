@@ -4,13 +4,12 @@ import { countryCodes } from './enum_country-codes.js'
 function getTooltip(item, group = 0) {
   const names = item?.users
     ?.map(user => {
-      return `<li><small class="pill ${user.maxRank}">${user.maxRank}</small> ${user.label}</li>`
+      return `<li><small class="pill ${user.maxRank}">${[user.maxRank, user.maxPosition]
+        .filter(Boolean)
+        .join(' :: ')}</small> ${user.label}</li>`
     })
     .join('')
-  const classes = [
-    'group',
-    ...new Set(item?.users?.map(user => user.maxRank).flat()),
-  ]
+  const classes = ['group']
 
   return item?.users?.length > 0
     ? {
@@ -26,11 +25,11 @@ function getTooltip(item, group = 0) {
 
 function getCountryCode(str) {
   if (str) {
-    const parts = str.split('_') 
+    const parts = str.split('_')
     let id = parts[0]
     const serverId = parts[1]
 
-    if (id === "PT" && +serverId > 247) {
+    if (id === 'PT' && +serverId > 247) {
       id = 'ESPT'
     } else if (id === 'ME' && +serverId > 90) {
       id = 'TR'

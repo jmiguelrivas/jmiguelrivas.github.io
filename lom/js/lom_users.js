@@ -14,7 +14,7 @@ const template = /*html*/ `
   <table>
     <thead>
       <tr>
-        <th>Rank :: Date</th>
+        <th>Rank :: Position :: Date</th>
         <th>UID</th>
         <th>Nick</th>
         <th>Server</th>
@@ -56,22 +56,18 @@ class Users extends HTMLElement {
         },
       })
 
-      createNode({
-        type: 'span',
-        parent: ranks,
-        innerHTML: user.rank?.[0],
-        attrs: {
-          class: ['pill', user.rank?.[0]].join(' '),
-        },
-      })
-
-      if (user.rank?.[1]) {
+      user.ranks.forEach(rank => {
         createNode({
-          type: 'time',
+          type: 'span',
           parent: ranks,
-          innerHTML: user.rank?.[1],
+          innerHTML: [rank?.rank, rank?.position, rank?.date]
+            .filter(Boolean)
+            .join(' :: '),
+          attrs: {
+            class: ['pill', rank?.rank].join(' '),
+          },
         })
-      }
+      })
 
       createNode({
         type: 'td',

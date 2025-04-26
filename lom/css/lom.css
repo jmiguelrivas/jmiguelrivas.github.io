@@ -18,7 +18,8 @@
   --tr: hsl(295deg 55% 40%);
   --ru: hsl(340deg 55% 40%);
 
-  --creator: linear-gradient(131deg, rgb(202 31 173) 0%, rgb(14 173 145) 100%);
+  --creator: linear-gradient(131deg, rgb(212, 49, 185) 0%, rgb(14 173 145) 100%);
+  --vmod: linear-gradient(131deg, rgb(97 31 202) 0%, rgb(14 173 145) 100%);
 
   /* --master: linear-gradient(131deg, rgba(34, 34, 196, 1) 0%, rgba(179, 0, 255, 1) 100%);
   --elite: linear-gradient(131deg, rgb(202 155 31) 0%, rgb(246 216 83) 100%);
@@ -98,22 +99,25 @@
     background: var(--mention)
   }
 
-  .pill.master {
+  .master {
     background: var(--master)
   }
 
-  .pill.elite {
+  .elite {
     background: var(--elite)
   }
 
-  .pill.top {
+  .top {
     background: var(--top)
   }
 
-  .pill.creator {
+  .creator {
     background: var(--creator)
   }
 
+  .vmod {
+    background: var(--vmod)
+  }
 
   h2 {
     font-size: 3rem;
@@ -334,6 +338,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .names-group {
