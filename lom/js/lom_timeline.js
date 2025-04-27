@@ -26,6 +26,7 @@ const template = `
 const data = {
   attrs: [],
   language: 'all',
+  langs,
   servers,
 }
 
@@ -35,17 +36,17 @@ class Timeline extends HTMLElement {
   }
 
   generateListeners() {
-    langs.forEach(lang => {
+    data.langs.forEach(lang => {
       document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
         document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
 
-        this.generateTable(data.language)
+        this.generateTable()
       })
     })
   }
 
-  generateTable(filterBy) {
+  generateTable() {
     const tableBody = this.querySelector('#merged-list')
     tableBody.innerHTML = ''
 
@@ -53,9 +54,9 @@ class Timeline extends HTMLElement {
 
     let localServers
 
-    if (filterBy !== 'all') {
+    if (data.language !== 'all') {
       localServers = data.servers.filter(
-        server => server.key.id === filterBy || server.values.some(val => val.id === filterBy)
+        server => server.key.id === data.language || server.values.some(val => val.id === data.language)
       )
     } else {
       localServers = data.servers
@@ -108,7 +109,7 @@ class Timeline extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = template
-    this.generateTable('all')
+    this.generateTable()
     this.generateListeners()
   }
 }

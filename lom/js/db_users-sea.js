@@ -6,5 +6,6 @@ export const sea = [
   // ]),
   new User(['Yacz'], ['EN_040'], 'C100D', [
     { rank: 'creator', date: '2025-04-25' },
+    { rank: 'elite', date: '2025-04-19' },
   ]),
 ]

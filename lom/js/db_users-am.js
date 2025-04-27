@@ -1,8 +1,8 @@
 import { User } from './classes.js'
 
 export const am = [
-  new User(['Zeko'], ['AMEN_034'], '80E06', [{ rank: 'top', position: 2, date: '2025-04-25' }]),
   new User(['BoringWu'], ['AMEN_094'], '80F01', [{ rank: 'top', position: 1, date: '2025-04-25' }]),
+  new User(['Zeko'], ['AMEN_034'], '80E06', [{ rank: 'top', position: 2, date: '2025-04-25' }]),
   new User(['concrete'], ['AMEN_353'], '4070B', [{ rank: 'top', position: 3, date: '2025-04-25' }]),
   new User(['Imba'], ['AMEN_032'], 'A040D', [{ rank: 'top', position: 4, date: '2025-04-25' }]),
   new User(['Dark Chocolate', 'Vegas'], ['AMEN_026'], 'A0B0F', [
@@ -196,6 +196,10 @@ export const am = [
   ]),
   new User(['Poseidon'], ['AMEN_112'], 'C090D', [
     { rank: 'top', position: 100, date: '2025-04-25' },
+  ]),
+  new User(['Kaido'], ['ES_022'], '90A02', [
+    { rank: 'top', position: 68, date: '2025-02-24' },
+    { rank: 'creator', date: '2025-02-24' },
   ]),
 
   // ------------------------------- elite ↓
@@ -602,7 +606,6 @@ export const am = [
   new User(['mako'], ['AMEN_182'], 'C0A01', [{ rank: 'top', position: null, date: null }]),
   new User(['shroomdada'], ['AMEN_005'], '80901', [{ rank: 'top', position: null, date: null }]),
   new User(['McFudge'], ['AMEN_111'], '90601', [{ rank: 'top', position: null, date: null }]),
-  new User(['Kaido'], ['AMEN_024'], '90A02', [{ rank: 'top', position: null, date: null }]),
   new User(['Butgobbler'], ['AMEN_008'], '6000B', [{ rank: 'top', position: null, date: null }]),
   new User(['Benimaru'], ['AMEN_403'], '60607', [{ rank: 'top', position: null, date: null }]),
   new User(['BigBoyBruce'], ['AMEN_250'], 'B0302', [{ rank: 'top', position: null, date: null }]),
@@ -636,6 +639,10 @@ export const am = [
     { rank: 'top', position: null, date: null },
     { rank: 'elite', date: '2025-04-25' },
   ]),
+
+  // new User(['Dakanoth'], ['AMENN_111'], '', [
+  //   { rank: 'creator', date: '2025-04-25' },
+  // ]),
 ]
 
 // new User(['Talisa'], [1310, 6103], null, ['friend']),

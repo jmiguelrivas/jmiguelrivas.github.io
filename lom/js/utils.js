@@ -23,19 +23,24 @@ function getTooltip(item, group = 0) {
     : { classes: [], msg: '' }
 }
 
+function validateCountryCode(id, serverId) {
+  if (id === 'PT' && +serverId > 247) {
+    return 'ESPT'
+  } else if (id === 'ME' && +serverId > 90) {
+    return 'TR'
+  } else if (id === 'EUEN' && +serverId >= 262) {
+    return 'MUSH'
+  }
+  return id
+}
+
 function getCountryCode(str) {
   if (str) {
     const parts = str.split('_')
     let id = parts[0]
     const serverId = parts[1]
 
-    if (id === 'PT' && +serverId > 247) {
-      id = 'ESPT'
-    } else if (id === 'ME' && +serverId > 90) {
-      id = 'TR'
-    } else if (id === 'EUEN' && +serverId >= 262) {
-      id = 'MUSH'
-    }
+    id = validateCountryCode(id, serverId)
 
     const users = usersDB.filter(user => user.server.includes(str))
 
@@ -48,4 +53,4 @@ function getCountryCode(str) {
   }
 }
 
-export { getCountryCode, getTooltip }
+export { getCountryCode, getTooltip, validateCountryCode }

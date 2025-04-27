@@ -16,6 +16,24 @@ const countryCodes = {
   ME: 39,
   TR: 39,
   RU: 42,
+
+  // 1: 'CN',
+  1: 'AMEN',
+  2: 'KO',
+  4: 'VN',
+  6: 'ES',
+  7: 'ID',
+  10: 'EN',
+  11: 'PT',
+  11: 'ESPT',
+  13: 'TH',
+  30: 'EUEN',
+  30: 'MUSH',
+  33: 'DE',
+  36: 'FR',
+  39: 'ME',
+  39: 'TR',
+  42: 'RU',
 }
 
 export {

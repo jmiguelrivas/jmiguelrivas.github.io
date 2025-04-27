@@ -3,10 +3,13 @@ import { User } from './classes.js'
 export const eu = [
   new User(['AhkTaar'], ['EUEN_001'], '31E0B', [
     { rank: 'elite', date: '2025-04-25' },
-    { rank: 'creator', position: null, date: '2025-04-25' },
+    { rank: 'creator', date: '2025-04-25' },
   ]),
   new User(['Gojo', 'GrumpyGojo'], ['DE_099'], 'A0D05', [
-    { rank: 'creator', position: null, date: '2025-04-25' },
+    { rank: 'creator', date: '2025-04-25' },
+  ]),
+  new User(['Klive'], ['TR_123'], '60E0B', [
+    { rank: 'creator', date: '2025-04-25' },
   ]),
 
   new User(['RudiRatios', 'Memorudia'], ['DE_002'], '01004', [

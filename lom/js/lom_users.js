@@ -11,7 +11,8 @@ import {
   langs
 } from './component_filters.js'
 
-const template = /*html*/ `
+class Users extends HTMLElement {
+  static template = /*html*/ `
 <nn-caja padding="4">
   ${createFilters()}
   <h2>Users</h2>
@@ -29,23 +30,22 @@ const template = /*html*/ `
 </nn-caja>
 `
 
-const data = {
-  attrs: [],
-  language: 'all',
-  users,
-}
+  static data = {
+    attrs: [],
+    language: 'all',
+    langs,
+    users,
+  }
 
-class Users extends HTMLElement {
   constructor() {
     super()
   }
 
   generateListeners() {
-    langs.forEach(lang => {
+    Users.data.langs.forEach(lang => {
       document.querySelector('.nav button.' + lang).addEventListener('click', () => {
-        data.language = lang
+        Users.data.language = lang
         document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
-
         this.generateTable()
       })
     })
@@ -55,11 +55,11 @@ class Users extends HTMLElement {
     const tableBody = this.querySelector('#table-body')
     tableBody.innerHTML = ''
 
-    document.querySelector('.nav button.' + data.language).classList.add('active')
+    document.querySelector('.nav button.' + Users.data.language)?.classList.add('active')
 
-    let table = data.users
-    if (data.language !== 'all') {
-      table = data.users.filter(user => user.lang === data.language)
+    let table = Users.data.users
+    if (Users.data.language !== 'all') {
+      table = Users.data.users.filter(user => user.lang === Users.data.language)
     }
 
     if (table.length) {
@@ -145,7 +145,7 @@ class Users extends HTMLElement {
   }
 
   connectedCallback() {
-    this.innerHTML = template
+    this.innerHTML = Users.template
     this.generateTable()
     this.generateListeners()
   }
@@ -154,5 +154,5 @@ class Users extends HTMLElement {
 window.customElements.define(getPrefix('users'), Users)
 
 export {
-  data
+  Users
 }

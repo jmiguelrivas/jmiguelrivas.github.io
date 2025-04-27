@@ -14,6 +14,7 @@ const template = `
 const data = {
   attrs: [],
   language: 'all',
+  langs,
   mergesArray,
 }
 
@@ -23,16 +24,16 @@ class Simple extends HTMLElement {
   }
 
   generateListeners() {
-    langs.forEach(lang => {
+    data.langs.forEach(lang => {
       document.querySelector('.nav button.' + lang).addEventListener('click', () => {
         data.language = lang
         document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
-        this.generateTable(data.language)
+        this.generateTable()
       })
     })
   }
 
-  generateTable(filterBy) {
+  generateTable() {
     const body = this.querySelector('#merged-list')
     body.innerHTML = ''
 
@@ -63,9 +64,9 @@ class Simple extends HTMLElement {
 
       let localServers
 
-      if (filterBy !== 'all') {
+      if (data.language !== 'all') {
         localServers = merge.servers.filter(
-          server => server.key.code === filterBy || server.values.some(val => val.id === filterBy)
+          server => server.key.code === data.language || server.values.some(val => val.id === data.language)
         )
       } else {
         localServers = merge.servers
