@@ -224,7 +224,7 @@ export const am = [
     { rank: 'vmod', date: '2025-04-25' },
   ]),
   new User(['Pirolão'], ['AMEN_623'], '60909', [
-    { rank: 'elite', date: null },
+    { rank: 'elite', date: '2025-04-22' },
     { rank: 'creator', date: '2025-04-25' },
   ]),
 
@@ -527,7 +527,7 @@ export const am = [
   // new User(['TuEMasQnts'], ['PT_178'], '40E01', [{ rank: 'master' }]),
   // new User(['Yushiro'], ['PT_169'], '41C06', [{ rank: 'master' }]),
 
-  new User(['DKiingG7'], ['PT_042'], null, [{ rank: 'creator', date: '2025-04-25' }]),
+  new User(['DKiingG7'], ['PT_042'], 'B0C09', [{ rank: 'creator', date: '2025-04-25' }]),
   new User(['GameOverLabs'], ['ES_041'], '80D0C', [{ rank: 'creator', date: '2025-04-25' }]),
   new User(['Sloothix'], ['AMEN_003'], '21C02', [{ rank: 'creator', date: '2025-04-25' }]),
 
@@ -585,7 +585,9 @@ export const am = [
   new User(['chobop'], ['AMEN_302'], 'D0F02', [{ rank: 'top', position: null, date: null }]),
   new User(['Enel'], ['AMEN_302'], '80107', [{ rank: 'top', position: null, date: null }]),
   new User(['Raven'], ['AMEN_019'], 'F0002', [{ rank: 'top', position: null, date: null }]),
-  new User(['JHotTea'], ['AMEN_021'], '70305', [{ rank: 'top', position: null, date: null }]),
+  new User(['JHotTea', 'BoringJu'], ['AMEN_021'], '70305', [
+    { rank: 'top', position: null, date: null },
+  ]),
   new User(['Remi'], ['AMEN_173'], 'C0F0B', [{ rank: 'top', position: null, date: null }]),
   new User(['MrsMadHatter'], ['AMEN_321'], 'C070B', [{ rank: 'top', position: null, date: null }]),
   new User(['moose'], ['AMEN_170'], 'E0908', [{ rank: 'top', position: null, date: null }]),

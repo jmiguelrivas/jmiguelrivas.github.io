@@ -5,21 +5,18 @@ import { rank } from './enum_rank.js'
 
 const users = [...am, ...eu, ...sea]
 .sort((a, b) => {
-  if (a.maxRank !== b.maxRank) {
-    return rank[a.maxRank] - rank[b.maxRank]
-  }
-  if (a.maxPosition !== b.maxPosition) {
-    return a.maxPosition - b.maxPosition
-  }
   if (a.langNumber !== b.langNumber) {
     return a.langNumber - b.langNumber
   }
   if (a.server[0] !== b.server[0]) {
     return a.server[0].localeCompare(b.server[0])
   }
-  // if (!b.maxPosition) {
-  //   return -1
-  // }
+  if (a.maxRank !== b.maxRank) {
+    return rank[a.maxRank] - rank[b.maxRank]
+  }
+  if (a.maxPosition !== b.maxPosition) {
+    return a.maxPosition - b.maxPosition
+  }
 })
 
 // function checkDuplicates() {
