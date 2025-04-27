@@ -223,7 +223,7 @@ export const am = [
   new User(['Matty'], ['AMEN_642'], '50708', [{ rank: 'elite', date: '2025-04-25' }]),
 
   // ------------------------------- elite unverified ↓
-  new User(['Mina'], ['PT_245'], '4060A', [
+  new User(['Loost', 'Mina'], ['PT_245'], '4060A', [
     { rank: 'elite', date: null },
     { rank: 'vmod', date: '2025-04-25' },
   ]),

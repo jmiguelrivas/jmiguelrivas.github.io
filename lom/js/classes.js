@@ -15,7 +15,7 @@ class User {
       countryCodes[
         validateCountryCode(this.langNumber, serverParts[1]) || serverParts[0]
       ].toLowerCase()
-    this.server = [this.lang, serverParts[1]].join('_').toLocaleUpperCase()
+    this.server = server//[this.lang, serverParts[1]].join('_').toLocaleUpperCase()
 
     // Find the most recent entry for each rank
     const latestByRank = new Map()
