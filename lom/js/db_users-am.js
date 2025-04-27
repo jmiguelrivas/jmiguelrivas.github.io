@@ -505,7 +505,9 @@ export const am = [
   new User(['Fenix', 'Jack'], ['PT_174'], '31003', [{ rank: 'elite', date: null }]),
   new User(['Migatte', 'ZeroTwo', '(blank)'], ['PT_176'], 'B0D03', [{ rank: 'elite', date: null }]),
   new User(['Colt75'], ['PT_176'], '71B0B', [{ rank: 'elite', date: null }]),
-  new User(['Pluton', 'Mutiris', 'Instinct', 'Bulma'], ['PT_178'], '40501', [{ rank: 'elite', date: null }]),
+  new User(['Pluton', 'Mutiris', 'Instinct', 'Bulma'], ['PT_178'], '40501', [
+    { rank: 'elite', date: null },
+  ]),
   new User(['n17'], ['PT_178'], 'C0400', [{ rank: 'elite', date: null }]),
   new User(['Gogeta'], ['PT_178'], '2190B', [{ rank: 'elite', date: null }]),
   new User(['Kroonos'], ['PT_222'], '50103', [{ rank: 'elite', date: null }]),

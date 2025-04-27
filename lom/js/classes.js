@@ -28,6 +28,7 @@ class User {
 
     this.ranks = Array.from(latestByRank.values())
 
+    this.lastVerify = ranks.map(item => item.date).sort((a,b) => new Date(b) - new Date(a))[0]
     this.maxRank = rankEnum[this.ranks.map(r => rankEnum[r.rank]).sort((a, b) => a - b)[0]]
 
     // Get top position (lowest number)

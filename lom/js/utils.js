@@ -4,9 +4,17 @@ import { countryCodes } from './enum_country-codes.js'
 function getTooltip(item, group = 0) {
   const names = item?.users
     ?.map(user => {
-      return `<li><small class="pill ${user.maxRank}">${[user.maxRank, user.maxPosition]
-        .filter(Boolean)
-        .join(' :: ')}</small> ${user.label}</li>`
+      const warning = !user?.lastVerify
+        ? `
+          <nn-icono class="exclamation pill sunglow" title="Old Entry"></nn-icono>
+        `
+        : ''
+      const rank = `        
+        <small class="pill ${user.maxRank}">
+          ${[user.maxRank, user.maxPosition].filter(Boolean).join(' :: ')}
+        </small>
+      `
+      return `<li>${rank} ${user.label} ${warning}</li>`
     })
     .join('')
   const classes = ['group']
@@ -20,7 +28,10 @@ function getTooltip(item, group = 0) {
             )}">${names}</mr-users>`
           : '',
       }
-    : { classes: [], msg: '' }
+    : {
+        classes: [],
+        msg: '',
+      }
 }
 
 function validateCountryCode(id, serverId) {

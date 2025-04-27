@@ -264,6 +264,11 @@
         align-items: center;
         justify-content: center;
 
+        nn-icono {
+          font-size: 10px;
+          color: #000;
+        }
+
         &:hover {
           opacity: 0.8;
         }
