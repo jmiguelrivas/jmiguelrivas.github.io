@@ -1,4 +1,4 @@
-import { validateCountryCode, getCountryCode } from './utils.js'
+import { validateCountryCode } from './utils.js'
 import { countryCodes } from './enum_country-codes.js'
 import { rank as rankEnum } from './enum_rank.js'
 

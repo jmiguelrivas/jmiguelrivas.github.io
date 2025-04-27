@@ -136,16 +136,17 @@ class Gaps extends HTMLElement {
 
       serv.servers.forEach(server => {
         const isMissing = !data.spreadServers.includes(server)
-        // console.log(server)
+
+        const serverDetails = getCountryCode(server)
 
         createNode({
           type: 'li',
           parent: ul,
           attrs: {
-            class: [isMissing ? 'missing' : '', getCountryCode(server).id].join(' '),
+            class: [isMissing ? 'missing' : '', serverDetails.id].join(' '),
             title: isMissing ? 'not merge / missing' : '',
           },
-          innerHTML: server,
+          innerHTML: serverDetails.label,
         })
       })
     })
