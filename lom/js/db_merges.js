@@ -60,7 +60,7 @@ function deepMerge(merges1, merges2) {
 }
 
 function removeDuplicates(matrix) {
-  return [...new Set(matrix)]
+  return [...new Set([...matrix])]
 }
 
 function flatObjects(matrix) {
@@ -125,7 +125,7 @@ const servers = allServers
   }))
   .sort(sortByNumberAndStringValue)
 
-const mergesArray = Object.entries(merges)
+const mergesArray = Object.entries({...mergesGlobal, ...mergesSea})
   .map(([key, values]) => {
     const servers = Object.entries(values)
       .map(([mergeKey, mergeValues]) => {
