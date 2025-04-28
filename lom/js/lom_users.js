@@ -14,7 +14,7 @@ import {
 class Users extends HTMLElement {
   static template = /*html*/ `
 <nn-caja padding="4">
-  ${createFilters()}
+  ${createFilters(['tr', 'espt', 'mush'])}
   <h2>Users</h2>
   <table>
     <thead>
