@@ -481,7 +481,7 @@ export const am = [
   new User(['kirito', 'soldado'], ['PT_174'], 'C080F', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
-  new User(['SnekySneaky'], ['AMEN_254'], '80F0F', [
+  new User(['SneakySneaky'], ['AMEN_254'], '80F0F', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['RetiredLowStat'], ['AMEN_388'], '9080A', [
