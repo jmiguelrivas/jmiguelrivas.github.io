@@ -574,7 +574,7 @@ export const am = [
   new User(['RegenMyBalls'], ['AMEN_031'], '80608', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
-  new User(['Pirolão'], ['AMEN_623'], '60909', [
+  new User(['Pirolão'], ['ESPT_304'], '60909', [
     { rank: 'elite', date: '2025-04-22' },
     { rank: 'creator', date: '2025-04-25' },
   ]),
@@ -904,6 +904,7 @@ export const am = [
   ]),
   new User(['Asyu'], ['AMEN_024'], '8010A', [
     { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: null, date: null },
   ]),
   new User(['(JP)'], ['AMEN_404'], 'A0901', [
     { rank: 'elite', date: '2025-04-25' },
@@ -1162,7 +1163,6 @@ export const am = [
   new User(['HornyGoat'], ['AMEN_030'], '21601', [
     { rank: 'elite', date: null },
   ]),
-  new User(['ManuVlz'], ['AMEN_006'], 'A080B', [{ rank: 'elite', date: null }]),
   new User(['Grandma'], ['AMEN_488'], 'A0A03', [{ rank: 'elite', date: null }]),
   new User(['jessica'], ['AMEN_170'], 'D020C', [{ rank: 'elite', date: null }]),
   new User(['RQ201'], ['AMEN_013'], 'B0F0A', [{ rank: 'elite', date: null }]),
@@ -1546,9 +1546,6 @@ export const am = [
   new User(['DixieNormus'], ['AMEN_217'], 'C0A02', [
     { rank: 'top', position: null, date: null },
   ]),
-  new User(['Asyu'], ['AMEN_024'], '8010A', [
-    { rank: 'top', position: null, date: null },
-  ]),
   new User(['AznRdnk'], ['AMEN_310'], '21105', [
     { rank: 'top', position: null, date: null },
   ]),
@@ -1577,9 +1574,6 @@ export const am = [
     { rank: 'top', position: null, date: null },
   ]),
   new User(['GingerKing'], ['AMEN_033'], '50F0A', [
-    { rank: 'top', position: null, date: null },
-  ]),
-  new User(['Ry'], ['AMEN_030'], '11C0A', [
     { rank: 'top', position: null, date: null },
   ]),
   new User(['Xyz', 'Ray'], ['AMEN_031'], 'D0D0D', [
