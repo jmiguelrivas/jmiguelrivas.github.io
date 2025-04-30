@@ -87,19 +87,6 @@ const sFamily = [
   },
 ]
 
-const sDocs = [
-  // {
-  //   name: 'Docs',
-  //   url: 'docs/index',
-  //   icon: 'file-o',
-  // },
-  {
-    name: 'Bounce Range / Research',
-    url: 'docs/bounce-range',
-    icon: 'file-o',
-  },
-]
-
 const others = [
   {
     name: '13 Months Calendar',
@@ -128,7 +115,6 @@ const queryString = window.location.search
 const routes = [
   s2025,
   others,
-  sDocs,
   sLOM,
   // sFamily,
   sNano,
