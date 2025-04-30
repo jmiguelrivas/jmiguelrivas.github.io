@@ -1,9 +1,28 @@
 import '../../0_global/js/index.js'
-import { mergesArray } from './db_merges.js'
-import { getTooltip } from './utils.js'
+import { getTooltip, getCountryCode, sortByNumberAndStringValue } from './utils.js'
 import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { createFilters, langs } from './component_filters.js'
 import './component_users.js'
+import mergesGlobal from './db_merges_global.js'
+import mergesSea from './db_merges_sea.js'
+
+const mergesArray = Object.entries({ ...mergesGlobal, ...mergesSea })
+  .map(([key, values]) => {
+    const servers = Object.entries(values)
+      .map(([mergeKey, mergeValues]) => {
+        return {
+          key: getCountryCode(mergeKey),
+          values: mergeValues.sort().map(val => getCountryCode(val)),
+        }
+      })
+      .sort(sortByNumberAndStringValue)
+
+    return {
+      date: key,
+      servers,
+    }
+  })
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
 
 const template = `
   <nn-caja padding="4">
@@ -25,11 +44,15 @@ class Simple extends HTMLElement {
 
   generateListeners() {
     data.langs.forEach(lang => {
-      document.querySelector('.nav button.' + lang).addEventListener('click', () => {
-        data.language = lang
-        document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
-        this.generateTable()
-      })
+      document
+        .querySelector('.nav button.' + lang)
+        .addEventListener('click', () => {
+          data.language = lang
+          document
+            .querySelectorAll('.nav button')
+            .forEach(btn => btn.classList.remove('active'))
+          this.generateTable()
+        })
     })
   }
 
@@ -37,7 +60,9 @@ class Simple extends HTMLElement {
     const body = this.querySelector('#merged-list')
     body.innerHTML = ''
 
-    document.querySelector('.nav button.' + data.language).classList.add('active')
+    document
+      .querySelector('.nav button.' + data.language)
+      .classList.add('active')
 
     data.mergesArray.forEach(merge => {
       createNode({
@@ -66,7 +91,9 @@ class Simple extends HTMLElement {
 
       if (data.language !== 'all') {
         localServers = merge.servers.filter(
-          server => server.key.code === data.language || server.values.some(val => val.id === data.language)
+          server =>
+            server.key.code === data.language ||
+            server.values.some(val => val.id === data.language)
         )
       } else {
         localServers = merge.servers
@@ -107,10 +134,14 @@ class Simple extends HTMLElement {
               type: 'span',
               parent: groupCell,
               attrs: {
-                class: ['fusion', cell.id, ...getTooltip(cell).classes].join(' '),
+                class: ['fusion', cell.id, ...getTooltip(cell).classes].join(
+                  ' '
+                ),
                 style: `order:${cell.numericId}`,
               },
-              innerHTML: getTooltip(cell).msg ? getTooltip(cell).msg : cell.label,
+              innerHTML: getTooltip(cell).msg
+                ? getTooltip(cell).msg
+                : cell.label,
             })
           })
         })

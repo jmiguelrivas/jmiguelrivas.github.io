@@ -1,12 +1,6 @@
 import mergesGlobal from './db_merges_global.js'
 import mergesSea from './db_merges_sea.js'
-import { getCountryCode } from './utils.js'
-
-function sortByNumberAndStringValue(a, b) {
-  const numDiff = a.key.numericId - b.key.numericId
-  if (numDiff !== 0) return numDiff
-  return a.key.label.localeCompare(b.key.label)
-}
+import { getCountryCode, sortByNumberAndStringValue } from './utils.js'
 
 function deepMerge(merges1, merges2) {
   /*
@@ -89,7 +83,7 @@ function mergeAllServers(serverMap) {
     combined.push(key, ...values)
   }
 
-  return removeDuplicates(combined).sort() // Remove duplicates
+  return removeDuplicates(combined).sort()
 }
 
 const spreadServers = mergeAllServers(serversArray)
@@ -125,22 +119,4 @@ const servers = allServers
   }))
   .sort(sortByNumberAndStringValue)
 
-const mergesArray = Object.entries({...mergesGlobal, ...mergesSea})
-  .map(([key, values]) => {
-    const servers = Object.entries(values)
-      .map(([mergeKey, mergeValues]) => {
-        return {
-          key: getCountryCode(mergeKey),
-          values: mergeValues.sort().map(val => getCountryCode(val)),
-        }
-      })
-      .sort(sortByNumberAndStringValue)
-
-    return {
-      date: key,
-      servers,
-    }
-  })
-  .sort((a, b) => new Date(b.date) - new Date(a.date))
-
-export { servers, mergesArray, spreadServers }
+export { servers, spreadServers }

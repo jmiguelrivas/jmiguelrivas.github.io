@@ -64,4 +64,10 @@ function getCountryCode(str) {
   }
 }
 
-export { getCountryCode, getTooltip, validateCountryCode }
+function sortByNumberAndStringValue(a, b) {
+  const numDiff = a.key.numericId - b.key.numericId
+  if (numDiff !== 0) return numDiff
+  return a.key.label.localeCompare(b.key.label)
+}
+
+export { getCountryCode, getTooltip, validateCountryCode, sortByNumberAndStringValue }
