@@ -1,0 +1,74 @@
+body, html {
+  overflow: auto;
+}
+
+nn-caja {
+  --accent-color: #88e2b4;
+  --accent-color-2: #d5e288;
+  --color-foreground: #eee;
+  --space-between-block-items: 1rem;
+  --space-between-inline-items: 0.5rem;
+  --low-contrast-color: #a1a1a1;
+  --border-color: #eee;
+
+  color: var(--color-foreground);
+  background-color: #202028;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  color-scheme: dark;
+  
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  h2,
+  h3,
+  p,
+  nn-code {
+    margin: 0;
+  }
+
+  article {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    border: 1px solid #454545;
+    border-radius: 5px;
+  }
+
+  canvas {
+    background-color: #111;
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+
+    td,
+    th {
+      padding: 1rem;
+    }
+
+    th {
+      background-color: #444;
+    }
+
+    td {
+      background-color: #333;
+    }
+  }
+
+  dl {
+    display: flex;
+    gap: 1rem;
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+}
