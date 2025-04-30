@@ -1,4 +1,6 @@
-@import url("../../0_global/css/main.css");
+body, html {
+  overflow: auto;
+}
 
 nn-caja {
   ul {

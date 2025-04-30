@@ -1,4 +1,4 @@
-import{j as n,M as r}from"./index-BPGHYluD.js";import{useMDXComponents as l}from"./index-BaAOJfyp.js";import"./iframe-DXdHWLB7.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Documentation/Portfolio 2025"}),`
+import{j as n,M as r}from"./index-BLtAyGl6.js";import{useMDXComponents as l}from"./index-DYpZpstB.js";import"./iframe-C03hAAQH.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Documentation/Portfolio 2025"}),`
 `,n.jsx(e.h1,{id:"portfolio-2025",children:"Portfolio 2025"}),`
 `,n.jsx(e.h2,{id:"experiments",children:"Experiments"}),`
 `,n.jsx(e.p,{children:"This project aims to push the following boundaries:"}),`
