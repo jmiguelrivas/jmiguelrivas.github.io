@@ -6,7 +6,6 @@ import { compressText } from '../../0_global/js/nano_spirit.js'
 
 export default {
   title: 'Research/Bounce Range',
-  tags: ['autodocs'],
   args: {
     min: 50,
     max: 150,
@@ -60,7 +59,7 @@ function generateBounceTable(min, max) {
   return table
 }
 
-export const Default = args => {
+export const BounceRange = args => {
   const { min, max } = args
   const container = document.createElement('section')
   container.classList.add('workarea')
@@ -86,8 +85,8 @@ export const Default = args => {
       <p>For example, if the maximum is 1200, it will take 1200 steps to reach the limit.</p>
 
       <nn-code>${compressText(`
-const max = 300
-const min = 0
+const max = ${max}
+const min = ${min}
 /* 90 is the peak value for the sine function; beyond that, it begins to decrease. */
 const maxSineValue = 90
 const increment = maxSineValue / (max - 1)
