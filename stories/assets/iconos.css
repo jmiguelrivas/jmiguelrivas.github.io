@@ -1,6 +1,6 @@
 @import url("../../0_global/css/main.css");
 
-.workarea {
+nn-caja {
   ul {
     display: flex;
     flex-wrap: wrap;

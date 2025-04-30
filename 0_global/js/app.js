@@ -45,6 +45,7 @@ const colorTagDict = {
   'vue 2': 'shamrock',
   threejs: 'royal-purple',
   konva: 'royal-purple',
+  storybook: 'shamrock',
 }
 
 class App extends HTMLElement {

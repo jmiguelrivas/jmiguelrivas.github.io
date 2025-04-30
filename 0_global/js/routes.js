@@ -63,21 +63,6 @@ const sLOM = [
   // },
 ]
 
-const sNano = [
-  // {
-  //   name: 'Grid System',
-  //   url: 'nano/grid',
-  //   icon: 'cube',
-  //   hidden: true,
-  // },
-  {
-    name: 'Iconos',
-    url: 'nano/iconos',
-    icon: 'paint-brush',
-    hidden: true,
-  },
-]
-
 const sFamily = [
   {
     name: 'Family Tree',
@@ -117,7 +102,12 @@ const routes = [
   others,
   sLOM,
   // sFamily,
-  sNano,
+  {
+    name: 'Storybook',
+    url: 'documentation/index',
+    icon: 'file-o',
+    tags: ['storybook'],
+  },
 ]
   .map(r => {
     return [
