@@ -1,15 +1,12 @@
 import {
   getPrefix
 } from '../../0_global/js/global_helpers.js'
-import {
-  compressText
-} from '../../0_global/js/nano_spirit.js'
 
 const readme = /*html*/ `
 <h2>Portfolio 2025</h2>
 
 <h3>
-  As easy to explore the code as possible
+  Built for Readability and Exploration
 </h3>
 
 <p>
@@ -91,7 +88,7 @@ const template = /*html*/ `
   </nn-desplazador>
 
   <footer>
-    <a class="btn shamrock" data-color="hsl(149deg, 61%, 51%)" href="https://github.com/jmiguelrivas/jmiguelrivas.github.io" target="_blank">Check this project in Github</a>
+    <a class="btn shamrock" data-color="hsl(149deg, 61%, 51%)" href="/documentation" target="_blank">Read more in Storybook</a>
     <button autofocus class="btn sunglow hide-dialog-btn" data-color="hsl(47deg, 100%, 57%)">Close Dialog</button>
   </footer>
 </dialog>

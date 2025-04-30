@@ -102,12 +102,12 @@ const routes = [
   others,
   sLOM,
   // sFamily,
-  {
-    name: 'Storybook',
-    url: 'documentation/index',
-    icon: 'file-o',
-    tags: ['storybook'],
-  },
+  // {
+  //   name: 'Storybook',
+  //   url: 'documentation/index',
+  //   icon: 'file-o',
+  //   tags: ['storybook'],
+  // },
 ]
   .map(r => {
     return [
