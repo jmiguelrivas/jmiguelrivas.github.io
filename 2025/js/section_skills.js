@@ -12,6 +12,7 @@ const data = {
     'javascript',
     'web-components',
     'vue',
+    'react',
     'vitest',
     'storybook',
     'git',
