@@ -78,7 +78,24 @@ export const BounceRange = args => {
 
     <canvas id="bounce-canvas" height="300" style="width: 100%; margin-bottom: 1rem;"></canvas>
 
-    <nn-code>${compressText(`${limitBounce}`)}</nn-code>
+    <nn-code>${compressText(`
+function limitBounce({ min, max, value }) {
+  const degreesToRadians = Math.PI / 180
+
+  /*
+    I'm using the absolute value to prevent the sine function from oscillating into negative values:
+    [1, 0, -1, 0] -> [1, 0, 1, 0]
+   
+    Next, I multiply by the maximum value to expand the range:
+    [1, 0, 1, 0] -> [max, 0, max, 0]
+   
+    Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+    [max, 0, max, 0] -> [max, min, max, min]
+  */
+
+  return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
+}
+      `)}</nn-code>
 
      <p>I adjusted the counter to slow down how quickly it reaches the limits. Now, the number of steps required to reach the maximum value is equal to the maximum itself.</p>
 

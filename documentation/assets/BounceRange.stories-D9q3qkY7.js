@@ -1,12 +1,12 @@
-import{c as l}from"./main-C7x4h8MC.js";const b={title:"Research/Bounce Range",args:{min:50,max:150},argTypes:{min:{control:"number"},max:{control:"number"}},parameters:{layout:"fullscreen"}};function m({min:a,max:n,value:i}){const e=Math.PI/180;return Math.abs(Math.sin(i*e))*(n-a)+a}function g(a,n){const i=90/(n-1);let e="";for(let o=a,t=a;o<n;o++,t+=i){const s=t*(Math.PI/180),c=Math.sin(s),d=m({min:a,max:n,value:t});e+=`
+import{c as u}from"./main-Bpn0YcEd.js";const v={title:"Research/Bounce Range",args:{min:50,max:150},argTypes:{min:{control:"number"},max:{control:"number"}},parameters:{layout:"fullscreen"}};function g({min:a,max:n,value:i}){const e=Math.PI/180;return Math.abs(Math.sin(i*e))*(n-a)+a}function p(a,n){const i=90/(n-1);let e="";for(let o=a,t=a;o<n;o++,t+=i){const s=t*(Math.PI/180),m=Math.sin(s),c=g({min:a,max:n,value:t});e+=`
       <tr>
         <td>${o-a}</td>
         <td>${t.toFixed(2)}</td>
         <td>${s.toFixed(2)}</td>
+        <td>${m.toFixed(2)}</td>
         <td>${c.toFixed(2)}</td>
-        <td>${d.toFixed(2)}</td>
       </tr>
-    `}return e}const r=a=>{const{min:n,max:i}=a,e=document.createElement("section");return e.classList.add("workarea"),e.innerHTML=`
+    `}return e}const d=a=>{const{min:n,max:i}=a,e=document.createElement("section");return e.classList.add("workarea"),e.innerHTML=`
   <nn-caja padding="4" size="1200">
     <h2>Bounce Range</h2>
     <p>This experiment simplifies a range that oscillates between a minimum and maximum value using sine functions.</p>
@@ -20,13 +20,30 @@ import{c as l}from"./main-C7x4h8MC.js";const b={title:"Research/Bounce Range",ar
 
     <canvas id="bounce-canvas" height="300" style="width: 100%; margin-bottom: 1rem;"></canvas>
 
-    <nn-code>${l(`${m}`)}</nn-code>
+    <nn-code>${u(`
+function limitBounce({ min, max, value }) {
+  const degreesToRadians = Math.PI / 180
+
+  /*
+    I'm using the absolute value to prevent the sine function from oscillating into negative values:
+    [1, 0, -1, 0] -> [1, 0, 1, 0]
+   
+    Next, I multiply by the maximum value to expand the range:
+    [1, 0, 1, 0] -> [max, 0, max, 0]
+   
+    Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+    [max, 0, max, 0] -> [max, min, max, min]
+  */
+
+  return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
+}
+      `)}</nn-code>
 
      <p>I adjusted the counter to slow down how quickly it reaches the limits. Now, the number of steps required to reach the maximum value is equal to the maximum itself.</p>
 
       <p>For example, if the maximum is 1200, it will take 1200 steps to reach the limit.</p>
 
-      <nn-code>${l(`
+      <nn-code>${u(`
 const max = ${i}
 const min = ${n}
 /* 90 is the peak value for the sine function; beyond that, it begins to decrease. */
@@ -44,10 +61,10 @@ const increment = maxSineValue / (max - 1)
           <th>Fn</th>
         </tr>
       </thead>
-      <tbody>${g(n,i)}</tbody>
+      <tbody>${p(n,i)}</tbody>
     </table>
     </nn-caja>
-  `,requestAnimationFrame(()=>{const o=e.querySelector("#bounce-canvas"),t=o.getContext("2d"),s=e.querySelector("#x-axis");let c=0;const d=()=>{c++;const u=m({min:n,max:i,value:c});s.textContent=u.toFixed(2),t.clearRect(0,142,o.width,16),t.beginPath(),t.fillStyle="#fff",t.arc(u,150,8,0,2*Math.PI),t.fill(),requestAnimationFrame(d)};o.width=o.offsetWidth,o.height=300,d()}),e};var h,x,p;r.parameters={...r.parameters,docs:{...(h=r.parameters)==null?void 0:h.docs,source:{originalSource:`args => {
+  `,requestAnimationFrame(()=>{const o=e.querySelector("#bounce-canvas"),t=o.getContext("2d"),s=e.querySelector("#x-axis");let m=0;const c=()=>{m++;const r=g({min:n,max:i,value:m});s.textContent=r.toFixed(2),t.clearRect(0,142,o.width,16),t.beginPath(),t.fillStyle="#fff",t.arc(r,150,8,0,2*Math.PI),t.fill(),requestAnimationFrame(c)};o.width=o.offsetWidth,o.height=300,c()}),e};var l,h,x;d.parameters={...d.parameters,docs:{...(l=d.parameters)==null?void 0:l.docs,source:{originalSource:`args => {
   const {
     min,
     max
@@ -68,7 +85,24 @@ const increment = maxSineValue / (max - 1)
 
     <canvas id="bounce-canvas" height="300" style="width: 100%; margin-bottom: 1rem;"></canvas>
 
-    <nn-code>\${compressText(\`\${limitBounce}\`)}</nn-code>
+    <nn-code>\${compressText(\`
+function limitBounce({ min, max, value }) {
+  const degreesToRadians = Math.PI / 180
+
+  /*
+    I'm using the absolute value to prevent the sine function from oscillating into negative values:
+    [1, 0, -1, 0] -> [1, 0, 1, 0]
+   
+    Next, I multiply by the maximum value to expand the range:
+    [1, 0, 1, 0] -> [max, 0, max, 0]
+   
+    Finally, I subtract the minimum value from the maximum and add the minimum back at the end to translate the vector.
+    [max, 0, max, 0] -> [max, min, max, min]
+  */
+
+  return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
+}
+      \`)}</nn-code>
 
      <p>I adjusted the counter to slow down how quickly it reaches the limits. Now, the number of steps required to reach the maximum value is equal to the maximum itself.</p>
 
@@ -121,4 +155,4 @@ const increment = maxSineValue / (max - 1)
     animate();
   });
   return container;
-}`,...(p=(x=r.parameters)==null?void 0:x.docs)==null?void 0:p.source}}};const $=["BounceRange"];export{r as BounceRange,$ as __namedExportsOrder,b as default};
+}`,...(x=(h=d.parameters)==null?void 0:h.docs)==null?void 0:x.source}}};const b=["BounceRange"];export{d as BounceRange,b as __namedExportsOrder,v as default};
