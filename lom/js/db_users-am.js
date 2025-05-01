@@ -4,70 +4,87 @@ export const am = [
   new User(['BoringWu'], ['AMEN_094'], '80F01', [
     { rank: 'top', position: 1, date: '2025-04-25' },
     { rank: 'top', position: 1, date: '2025-04-28' },
+    { rank: 'top', position: 1, date: '2025-05-01' },
   ]),
   new User(['concrete'], ['AMEN_353'], '4070B', [
     { rank: 'top', position: 3, date: '2025-04-25' },
     { rank: 'top', position: 2, date: '2025-04-28' },
+    { rank: 'top', position: 2, date: '2025-05-01' },
   ]),
   new User(['Zeko'], ['AMEN_034'], '80E06', [
     { rank: 'top', position: 2, date: '2025-04-25' },
     { rank: 'top', position: 3, date: '2025-04-28' },
+    { rank: 'top', position: 3, date: '2025-05-01' },
   ]),
   new User(['Dark Chocolate', 'Vegas'], ['AMEN_026'], 'A0B0F', [
     { rank: 'top', position: 5, date: '2025-04-25' },
     { rank: 'top', position: 4, date: '2025-04-28' },
+    { rank: 'top', position: 4, date: '2025-05-01' },
   ]),
   new User(['Imba'], ['AMEN_032'], 'A040D', [
     { rank: 'top', position: 4, date: '2025-04-25' },
     { rank: 'top', position: 6, date: '2025-04-28' },
+    { rank: 'top', position: 10, date: '2025-05-01' },
   ]),
   new User(['Huddy'], ['AMEN_339'], 'A0909', [
     { rank: 'elite', date: '2025-04-25' },
     { rank: 'top', position: 47, date: '2025-04-28' },
+    { rank: 'top', position: 48, date: '2025-05-01' },
   ]),
   new User(['Zeromus', 'Minamoto'], ['AMEN_117'], 'D0401', [
     { rank: 'top', position: 6, date: '2025-04-25' },
     { rank: 'top', position: 11, date: '2025-04-28' },
+    { rank: 'top', position: 16, date: '2025-05-01' },
   ]),
-  new User(['PJs', 'BoringPu'], ['AMEN_021'], 'D0603', [
+  new User(['Pumba', 'PJs', 'BoringPu'], ['AMEN_021'], 'D0603', [
     { rank: 'top', position: 7, date: '2025-04-25' },
     { rank: 'top', position: 8, date: '2025-04-28' },
+    { rank: 'top', position: 8, date: '2025-05-01' },
   ]),
   new User(['Chem_Addict'], ['AMEN_032'], 'F0C08', [
     { rank: 'top', position: 8, date: '2025-04-25' },
     { rank: 'top', position: 5, date: '2025-04-28' },
+    { rank: 'top', position: 5, date: '2025-05-01' },
   ]),
   new User(['Leroy'], ['AMEN_280'], 'C0D07', [
     { rank: 'top', position: 9, date: '2025-04-25' },
     { rank: 'top', position: 56, date: '2025-04-28' },
+    { rank: 'top', position: 6, date: '2025-05-01' },
   ]),
   new User(['Shroom', 'ShroomieB070D'], ['AMEN_250'], 'B070D', [
     { rank: 'top', position: 10, date: '2025-04-25' },
     { rank: 'top', position: 20, date: '2025-04-28' },
+    { rank: 'top', position: 15, date: '2025-05-01' },
   ]),
   new User(['(CH)'], ['AMEN_019'], 'D030F', [
     { rank: 'top', position: 11, date: '2025-04-25' },
     { rank: 'top', position: 10, date: '2025-04-28' },
+    { rank: 'top', position: 12, date: '2025-05-01' },
   ]),
-  new User(['FAFO', 'BoringLu'], ['AMEN_021'], '40205', [
+  new User(['Simba', 'FAFO', 'BoringLu'], ['AMEN_021'], '40205', [
     { rank: 'top', position: 12, date: '2025-04-25' },
     { rank: 'top', position: 17, date: '2025-04-28' },
+    { rank: 'top', position: 14, date: '2025-05-01' },
   ]),
   new User(['Rubop'], ['AMEN_027'], 'A110F', [
     { rank: 'top', position: 13, date: '2025-04-25' },
     { rank: 'top', position: 21, date: '2025-04-28' },
+    { rank: 'top', position: 23, date: '2025-05-01' },
   ]),
   new User(['(blank)'], ['AMEN_024'], '40001', [
     { rank: 'top', position: 14, date: '2025-04-25' },
     { rank: 'top', position: 7, date: '2025-04-28' },
+    { rank: 'top', position: 7, date: '2025-05-01' },
   ]),
   new User(['Iskander'], ['AMEN_254'], '70C07', [
     { rank: 'top', position: 15, date: '2025-04-25' },
     { rank: 'top', position: 14, date: '2025-04-28' },
+    { rank: 'top', position: 30, date: '2025-05-01' },
   ]),
   new User(['(CH)'], ['AMEN_019'], 'D0406', [
     { rank: 'top', position: 16, date: '2025-04-25' },
     { rank: 'top', position: 19, date: '2025-04-28' },
+    { rank: 'top', position: 13, date: '2025-05-01' },
   ]),
   new User(['8wide', 'HoringFu'], ['AMEN_091'], 'A0E06', [
     { rank: 'top', position: 17, date: '2025-04-25' },
@@ -77,76 +94,94 @@ export const am = [
   new User(['Shroomrix'], ['AMEN_112'], 'B020C', [
     { rank: 'top', position: 18, date: '2025-04-25' },
     { rank: 'top', position: 16, date: '2025-04-28' },
+    { rank: 'top', position: 11, date: '2025-05-01' },
   ]),
   new User(['Bird'], ['AMEN_302'], '70C0D', [
     { rank: 'top', position: 19, date: '2025-04-25' },
     { rank: 'top', position: 13, date: '2025-04-28' },
+    { rank: 'top', position: 20, date: '2025-05-01' },
   ]),
   new User(['pheel'], ['AMEN_323'], '40200', [
     { rank: 'top', position: 20, date: '2025-04-25' },
     { rank: 'top', position: 12, date: '2025-04-28' },
+    { rank: 'top', position: 9, date: '2025-05-01' },
   ]),
   new User(['Slovet'], ['AMEN_027'], 'E0806', [
     { rank: 'top', position: 21, date: '2025-04-25' },
     { rank: 'top', position: 9, date: '2025-04-28' },
+    { rank: 'top', position: 17, date: '2025-05-01' },
   ]),
   new User(['duBBss', 'SpankA', 'GaryProbably'], ['AMEN_035'], '21A00', [
     { rank: 'top', position: 22, date: '2025-04-25' },
     { rank: 'top', position: 26, date: '2025-04-28' },
+    { rank: 'top', position: 52, date: '2025-05-01' },
   ]),
   new User(['NormalGuard'], ['AMEN_003'], '41701', [
     { rank: 'top', position: 23, date: '2025-04-25' },
     { rank: 'top', position: 25, date: '2025-04-28' },
+    { rank: 'top', position: 25, date: '2025-05-01' },
   ]),
   new User(['Greed'], ['AMEN_280'], '80101', [
     { rank: 'top', position: 24, date: '2025-04-25' },
     { rank: 'top', position: 31, date: '2025-04-28' },
+    { rank: 'top', position: 46, date: '2025-05-01' },
   ]),
   new User(['Mërk'], ['AMEN_003'], '9190B', [
     { rank: 'top', position: 25, date: '2025-04-25' },
     { rank: 'top', position: 18, date: '2025-04-28' },
+    { rank: 'top', position: 19, date: '2025-05-01' },
   ]),
   new User(['SorryNotSorry'], ['AMEN_019'], 'A0107', [
     { rank: 'top', position: 26, date: '2025-04-25' },
     { rank: 'top', position: 23, date: '2025-04-28' },
+    { rank: 'top', position: 22, date: '2025-05-01' },
   ]),
   new User(['pvtmeow'], ['AMEN_182'], 'F0E0C', [
     { rank: 'top', position: 27, date: '2025-04-25' },
+    { rank: 'top', position: 81, date: '2025-05-01' },
   ]),
-  new User(['Ravs Alt', 'Holo'], ['AMEN_282'], '90504', [
+  new User(['Drew P Bauls', '49', 'Ravs Alt', 'Holo'], ['AMEN_282'], '90504', [
     { rank: 'top', position: 28, date: '2025-04-25' },
     { rank: 'top', position: 36, date: '2025-04-28' },
+    { rank: 'top', position: 27, date: '2025-05-01' },
   ]),
   new User(['Star'], ['AMEN_002'], '61B0F', [
     { rank: 'top', position: 29, date: '2025-04-25' },
     { rank: 'top', position: 28, date: '2025-04-28' },
+    { rank: 'top', position: 44, date: '2025-05-01' },
   ]),
   new User(['Mythic'], ['AMEN_310'], '01A0E', [
     { rank: 'top', position: 30, date: '2025-04-25' },
     { rank: 'top', position: 66, date: '2025-04-28' },
+    { rank: 'top', position: 53, date: '2025-05-01' },
   ]),
   new User(['Mahoraga'], ['AMEN_281'], 'B0B0E', [
     { rank: 'top', position: 31, date: '2025-04-25' },
     { rank: 'top', position: 32, date: '2025-04-28' },
+    { rank: 'top', position: 42, date: '2025-05-01' },
   ]),
   new User(['Deserving'], ['AMEN_170'], '50A06', [
     { rank: 'top', position: 32, date: '2025-04-25' },
     { rank: 'top', position: 80, date: '2025-04-28' },
+    { rank: 'top', position: 74, date: '2025-05-01' },
   ]),
   new User(['Deathwing'], ['AMEN_216'], 'B0605', [
     { rank: 'top', position: 33, date: '2025-04-25' },
     { rank: 'top', position: 29, date: '2025-04-28' },
+    { rank: 'top', position: 31, date: '2025-05-01' },
   ]),
   new User(['Feeshy'], ['AMEN_003'], '50305', [
     { rank: 'top', position: 34, date: '2025-04-25' },
     { rank: 'top', position: 30, date: '2025-04-28' },
+    { rank: 'top', position: 29, date: '2025-05-01' },
   ]),
   new User(['Huddy'], ['AMEN_339'], '70A07', [
     { rank: 'top', position: 35, date: '2025-04-25' },
   ]),
-  new User(['BoringAu', 'WaterDog'], ['AMEN_021'], 'B0A03', [
+  new User(['Timon', 'BoringAu', 'WaterDog'], ['AMEN_021'], 'B0A03', [
     { rank: 'top', position: 36, date: '2025-04-25' },
     { rank: 'top', position: 38, date: '2025-04-28' },
+    { rank: 'top', position: 41, date: '2025-05-01' },
   ]),
   new User(
     ['Ashborn', 'Joker', 'O Haio', 'ExpertGuard', 'Seiya'],
@@ -155,64 +190,78 @@ export const am = [
     [
       { rank: 'top', position: 37, date: '2025-04-25' },
       { rank: 'top', position: 64, date: '2025-04-28' },
+      { rank: 'top', position: 49, date: '2025-05-01' },
     ]
   ),
   new User(['NiiLoC'], ['AMEN_488'], 'A0F06', [
     { rank: 'top', position: 38, date: '2025-04-25' },
     { rank: 'creator', date: '2025-04-25' },
     { rank: 'top', position: 58, date: '2025-04-28' },
+    { rank: 'top', position: 55, date: '2025-05-01' },
   ]),
   new User(['Midswift'], ['AMEN_031'], 'F0B0E', [
     { rank: 'top', position: 39, date: '2025-04-25' },
     { rank: 'top', position: 61, date: '2025-04-28' },
+    { rank: 'top', position: 59, date: '2025-05-01' },
   ]),
-  new User(['(CH)'], ['AMEN_019'], 'E050C', [
+  new User(['AlexAdams'], ['AMEN_019'], 'E050C', [
     { rank: 'top', position: 40, date: '2025-04-25' },
     { rank: 'top', position: 55, date: '2025-04-28' },
   ]),
-  new User(['Rock Howard', 'Famine'], ['AMEN_117'], '8030B', [
+  new User(['Rock_Howard', 'Famine'], ['AMEN_117'], '8030B', [
     { rank: 'top', position: 41, date: '2025-04-25' },
     { rank: 'top', position: 37, date: '2025-04-28' },
+    { rank: 'top', position: 56, date: '2025-05-01' },
   ]),
   new User(['Azure'], ['AMEN_339'], '40202', [
     { rank: 'top', position: 42, date: '2025-04-25' },
     { rank: 'top', position: 34, date: '2025-04-28' },
+    { rank: 'top', position: 54, date: '2025-05-01' },
   ]),
   new User(['Hya'], ['AMEN_035'], '01306', [
     { rank: 'top', position: 43, date: '2025-04-25' },
     { rank: 'top', position: 27, date: '2025-04-28' },
+    { rank: 'top', position: 36, date: '2025-05-01' },
   ]),
   new User(['Mister'], ['AMEN_304'], '70202', [
     { rank: 'top', position: 44, date: '2025-04-25' },
     { rank: 'top', position: 68, date: '2025-04-28' },
+    { rank: 'top', position: 80, date: '2025-05-01' },
   ]),
   new User(['Bapesta'], ['AMEN_111'], 'A0F01', [
     { rank: 'top', position: 45, date: '2025-04-25' },
     { rank: 'top', position: 51, date: '2025-04-28' },
+    { rank: 'top', position: 21, date: '2025-05-01' },
   ]),
-  new User(['BoringKu', 'WaterFrog'], ['AMEN_021'], '9040C', [
+  new User(['Scar', 'BoringKu', 'WaterFrog'], ['AMEN_021'], '9040C', [
     { rank: 'top', position: 46, date: '2025-04-25' },
     { rank: 'top', position: 39, date: '2025-04-28' },
+    { rank: 'top', position: 28, date: '2025-05-01' },
   ]),
   new User(['Glizzard', 'Mustard'], ['AMEN_323'], 'F0101', [
     { rank: 'top', position: 47, date: '2025-04-25' },
     { rank: 'top', position: 45, date: '2025-04-28' },
+    { rank: 'top', position: 35, date: '2025-05-01' },
   ]),
   new User(['MagikalShroom'], ['AMEN_338'], '90904', [
     { rank: 'top', position: 48, date: '2025-04-25' },
     { rank: 'top', position: 53, date: '2025-04-28' },
+    { rank: 'top', position: 43, date: '2025-05-01' },
   ]),
   new User(['Coldpulse'], ['AMEN_461'], '11302', [
     { rank: 'top', position: 49, date: '2025-04-25' },
     { rank: 'top', position: 33, date: '2025-04-28' },
+    { rank: 'top', position: 45, date: '2025-05-01' },
   ]),
   new User(['Gibby'], ['AMEN_112'], 'C0307', [
     { rank: 'top', position: 50, date: '2025-04-25' },
     { rank: 'top', position: 35, date: '2025-04-28' },
+    { rank: 'top', position: 32, date: '2025-05-01' },
   ]),
   new User(['Wolverine'], ['AMEN_032'], '6010C', [
     { rank: 'top', position: 51, date: '2025-04-25' },
     { rank: 'top', position: 46, date: '2025-04-28' },
+    { rank: 'top', position: 60, date: '2025-05-01' },
   ]),
   new User(['RougeVifsy'], ['AMEN_033'], 'F0800', [
     { rank: 'top', position: 52, date: '2025-04-25' },
@@ -220,21 +269,22 @@ export const am = [
   new User(['PrimEarl'], ['AMEN_112'], '90C00', [
     { rank: 'top', position: 53, date: '2025-04-25' },
     { rank: 'top', position: 72, date: '2025-04-28' },
-  ]),
-  new User(['Joltz'], ['AMEN_169'], 'F0304', [
-    { rank: 'top', position: 54, date: '2025-04-25' },
+    { rank: 'top', position: 76, date: '2025-05-01' },
   ]),
   new User(['Akuma'], ['AMEN_215'], 'B0200', [
     { rank: 'top', position: 55, date: '2025-04-25' },
     { rank: 'top', position: 42, date: '2025-04-28' },
+    { rank: 'top', position: 71, date: '2025-05-01' },
   ]),
   new User(['Wimm'], ['AMEN_121'], '31E0F', [
     { rank: 'top', position: 56, date: '2025-04-25' },
     { rank: 'top', position: 49, date: '2025-04-28' },
+    { rank: 'top', position: 51, date: '2025-05-01' },
   ]),
   new User(['KidGoku'], ['AMEN_404'], '4040F', [
     { rank: 'top', position: 57, date: '2025-04-25' },
     { rank: 'top', position: 76, date: '2025-04-28' },
+    { rank: 'top', position: 47, date: '2025-05-01' },
   ]),
   new User(['Cookies'], ['AMEN_253'], 'B0B0F', [
     { rank: 'top', position: 58, date: '2025-04-25' },
@@ -242,10 +292,12 @@ export const am = [
   new User(['Moody'], ['AMEN_003'], '80A0D', [
     { rank: 'top', position: 59, date: '2025-04-25' },
     { rank: 'top', position: 63, date: '2025-04-28' },
+    { rank: 'top', position: 73, date: '2025-05-01' },
   ]),
   new User(['Hollow'], ['AMEN_024'], '5000B', [
     { rank: 'top', position: 60, date: '2025-04-25' },
     { rank: 'top', position: 67, date: '2025-04-28' },
+    { rank: 'top', position: 40, date: '2025-05-01' },
   ]),
   new User(['xEvilReeFx'], ['AMEN_013'], '70E0A', [
     { rank: 'top', position: 61, date: '2025-04-25' },
@@ -258,10 +310,12 @@ export const am = [
   new User(['PrincessKane'], ['AMEN_473'], 'C0203', [
     { rank: 'top', position: 63, date: '2025-04-25' },
     { rank: 'top', position: 52, date: '2025-04-28' },
+    { rank: 'top', position: 24, date: '2025-05-01' },
   ]),
   new User(['DrAmALoC248'], ['AMEN_108'], '5040F', [
     { rank: 'top', position: 64, date: '2025-04-25' },
     { rank: 'top', position: 44, date: '2025-04-28' },
+    { rank: 'top', position: 58, date: '2025-05-01' },
   ]),
   new User(['GrimmLord'], ['AMEN_027'], 'B040A', [
     { rank: 'top', position: 65, date: '2025-04-25' },
@@ -269,6 +323,7 @@ export const am = [
   new User(['Uzi', 'Bojangles'], ['AMEN_369'], 'B0002', [
     { rank: 'top', position: 66, date: '2025-04-25' },
     { rank: 'top', position: 22, date: '2025-04-28' },
+    { rank: 'top', position: 26, date: '2025-05-01' },
   ]),
   new User(['Bonita'], ['AMEN_404'], '80004', [
     { rank: 'top', position: 67, date: '2025-04-25' },
@@ -277,6 +332,7 @@ export const am = [
   new User(['Hero'], ['AMEN_354'], 'B0F0B', [
     { rank: 'top', position: 68, date: '2025-04-25' },
     { rank: 'top', position: 74, date: '2025-04-28' },
+    { rank: 'top', position: 70, date: '2025-05-01' },
   ]),
   new User(['Chicka'], ['AMEN_435'], '40207', [
     { rank: 'top', position: 69, date: '2025-04-25' },
@@ -285,6 +341,7 @@ export const am = [
   new User(['MathsDebating'], ['AMEN_310'], 'C050D', [
     { rank: 'top', position: 70, date: '2025-04-25' },
     { rank: 'top', position: 77, date: '2025-04-28' },
+    { rank: 'top', position: 64, date: '2025-05-01' },
   ]),
   new User(['9030c'], ['AMEN_182'], '9030C', [
     { rank: 'top', position: 71, date: '2025-04-25' },
@@ -292,56 +349,58 @@ export const am = [
   new User(['KitKat'], ['AMEN_253'], 'E0B0F', [
     { rank: 'top', position: 72, date: '2025-04-25' },
     { rank: 'top', position: 54, date: '2025-04-28' },
+    { rank: 'top', position: 34, date: '2025-05-01' },
   ]),
   new User(['Rafiki'], ['AMEN_226'], 'E0C09', [
     { rank: 'top', position: 73, date: '2025-04-25' },
     { rank: 'top', position: 57, date: '2025-04-28' },
+    { rank: 'top', position: 67, date: '2025-05-01' },
   ]),
   new User(['WetMonster'], ['AMEN_004'], 'D0D02', [
     { rank: 'top', position: 74, date: '2025-04-25' },
     { rank: 'top', position: 15, date: '2025-04-28' },
+    { rank: 'top', position: 50, date: '2025-05-01' },
   ]),
   new User(['Fara'], ['AMEN_180'], 'E0808', [
     { rank: 'top', position: 75, date: '2025-04-25' },
     { rank: 'top', position: 71, date: '2025-04-28' },
+    { rank: 'top', position: 75, date: '2025-05-01' },
   ]),
   new User(['Gustavo'], ['AMEN_107'], 'E050E', [
     { rank: 'top', position: 76, date: '2025-04-25' },
     { rank: 'top', position: 60, date: '2025-04-28' },
+    { rank: 'top', position: 57, date: '2025-05-01' },
   ]),
   new User(['Code'], ['AMEN_091'], 'B0B08', [
     { rank: 'top', position: 77, date: '2025-04-25' },
     { rank: 'top', position: 78, date: '2025-04-28' },
-  ]),
-  new User(['Babyboopz'], ['AMEN_019'], '21400', [
-    { rank: 'top', position: 78, date: '2025-04-25' },
+    { rank: 'top', position: 78, date: '2025-05-01' },
   ]),
   new User(['Delly'], ['AMEN_112'], 'B0F01', [
     { rank: 'top', position: 79, date: '2025-04-25' },
+    { rank: 'top', position: 97, date: '2025-05-01' },
   ]),
   new User(['Mavis', 'DieEasy'], ['AMEN_113'], '70D05', [
     { rank: 'top', position: 80, date: '2025-04-25' },
     { rank: 'top', position: 75, date: '2025-04-28' },
+    { rank: 'top', position: 65, date: '2025-05-01' },
   ]),
   new User(['Traub'], ['AMEN_004'], '5020E', [
     { rank: 'top', position: 81, date: '2025-04-25' },
     { rank: 'top', position: 48, date: '2025-04-28' },
+    { rank: 'top', position: 68, date: '2025-05-01' },
   ]),
-  new User(['CL4P_TP'], ['AMEN_404'], '6040E', [
+  new User(['Kupo', 'CL4P_TP'], ['AMEN_404'], '6040E', [
     { rank: 'top', position: 82, date: '2025-04-25' },
     { rank: 'top', position: 73, date: '2025-04-28' },
+    { rank: 'top', position: 61, date: '2025-05-01' },
   ]),
-  new User(['Damo'], ['AMEN_435'], '70F00', [
-    { rank: 'top', position: 83, date: '2025-04-25' },
-  ]),
+
   new User(['Beagle'], ['AMEN_215'], '8000E', [
     { rank: 'top', position: 84, date: '2025-04-25' },
   ]),
   new User(['DumpsterBacon'], ['AMEN_170'], 'F0E0D', [
     { rank: 'top', position: 85, date: '2025-04-25' },
-  ]),
-  new User(['Humankiller'], ['AMEN_180'], '5130C', [
-    { rank: 'top', position: 86, date: '2025-04-25' },
   ]),
   new User(['Tony'], ['AMEN_435'], 'C0506', [
     { rank: 'top', position: 87, date: '2025-04-25' },
@@ -349,6 +408,7 @@ export const am = [
   new User(['Mikerodose'], ['AMEN_121'], 'E030D', [
     { rank: 'top', position: 88, date: '2025-04-25' },
     { rank: 'top', position: 69, date: '2025-04-28' },
+    { rank: 'top', position: 77, date: '2025-05-01' },
   ]),
   new User(['Oya'], ['AMEN_321'], 'E070D', [
     { rank: 'top', position: 89, date: '2025-04-25' },
@@ -359,13 +419,16 @@ export const am = [
   new User(['Bill'], ['AMEN_003'], 'F0207', [
     { rank: 'top', position: 91, date: '2025-04-25' },
     { rank: 'top', position: 70, date: '2025-04-28' },
+    { rank: 'top', position: 18, date: '2025-05-01' },
   ]),
   new User(['MadHatterVII'], ['AMEN_321'], '60306', [
     { rank: 'top', position: 92, date: '2025-04-25' },
     { rank: 'top', position: 40, date: '2025-04-28' },
+    { rank: 'top', position: 62, date: '2025-05-01' },
   ]),
   new User(['Hostile'], ['AMEN_170'], 'A020C', [
     { rank: 'top', position: 93, date: '2025-04-25' },
+    { rank: 'top', position: 93, date: '2025-05-01' },
   ]),
   new User(['JegErDinMom'], ['AMEN_370'], 'D0600', [
     { rank: 'top', position: 94, date: '2025-04-25' },
@@ -377,10 +440,12 @@ export const am = [
   new User(['JuraphicSark'], ['AMEN_002'], 'D0D03', [
     { rank: 'top', position: 96, date: '2025-04-25' },
     { rank: 'top', position: 62, date: '2025-04-28' },
+    { rank: 'top', position: 72, date: '2025-05-01' },
   ]),
   new User(['Luxury'], ['PT_179'], '7080D', [
     { rank: 'top', position: 97, date: '2025-04-25' },
     { rank: 'top', position: 41, date: '2025-04-28' },
+    { rank: 'top', position: 38, date: '2025-05-01' },
   ]),
   new User(['MrBates'], ['AMEN_369'], 'E0E01', [
     { rank: 'top', position: 98, date: '2025-04-25' },
@@ -390,6 +455,7 @@ export const am = [
   ]),
   new User(['Poseidon'], ['AMEN_112'], 'C090D', [
     { rank: 'top', position: 100, date: '2025-04-25' },
+    { rank: 'top', position: 94, date: '2025-05-01' },
   ]),
   new User(['Kaido'], ['ES_022'], '90A02', [
     { rank: 'top', position: 68, date: '2025-02-24' },
@@ -397,6 +463,7 @@ export const am = [
   ]),
   new User(['Demon Ghost'], ['AMEN_493'], '30F0B', [
     { rank: 'top', position: 81, date: '2025-04-28' },
+    { rank: 'top', position: 79, date: '2025-05-01' },
   ]),
   new User(['Piz'], ['AMEN_108'], 'B0702', [
     { rank: 'elite', date: '2025-04-25' },
@@ -415,6 +482,7 @@ export const am = [
   ]),
   new User(['BigBoyBruce'], ['AMEN_250'], 'B0302', [
     { rank: 'top', position: 86, date: '2025-04-28' },
+    { rank: 'top', position: 66, date: '2025-05-01' },
   ]),
   new User(['Pokey'], ['AMEN_117'], '70506', [
     { rank: 'top', position: 87, date: '2025-04-28' },
@@ -425,6 +493,7 @@ export const am = [
   new User(['Calmskitzo'], ['AMEN_226'], 'C0101', [
     { rank: 'top', position: 89, date: '2025-04-28' },
     { rank: 'creator', date: '2025-04-25' },
+    { rank: 'top', position: 37, date: '2025-05-01' },
   ]),
   new User(['D2Junkie'], ['AMEN_403'], 'C0005', [
     { rank: 'elite', date: '2025-04-25' },
@@ -441,6 +510,7 @@ export const am = [
   new User(['Alteron'], ['AMEN_013'], 'F0E0F', [
     { rank: 'top', position: 93, date: '2025-04-28' },
     { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 63, date: '2025-05-01' },
   ]),
   new User(['Pwr'], ['AMEN_461'], 'F0E0F', [
     { rank: 'top', position: 94, date: '2025-04-28' },
@@ -448,6 +518,7 @@ export const am = [
   new User(['Awesome'], ['AMEN_447'], '9020B', [
     { rank: 'top', position: 95, date: '2025-04-28' },
     { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 69, date: '2025-05-01' },
   ]),
   new User(['Medrusta'], ['AMEN_004'], '90D06', [
     { rank: 'top', position: 96, date: '2025-04-28' },
@@ -455,6 +526,7 @@ export const am = [
   ]),
   new User(['JHotTea', 'BoringJu'], ['AMEN_021'], '70305', [
     { rank: 'top', position: 97, date: '2025-04-28' },
+    { rank: 'top', position: 33, date: '2025-05-01' },
   ]),
   new User(['aNormaaal'], ['AMEN_215'], '5130B', [
     { rank: 'top', position: 98, date: '2025-04-28' },
@@ -466,7 +538,66 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
     { rank: 'top', position: 100, date: '2025-04-28' },
   ]),
-
+  new User(['Matty'], ['AMEN_218'], '8070F', [
+    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2025-05-01' },
+  ]),
+  new User(['JustANobody', 'ZzBLAZE'], ['AMEN_215'], '80F09', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 99, date: '2025-05-01' },
+  ]),
+  new User(['RegenForCuckz'], ['AMEN_006'], '70E0F', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 98, date: '2025-05-01' },
+  ]),
+  new User(['Erany'], ['AMEN_549'], '90602', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 96, date: '2025-05-01' },
+  ]),
+  new User(['Noszerk'], ['AMEN_001'], '01606', [
+    { rank: 'top', position: 95, date: '2025-05-01' },
+  ]),
+  new User(['Baruca'], ['AMEN_107'], 'F0E02', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 92, date: '2025-05-01' },
+  ]),
+  new User(['Ronkz'], ['AMEN_304'], '60605', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 91, date: '2025-05-01' },
+  ]),
+  new User(['BlackCreme'], ['AMEN_122'], '6070B', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 90, date: '2025-05-01' },
+  ]),
+  new User(['Humankiller'], ['AMEN_180'], '5130C', [
+    { rank: 'top', position: 86, date: '2025-04-25' },
+    { rank: 'top', position: 89, date: '2025-05-01' },
+  ]),
+  new User(['Joltz'], ['AMEN_169'], 'F0304', [
+    { rank: 'top', position: 54, date: '2025-04-25' },
+    { rank: 'top', position: 88, date: '2025-05-01' },
+  ]),
+  new User(['SaintNick', 'Solo'], ['AMEN_114'], '90F06', [
+    { rank: 'top', position: 87, date: '2025-05-01' },
+  ]),
+  new User(['Dre'], ['AMEN_173'], '60D0F', [
+    { rank: 'top', position: 86, date: '2025-05-01' },
+  ]),
+  new User(['Fuxi'], ['AMEN_107'], '80506', [
+    { rank: 'elite', date: '2025-04-25' },
+    { rank: 'top', position: 85, date: '2025-05-01' },
+  ]),
+  new User(['YukaCreme'], ['AMEN_122'], '40902', [
+    { rank: 'top', position: 84, date: '2025-05-01' },
+  ]),
+  new User(['Babyboopz'], ['AMEN_019'], '21400', [
+    { rank: 'top', position: 78, date: '2025-04-25' },
+    { rank: 'top', position: 83, date: '2025-05-01' },
+  ]),
+  new User(['Damo'], ['AMEN_435'], '70F00', [
+    { rank: 'top', position: 83, date: '2025-04-25' },
+    { rank: 'top', position: 82, date: '2025-05-01' },
+  ]),
   // ------------------------------- elite ↓
   new User(['BabaYaga'], ['PT_173'], 'E0F0B', [
     { rank: 'elite', date: '2025-04-25' },
@@ -506,9 +637,6 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['Matty'], ['AMEN_642'], '50708', [
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
-  new User(['Ronkz'], ['AMEN_304'], '60605', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['(CH)'], ['AMEN_254'], 'B020E', [
@@ -592,18 +720,6 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['Tambay'], ['AMEN_033'], 'C0706', [
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
-  new User(['JustANobody', 'ZzBLAZE'], ['AMEN_215'], '80F09', [
-    { rank: 'top', position: null, date: null },
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
-  new User(['BlackCreme'], ['AMEN_122'], '6070B', [
-    { rank: 'top', position: null, date: null },
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
-  new User(['Baruca'], ['AMEN_107'], 'F0E02', [
-    { rank: 'top', position: null, date: null },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['Wrecker'], ['AMEN_002'], 'F0001', [
@@ -747,9 +863,6 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['Etitizz'], ['AMEN_304'], '70B0E', [
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
-  new User(['Erany'], ['AMEN_549'], '90602', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['Wicked'], ['AMEN_107'], '90A02', [
@@ -1070,10 +1183,6 @@ export const am = [
   new User(['Killua'], ['AMEN_117'], 'F060F', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
-  new User(['Fuxi'], ['AMEN_107'], '80506', [
-    { rank: 'top', position: null, date: null },
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
   new User(['Bc00'], ['AMEN_386'], 'D020F', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
@@ -1098,9 +1207,6 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['ManuViz'], ['AMEN_006'], 'AD80B', [
-    { rank: 'elite', date: '2025-04-25' },
-  ]),
-  new User(['RegenForCuckz'], ['AMEN_006'], '70E0F', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   new User(['DeadWeight'], ['AMEN_369'], '90D0D', [
@@ -1332,9 +1438,6 @@ export const am = [
   new User(['BaronNehro'], ['AMEN_121'], '40508', [
     { rank: 'elite', date: null },
   ]),
-  new User(['YukaCreme'], ['AMEN_122'], '40902', [
-    { rank: 'elite', date: null },
-  ]),
   new User(['Moon'], ['AMEN_183'], 'C0F06', [{ rank: 'elite', date: null }]),
   new User(['Marreco'], ['AMEN_251'], 'A0B0E', [{ rank: 'elite', date: null }]),
   new User(['Eviscerated'], ['AMEN_121'], 'C0E0A', [
@@ -1426,9 +1529,6 @@ export const am = [
   new User(['ShroomieC090C'], ['AMEN_121'], 'C090C', [
     { rank: 'top', position: null, date: null },
   ]),
-  new User(['Matty'], ['AMEN_218'], '8070F', [
-    { rank: 'top', position: null, date: null },
-  ]),
   new User(['Helly'], ['AMEN_024'], '01B0D', [
     { rank: 'top', position: null, date: null },
   ]),
@@ -1490,9 +1590,6 @@ export const am = [
     { rank: 'top', position: null, date: null },
   ]),
   new User(['moose'], ['AMEN_170'], 'E0908', [
-    { rank: 'top', position: null, date: null },
-  ]),
-  new User(['Solo'], ['AMEN_114'], '90F06', [
     { rank: 'top', position: null, date: null },
   ]),
   new User(['Algor'], ['AMEN_111'], 'E050F', [
