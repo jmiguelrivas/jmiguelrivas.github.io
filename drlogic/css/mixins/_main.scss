@@ -1,0 +1,11 @@
+@mixin button-color( $name, $color )
+{
+	&.#{$name} {
+		background-color: $color;
+		box-shadow: 0px 3px 0 darken( $color, 10% );
+		&:hover {
+			background-color: darken( $color, 10% );
+			box-shadow: 0px 3px 0 darken( $color, 20% );
+		}
+	}
+}

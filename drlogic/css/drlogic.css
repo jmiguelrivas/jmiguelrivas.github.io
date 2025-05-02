@@ -1,144 +1,414 @@
 @import url("../../0_global/css/main.css");
+@import url("../../0_global/modules/mini-bootstrap.css");
+@import url("./base/typography.css");
+@import url("./main/footer.css");
+@import url("./main/main.css");
+@import url("./sections/home.css");
 
-.calendar {
-  .controls {
-    margin: auto;
-    margin-block-end: 2rem;
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+section#home,
+section#contact,
+section#about-us,
+section#services,
+section#other-services,
+section#testimonial {
+  margin: 0;
+  padding: 0;
+  font-family: var(--base-font-family);
+  letter-spacing: 0.8pt;
+  color: #333;
+  --max-heigh: -1570px;
+}
 
-    .tabs {
-      display: flex;
-      flex-grow: 1;
-      flex-shrink: 1;
-      gap: .5rem;
-      max-width: 330px;
 
-      button {
-        flex-grow: 1;
-      }
-    }
-
-    .date-changer {
-      display: flex;
-      justify-content: space-between;
-      gap: .5rem;
-      flex-basis: 200px;
-      align-items: center;
-
-      &.week-counter {
-        flex-basis: 140px;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: 1.5rem;
-      }
-    }
+@keyframes drlogic-404-dancing-border {
+  0% {
+    border: 3vmax solid #156993;
   }
-
-  .year-view {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .header {
-      height: 22px;
-      font-size: 10px;
-    }
-  }
-
-  .month-view {
-    height: calc(100vh - 100px);
-    min-height: 370px;
-
-    .day {
-      .custom {
-        font-size: 21px;
-      }
-
-      .gregorian {
-        font-size: 14px;
-      }
-    }
-  }
-
-  .header {
-    display: flex;
-    gap: .5rem;
-    flex-direction: row;
-    justify-content: center;
-    flex-shrink: 0;
-    height: 50px;
-  }
-
-  .day-header {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    background: #3a424c;
-  }
-
-  .day {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-    background: #333;
-    padding: 3px 5px;
-    border-radius: 5px;
-    flex-basis: 35px;
-    justify-content: center;
-
-    .custom {
-      font-size: 11px;
-    }
-
-    .gregorian {
-      font-size: 10px;
-    }
-
-    &.event {
-      border: 1px solid var(--accent-color);
-    }
-
-    &.current {
-      background-color: var(--accent-color);
-      color: #222;
-    }
-  }
-
-  .week {
-    display: flex;
-    gap: .5rem;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-  }
-
-  .month {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding: 1rem;
-    flex-basis: 330px;
-    justify-content: center;
-    flex-grow: 1;
-  }
-
-  .month-name {
-    margin: 0;
-    margin-block-end: .5rem;
-    text-align: center;
-    font-size: 1rem;
-    color: var(--accent-color);
+  50% {
+    border: 16vmax solid #156993;
   }
 }
+
+@keyframes drlogic-contact-flying-plane-01 {
+  100% {
+    transform: translate(-750px, var(--max-heigh));
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-02 {
+  100% {
+    transform: translate(-850px, var(--max-heigh));
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-03 {
+  100% {
+    transform: translate(-450px, var(--max-heigh));
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-04 {
+  100% {
+    transform: translate(700px, var(--max-heigh));
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-05 {
+  100% {
+    transform: translate(1200px, var(--max-heigh));
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-06 {
+  100% {
+    transform: translate(1000px, var(--max-heigh));
+  }
+}
+
+@keyframes drlogic-contact-glowing-mark {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes drlogic-home-clicking-01 {
+  0% {
+    transform: rotateZ(-3deg) translateX(2px);
+  }
+  20% {
+    transform: rotateZ(5deg) translateX(2px);
+  }
+  40% {
+    transform: rotateZ(-3deg) translateX(2px);
+  }
+  60% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+  80% {
+    transform: rotateZ(5deg) translateX(3px);
+  }
+  100% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+}
+
+@keyframes drlogic-home-clicking-02 {
+  0% {
+    transform: rotateZ(-3deg) translateX(0);
+  }
+  20% {
+    transform: rotateZ(5deg) translateX(0);
+  }
+  40% {
+    transform: rotateZ(-3deg) translateX(0);
+  }
+  60% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+  80% {
+    transform: rotateZ(5deg) translateX(3px);
+  }
+  100% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+}
+
+@keyframes drlogic-home-cursor-moving {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, -79px);
+  }
+  32% {
+    transform: translate(0px, -79px);
+  }
+  55% {
+    transform: translate(-90px, -59px);
+  }
+  58% {
+    transform: translate(-90px, -59px);
+  }
+  82% {
+    transform: translate(-25px, -76px);
+  }
+  85% {
+    transform: translate(-25px, -76px);
+  }
+  95% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes drlogic-home-folder-open {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes drlogic-home-knocking {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(6deg);
+  }
+}
+
+@keyframes drlogic-home-nodding {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(8deg);
+  }
+}
+
+@keyframes drlogic-home-shaking {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes drlogic-home-watching {
+  0% {
+    transform: rotateZ(7deg);
+  }
+  20% {
+    transform: rotateZ(-2deg);
+  }
+  95% {
+    transform: rotateZ(-2deg);
+  }
+}
+
+@keyframes drlogic-testimonials-rising {
+  0% {
+    top: 0;
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(30deg);
+    top: 90%;
+  }
+  100% {
+    transform: rotateZ(30deg);
+    top: 90%;
+  }
+}
+
+@keyframes drlogic-services-globe-shaking {
+  from {
+    transform: scaleX(-1) rotateZ(0deg) rotateX(0deg);
+  }
+  to {
+    transform: scaleX(-1) rotateZ(10deg) rotateX(10deg);
+  }
+}
+
+@keyframes drlogic-services-globe-shaking-2 {
+  from {
+    transform: rotateZ(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateZ(-10deg) rotateX(10deg);
+  }
+}
+
+/* @keyframes drlogic-services-data-transfer-tablet {
+  $steps: 22;
+  $fx: math.div(100, 22);
+  $kounter: 0;
+
+  #{ $fx * $kounter }% {
+    top: 169px;
+    left: 153px;
+    opacity: 1;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 226px;
+    left: 153px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 226px;
+    left: 231px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 277px;
+    left: 231px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 277px;
+    left: 165px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 165px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 310px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 460px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 164px;
+    left: 460px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 460px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 310px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 261px;
+    left: 310px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 261px;
+    left: 350px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 106px;
+    left: 350px;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 106px;
+    left: 350px;
+  }
+} */
+
+/* 
+section#contact {
+  @import "sections/contact";
+}
+
+section#about-us {
+  @import "mixins/about";
+  @import "sections/about";
+}
+
+section#services {
+  @import "sections/services";
+}
+
+section#other-services {
+  @import "sections/other-services";
+}
+
+section#testimonial {
+  @import "mixins/testimonials";
+  @import "sections/testimonials";
+} */ */

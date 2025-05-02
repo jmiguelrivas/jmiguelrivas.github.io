@@ -12,6 +12,11 @@ const data = {
       regex: /pi-(\d)*/g,
       prefix: 'pi',
     },
+    {
+      name: 'break',
+      regex: /break-(.*)*/g,
+      prefix: 'break',
+    },
   ],
 }
 

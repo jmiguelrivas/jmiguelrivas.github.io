@@ -1,0 +1,9 @@
+@mixin people_box($name, $color) {
+	&.#{$name} {
+		h3,
+		h4,
+		.sub-description nn-icon {
+			color: $color;
+		}
+	}
+}

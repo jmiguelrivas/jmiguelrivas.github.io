@@ -1,0 +1,160 @@
+#about-us {
+	overflow-x: hidden;
+
+	.intro {
+		background-color: $brand-red;
+		padding-bottom: 420px;
+		margin-bottom: -110px;
+
+		@media (min-width: $screen-md-min) {
+			height: 100vh;
+			max-height: 1050px;
+			min-height: 920px;
+		}
+
+		@media (max-width: $screen-md-min) {
+			min-height: 1100px;
+		}
+	}
+
+	.copywrite {
+		margin: 30px auto 50px;
+	}
+
+	.animation-intro {
+		max-width: 620px;
+		height: 350px;
+		margin: -440px auto 50px;
+		position: relative;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			display: block;
+
+
+			&.base {
+				bottom: 0;
+				z-index: 1;
+				@media (max-width: $screen-xs-min) {
+					width: 70%;
+					left: 75px;
+				}
+			}
+
+			&.manager {
+				bottom: 30px;
+				left: 200px;
+				@media (max-width: $screen-xs-min) {
+					width: 20%;
+				}
+			}
+		}
+	}
+
+	img.logo {
+		margin: 10px;
+		vertical-align: middle;
+		@media (max-width: $screen-xs-min) {
+			max-height: 99px;
+			margin: 5px;
+		}
+
+		&.google { height: 140px; }
+		&.acn { height: 140px; }
+		&.meraki { height: 100px; }
+	}
+
+	.body {
+		top: -450px;
+		padding-top: 460px;
+		margin-bottom: -680px;
+
+		.btn {
+			display: block;
+			width: 250px;
+			margin: 0 auto 38px;
+		}
+	}
+}
+
+article.people {
+	width: 250px;
+	display: inline-block;
+	margin: 16px;
+	z-index: 1;
+	vertical-align: top;
+	overflow: hidden;
+	text-align: left;
+
+	@include people_box( "blue", $brand-blue );
+	@include people_box( "red", $brand-red );
+	@include people_box( "green", $brand-green );
+	@include people_box( "purple", $brand-purple2 );
+	@include people_box( "cyan", $brand-cyan );
+	@include people_box( "orange", $brand-orange );
+
+	.main {min-height: 80px;}
+
+	.description {
+		padding: 5px 40px 0;
+		border-top-right-radius: 40%;
+		border-top-left-radius: 40%;
+		position: relative;
+		width: 120%;
+		left: -10%;
+		margin-top: -70px;
+		background-color: #fff;
+		transition: margin 500ms;
+	}
+
+	.sub-description {
+		transition: all 800ms;
+		padding: 0 12px;
+
+		p {
+			font-family: $base-font-family;
+			line-height: 1;
+			margin: 0;
+		}
+
+		nn-icon {
+			color: #E87721;
+			padding: 8px 0;
+		}
+
+		strong {
+			font-family: $base-font-family;
+			margin-left: 5px;
+		}
+
+		hr {
+			border-color: #E87721;
+			opacity: 0.4;
+			margin: 10px auto;
+		}
+	}
+
+	p {
+		line-height: 1.5;
+		font-size: 9pt;
+	}
+
+	h3, h4 {
+		color: #E87721;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 16pt;
+		font-weight: bold;
+	}
+
+	h4 {
+		font-size: 8pt;
+		letter-spacing: .2pt;
+		margin: -2px 0 14px 0;
+		text-transform: uppercase;
+	}
+
+}

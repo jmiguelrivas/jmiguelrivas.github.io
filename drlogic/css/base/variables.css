@@ -1,0 +1,60 @@
+html {
+  /* Typography */
+  --base-font-family: "Montserrat", helvetica, "open-sans", sans-serif, verdana;
+  --heading-font-family: var(--base-font-family);
+
+  /* Font Sizes */
+  --base-font-size: 1em;
+
+  /* Line height */
+  --base-line-height: 1.5;
+  --heading-line-height: 1.2;
+
+  /* Other Sizes */
+  --base-border-radius: 3px;
+  --base-spacing: var(--base-line-height * 1em);
+  --small-spacing: calc(var(--base-spacing) / 2);
+  --base-z-index: 0;
+
+  /* Colors */
+  --blue: #477dca;
+  --dark-gray: #333;
+  --medium-gray: #999;
+  --light-gray: #ddd;
+
+  /* Brand colors */
+  --brand-dark-blue: #2a4a64;
+  --brand-blue: #116ec4;
+  --brand-red: #d73333;
+  --brand-cyan: #38c7d2;
+  --brand-yellow: #ffcf5d;
+  --brand-purple: #64429c;
+  --brand-purple2: #8843a2;
+  --brand-green: #5acf57;
+  --brand-orange: #f9722e;
+  --brand-orange2: #f9ae3c;
+
+  /* Font Colors */
+  --base-font-color: var(--dark-gray);
+  --action-color: var(--blue);
+
+  /* Border */
+  --base-border-color: var(--light-gray);
+  --base-border: 1px solid var(--base-border-color);
+
+  /* Background Colors */
+  --base-background-color: #fff;
+  /* --secondary-background-color: tint(--base-border-color, 75%); */
+
+  /* Animations */
+  --base-duration: 500ms;
+  --base-timing: ease;
+
+  --screen-xs-min: 480px;
+  --screen-sm-min: 768px;
+  --screen-md-min: 992px;
+  --screen-lg-min: 1200px;
+
+  --medium-screen: 768px;
+  --large-screen: 900px;
+}

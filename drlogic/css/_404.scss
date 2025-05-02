@@ -1,0 +1,132 @@
+#{mr-section(drlogic-404)} {
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	font-family: Montserrat;
+	margin: 0;
+	overflow: hidden;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	height: 100%;
+	flex-wrap: wrap;
+
+	section {
+		border: 5vmax solid #156993;
+		border-radius: 50%;
+		min-height: 110vmax;
+		min-width: 110vmax;
+		box-sizing: border-box;
+		animation: drlogic-404-dancing-border 2000ms infinite ease-in-out alternate;
+	}
+
+	.info {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.numbers {
+		font-size: 270px;
+		font-weight: bold;
+		flex-basis: 100%;
+		letter-spacing: 0;
+		margin: -35px 0;
+
+		span {
+			opacity: 0.8;
+			display: inline-block;
+			line-height: 0;
+			transform-origin: 60% 100%;
+		}
+
+		.n1 {
+			color: #22b573;
+			transform: rotateZ(-20deg);
+		}
+
+		.n2 {
+			color: #ffcf5d;
+			flex-basis: 100%;
+			margin: 0 -40px;
+		}
+
+		.n3 {
+			color: #d33dac;
+			transform: rotateZ(20deg);
+		}
+	}
+
+	h1,
+	h2 {
+		letter-spacing: 0;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 50px;
+		transform: translate(0px, 0px);
+		color: inherit;
+		text-transform: none;
+	}
+
+	h2 {
+		font-size: 20pt;
+	}
+
+	p {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	h1,
+	h2,
+	p {
+		line-height: 1;
+		margin: 10px 0;
+		flex-basis: 100%;
+	}
+
+	.btn {
+		background-color: #3488c1;
+		box-shadow: 0px 3px 0 #2a4a64;
+		display: block;
+		padding: 12px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		margin: auto;
+		transition: background-color 500ms;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: #457696;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.numbers {
+			font-size: 180px;
+		}
+
+		h1 {
+			font-size: 35px;
+		}
+		h2 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 12px;
+		}
+
+		#error404 .btn {
+			font-size: 10px;
+		}
+	}
+}

@@ -1,0 +1,559 @@
+@use "sass:math";
+
+#services {
+  .btn {
+    @media (max-width: $screen-sm-min) {
+      font-size: 8pt;
+      padding: 10px 10px;
+    }
+  }
+
+  .highlight {
+    padding-top: 20px;
+    display: none;
+  }
+
+  .intro {
+    background-color: $brand-green;
+    height: 100vh;
+    min-height: 810px;
+    line-height: 100vh;
+    position: relative;
+
+    @media (min-width: $screen-lg-min) {
+      min-height: 884px;
+      max-height: 960px;
+    }
+
+    @media (max-width: $screen-lg-min) and (min-width: $screen-sm-min) {
+      min-height: 1048px;
+      max-height: 960px;
+    }
+
+    @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
+      min-height: 820px;
+    }
+
+    .container {
+      line-height: 1.42857143;
+    }
+  }
+
+  .relative-box {
+    margin: auto;
+    z-index: 0;
+    width: 270px;
+    height: 330px;
+
+    @media (min-width: $screen-sm-min) {
+      width: 600px;
+      height: 496px;
+    }
+
+    @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
+      width: 390px;
+      height: 380px;
+    }
+  }
+
+  .animation-intro {
+    position: absolute;
+    bottom: 82px;
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) {
+      bottom: 160px;
+    }
+
+    @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
+      bottom: 110px;
+    }
+
+    img {
+      position: absolute;
+    }
+
+    .dot {
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: #ef5c42;
+      border: 7px solid #fff;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      z-index: 2;
+      display: none;
+
+      @media (min-width: $screen-sm-min) {
+        animation: drlogic-services-data-transfer-tablet 8s ease-in-out normal infinite;
+        display: block;
+      }
+    }
+
+    .globe {
+      width: 36px;
+      height: auto;
+      @media (min-width: $screen-sm-min) {
+        width: 60px;
+      }
+    }
+
+    .woman-globe {
+      transform: scaleX(-1);
+      animation: drlogic-services-globe-shaking 500ms ease-in-out alternate infinite;
+      top: 200px;
+      left: 60px;
+
+      @media (min-width: $screen-sm-min) {
+        top: 318px;
+        left: 90px;
+      }
+    }
+
+    .man-globe {
+      animation: drlogic-services-globe-shaking-2 500ms ease-in-out alternate infinite;
+      top: 205px;
+      right: 30px;
+
+      @media (min-width: $screen-sm-min) {
+        top: 310px;
+        right: 38px;
+      }
+    }
+
+    .base,
+    .front {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .base {
+      z-index: 1;
+    }
+    .front {
+      z-index: 3;
+    }
+  }
+
+  .copywrite {
+    margin: 0px auto 100px;
+    max-width: 950px;
+  }
+
+  .body {
+    top: -450px;
+    padding-top: 460px;
+    margin-bottom: -680px;
+
+    .container {
+      margin-top: 0;
+    }
+
+    .bend {
+      padding: 120px 0 0px;
+    }
+  }
+
+  h3 {
+    font-size: 14pt;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 12pt;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    letter-spacing: 4pt;
+  }
+
+  small {
+    display: block;
+  }
+
+  .nav-tabs {
+    margin: auto;
+    display: inline-block;
+    border: none;
+
+    li {
+      font-size: 15pt;
+      padding: 0 7px;
+
+      &:last-child {
+        border-left: 3px solid rgba(90, 207, 87, 0.17);
+      }
+
+      &.active a {
+        color: $brand-green;
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      a {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        border: none;
+        padding: 20px 10px;
+        margin: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          background-color: $brand-green;
+          height: 12px;
+          width: 12px;
+          margin-left: -6px;
+          position: absolute;
+          left: 50%;
+          top: -6px;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: 500ms;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: $brand-green;
+        }
+      }
+    }
+  }
+
+  .price_box {
+    font-weight: 300;
+    display: inline-block;
+    background-color: #f1f6f9;
+    width: 105px;
+    margin: 25px 9px;
+    box-shadow: 2px 2px 2px #d8eaf3;
+    padding: 20px 0;
+
+    @media (min-width: $screen-sm-min) {
+      width: 165px;
+      padding: 44px 0;
+    }
+
+    strong {
+      font-size: 25pt;
+      display: block;
+      font-weight: inherit;
+      line-height: 1.2;
+      @media (min-width: $screen-sm-min) {
+        font-size: 34pt;
+      }
+    }
+
+    small {
+      font-size: 8pt;
+      @media (min-width: $screen-sm-min) {
+        font-size: 10pt;
+      }
+    }
+  }
+
+  .plus {
+    font-size: 34pt;
+    vertical-align: 12px;
+    display: inline-block;
+    @media (min-width: $screen-sm-min) {
+      font-size: 57pt;
+    }
+  }
+
+  .textDesktop {
+    margin: auto;
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+      display: block;
+      position: relative;
+    }
+
+    .txt-box {
+      margin: 0;
+      text-align: center;
+      float: none;
+      width: 320px;
+    }
+  }
+
+  .service {
+    padding: 20px 0;
+    text-align: left;
+
+    .container {
+      padding: 0 32px;
+    }
+
+    &:nth-child(even) {
+      background-color: #efefef;
+    }
+
+    &:nth-child(odd) {
+      .column.img {
+        @media (min-width: $screen-sm-min) {
+          float: right;
+        }
+      }
+    }
+
+    img {
+      $size: 320px;
+      width: $size;
+    }
+
+    .column {
+      &.img {
+        text-align: center;
+        height: 100%;
+      }
+      &.text {
+        @media (min-width: $screen-sm-min) {
+          padding: 40px 0;
+        }
+      }
+    }
+  }
+
+  table {
+    margin: 65px 0;
+
+    img {
+      width: 17px;
+      margin: 6px 6px 6px 0;
+      @media (max-width: $screen-sm-min) {
+        display: none;
+      }
+    }
+
+    td,
+    th,
+    tr {
+      border: none;
+      @media (max-width: $screen-sm-min) {
+        font-size: 9pt;
+      }
+    }
+
+    td,
+    th {
+      &:first-child {
+        width: 100px;
+        @media (min-width: $screen-sm-min) {
+          width: 210px;
+        }
+      }
+      padding: 10px 20px;
+      text-align: left;
+    }
+
+    td {
+      font-weight: 300;
+    }
+
+    tr {
+      transition: all 500ms;
+      &:nth-child(even) {
+        background-color: #f1f6f9;
+        border-bottom: 2px solid #d8eaf3;
+      }
+
+      &:nth-child(odd) {
+        background-color: transparent;
+        border-bottom: 2px solid transparent;
+      }
+
+      &:hover {
+        background-color: #a4ddff;
+        border-bottom: 2px solid #5ea3c5;
+      }
+    }
+  }
+}
+
+$screen-info-min: 1190px;
+
+.infogram {
+  background-color: #f3f7fb;
+  padding: 10px 0 50px;
+
+  .container {
+    position: relative;
+    @media (min-width: $screen-info-min) {
+      width: 660px;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    padding: 60px 0;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    line-height: 1;
+  }
+
+  article {
+    max-width: 320px;
+    margin: auto;
+    @media (min-width: $screen-info-min) {
+      max-width: 572px;
+      width: 572px;
+      position: absolute;
+    }
+  }
+
+  .image-box,
+  .txt-box {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .txt-box {
+    max-width: 320px;
+    @media (min-width: $screen-info-min) {
+      text-align: left;
+      max-width: 200px;
+      margin: 70px -46px 0;
+    }
+  }
+
+  .image-box {
+    width: 320px;
+    position: relative;
+    height: 235px;
+    transition: all 500ms;
+    transform: translate(0) rotateZ(0deg);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .number {
+    z-index: 1;
+    position: absolute;
+    font-size: 14pt;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    border: 4px solid #f3f7fb;
+    padding: 12px 0;
+    width: 58px;
+    transition: all 500ms;
+    transform: translate(0) rotateZ(0deg);
+
+    &.n0 {
+      display: none;
+    }
+  }
+
+  article {
+    &.sec0 {
+      max-width: 320px;
+      margin: auto;
+      @media (min-width: $screen-info-min) {
+        position: relative;
+      }
+
+      .txt-box {
+        text-align: center;
+        @media (min-width: $screen-info-min) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      .number {
+        top: 51px;
+        left: 63px;
+      }
+      .image-box,
+      .txt-box {
+        @media (min-width: $screen-info-min) {
+          float: left;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .number {
+        top: 34px;
+        left: 198px;
+      }
+      .image-box,
+      .txt-box {
+        @media (min-width: $screen-info-min) {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+#contract {
+  .copywrite {
+    .btn {
+      margin: 30px auto 0;
+    }
+  }
+
+  .infogram {
+    .container {
+      @media (min-width: $screen-info-min) {
+        background: #f3f7fb url(get-zapp("img/drlogic/services/diagram-contract.png")) center 60px no-repeat;
+        background-size: 650px;
+        height: 1100px;
+      }
+    }
+
+    article {
+      &.sec1 {
+        top: 360px;
+        left: -19%;
+      }
+      &.sec2 {
+        top: 560px;
+        right: 20%;
+      }
+      &.sec3 {
+        top: 810px;
+        left: 50%;
+      }
+      &.sec2,
+      &.sec3 {
+        @media (min-width: $screen-info-min) {
+          margin-left: #{(math.div(-572, 2) - 120)}#{"px"};
+          margin-right: #{(math.div(-572, 2) - 120)}#{"px"};
+        }
+      }
+    }
+
+    .number {
+      &.n1 {
+        background-color: #00c4b4;
+      }
+      &.n2 {
+        background-color: #ffc600;
+      }
+      &.n3 {
+        background-color: #004e78;
+        top: 51px;
+        left: 63px;
+      }
+    }
+  }
+}
