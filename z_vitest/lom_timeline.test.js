@@ -22,8 +22,8 @@ const serversList = [
 test('pt-169 servers list verification', () => {
   expect(serversList).toEqual([
     'PT-169',
-    'PT-171',
     'PT-170',
+    'PT-171',
     'PT-172',
     'PT-173',
     'PT-174',
