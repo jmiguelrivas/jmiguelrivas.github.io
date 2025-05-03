@@ -85,12 +85,12 @@ const others = [
     icon: 'cube',
     tags: ['web-components', 'threejs'],
   },
-  {
-    name: 'DrLogic',
-    url: 'drlogic/index',
-    icon: 'cube',
-    tags: ['vue 2', 'wip'],
-  },
+  // {
+  //   name: 'DrLogic',
+  //   url: 'drlogic/index',
+  //   icon: 'cube',
+  //   tags: ['vue 2', 'wip'],
+  // },
 ]
 
 const queryString = window.location.search
