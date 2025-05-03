@@ -1497,13 +1497,14 @@ export const am = [
   new User(['Dazie'], ['AMEN_639'], '01602', [{ rank: 'elite', date: null }]),
 
   new User(['DKiingG7'], ['PT_042'], 'B0C09', [
-    { rank: 'creator', date: '2025-04-25' },
+    { rank: 'creator', date: '2025-04-14' },
   ]),
   new User(['GameOverLabs'], ['ES_041'], '80D0C', [
     { rank: 'creator', date: '2025-04-25' },
   ]),
   new User(['Sloothix'], ['AMEN_003'], '21C02', [
     { rank: 'creator', date: '2025-04-25' },
+    { rank: 'vmod', date: '2025-05-01' },
   ]),
   new User(['Dakanoth'], ['AMEN_111'], null, [
     { rank: 'creator', date: '2025-04-25' },

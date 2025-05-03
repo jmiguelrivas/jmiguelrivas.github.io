@@ -1,0 +1,12 @@
+@mixin ballon-color( $name, $color, $color-complementary:#000 )
+{
+  &.#{$name} {
+    .preview {
+      background-color: $color;
+    }
+    .pixel-modal-body{
+      background-color: $color;
+      color: $color-complementary;
+    }
+  }
+}

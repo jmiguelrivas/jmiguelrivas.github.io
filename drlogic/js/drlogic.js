@@ -2,27 +2,25 @@ import '../../0_global/js/index.js'
 
 import {
   createApp,
-  ref
+  // ref
 } from '../../0_global/modules/vue.esm-browser.js'
 
-import Contact from "./section_contact.js"
+// import Contact from "./section_contact.js"
+import Home from './section_home.js'
 
 const App = {
   components: {
-    Contact,
+    // Contact,
+    Home,
   },
   template: /*html*/ `
 <div>
-  <Contact />
+  <!-- <Contact /> -->
+  <Home />
 </div>
 `,
   setup() {
-    const message = ref('Hello from external JS!')
-    const count = ref(0)
-    return {
-      message,
-      count,
-    }
+    return {}
   },
 }
 

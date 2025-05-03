@@ -1,0 +1,164 @@
+#other-services {
+  h3 {
+    font-size: 16pt;
+    font-weight: bold;
+  }
+
+  .intro {
+    background-color: $brand-purple2;
+    min-height: 1210px;
+
+    position: relative;
+
+    @media (min-width: $screen-lg-min) {
+      min-height: 950px;
+      max-height: 1050px;
+      height: 100vh;
+    }
+
+    @media (max-width: $screen-lg-min) and (min-width: $screen-sm-min) {
+      min-height: 990px;
+      max-height: 1050px;
+      height: 100vh;
+    }
+
+    @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
+      min-height: 1090px;
+    }
+
+  }
+
+  .body {
+
+    .bend {
+      padding: 110px 0 0;
+    }
+  }
+
+  .copywrite {
+    margin: -20px auto 100px;
+  }
+
+  .relative-box {
+    max-width: 900px;
+    margin: auto;
+
+    @media (min-width: $screen-md-min) {
+      background: url(get-zapp('img/drlogic/o-services/intro-01.png')) center 60px no-repeat;
+      background-size: 900px;
+      height: 370px;
+      left: 31px;
+    }
+  }
+
+  .animation-intro {
+    position: absolute;
+    bottom: 232px;
+    width: 100%;
+
+    .head-mobile {
+      display: block;
+      width: 95%;
+      margin: 0 auto 35px;
+
+      @media (min-width: $screen-md-min) {
+        display: none;
+      }
+    }
+
+    img[class^="e0"] {
+      position: absolute;
+      transition: transform 200ms;
+      display: none;
+      @media (min-width: $screen-md-min) {
+        display: block;
+      }
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+
+    .e01 { top: 221px; left: 157px; }
+    .e02 { top: 55px; left: 220px; }
+    .e03 { top: 93px; left: 100px; }
+    .e04 { top: 7px; left: 436px; }
+    .e05 { top: 50px; left: 706px; }
+    .e06 { top: 60px; left: -111px; }
+    .e07 { top: 282px; left: 737px; }
+    .e08 { top: 240px; left: -90px; }
+  }
+
+  .strategy {
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+  }
+
+  .diagram {
+    background-color: #f3f7fb;
+    width: 100%;
+    padding: 43px 0 66px;
+    margin-top: 70px;
+
+    p {
+      max-width: 910px;
+      margin: auto;
+    }
+  }
+
+  .diagram-contain {
+    position: relative;
+
+    .logo { top:290px; left:330px; }
+    .software { top: -20px; left: 84px; }
+    .broadband { top: 470px; right: -26px; }
+    .devices { top: 110px; left: 330px; }
+    .email { top: 610px; left: 191px; }
+    .hosting { top: 506px; left: 540px; }
+    .networking { top: 144px; left: 660px; }
+    .storage { top: 340px; left: 140px;}
+    .wireless { top: 30px; left: 837px; }
+    .backup { top:500px; left:0; }
+
+    @media (min-width: $screen-md-min) {
+      background: url(get-zapp('img/drlogic/o-services/diagram/wires.png')) center 60px no-repeat;
+      background-size: 900px;
+      width: 900px;
+      min-height: 860px;
+      margin: 70px auto 0;
+      left: -70px;
+    }
+
+    img {
+      width: 170px;
+      display: inline-block;
+      margin: 30px;
+      transition: all 500ms;
+
+      &:hover {
+        transform: rotateZ(15deg);
+      }
+
+      @media (min-width: $screen-md-min) {
+        position: absolute;
+        width: 150px;
+      }
+
+      &.logo {
+        display: none;
+
+        @media (min-width: $screen-md-min) {
+          width: 200px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .question {
+    display: block;
+    color: #337ab7;
+  }
+
+}

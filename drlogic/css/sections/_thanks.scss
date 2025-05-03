@@ -1,0 +1,103 @@
+#thanks {
+
+  section.intro {
+    background-image: none;
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    .animation-intro {
+      height: 100vh;
+      min-height: 888px;
+      max-height: 1050px;
+      top: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+  section.body {
+    margin-top: -110px;
+
+    .bend {
+      padding: 100px 0 10px;
+      width: 120%;
+      left: -10%;
+      height: 300px;
+    }
+  }
+
+  .goToMap {
+    cursor: pointer;
+  }
+
+}
+
+#thanks {
+
+  .intro {
+    background-color: $brand-orange;
+    overflow: hidden;
+    padding: 40px 0 0;
+  }
+
+  .animation-intro {
+    width: 100%;
+    margin-bottom: -110px;
+    margin-top: -265px;
+    position: relative;
+
+    .plane {
+      position: absolute;
+      bottom: -250px;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+
+      $more-time: 1500ms;
+
+      &.p01 {
+        left: 40%;
+        animation-name: flying_plane_01;
+        animation-duration: 2900ms + $more-time;
+      }
+
+      &.p02 {
+        left: 45%;
+        animation-name: flying_plane_02;
+        animation-duration: 1700ms + $more-time;
+      }
+
+      &.p03 {
+        left: 47%;
+        animation-name: flying_plane_03;
+        animation-duration: 3400ms + $more-time;
+      }
+
+      &.p04 {
+        left: 47%;
+        animation-name: flying_plane_04;
+        animation-duration: 2800ms + $more-time;
+      }
+
+      &.p05 {
+        left: 54%;
+        animation-name: flying_plane_05;
+        animation-duration: 2300ms + $more-time;
+      }
+
+      &.p06 {
+        left: 58%;
+        animation-name: flying_plane_06;
+        animation-duration: 2100ms + $more-time;
+      }
+
+    }
+  }
+
+  #location {
+    text-align: center;
+    position: relative;
+    top: -140px;
+  }
+}

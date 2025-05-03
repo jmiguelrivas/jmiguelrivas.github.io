@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "test",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --output-dir 'documentation'"
+    "test": "vitest",
+    "sb": "storybook dev -p 6006",
+    "sb-b": "storybook build --output-dir 'documentation'"
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +21,7 @@
     "@storybook/test": "^8.6.12",
     "@storybook/web-components": "^8.6.12",
     "@storybook/web-components-vite": "^8.6.12",
-    "lit": "^3.3.0",
-    "storybook": "^8.6.12"
+    "storybook": "^8.6.12",
+    "vitest": "^3.1.2"
   }
 }

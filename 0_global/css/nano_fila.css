@@ -75,3 +75,35 @@ nn-fila {
     padding-inline: var(--padding-inline);
   }
 }
+
+@media (max-width: 1200px) {
+  nn-fila {
+    &.break-lg {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  nn-fila {
+    &.break-md {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nn-fila {
+    &.break-sm {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nn-fila {
+    &.break-xs {
+      display: block;
+    }
+  }
+}
