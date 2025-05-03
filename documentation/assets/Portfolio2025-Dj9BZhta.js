@@ -1,4 +1,4 @@
-import{j as n,M as r}from"./index-CUcy7BQu.js";import{useMDXComponents as l}from"./index-Dto0nlpe.js";import"./iframe-BN-joxSH.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Documentation/Portfolio 2025"}),`
+import{j as n,M as r}from"./index-l_8A9A0F.js";import{useMDXComponents as l}from"./index-ChhWqdO5.js";import"./iframe-CoNC8KRZ.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Documentation/Portfolio 2025"}),`
 `,n.jsx(e.h1,{id:"portfolio-2025",children:"Portfolio 2025"}),`
 `,n.jsx(e.h2,{id:"experiments",children:"Experiments"}),`
 `,n.jsx(e.p,{children:"This project aims to push the following boundaries:"}),`
@@ -117,5 +117,9 @@ nn-column [en] -> nn-pilar [es]
 `,n.jsxs(e.ul,{children:[`
 `,n.jsxs(e.li,{children:[n.jsx(e.code,{children:"Papá"})," [Father] → ",n.jsx(e.code,{children:"Papa"})," [Potato or Pope]"]}),`
 `]}),`
-`,n.jsx(e.h2,{id:"new-updates-20250430",children:"New Updates (2025/04/30)"}),`
-`,n.jsxs(e.p,{children:["I've added the first modular React app ",n.jsx(e.a,{href:"https://jmiguelrivas.github.io/calendar/calendar.html",rel:"nofollow",children:"Calendar App"}),". To maintain modularity, Babel now runs directly in the browser. While not ideal for performance, this approach keeps the setup isolated from the rest of the application, which doesn’t require Babel. It also allows the use of JSX syntax, making the code easier to read and understand on GitHub for other developers."]})]})}function h(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(s,{...i})}):s(i)}export{h as default};
+`,n.jsx(e.h2,{id:"updates-20250418",children:"Updates (2025/04/18)"}),`
+`,n.jsxs(e.p,{children:["I've added the first modular React app ",n.jsx(e.a,{href:"https://jmiguelrivas.github.io/calendar/calendar.html",rel:"nofollow",children:"Calendar App"}),". To maintain modularity, Babel now runs directly in the browser. While not ideal for performance, this approach keeps the setup isolated from the rest of the application, which doesn’t require Babel. It also allows the use of JSX syntax, making the code easier to read and understand on GitHub for other developers."]}),`
+`,n.jsx(e.h2,{id:"updates-20250430",children:"Updates (2025/04/30)"}),`
+`,n.jsx(e.p,{children:"Add storybook and migrated documentation to it."}),`
+`,n.jsx(e.h2,{id:"updates-20250503",children:"Updates (2025/05/03)"}),`
+`,n.jsx(e.p,{children:"Working in the integration of unit test and github actions to run tests every commit."})]})}function h(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(s,{...i})}):s(i)}export{h as default};
