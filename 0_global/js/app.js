@@ -46,6 +46,7 @@ const colorTagDict = {
   threejs: 'royal-purple',
   konva: 'royal-purple',
   storybook: 'shamrock',
+  vitest: 'shamrock',
 }
 
 class App extends HTMLElement {

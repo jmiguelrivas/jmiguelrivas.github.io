@@ -75,19 +75,19 @@ const sFamily = [
 const others = [
   {
     name: '13 Months Calendar',
-    url: 'calendar/calendar',
+    url: 'calendar/index',
     icon: 'calendar',
     tags: ['react 19'],
   },
   {
     name: 'Color Cube',
-    url: 'cube/cube',
+    url: 'cube/index',
     icon: 'cube',
     tags: ['web-components', 'threejs'],
   },
   {
     name: 'DrLogic',
-    url: 'drlogic/drlogic',
+    url: 'drlogic/index',
     icon: 'cube',
     tags: ['vue 2', 'wip'],
   },
@@ -102,6 +102,12 @@ const routes = [
   others,
   sLOM,
   // sFamily,
+  // {
+  //   name: 'Vitest',
+  //   url: 'vitest/index',
+  //   icon: 'file-o',
+  //   tags: ['vitest'],
+  // },
   // {
   //   name: 'Storybook',
   //   url: 'documentation/index',
