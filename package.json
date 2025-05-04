@@ -9,7 +9,8 @@
   "scripts": {
     "test": "vitest",
     "sb": "storybook dev -p 6006",
-    "sb-b": "storybook build --output-dir 'documentation'"
+    "sb-b": "storybook build --output-dir 'storybook'",
+    "gitlog": "./gitlog.js"
   },
   "type": "module",
   "author": "",
@@ -25,5 +26,8 @@
     "@vitest/ui": "^3.1.2",
     "storybook": "^8.6.12",
     "vitest": "^3.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }

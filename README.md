@@ -6,6 +6,29 @@ brave-browser --args --user-data-dir="$HOME/brave-dev-data" --disable-web-securi
 ```
 
 ## Storybook
+```bash
+npm run sb
 ```
-npm run storybook
+
+## Storybook::Build
+```bash
+npm run sb-b
+```
+
+## Vitest
+```bash
+npm run test
+```
+
+## Generate Github Log
+in order to be able to access ituhb you are gonna need a token and an `.env` file
+
+`.env` file
+```
+GITHUB_TOKEN=ghp_yourActualGitHubTokenHere
+```
+
+generating log:
+```bash
+npm run gitlog
 ```
