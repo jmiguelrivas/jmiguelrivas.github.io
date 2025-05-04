@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import 'dotenv/config' // loads .env automatically
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.gitlog' });
 
 import fetch from 'node-fetch'
 import fs from 'fs'

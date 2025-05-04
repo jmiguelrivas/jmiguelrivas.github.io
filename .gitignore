@@ -8,10 +8,8 @@ yarn-error.log*
 
 # Optional: Environment files
 .env
-.env.local
+.env.*
 
 # Optional: Build output
 dist/
 build/
-
-storybook/sb-addons/
