@@ -20,7 +20,7 @@ const serversList = [
 ]
 // console.log(serversList)
 
-test('pt-169 servers list verification', () => {
+test('should return the correct list of server labels for PT-169 and its merged servers', () => {
   expect(serversList).toEqual([
     'PT-169',
     'PT-170',
@@ -36,7 +36,7 @@ test('pt-169 servers list verification', () => {
   ])
 })
 
-test('pt-169 users list verification', () => {
+test('should return a sorted list of user IDs across PT-169 and all merged servers', () => {
   expect(users).toEqual([
     '11F08',
     '2190B',
