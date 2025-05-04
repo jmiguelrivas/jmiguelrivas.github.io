@@ -524,7 +524,7 @@ export const am = [
     { rank: 'top', position: 96, date: '2025-04-28' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
-  new User(['JHotTea', 'BoringJu'], ['AMEN_021'], '70305', [
+  new User(['JHotTea', 'BoringJu'], ['AMEN_058'], '70305', [
     { rank: 'top', position: 97, date: '2025-04-28' },
     { rank: 'top', position: 33, date: '2025-05-01' },
   ]),
@@ -1502,7 +1502,7 @@ export const am = [
   new User(['GameOverLabs'], ['ES_041'], '80D0C', [
     { rank: 'creator', date: '2025-04-25' },
   ]),
-  new User(['Sloothix'], ['AMEN_003'], '21C02', [
+  new User(['Sloothix'], ['AMEN_029'], '21C02', [
     { rank: 'creator', date: '2025-04-25' },
     { rank: 'vmod', date: '2025-05-01' },
   ]),

@@ -11,6 +11,7 @@
     "sb": "storybook dev -p 6006",
     "sb-b": "storybook build --output-dir 'documentation'"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "devDependencies": {

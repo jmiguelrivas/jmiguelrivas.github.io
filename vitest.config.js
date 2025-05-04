@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     reporters: ['default', 'html'],
     outputFile: {
-      html: './vitest/index.html', // Optional: specify the output file path
+      html: './vitest/index.html',
     },
   },
 });

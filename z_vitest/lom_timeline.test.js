@@ -2,6 +2,7 @@ import { expect, test } from 'vitest'
 import { servers } from '../lom/js/db_merges.js'
 
 const pt169 = servers.find(server => server.key.label === 'PT-169')
+// console.log(pt169)
 
 const users = [
   pt169.key.users.map(user => user.id),
