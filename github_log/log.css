@@ -1,0 +1,68 @@
+@import url("../../0_global/css/main.css");
+
+html,
+body {
+  overflow: auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-block: 3rem;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style: none;
+}
+
+.main-list {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  font-size: 10px;
+
+  strong {
+    color: var(--accent-color-2);
+  }
+
+  time {
+    color: var(--accent-color);
+  }
+
+  em {
+    font-style: normal;
+    background-color: var(--color-foreground);
+    color: #202028;
+    padding: 2px 4px;
+    border-radius: 5px;
+  }
+
+  .msg {
+    margin: 0;
+    padding: 0;
+    gap: .5rem;
+
+    li {
+      font-size: 12px;
+      background-color: #30303c;
+      border-radius: 5px;
+      padding: .5rem;
+    }
+  }
+}
+
+/* li {
+  margin-bottom: 0.5em;
+} */
+
+/* code {
+  background: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+} */
