@@ -3,23 +3,27 @@ import { eu } from './db_users-eu.js'
 import { sea } from './db_users-sea.js'
 import { rank } from './enum_rank.js'
 
-const users = [...am, ...eu, ...sea]
-.sort((a, b) => {
+const users = [...am, ...eu, ...sea].sort((a, b) => {
+  if (a.maxPosition !== b.maxPosition) {
+    return a.maxPosition - b.maxPosition
+  }
+  if (a.lastVerify !== b.lastVerify) {
+    return new Date(b.lastVerify) - new Date(a.lastVerify)
+  }
+  if (a.maxRank !== b.maxRank) {
+    return rank[a.maxRank] - rank[b.maxRank]
+  }
   if (a.langNumber !== b.langNumber) {
     return a.langNumber - b.langNumber
   }
   if (a.server[0] !== b.server[0]) {
     return a.server[0].localeCompare(b.server[0])
   }
-  // if (a.id !== b.id) {
-  //   return a.id.localeCompare(b.id)
-  // }
-  if (a.maxRank !== b.maxRank) {
-    return rank[a.maxRank] - rank[b.maxRank]
+  if (a.id !== b.id) {
+    return a.id.localeCompare(b.id)
   }
-  if (a.maxPosition !== b.maxPosition) {
-    return a.maxPosition - b.maxPosition
-  }
+
+  return 0
 })
 
 // function checkDuplicates() {

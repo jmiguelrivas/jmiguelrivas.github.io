@@ -15,7 +15,7 @@ class User {
       countryCodes[
         validateCountryCode(this.langNumber, serverParts[1]) || serverParts[0]
       ].toLowerCase()
-    this.server = server//[this.lang, serverParts[1]].join('_').toLocaleUpperCase()
+    this.server = server //[this.lang, serverParts[1]].join('_').toLocaleUpperCase()
 
     // Find the most recent entry for each rank
     const latestByRank = new Map()
@@ -28,11 +28,16 @@ class User {
 
     this.ranks = Array.from(latestByRank.values())
 
-    this.lastVerify = ranks.map(item => item.date).sort((a,b) => new Date(b) - new Date(a))[0]
-    this.maxRank = rankEnum[this.ranks.map(r => rankEnum[r.rank]).sort((a, b) => a - b)[0]]
+    this.lastVerify = ranks
+      .map(item => item.date)
+      .sort((a, b) => new Date(b) - new Date(a))[0]
+    this.maxRank =
+      rankEnum[this.ranks.map(r => rankEnum[r.rank]).sort((a, b) => a - b)[0]]
 
     // Get top position (lowest number)
-    this.maxPosition = Math.min(...this.ranks.map(r => r.position ?? undefined))
+    this.maxPosition = Math.min(
+      ...this.ranks.filter(e => e.position).map(r => r.position ?? undefined)
+    )
 
     // Most recent record for the highest rank
     this.rank = this.ranks
