@@ -53,11 +53,13 @@ function getCountryCode(str) {
 
     id = validateCountryCode(id, serverId)
 
-    const users = usersDB.filter(user => user.server.includes(str))
+    const users = usersDB.filter(
+      user => user.server === [id, serverId].join('_')
+    )
 
     return {
       id: id?.toLowerCase(),
-      label: [id, serverId].join('-'),
+      label: [id, serverId].join('_'),
       numericId: countryCodes?.[id],
       users,
     }
@@ -70,4 +72,9 @@ function sortByNumberAndStringValue(a, b) {
   return a.key.label.localeCompare(b.key.label)
 }
 
-export { getCountryCode, getTooltip, validateCountryCode, sortByNumberAndStringValue }
+export {
+  getCountryCode,
+  getTooltip,
+  validateCountryCode,
+  sortByNumberAndStringValue,
+}

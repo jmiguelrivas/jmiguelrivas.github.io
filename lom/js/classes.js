@@ -7,14 +7,14 @@ class User {
     this.names = names
     this.id = id
 
-    const serverParts = server[0].split('_')
+    const serverParts = server.split('_')
 
     this.label = [id, names[0]].filter(Boolean).join(' :: ')
     this.langNumber = countryCodes[serverParts[0]]
-    this.lang =
-      countryCodes[
-        validateCountryCode(this.langNumber, serverParts[1]) || serverParts[0]
-      ].toLowerCase()
+    this.lang = serverParts[0].toLowerCase()
+    // countryCodes[
+    //   validateCountryCode(this.langNumber, serverParts[1]) || serverParts[0]
+    // ].toLowerCase()
     this.server = server //[this.lang, serverParts[1]].join('_').toLocaleUpperCase()
 
     // Find the most recent entry for each rank
@@ -35,9 +35,8 @@ class User {
       rankEnum[this.ranks.map(r => rankEnum[r.rank]).sort((a, b) => a - b)[0]]
 
     // Get top position (lowest number)
-    this.maxPosition = Math.min(
-      ...this.ranks.filter(e => e.position).map(r => r.position ?? undefined)
-    )
+    const positions = this.ranks.map(r => r?.position).filter(Boolean)
+    this.maxPosition = positions.length ? Math.min(...positions) : null
 
     // Most recent record for the highest rank
     this.rank = this.ranks
