@@ -81,6 +81,7 @@ class App extends HTMLElement {
             parent: li,
             attrs: {
               class: 'btn-icon active',
+              'aria-label': item.name,
             },
           })
         } else if (item?.url) {
@@ -91,6 +92,7 @@ class App extends HTMLElement {
               class: 'btn-icon',
               href: item.url,
               target: '_self',
+              'aria-label': item.name,
             },
           })
         } else if (item.fn) {
@@ -99,6 +101,7 @@ class App extends HTMLElement {
             parent: li,
             attrs: {
               class: 'btn-icon',
+              'aria-label': item.name,
             },
           })
 
