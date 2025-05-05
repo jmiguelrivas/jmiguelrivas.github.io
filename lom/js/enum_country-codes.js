@@ -18,7 +18,7 @@ const countryCodes = {
   RU: 42,
 
   TW: 54,
-  KR: 65,
+  KR: 64,
   JP: 74,
 
   // 1: 'CN',

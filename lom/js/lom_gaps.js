@@ -114,6 +114,21 @@ class Gaps extends HTMLElement {
         filter: 'ru',
         servers: generateRange('RU', 42001, 42999),
       },
+      {
+        title: 'TW',
+        filter: 'tw',
+        servers: generateRange('TW', 54001, 54999),
+      },
+      {
+        title: 'KR',
+        filter: 'kr',
+        servers: generateRange('KR', 64001, 64999),
+      },
+      {
+        title: 'JP',
+        filter: 'jp',
+        servers: generateRange('JP', 74001, 74999),
+      },
     ].filter(item => {
       if (data.language === 'all') return true
       return data.language === item.filter

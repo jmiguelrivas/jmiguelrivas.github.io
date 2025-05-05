@@ -1,7 +1,7 @@
 export let langs = [
   'all',
   'cn',
-  // 'tw',
+  'tw',
   'amen',
   'vn',
   'es',
@@ -16,8 +16,8 @@ export let langs = [
   'fr',
   'me',
   'tr',
-  // 'kr',
-  // 'jp',
+  'kr',
+  'jp',
   'ru',
 ]
 

@@ -5,8 +5,9 @@ import { createFilters, langs } from './component_filters.js'
 import './component_users.js'
 import mergesGlobal from './db_merges_global.js'
 import mergesSea from './db_merges_sea.js'
+import mergesTW from './db_merges_tw.js'
 
-const mergesArray = Object.entries({ ...mergesGlobal, ...mergesSea })
+const mergesArray = Object.entries({ ...mergesGlobal, ...mergesSea, ...mergesTW })
   .map(([key, values]) => {
     const servers = Object.entries(values)
       .map(([mergeKey, mergeValues]) => {
