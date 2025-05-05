@@ -10,7 +10,8 @@
     "test": "vitest",
     "sb": "storybook dev -p 6006",
     "sb-b": "storybook build --output-dir 'storybook'",
-    "gitlog": "./gitlog.js"
+    "gitlog": "./gitlog.js",
+    "lh": "lhci autorun"
   },
   "type": "module",
   "author": "",

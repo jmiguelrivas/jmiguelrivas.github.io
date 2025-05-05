@@ -1,0 +1,26 @@
+[
+  {
+    "url": "http://localhost:42929/2025/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/beemo/projects/jmiguelrivas.github.io/lighthouse/[name]-report.html",
+    "jsonPath": "/home/beemo/projects/jmiguelrivas.github.io/lighthouse/[name]-report.html",
+    "summary": {
+      "performance": 0.49,
+      "accessibility": 0.83,
+      "best-practices": 1,
+      "seo": 0.91
+    }
+  },
+  {
+    "url": "http://localhost:42929/lom/timeline.html",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/beemo/projects/jmiguelrivas.github.io/lighthouse/[name]-report.html",
+    "jsonPath": "/home/beemo/projects/jmiguelrivas.github.io/lighthouse/[name]-report.html",
+    "summary": {
+      "performance": 0.78,
+      "accessibility": 0.75,
+      "best-practices": 1,
+      "seo": 1
+    }
+  }
+]
