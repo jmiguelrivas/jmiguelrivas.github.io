@@ -17,6 +17,10 @@ const countryCodes = {
   TR: 39,
   RU: 42,
 
+  TW: 54,
+  KR: 65,
+  JP: 74,
+
   // 1: 'CN',
   1: 'AMEN',
   2: 'KO',
@@ -34,6 +38,10 @@ const countryCodes = {
   39: 'ME',
   // 39: 'TR',
   42: 'RU',
+
+  54: 'TW',
+  65: 'KR',
+  74: 'JP',
 }
 
 export {

@@ -1,7 +1,8 @@
 @import url("../../0_global/css/main.css");
 
 .workarea {
-  --cn: hsl(0deg 55% 40%);
+  --cn: hsl(0deg 54.26% 31.65%);
+  --tw: hsl(0deg 55% 40%);
   --amen: hsl(10deg 55% 40%);
   --vn: hsl(30deg 55% 40%);
   --es: hsl(50deg 55% 40%);
@@ -15,8 +16,10 @@
   --de: hsl(240deg 55% 40%);
   --fr: hsl(250deg 55% 40%);
   --me: hsl(270deg 55% 40%);
-  --tr: hsl(295deg 55% 40%);
-  --ru: hsl(340deg 55% 40%);
+  --tr: hsl(280deg 55% 40%);
+  --kr: hsl(300deg 62.93% 42.53%);
+  --jp: hsl(330deg 55% 40%);
+  --ru: hsl(330deg 55% 35%);
 
   --creator: linear-gradient(131deg, rgb(212, 49, 185) 0%, rgb(14 173 145) 100%);
   --vmod: linear-gradient(131deg, rgb(97 31 202) 0%, rgb(14 173 145) 100%);
@@ -33,6 +36,18 @@
 
   .cn {
     background: var(--cn)
+  }
+
+  .tw {
+    background: var(--tw)
+  }
+
+  .kr {
+    background: var(--kr)
+  }
+
+  .jp {
+    background: var(--jp)
   }
 
   .vn {

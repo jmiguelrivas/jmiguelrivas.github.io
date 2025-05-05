@@ -1,49 +1,23 @@
 import mergesGlobal from './db_merges_global.js'
 import mergesSea from './db_merges_sea.js'
+import mergesTW from './db_merges_tw.js'
 import { getCountryCode, sortByNumberAndStringValue } from './utils.js'
 
-function deepMerge(merges1, merges2) {
-  /*
-    Makes sure that merges with the same date don't override each other but merge into the same object
+function deepMerge(...merges) {
+  const result = {}
 
-    const merges1 = {
-      '2024-09-30': {
-        ME_060: ['ME_061', 'RU_069', 'RU_071', 'RU_072'],
-        FR_189: ['FR_190', 'FR_191', 'FR_192'],
-        EUEN_168: ['EUEN_169', 'EUEN_172', 'RU_068'],
-      },
-    }
+  for (const merge of merges) {
+    for (const date in merge) {
+      if (!result[date]) {
+        result[date] = {}
+      }
 
-    const merges2 = {
-      '2024-09-30': {
-        EUEN_168: ['FR_189', 'ME_060'],
-      },
-    }
-
-    will result into:
-
-    const merges = {
-      '2024-09-30': {
-        ME_060: ['ME_061', 'RU_069', 'RU_071', 'RU_072'],
-        FR_189: ['FR_190', 'FR_191', 'FR_192'],
-        EUEN_168: ['EUEN_169', 'EUEN_172', 'RU_068'],
-        EUEN_168: ['FR_189', 'ME_060'],
-      },
-    }
-  */
-
-  const result = { ...merges2 }
-
-  for (const date in merges1) {
-    if (!result[date]) {
-      result[date] = { ...merges1[date] }
-    } else {
-      for (const key in merges1[date]) {
+      for (const key in merge[date]) {
         if (!result[date][key]) {
-          result[date][key] = [...merges1[date][key]]
+          result[date][key] = [...merge[date][key]]
         } else {
           const existing = new Set(result[date][key])
-          merges1[date][key].forEach(item => existing.add(item))
+          merge[date][key].forEach(item => existing.add(item))
           result[date][key] = Array.from(existing)
         }
       }
@@ -72,7 +46,7 @@ function flatObjects(matrix) {
   return result
 }
 
-const merges = deepMerge(mergesSea, mergesGlobal)
+const merges = deepMerge(mergesSea, mergesGlobal, mergesTW)
 
 const serversArray = flatObjects(Object.values(merges))
 

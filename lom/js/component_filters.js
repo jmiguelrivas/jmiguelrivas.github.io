@@ -1,6 +1,7 @@
 export let langs = [
   'all',
   'cn',
+  // 'tw',
   'amen',
   'vn',
   'es',
@@ -15,6 +16,8 @@ export let langs = [
   'fr',
   'me',
   'tr',
+  // 'kr',
+  // 'jp',
   'ru',
 ]
 
