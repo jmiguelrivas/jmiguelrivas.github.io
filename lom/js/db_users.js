@@ -4,6 +4,13 @@ import { sea } from './db_users-sea.js'
 import { rank } from './enum_rank.js'
 
 const users = [...am, ...eu, ...sea].sort((a, b) => {
+  const aPos = a.maxPosition ?? Infinity
+  const bPos = b.maxPosition ?? Infinity
+
+  if (aPos !== bPos) {
+    return aPos - bPos
+  }
+
   if (a.maxPosition !== b.maxPosition) {
     return a.maxPosition - b.maxPosition
   }
