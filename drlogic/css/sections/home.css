@@ -290,7 +290,7 @@ section#home {
 		section.intro {
 			padding: 0 0 230px;
 			max-height: 688px;
-			height: 100vh;
+			height: 100svh
 			min-height: 638px;
 			position: relative;
 

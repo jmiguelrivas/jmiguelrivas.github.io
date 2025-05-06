@@ -3,7 +3,7 @@
 mr-cube {
   display: block;
   background-color: #17161a;
-  height: 100vh;
+  height: 100svh
 
   canvas {
     max-width: 100%;

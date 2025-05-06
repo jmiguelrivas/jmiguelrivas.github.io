@@ -13,13 +13,13 @@
     @media (min-width: $screen-lg-min) {
       min-height: 950px;
       max-height: 1050px;
-      height: 100vh;
+      height: 100svh
     }
 
     @media (max-width: $screen-lg-min) and (min-width: $screen-sm-min) {
       min-height: 990px;
       max-height: 1050px;
-      height: 100vh;
+      height: 100svh
     }
 
     @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
