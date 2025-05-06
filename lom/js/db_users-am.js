@@ -31,7 +31,7 @@ export const am = [
     { rank: 'top', position: 6, date: '2025-05-01' },
     { rank: 'top', position: 6, date: '2025-05-05' },
   ]),
-  new User(['(?)'], 'AMEN_019', 'D030F', [
+  new User(['熳灵熳灵烘 (Man Ling Man Ling Hong)'], 'AMEN_019', 'D030F', [
     { rank: 'top', position: 11, date: '2025-04-25' },
     { rank: 'top', position: 10, date: '2025-04-28' },
     { rank: 'top', position: 12, date: '2025-05-01' },
@@ -67,7 +67,7 @@ export const am = [
     { rank: 'top', position: 17, date: '2025-05-01' },
     { rank: 'top', position: 12, date: '2025-05-05' },
   ]),
-  new User(['(?)'], 'AMEN_019', 'D0406', [
+  new User(['充钱使你快乐 (Chong Qian Shi Ni Kuai Le)'], 'AMEN_019', 'D0406', [
     { rank: 'top', position: 16, date: '2025-04-25' },
     { rank: 'top', position: 19, date: '2025-04-28' },
     { rank: 'top', position: 13, date: '2025-05-01' },
@@ -515,7 +515,7 @@ export const am = [
     { rank: 'top', position: 43, date: '2025-04-28' },
     { rank: 'top', position: 91, date: '2025-05-05' },
   ]),
-  new User(['(?)'], 'AMEN_002', '11A07', [
+  new User(['ゴッドハンター (Goddo Hantaa)'], 'AMEN_002', '11A07', [
     { rank: 'top', position: 92, date: '2025-05-05' },
   ]),
   new User(['MrsMadHatter'], 'AMEN_321', 'C070B', [
