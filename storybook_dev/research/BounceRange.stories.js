@@ -1,7 +1,6 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-
 import { compressText } from '../../0_global/js/nano_spirit.js'
 
 export default {
