@@ -24,7 +24,7 @@ export default {
 }
 
 function processWord(str) {
-  return str.split('').sort().join('').toLowerCase().replace(/\s/, '')
+  return str.split('').sort().join('').toLowerCase().replace(/\s*/, '')
 }
 
 function isAnagram(str1, str2) {
@@ -44,9 +44,9 @@ export const Anagram = args => {
   container.innerHTML = /*html*/ `
 <nn-caja padding="4" size="1200">
   <h1>Anagram Checker</h1>
-  <nn-code>${compressText(`${str1} => ${processWord(str1)}`)}</nn-code>
-  <nn-code>${compressText(`${str2} => ${processWord(str2)}`)}</nn-code>
-  <nn-code>${compressText(`${isAnagram(str1, str2)}`)}</nn-code>
+  <nn-code>${compressText(`[str1]: "${str1}" = "${processWord(str1)}"`)}</nn-code>
+  <nn-code>${compressText(`[str2]: "${str2}" = "${processWord(str2)}"`)}</nn-code>
+  <nn-code>${compressText(`"${processWord(str1)}" = "${processWord(str2)}" = ${isAnagram(str1, str2)}`)}</nn-code>
 </nn-caja>
 `
   return container
