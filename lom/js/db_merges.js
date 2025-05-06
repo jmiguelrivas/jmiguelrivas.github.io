@@ -1,6 +1,7 @@
 import mergesGlobal from './db_merges_global.js'
 import mergesSea from './db_merges_sea.js'
 import mergesTW from './db_merges_tw.js'
+import mergesKR from './db_merges_kr.js'
 import { getCountryCode, sortByNumberAndStringValue } from './utils.js'
 
 function deepMerge(...merges) {
@@ -46,7 +47,7 @@ function flatObjects(matrix) {
   return result
 }
 
-const merges = deepMerge(mergesSea, mergesGlobal, mergesTW)
+const merges = deepMerge(mergesSea, mergesGlobal, mergesTW, mergesKR)
 
 const serversArray = flatObjects(Object.values(merges))
 

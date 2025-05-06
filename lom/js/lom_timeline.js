@@ -37,12 +37,16 @@ class Timeline extends HTMLElement {
 
   generateListeners() {
     data.langs.forEach(lang => {
-      document.querySelector('.nav button.' + lang).addEventListener('click', () => {
-        data.language = lang
-        document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
+      document
+        .querySelector('.nav button.' + lang)
+        .addEventListener('click', () => {
+          data.language = lang
+          document
+            .querySelectorAll('.nav button')
+            .forEach(btn => btn.classList.remove('active'))
 
-        this.generateTable()
-      })
+          this.generateTable()
+        })
     })
   }
 
@@ -50,13 +54,17 @@ class Timeline extends HTMLElement {
     const tableBody = this.querySelector('#merged-list')
     tableBody.innerHTML = ''
 
-    document.querySelector('.nav button.' + data.language).classList.add('active')
+    document
+      .querySelector('.nav button.' + data.language)
+      .classList.add('active')
 
     let localServers
 
     if (data.language !== 'all') {
       localServers = data.servers.filter(
-        server => server.key.id === data.language || server.values.some(val => val.id === data.language)
+        server =>
+          server.key.id === data.language ||
+          server.values.some(val => val.id === data.language)
       )
     } else {
       localServers = data.servers
@@ -76,6 +84,7 @@ class Timeline extends HTMLElement {
         parent: tr,
         attrs: {
           class: [key.id, ...getTooltip(key).classes].join(' '),
+          // ...(!group.length && { colspan: 2 }),
         },
         innerHTML: getTooltip(key).msg
           ? getTooltip(key, group.length + 1).msg
@@ -85,7 +94,7 @@ class Timeline extends HTMLElement {
       const tdGroup = createNode({
         type: 'td',
         parent: tr,
-        attrs: { class: 'merged' },
+        attrs: {class: ['merged', !group.length && key.id].join(' ') },
       })
 
       const groupCell = createNode({

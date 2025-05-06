@@ -308,3 +308,18 @@ export const kr = [
     { rank: 'top', position: 100, date: '2025-05-05' },
   ]),
 ]
+
+// function convertListToObject(ids, date = '2023-12-01') {
+//   const result = {
+//     [date]: {},
+//   }
+
+//   ids.forEach(id => {
+//     result[date][id] = []
+//   })
+
+//   return result
+// }
+
+// export const tmpKoreanServers = convertListToObject(kr.map(user => user.server))
+// console.log(tmpKoreanServers)

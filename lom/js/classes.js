@@ -1,4 +1,3 @@
-import { validateCountryCode } from './utils.js'
 import { countryCodes } from './enum_country-codes.js'
 import { rank as rankEnum } from './enum_rank.js'
 
@@ -12,11 +11,8 @@ class User {
     this.label = [id, names[0]].filter(Boolean).join(' :: ')
     this.langNumber = countryCodes[serverParts[0]]
     this.lang = serverParts[0].toLowerCase()
-    // countryCodes[
-    //   validateCountryCode(this.langNumber, serverParts[1]) || serverParts[0]
-    // ].toLowerCase()
-    this.server = server //[this.lang, serverParts[1]].join('_').toLocaleUpperCase()
-
+    this.server = server
+    
     // Find the most recent entry for each rank
     const latestByRank = new Map()
     for (const entry of ranks) {
