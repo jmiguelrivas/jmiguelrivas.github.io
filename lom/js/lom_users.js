@@ -43,11 +43,15 @@ class Users extends HTMLElement {
 
   generateListeners() {
     Users.data.langs.forEach(lang => {
-      document.querySelector('.nav button.' + lang).addEventListener('click', () => {
-        Users.data.language = lang
-        document.querySelectorAll('.nav button').forEach(btn => btn.classList.remove('active'))
-        this.generateTable()
-      })
+      document
+        .querySelector('.nav button.' + lang)
+        .addEventListener('click', () => {
+          Users.data.language = lang
+          document
+            .querySelectorAll('.nav button')
+            .forEach(btn => btn.classList.remove('active'))
+          this.generateTable()
+        })
     })
   }
 
@@ -55,7 +59,9 @@ class Users extends HTMLElement {
     const tableBody = this.querySelector('#table-body')
     tableBody.innerHTML = ''
 
-    document.querySelector('.nav button.' + Users.data.language)?.classList.add('active')
+    document
+      .querySelector('.nav button.' + Users.data.language)
+      ?.classList.add('active')
 
     let table = Users.data.users
     if (Users.data.language !== 'all') {
@@ -120,12 +126,25 @@ class Users extends HTMLElement {
           createNode({
             type: 'span',
             parent: ranks,
-            innerHTML: [rank?.rank, rank?.position, rank?.date].filter(Boolean).join(' :: '),
+            innerHTML: [rank?.rank, rank?.position, rank?.date]
+              .filter(Boolean)
+              .join(' :: '),
             attrs: {
               class: ['pill', rank?.rank].join(' '),
             },
           })
         })
+
+        if (user.maxPower && user.maxLevel) {
+          createNode({
+            type: 'span',
+            parent: ranks,
+            innerHTML: `lv${user.maxLevel} :: ${user.maxPower / 1000000}M`,
+            attrs: {
+              class: ['pill', user.lang].join(' '),
+            },
+          })
+        }
       })
     } else {
       const tr = createNode({

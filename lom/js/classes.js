@@ -38,6 +38,12 @@ class User {
     const positions = this.ranks.map(r => r?.position).filter(Boolean)
     this.maxPosition = positions.length ? Math.min(...positions) : null
 
+    const powers = this.ranks.map(r => r?.power).filter(Boolean)
+    this.maxPower = powers.length ? Math.max(...powers) : null
+
+    const lvs = this.ranks.map(r => r?.lv).filter(Boolean)
+    this.maxLevel = lvs.length ? Math.max(...lvs) : null
+
     // Most recent record for the highest rank
     this.rank = this.ranks
       .filter(r => r.rank === this.maxRank)

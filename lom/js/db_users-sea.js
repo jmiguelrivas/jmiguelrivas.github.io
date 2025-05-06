@@ -7,22 +7,22 @@ export const sea = [
   ]),
 
   new User(['Prophet'], 'EN_122', 'A0607', [
-    { rank: 'top', position: 1, date: '2025-04-28' },
+    { rank: 'top', position: 1, date: '2025-04-28', power: 268500000, lv:205 },
   ]),
   new User(['Mini'], 'EN_021', '6010B', [
-    { rank: 'top', position: 2, date: '2025-04-28' },
+    { rank: 'top', position: 2, date: '2025-04-28', power: 213000000, lv:192 },
   ]),
   new User(['Zenos'], 'VN_042', '40407', [
-    { rank: 'top', position: 3, date: '2025-04-28' },
+    { rank: 'top', position: 3, date: '2025-04-28', power: 168700000, lv: 188 },
   ]),
-  new User(['(?)'], 'EN_004', '31604', [
-    { rank: 'top', position: 4, date: '2025-04-28' },
+  new User(['段誉 (Duan Yu)'], 'EN_004', '31604', [
+    { rank: 'top', position: 4, date: '2025-04-28', power: 158400000, lv:189 },
   ]),
-  new User(['(?)'], 'EN_004', 'C0C09', [
-    { rank: 'top', position: 5, date: '2025-04-28' },
+  new User(['前男友 (Qian Nán Yǒu)'], 'EN_004', 'C0C09', [
+    { rank: 'top', position: 5, date: '2025-04-28', power: 153700000, lv: 193 },
   ]),
   new User(['Mernyl'], 'TH_002', '31E09', [
-    { rank: 'top', position: 6, date: '2025-04-28' },
+    { rank: 'top', position: 6, date: '2025-04-28', power: 168600000, lv:188 },
   ]),
   new User(['(?)'], 'EN_004', '60605', [
     { rank: 'top', position: 7, date: '2025-04-28' },

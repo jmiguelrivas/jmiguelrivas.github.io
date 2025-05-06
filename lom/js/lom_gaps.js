@@ -122,7 +122,7 @@ class Gaps extends HTMLElement {
       {
         title: 'KR',
         filter: 'kr',
-        servers: generateRange('KR', 64001, 64999),
+        servers: generateRange('KR', 641001, 642999),
       },
       {
         title: 'JP',

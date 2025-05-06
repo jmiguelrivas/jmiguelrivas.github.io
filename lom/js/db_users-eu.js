@@ -14,18 +14,22 @@ export const eu = [
   new User(['RudiRatios', 'Memorudia'], 'DE_002', '01004', [
     { rank: 'top', position: 1, date: '2025-04-25' },
     { rank: 'top', position: 1, date: '2025-04-28' },
+    { rank: 'top', position: 1, date: '2025-05-06', power: 189600000, lv:189  },
   ]),
   new User(['Zet'], 'EUEN_068', '5130F', [
     { rank: 'top', position: 2, date: '2025-04-25' },
     { rank: 'top', position: 2, date: '2025-04-28' },
+    { rank: 'top', position: 9, date: '2025-05-06', power: 166000000, lv:186  },
   ]),
   new User(['washed', 'Rosalina'], 'DE_003', 'D090E', [
     { rank: 'top', position: 3, date: '2025-04-25' },
     { rank: 'top', position: 8, date: '2025-04-28' },
+    { rank: 'top', position: 3, date: '2025-05-06', power: 155200000, lv:189  },
   ]),
   new User(['BROMMMM', 'Plot'], 'EUEN_042', 'C0209', [
     { rank: 'top', position: 4, date: '2025-04-25' },
     { rank: 'top', position: 9, date: '2025-04-28' },
+    { rank: 'top', position: 4, date: '2025-05-06', power: 167300000, lv:188  },
   ]),
   new User(['Dino'], 'EUEN_001', '11303', [
     { rank: 'top', position: 5, date: '2025-04-25' },
@@ -54,10 +58,12 @@ export const eu = [
     { rank: 'top', position: 11, date: '2025-04-25' },
     { rank: 'top', position: 6, date: '2025-04-28' },
     { rank: 'vmod', date: '2025-04-27' },
+    { rank: 'top', position: 6, date: '2025-05-06', power: 154700000, lv:192 },
   ]),
   new User(['Absuro'], 'FR_133', 'B030B', [
     { rank: 'top', position: 12, date: '2025-04-25' },
     { rank: 'top', position: 10, date: '2025-04-28' },
+    { rank: 'top', position: 5, date: '2025-05-06', power: 149900000, lv:180  },
   ]),
   new User(['Gelmi'], 'DE_061', 'C0A08', [
     { rank: 'top', position: 13, date: '2025-04-25' },
