@@ -47,4 +47,6 @@ class User {
   }
 }
 
-export { User }
+const user = (...args) => new User(...args);
+
+export { user }
