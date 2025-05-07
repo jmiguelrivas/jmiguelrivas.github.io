@@ -3,7 +3,6 @@ import '../../0_global/css/main.css'
 import '../assets/iconos.css'
 
 export default {
-  title: 'UI/Iconos',
   parameters: {
     layout: 'fullscreen',
   },

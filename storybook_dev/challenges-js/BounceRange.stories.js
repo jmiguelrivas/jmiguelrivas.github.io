@@ -4,7 +4,6 @@ import '../assets/docs.css'
 import { compressText } from '../../0_global/js/nano_spirit.js'
 
 export default {
-  title: 'Research/Bounce Range',
   args: {
     min: 50,
     max: 150,
