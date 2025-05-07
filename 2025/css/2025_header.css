@@ -97,6 +97,14 @@ header.header {
     padding: 1rem;
     z-index: 5;
 
+    em {
+      background-color: rgb(16 16 22);
+      border-radius: 5px;
+      padding: 2px 5px;
+      color: var(--accent-color);
+      font-style: normal;
+    }
+
     h1 {
       font-size: 4rem;
     }

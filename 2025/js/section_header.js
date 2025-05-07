@@ -95,8 +95,8 @@ const template = /*html*/ `
   <h2>
     Frontend Developer
   </h2>
-  <p>Passionate frontend developer with a strong focus on building custom web applications mostly using Vue2 and Vue3 with deep knowledge about React and Web Components.</p>
-  <p>With years of experience across various industries, I've contributed to UI libraries, optimized performance, and collaborated closely with cross functional teams to deliver seamless user experiences. My expertise includes modern frontend frameworks, component-driven development, and testing methodologies using tools like Storybook and Vitest.</p>
+  <p>Passionate frontend developer with a strong focus on building custom web applications mostly using <em>Vue2</em> and <em>Vue3</em> with deep knowledge about <em>React</em> and <em>Web Components</em>.</p>
+  <p>With years of experience across various industries, I've contributed to UI libraries, optimized performance, and collaborated closely with cross functional teams to deliver seamless user experiences. My expertise includes modern frontend frameworks, component-driven development, and testing methodologies using tools like <em>Storybook</em> and <em>Vitest</em>.</p>
   <button class="btn show-dialog-btn sunglow" data-color="hsl(47deg, 100%, 57%)">Research behind this website</button>
 </div>
 
