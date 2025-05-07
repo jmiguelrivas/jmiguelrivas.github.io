@@ -1,10 +1,27 @@
 dialog {
   padding: 0;
-  width: min(900px, calc(100vw - 1rem));
+  width: min(600px, calc(100vw - 2rem));
   background-color: var(--bk-color);
   z-index: 5;
   color: var(--color-foreground);
   border: 1px solid #515151;
+
+  .btn-group {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+
+    li {
+      flex-grow: 1;
+    }
+  }
+
+  a, .btn {
+    width: 100%;
+  }
 
   h1,
   h2,
@@ -47,21 +64,13 @@ dialog {
     font-style: normal;
   }
 
-  footer {
-    padding: 1rem;
-    gap: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   nn-desplazador {
     max-height: calc(100vh - 205px);
 
     nn-caja {
       display: flex;
       flex-flow: column;
-      gap: 1.5rem;
+      gap: 2rem;
     }
   }
 }

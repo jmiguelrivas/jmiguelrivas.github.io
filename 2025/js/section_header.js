@@ -5,21 +5,41 @@ import {
 const readme = /*html*/ `
 <h2>Portfolio 2025</h2>
 
-<h3>
-  Built for Readability and Exploration
-</h3>
-
-<p>
-  <em>Vue</em>, <em>React</em>, and <em>Angular</em> have been replaced with <em>Web Components</em>. Because of this, you will be able to see the full structure when inspecting elements on the website.
-</p>
-
-<h3>
-  No Preprocessor of Any Kind
-</h3>
-
-<p>
-  Technologies like <em>Sass</em>, <em>Less</em>, <em>Jade/Pug</em>, and <em>HAML</em> are not used, as there is also no local server (<em>Webpack</em>). Instead, <em>CSS Variables</em> and <em>CSS Nesting</em> replace <em>Sass</em> and <em>Less</em> functionalities.
-</p>
+<ul class="btn-group">
+  <li>
+    <a
+      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+      href="/storybook/"
+      target="_blank"
+      >Storybook Documentation</a
+    >
+  </li>
+  <li>
+    <a
+      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+      href="/vitest/"
+      target="_blank"
+      >Vitest Report</a
+    >
+  </li>
+  <li>
+    <a
+      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+      href="/github_log"
+      target="_self"
+      >Commit Log</a
+    >
+  </li>
+  <li>
+    <a
+      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+      href="https://github.com/jmiguelrivas/jmiguelrivas.github.io"
+      target="_blank"
+      >Github</a
+    >
+  </li>
+</ul>
+<button autofocus class="btn sunglow hide-dialog-btn" data-color="hsl(47deg, 100%, 57%)">Close Dialog</button>
 `
 
 const trees = Array.from({
@@ -82,15 +102,10 @@ const template = /*html*/ `
 
 <dialog>
   <nn-desplazador>
-    <nn-caja padding="4">
+    <nn-caja padding="8">
       ${readme}
     </nn-caja>
   </nn-desplazador>
-
-  <footer>
-    <a class="btn shamrock" data-color="hsl(149deg, 61%, 51%)" href="/documentation" target="_blank">Read more in Storybook</a>
-    <button autofocus class="btn sunglow hide-dialog-btn" data-color="hsl(47deg, 100%, 57%)">Close Dialog</button>
-  </footer>
 </dialog>
 `
 const data = {
