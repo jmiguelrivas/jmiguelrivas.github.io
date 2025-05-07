@@ -10,7 +10,7 @@ export default {
     layout: 'fullscreen',
   },
   args: {
-    str: 'a gentleman',
+    str: 'abcdefghijklmnopqrstuvwxyz',
   },
   argTypes: {
     str: {
@@ -30,12 +30,20 @@ export const StringReverse = args => {
     .sort(() => -1)
     .join('')
 
-  console.log(result)
-
-  container.innerHTML = /*html*/ `
+  container.innerHTML = `
 <nn-caja padding="4" size="1200">
   <h1>String Reverse</h1>
+
+  <p>Input</p>
   <nn-code>${compressText(`${str}`)}</nn-code>
+  
+  <p>Solution</p>
+  <nn-code>${compressText(`str
+ .split('')
+ .sort(() => -1)
+ .join('')`)}</nn-code>
+
+  <p>Output</p>
   <nn-code>${compressText(`${result}`)}</nn-code>
 </nn-caja>
 `
