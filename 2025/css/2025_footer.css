@@ -49,13 +49,11 @@ footer.page-footer {
     }
 
     &:before {
-      top: -50%;
-      left: 0;
+      inset: -50% auto auto 0;
     }
 
     &:after {
-      top: 0;
-      left: -50%;
+      inset: 0 auto auto -50%;
     }
   }
 }

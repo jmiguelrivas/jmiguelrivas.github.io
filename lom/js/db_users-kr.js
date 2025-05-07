@@ -6,6 +6,7 @@ export const kr = [
   ]),
   user(['동물_밀렵꾼 (Dongmul_Millyeopkkun)'], 'KR_1785', 'C060F', [
     { rank: 'top', position: 2, date: '2025-05-06', power: 497100000, lv: 187 },
+    { rank: 'top', position: 1, date: '2025-05-07', power: 497200000, lv: 187 },
   ]),
   user(['뽀뽀 (Bboppo)'], 'KR_1206', '90D01', [
     { rank: 'top', position: 3, date: '2025-05-06', power: 225500000, lv: 192 },

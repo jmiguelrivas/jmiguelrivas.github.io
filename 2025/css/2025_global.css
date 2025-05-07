@@ -85,26 +85,12 @@ blockquote {
 
 aside.paper {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 0 0;
   z-index: 10;
   background: url('../img/paper.webp') center center repeat;
   opacity: 0.15;
   pointer-events: none;
 }
-
-nn-pilar.workarea {
-  --bk-color: rgb(39 39 49);
-
-  section {
-    >nn-caja>h2 {
-      margin: 0 0 2rem;
-    }
-  }
-}
-
 
 /* ------------------------------- Media */
 
@@ -194,9 +180,7 @@ nn-pilar.workarea {
 
       nn-pilar.workarea {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        inset: 0 0 0 0;
         width: 100% !important;
         flex-basis: 100%;
         max-width: 100% !important;
