@@ -1,4 +1,4 @@
-import{c as u}from"./main-WB5zqjlr.js";const v={title:"Research/Bounce Range",args:{min:50,max:150},argTypes:{min:{control:"number"},max:{control:"number"}},parameters:{layout:"fullscreen"}};function g({min:a,max:n,value:i}){const e=Math.PI/180;return Math.abs(Math.sin(i*e))*(n-a)+a}function p(a,n){const i=90/(n-1);let e="";for(let o=a,t=a;o<n;o++,t+=i){const s=t*(Math.PI/180),m=Math.sin(s),c=g({min:a,max:n,value:t});e+=`
+import{c as u}from"./main-CGAxX0ND.js";/* empty css             */const b={args:{min:50,max:150},argTypes:{min:{control:"number"},max:{control:"number"}},parameters:{layout:"fullscreen"}};function g({min:a,max:n,value:i}){const e=Math.PI/180;return Math.abs(Math.sin(i*e))*(n-a)+a}function p(a,n){const i=90/(n-1);let e="";for(let o=a,t=a;o<n;o++,t+=i){const s=t*(Math.PI/180),m=Math.sin(s),c=g({min:a,max:n,value:t});e+=`
       <tr>
         <td>${o-a}</td>
         <td>${t.toFixed(2)}</td>
@@ -155,4 +155,4 @@ const increment = maxSineValue / (max - 1)
     animate();
   });
   return container;
-}`,...(x=(h=d.parameters)==null?void 0:h.docs)==null?void 0:x.source}}};const b=["BounceRange"];export{d as BounceRange,b as __namedExportsOrder,v as default};
+}`,...(x=(h=d.parameters)==null?void 0:h.docs)==null?void 0:x.source}}};const y=["BounceRange"];export{d as BounceRange,y as __namedExportsOrder,b as default};
