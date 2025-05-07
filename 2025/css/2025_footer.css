@@ -28,7 +28,7 @@ footer.page-footer {
   .heart {
     position: relative;
     display: inline-block;
-    transform: rotate(45deg);
+    rotate: 45deg;
     margin-inline: .25rem;
     animation: beating-heart .2s linear infinite alternate;
 
@@ -62,10 +62,10 @@ footer.page-footer {
 
 @keyframes beating-heart {
   0% {
-    transform: rotate(45deg) scale(1);
+    rotate: 45deg) scale(1;
   }
 
   100% {
-    transform: rotate(45deg) scale(1.15);
+    rotate: 45deg) scale(1.15;
   }
 }

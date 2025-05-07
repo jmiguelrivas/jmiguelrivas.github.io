@@ -134,31 +134,31 @@ nn-caja.preview {
     &.c01 {
       top: -5px;
       left: 60px;
-      transform: rotate(-80deg);
+      rotate: -80deg;
     }
 
     &.c02 {
       bottom: 0px;
       left: 8px;
-      transform: rotate(-20deg);
+      rotate: -20deg;
     }
 
     &.c03 {
       bottom: 8px;
       left: 43px;
-      transform: rotate(-10deg);
+      rotate: -10deg;
     }
 
     &.c04 {
       bottom: 0px;
       right: 10px;
-      transform: rotate(20deg);
+      rotate: 20deg;
     }
 
     &.c05 {
       top: 5px;
       left: 10px;
-      transform: rotate(-20deg);
+      rotate: -20deg;
     }
   }
 
@@ -192,42 +192,42 @@ nn-caja.preview {
 
   20% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   30% {
     top: -40px;
-    transform: rotate(-10deg);
+    rotate: -10deg;
   }
 
   40% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   50% {
     top: -20px;
-    transform: rotate(6deg);
+    rotate: 6deg;
   }
 
   60% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   70% {
     top: 0px;
-    transform: rotate(-2deg);
+    rotate: -2deg;
   }
 
   80% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   90% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 }
 

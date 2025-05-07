@@ -6,7 +6,7 @@ nn-icono {
   &:before {
     display: inline-block;
     content: var(--icon);
-    transform: rotate(var(--direction));
+    rotate: var(--direction);
   }
 
   &.d0, &.down { --direction: 0deg; }

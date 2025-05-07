@@ -21,7 +21,7 @@ mr-skills {
 
   &:after {
     bottom: -70px;
-    transform: rotate(180deg);
+    rotate: 180deg;
   }
 
   ul {
@@ -46,7 +46,7 @@ mr-skills {
       }
 
       &:hover img {
-        transform: rotate(10deg);
+        rotate: 10deg;
       }
     }
   }
