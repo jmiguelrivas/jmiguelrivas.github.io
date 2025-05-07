@@ -33,7 +33,7 @@ body {
 
 mr-app {
   display: block;
-  height: 100vh;
+  height: 100svh;
 
   >nn-fila {
     height: 100%;

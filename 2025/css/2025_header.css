@@ -67,7 +67,7 @@ dialog {
 }
 
 header.header {
-  padding-top: 80svh
+  padding-top: 80svh;
   background-image: url(../img/pattern_stars.svg);
   background-position: 0 0;
   animation: stars 40s linear infinite;
@@ -82,7 +82,7 @@ header.header {
 
   .content {
     position: absolute;
-    top: 20svh
+    top: 20svh;
     width: 100%;
     text-align: center;
     padding: 1rem;

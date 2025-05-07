@@ -143,7 +143,7 @@ nn-pilar.workarea {
     }
 
     .content {
-      top: 10svh
+      top: 10svh;
 
       h1 {
         font-size: 2.5rem;
