@@ -19,7 +19,7 @@ nn-caja.preview {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 520px;
+  height: 700px;
 
   * {
     box-sizing: content-box;
@@ -38,7 +38,7 @@ nn-caja.preview {
       position: relative;
       margin: 0 250px;
       top: 45px;
-      background-color: #111;
+      background-color: #292b33;
       perspective: 1000px;
       z-index: 1;
     }
@@ -86,6 +86,8 @@ nn-caja.preview {
         left: 70px;
 
         .air_dust {
+          --index: 0;
+          top: calc(2% + 12px * var(--index));
           width: 35px;
           height: 9%;
           position: absolute;
@@ -93,31 +95,29 @@ nn-caja.preview {
           background-color: #444;
           left: -45px;
 
-          $plus: 12;
-
           &.dust01 {
-            top: 2%;
-          }
+            --index: 0;
+          }    
           &.dust02 {
-            top: 2% + $plus * 1;
+            --index: 1;
           }
           &.dust03 {
-            top: 2% + $plus * 2;
+            --index: 2;
           }
           &.dust04 {
-            top: 2% + $plus * 3;
+            --index: 3;
           }
           &.dust05 {
-            top: 2% + $plus * 4;
+            --index: 4;
           }
           &.dust06 {
-            top: 2% + $plus * 5;
+            --index: 5;
           }
           &.dust07 {
-            top: 2% + $plus * 6;
+            --index: 6;
           }
           &.dust08 {
-            top: 2% + $plus * 7;
+            --index: 7;
           }
         }
       }
@@ -178,14 +178,14 @@ nn-caja.preview {
     }
 
     .shadow {
-      width: 100;
+      width: 100%;
       height: 10px;
       bottom: -55px;
       position: absolute;
       border-radius: 20px;
       background-color: rgba(34, 34, 34, 0.45);
       animation: css-minivan-rolling-03 200ms alternate infinite;
-      z-index: -1;
+      z-index: 0;
     }
   }
 }
@@ -244,18 +244,13 @@ nn-caja.preview {
 }
 `
 
-export const Minivan = args => {
-  const container = document.createElement('section')
-  container.classList.add('workarea')
+const airdust = Array.from({
+  length: 8,
+})
+  .map((e, i) => `<div class="air_dust dust0${i + 1}"></div>`)
+  .join('')
 
-  const airdust = Array.from({
-    length: 8,
-  })
-    .map((e, i) => `<div class="air_dust dust0${i + 1}"></div>`)
-    .join('')
-
-  container.innerHTML += `
-<style>${style}</style>
+const html = `
 <nn-caja padding="4" class="preview">
   <div id="minibus">
     <div class="window w01"></div>
@@ -275,12 +270,23 @@ export const Minivan = args => {
     <div class="bumper back"></div>
     <div class="shadow"></div>
   </div>
-</nn-caja>
+</nn-caja>`
+
+export const Minivan = args => {
+  const container = document.createElement('section')
+  container.classList.add('workarea')
+
+  container.innerHTML += `
+<style>${style}</style>
+${html}
 
 <nn-caja padding="4" size="1200">
-<h1>CSS Output:</h1>
+  <h1>CSS Output:</h1>
   <nn-code>${compressText(`${style}`)}</nn-code>
-  </nn-caja>
+
+  <h1>HTML Output:</h1>
+  <nn-code>${compressText(`${html}`)}</nn-code>
+</nn-caja>
 `
   return container
 }

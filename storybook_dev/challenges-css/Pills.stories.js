@@ -18,7 +18,7 @@ nn-caja.preview {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 520px;
+  height: 700px;
 
   .box {
     width: 200px;
@@ -42,7 +42,7 @@ nn-caja.preview {
       left: 0%;
       border-radius: 50%;
       top: 290px;
-      z-index: -1;
+      z-index: 0;
       transition: all 1000ms ease;
     }
 
@@ -300,18 +300,13 @@ nn-caja.preview {
 }
 `
 
-export const Pills = args => {
-  const container = document.createElement('section')
-  container.classList.add('workarea')
+const cracks = Array.from({
+  length: 15,
+})
+  .map(e => `<div class="crack"></div>`)
+  .join('')
 
-  const cracks = Array.from({
-    length: 15,
-  })
-    .map(e => `<div class="crack"></div>`)
-    .join('')
-
-  container.innerHTML += `
-<style>${style}</style>
+const html = `
 <nn-caja padding="4" class="preview">
   <div class="box">
     <div class="shadow"></div>
@@ -332,11 +327,22 @@ export const Pills = args => {
       <div class="gloss g02"></div>
     </div>
   </div>
-</nn-caja>
+</nn-caja>`
+
+export const Pills = args => {
+  const container = document.createElement('section')
+  container.classList.add('workarea')
+
+  container.innerHTML += `
+<style>${style}</style>
+${html}
 
 <nn-caja padding="4" size="1200">
-<h1>CSS Output:</h1>
+  <h1>CSS Output:</h1>
   <nn-code>${compressText(`${style}`)}</nn-code>
+
+  <h1>HTML Output:</h1>
+  <nn-code>${compressText(`${html}`)}</nn-code>
   </nn-caja>
 `
   return container
