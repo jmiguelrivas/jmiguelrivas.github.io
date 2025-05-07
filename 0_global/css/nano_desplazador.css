@@ -1,6 +1,6 @@
 nn-desplazador {
   --nn-track-color: hsl(0deg 0% 14%);
-  --nn-thumb-color: hsl(0deg 0% 43%);
+  --nn-thumb-color: var(--accent-color-2); //hsl(0deg 0% 43%);
 
   scroll-behavior: smooth;
 
