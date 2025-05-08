@@ -1300,7 +1300,7 @@ export const am = [
     { rank: 'elite', date: null },
   ]),
   user(['Kroonos'], 'PT_222', '50103', [{ rank: 'elite', date: null }]),
-  user(['Azeroth'], 'PT_222', 'B0604', [{ rank: 'elite', date: null }]),
+  user(['Azeroth'], 'PT_223', 'B0604', [{ rank: 'elite', date: null }]),
   user(['Pegasus'], 'PT_222', 'A090B', [{ rank: 'elite', date: null }]),
   user(['KingKurt99'], 'AMEN_353', 'C0603', [{ rank: 'elite', date: null }]),
   user(['HornyGoat'], 'AMEN_030', '21601', [{ rank: 'elite', date: null }]),
