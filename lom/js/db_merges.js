@@ -2,7 +2,8 @@ import mergesGlobal from './db_merges_global.js'
 import mergesSea from './db_merges_sea.js'
 import mergesTW from './db_merges_tw.js'
 import mergesKR from './db_merges_kr.js'
-import { getCountryCode, sortByNumberAndStringValue } from './utils.js'
+import { getCountryCode } from './utils.js'
+import {countryCodes} from "./enum_country-codes.js"
 
 function buildDependencyMap(...inputs) {
   const merged = {}
@@ -59,18 +60,23 @@ const spreadServers = Object.entries(mergedMap).flatMap(([key, values]) => [
 ])
 
 function expandDependencyMapWithMetadata(dependencyMap) {
-  return Object.entries(dependencyMap)
-    .map(([rootKey, mergedKeys]) => {
-      const keyMeta = getCountryCode(rootKey)
+  const langCounters = {}
 
-      const values = mergedKeys.map(getCountryCode)
+  return Object.entries(dependencyMap).map(([key, values]) => {
+    const keyMeta = getCountryCode(key)
+    const lang = countryCodes[keyMeta.id.toUpperCase()]
 
-      return {
-        key: keyMeta,
-        values,
-      }
-    })
-    .sort((a, b) => a.key.numericId - b.key.numericId)
+    if (!langCounters[lang]) langCounters[lang] = 1
+    else langCounters[lang]++
+
+    return {
+      key: {
+        ...keyMeta,
+        index: langCounters[lang],
+      },
+      values: values.map(getCountryCode),
+    }
+  }).sort((a, b) => a.key.numericId - b.key.numericId)
 }
 
 const expanded = expandDependencyMapWithMetadata(mergedMap)

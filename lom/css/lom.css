@@ -353,6 +353,25 @@
     gap: 2px;
   }
 
+  .user-details {
+    text-transform: uppercase;
+    display: flex;
+    gap: .5rem;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 12px;
+      background-color: hsl(0deg 0% 100% / 60%);
+      color: var(--charcoal);
+      padding: 3px 6px;
+      border-radius: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+
   .date-rank-group {
     display: flex;
     gap: 1rem;

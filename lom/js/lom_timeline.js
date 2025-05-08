@@ -70,7 +70,7 @@ class Timeline extends HTMLElement {
       localServers = data.servers
     }
 
-    localServers.forEach(serv => {
+    localServers.forEach((serv) => {
       const key = { ...serv.key }
       const group = serv.values
 
@@ -79,19 +79,53 @@ class Timeline extends HTMLElement {
         parent: tableBody,
       })
 
-      createNode({
+      const td = createNode({
         type: 'td',
         parent: tr,
         attrs: {
-          class: [key.id, ].join(' '),
+          class: [key.id, 'leading-server'].join(' '),
         },
-        innerHTML: [key.label, `(${group.length})`].join(' '),
+      })
+
+      createNode({
+        type: 'span',
+        parent: td,
+        attrs: {
+          // class: ['pill', 'charcoal'].join(' '),
+        },
+        text: key.label,
+      })
+
+      const div = createNode({
+        type: 'div',
+        parent: td,
+        attrs: {
+          class: ['user-details'].join(' '),
+        },
+      })
+
+      createNode({
+        type: 'span',
+        parent: div,
+        // attrs: {
+        //   class: ['pill', 'white'].join(' '),
+        // },
+        text: 'Index: ' + key.index,
+      })
+
+      createNode({
+        type: 'span',
+        parent: div,
+        // attrs: {
+        //   class: ['pill', 'white'].join(' '),
+        // },
+        text: 'Length: ' + group.length,
       })
 
       const tdGroup = createNode({
         type: 'td',
         parent: tr,
-        attrs: {class: ['merged', !group.length && key.id].join(' ') },
+        attrs: { class: ['merged', !group.length && key.id].join(' ') },
       })
 
       const groupCell = createNode({

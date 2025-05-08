@@ -45,6 +45,8 @@ function validateCountryCode(id, serverId) {
   return id
 }
 
+const numericIdCounters = {}
+
 function getCountryCode(str) {
   if (str) {
     const parts = str.split('_')
@@ -52,6 +54,13 @@ function getCountryCode(str) {
     const serverId = parts[1]
 
     id = validateCountryCode(id, serverId)
+    const numericId = countryCodes?.[id]
+
+    if (!numericIdCounters[numericId]) {
+      numericIdCounters[numericId] = 1
+    }
+
+    const index = numericIdCounters[numericId]++
 
     const users = usersDB.filter(
       user => user.server === [id, serverId].join('_')
@@ -60,21 +69,15 @@ function getCountryCode(str) {
     return {
       id: id?.toLowerCase(),
       label: [id, serverId].join('_'),
-      numericId: countryCodes?.[id],
+      numericId,
       users,
+      index,
     }
   }
-}
-
-function sortByNumberAndStringValue(a, b) {
-  const numDiff = a.key.numericId - b.key.numericId
-  if (numDiff !== 0) return numDiff
-  return a.key.label.localeCompare(b.key.label)
 }
 
 export {
   getCountryCode,
   getTooltip,
   validateCountryCode,
-  sortByNumberAndStringValue,
 }

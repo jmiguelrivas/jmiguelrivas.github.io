@@ -2,6 +2,7 @@ body {
   --sunglow: hsl(47deg, 100%, 57%);
   --shamrock: hsl(149deg, 61%, 51%);
   --royal-purple: hsl(262.83deg 41.07% 43.92%);
+  --charcoal: #36454F;
 }
 
 .btn {
@@ -66,6 +67,14 @@ body {
 
   &.royal-purple {
     --color: var(--royal-purple);
+  }
+
+  &.charcoal {
+    --color: var(--charcoal);
+  }
+  &.white {
+    --color: white;
+    color: var(--charcoal) !important;
   }
 }
 
