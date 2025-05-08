@@ -160,9 +160,65 @@
     color: #fff;
   }
 
+  .table {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .table-header {
+      nn-pilar {
+        background: rgb(255 255 255 / 12%);
+      }
+    }
+
+    nn-pilar {
+      outline: solid 2px #202028;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #table-body {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      nn-fila {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    nn-fila {
+      opacity: 0.8;
+      transition: opacity 200ms ease;
+      text-align: center;
+
+      nn-pilar {
+        padding: 1rem;
+        
+        &:first-child {
+          font-weight: 700;
+          color: #fff;
+        }
+
+        color: #eee;
+        background-color: hsl(240 6% 17% / 1);
+      }
+
+      &:nth-child(odd) {
+        opacity: 0.75;
+      }
+
+      &:nth-child(even) {
+        opacity: 0.9;
+      }
+    }
+  }
+
   table {
     border-spacing: 2px .5rem;
-    /* max-width: 100%; */
 
     th {
       background: rgb(255 255 255 / 12%);
@@ -291,7 +347,6 @@
       }
     }
   }
-
 
   .controllers {
     display: flex;

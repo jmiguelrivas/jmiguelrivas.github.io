@@ -79,7 +79,11 @@ nn-fila {
 @media (max-width: 1200px) {
   nn-fila {
     &.break-lg {
-      display: block;
+      flex-direction: column;
+
+      nn-pilar {
+        --size: 100%;
+      }
     }
   }
 }
@@ -87,7 +91,11 @@ nn-fila {
 @media (max-width: 992px) {
   nn-fila {
     &.break-md {
-      display: block;
+      flex-direction: column;
+
+      nn-pilar {
+        --size: 100%;
+      }
     }
   }
 }
@@ -95,7 +103,11 @@ nn-fila {
 @media (max-width: 768px) {
   nn-fila {
     &.break-sm {
-      display: block;
+      flex-direction: column;
+
+      nn-pilar {
+        --size: 100%;
+      }
     }
   }
 }
@@ -103,7 +115,11 @@ nn-fila {
 @media (max-width: 480px) {
   nn-fila {
     &.break-xs {
-      display: block;
+      flex-direction: column;
+
+      nn-pilar {
+        --size: 100%;
+      }
     }
   }
 }

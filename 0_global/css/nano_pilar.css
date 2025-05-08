@@ -6,6 +6,7 @@ nn-pilar {
   flex-basis: var(--size);
   max-width: var(--size);
   width: var(--size);
+  display: block;
 
   &.n1d20 {
     --size: 5%;

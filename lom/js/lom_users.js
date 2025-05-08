@@ -1,32 +1,22 @@
 import '../../0_global/js/index.js'
-import {
-  getPrefix,
-  createNode
-} from '../../0_global/js/global_helpers.js'
-import {
-  usersDB as users
-} from './db_users.js'
-import {
-  createFilters,
-  langs
-} from './component_filters.js'
+import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
+import { usersDB as users } from './db_users.js'
+import { createFilters, langs } from './component_filters.js'
 
 class Users extends HTMLElement {
   static template = /*html*/ `
 <nn-caja padding="4">
   ${createFilters()}
   <h2>Users</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Server</th>
-        <th>UID</th>
-        <th>Nick</th>
-        <th>Rank :: Position :: Date</th>
-      </tr>
-    </thead>
-    <tbody id="table-body"></tbody>
-  </table>
+  <div class="table">
+    <nn-fila break="sm" class="table-header">
+      <nn-pilar size="20%">Server</nn-pilar>
+      <nn-pilar size="20%">UID</nn-pilar>
+      <nn-pilar size="35%">Nick</nn-pilar>
+      <nn-pilar size="25%">Rank :: Position :: Date</nn-pilar>
+    </nn-fila>
+    <div id="table-body"></div>
+  </div>
 </nn-caja>
 `
 
@@ -71,28 +61,38 @@ class Users extends HTMLElement {
     if (table.length) {
       table.forEach(user => {
         const tr = createNode({
-          type: 'tr',
+          type: 'nn-fila',
           parent: tableBody,
           attrs: {
             title: user.names[0],
+            break: 'md',
           },
         })
 
         createNode({
-          type: 'td',
+          type: 'nn-pilar',
           parent: tr,
+          attrs: {
+            size: '20%',
+          },
           innerHTML: `<span class="pill ${user.lang}">${user.server}</span>`,
         })
 
         createNode({
-          type: 'td',
+          type: 'nn-pilar',
           parent: tr,
+          attrs: {
+            size: '20%',
+          },
           innerHTML: user.id,
         })
 
         const names = createNode({
-          type: 'td',
+          type: 'nn-pilar',
           parent: tr,
+          attrs: {
+            size: '35%',
+          },
         })
 
         const namesGroup = createNode({
@@ -115,10 +115,11 @@ class Users extends HTMLElement {
         })
 
         const ranks = createNode({
-          type: 'td',
+          type: 'nn-pilar',
           parent: tr,
           attrs: {
             class: 'date-rank-group',
+            size: '25%',
           },
         })
 
@@ -153,7 +154,7 @@ class Users extends HTMLElement {
       })
 
       createNode({
-        type: 'td',
+        type: 'nn-pilar',
         parent: tr,
         text: 'No users found',
         attrs: {
@@ -172,6 +173,4 @@ class Users extends HTMLElement {
 
 window.customElements.define(getPrefix('users'), Users)
 
-export {
-  Users
-}
+export { Users }
