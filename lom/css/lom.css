@@ -414,11 +414,15 @@
 }
 
 @media (max-width: 480px) {
+  .user-details {
+    flex-direction: column;
+  }
+
   mr-users {
-    > span {
+    >span {
       flex-direction: column;
 
-      > button {
+      >button {
         width: 100% !important;
       }
     }
