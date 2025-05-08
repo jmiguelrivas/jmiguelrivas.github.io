@@ -29,8 +29,6 @@ function simplifyCommits(commits) {
 
 const commitsSimplified = simplifyCommits(commitsDB)
 
-console.log(commitsSimplified)
-
 class Log extends HTMLElement {
   static commits = commitsSimplified.map(commit => {
     const msg = commit.commits.map(p => `<li><em>${p.id}</em> ${p.msg}</li>`).join(' ')
