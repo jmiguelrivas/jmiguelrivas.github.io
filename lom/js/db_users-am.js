@@ -714,7 +714,7 @@ export const am = [
   user(['Shade'], 'AMEN_672', '80A04', [
     { rank: 'top', position: 87, date: '2025-05-08' },
   ]),
-  user(['Medrusta'], 'AMEN_004', '90D06', [
+  user(['Medrusta'], 'AMEN_172', '90D06', [
     { rank: 'top', position: 96, date: '2025-04-28' },
     { rank: 'top', position: 88, date: '2025-05-08' },
     { rank: 'elite', date: '2025-04-25' },
@@ -981,6 +981,9 @@ export const am = [
   ]),
   user(['Proto152'], 'AMEN_435', '90F0B', [
     { rank: 'elite', date: '2025-04-25' },
+  ]),
+  user(['DeservingJr'], 'AMEN_172', 'B0B0D', [
+    { rank: 'elite', date: '2025-05-08' },
   ]),
   user(['Qweeble'], 'AMEN_170', '11707', [
     { rank: 'elite', date: '2025-04-25' },
