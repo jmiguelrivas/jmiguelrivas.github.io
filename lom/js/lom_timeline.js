@@ -83,12 +83,9 @@ class Timeline extends HTMLElement {
         type: 'td',
         parent: tr,
         attrs: {
-          class: [key.id, ...getTooltip(key).classes].join(' '),
-          // ...(!group.length && { colspan: 2 }),
+          class: [key.id, ].join(' '),
         },
-        innerHTML: getTooltip(key).msg
-          ? getTooltip(key, group.length + 1).msg
-          : [key.label, `(${group.length + 1})`].join(' '),
+        innerHTML: [key.label, `(${group.length})`].join(' '),
       })
 
       const tdGroup = createNode({

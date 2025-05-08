@@ -4,94 +4,75 @@ import mergesTW from './db_merges_tw.js'
 import mergesKR from './db_merges_kr.js'
 import { getCountryCode, sortByNumberAndStringValue } from './utils.js'
 
-function deepMerge(...merges) {
-  const result = {}
+function buildDependencyMap(...inputs) {
+  const merged = {}
+  const allDependencies = new Set()
 
-  for (const merge of merges) {
-    for (const date in merge) {
-      if (!result[date]) {
-        result[date] = {}
-      }
-
-      for (const key in merge[date]) {
-        if (!result[date][key]) {
-          result[date][key] = [...merge[date][key]]
-        } else {
-          const existing = new Set(result[date][key])
-          merge[date][key].forEach(item => existing.add(item))
-          result[date][key] = Array.from(existing)
+  // Merge all inputs into a flat dependency map
+  for (const input of inputs) {
+    for (const day of Object.values(input)) {
+      for (const [key, deps] of Object.entries(day)) {
+        if (!merged[key]) merged[key] = new Set()
+        for (const dep of deps) {
+          merged[key].add(dep)
+          allDependencies.add(dep)
         }
       }
     }
   }
 
+  // Identify root keys (those not merged into others)
+  const rootKeys = Object.keys(merged).filter(key => !allDependencies.has(key))
+
+  // Recursively resolve full dependency tree
+  const result = {}
+
+  function resolve(key, visited = new Set()) {
+    if (visited.has(key)) return
+    visited.add(key)
+
+    const children = merged[key] || new Set()
+    for (const child of children) {
+      resolve(child, visited)
+    }
+  }
+
+  for (const key of rootKeys) {
+    const visited = new Set()
+    resolve(key, visited)
+    result[key] = [...visited].sort()
+  }
+
   return result
 }
 
-function removeDuplicates(matrix) {
-  return [...new Set([...matrix])]
-}
+const mergedMap = buildDependencyMap(
+  mergesGlobal,
+  mergesKR,
+  mergesSea,
+  mergesTW
+)
 
-function flatObjects(matrix) {
-  const result = {}
-  matrix.forEach(s => {
-    Object.entries(s).forEach(([k, v]) => {
-      if (result?.[k]) {
-        result[k].push(...v)
-        result[k] = removeDuplicates(result[k])
-      } else {
-        result[k] = v
+const spreadServers = Object.entries(mergedMap).flatMap(([key, values]) => [
+  key,
+  ...values,
+])
+
+function expandDependencyMapWithMetadata(dependencyMap) {
+  return Object.entries(dependencyMap)
+    .map(([rootKey, mergedKeys]) => {
+      const keyMeta = getCountryCode(rootKey)
+
+      const values = mergedKeys.map(getCountryCode)
+
+      return {
+        key: keyMeta,
+        values,
       }
     })
-  })
-  return result
+    .sort((a, b) => a.key.numericId - b.key.numericId)
 }
 
-const merges = deepMerge(mergesSea, mergesGlobal, mergesTW, mergesKR)
+const expanded = expandDependencyMapWithMetadata(mergedMap)
 
-const serversArray = flatObjects(Object.values(merges))
-
-function mergeAllServers(serverMap) {
-  const combined = []
-
-  for (const [key, values] of Object.entries(serverMap)) {
-    combined.push(key, ...values)
-  }
-
-  return removeDuplicates(combined).sort()
-}
-
-const spreadServers = mergeAllServers(serversArray)
-
-const serversKeys = Object.keys(serversArray).sort()
-
-const fusedServers = Object.values(serversArray).flat()
-
-const allServers = Object.entries(serversArray).map(([key, values]) => {
-  const fusion = values
-    .map(value => {
-      return [value, serversKeys.includes(value) && serversArray[value]]
-    })
-    .flat(2)
-    .filter(e => e)
-    .sort()
-
-  return {
-    key,
-    values: fusion,
-  }
-})
-
-const servers = allServers
-  .filter(server => {
-    const currentServer = server.key
-    const belongsToFusion = fusedServers.includes(currentServer)
-    return !belongsToFusion
-  })
-  .map(item => ({
-    key: getCountryCode(item.key),
-    values: item.values.map(value => getCountryCode(value)),
-  }))
-  .sort(sortByNumberAndStringValue)
-
-export { servers, spreadServers }
+export { expanded as servers, spreadServers, expandDependencyMapWithMetadata }
