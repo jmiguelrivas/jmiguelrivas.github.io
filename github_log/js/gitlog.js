@@ -4,14 +4,41 @@ import {
 } from '../../0_global/js/global_helpers.js'
 import commitsDB from './db_commits.js'
 
-class Log extends HTMLElement {
-  static commits = commitsDB.map(commit => {
-    const msg = commit.msg.map(p => `<li>${p}</li>`).join(' ')
+function simplifyCommits(commits) {
+  const grouped = new Map();
 
-    return /*html*/ `
+  for (const { date, author, id, msg } of commits) {
+    const key = `${date}::${author}`;
+
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        date,
+        author,
+        commits: []
+      });
+    }
+
+    const group = grouped.get(key);
+    for (const m of msg) {
+      group.commits.push({ id, msg: m });
+    }
+  }
+
+  return Array.from(grouped.values());
+}
+
+const commitsSimplified = simplifyCommits(commitsDB)
+
+console.log(commitsSimplified)
+
+class Log extends HTMLElement {
+  static commits = commitsSimplified.map(commit => {
+    const msg = commit.commits.map(p => `<li><em>${p.id}</em> ${p.msg}</li>`).join(' ')
+
+    return `
 <li>
   <h2>
-    <strong>${commit.author}</strong> :: <em>${commit.id}</em> :: <time datetime="${commit.dateIso}">${commit.dateLocal}</time>
+    <strong>${commit.author}</strong> :: <time datetime="${commit.date}">${commit.date}</time>
   </h2>
   <ul class="msg">
     ${msg}

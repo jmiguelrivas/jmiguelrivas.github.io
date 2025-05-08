@@ -1,9 +1,280 @@
 export default [
   {
     "author": "Miguel Rivas",
+    "id": "d013b1c",
+    "date": "2025-05-07",
+    "msg": [
+      "global: cleaning"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "26e837e",
+    "date": "2025-05-07",
+    "msg": [
+      "lom: reducing classes instances"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "9a521bb",
+    "date": "2025-05-07",
+    "msg": [
+      "global: increasing scrollbar width"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "1f474fe",
+    "date": "2025-05-07",
+    "msg": [
+      "2025: fixing paluma animation"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "4a3ec54",
+    "date": "2025-05-07",
+    "msg": [
+      "global: transform-(rotate-translate-scale) for new standalone properties"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "e8a47d5",
+    "date": "2025-05-07",
+    "msg": [
+      "2025: adding emphasis in the content text"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "cc2bb3d",
+    "date": "2025-05-07",
+    "msg": [
+      "2025: adding links to the main dialog"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "07ae190",
+    "date": "2025-05-07",
+    "msg": [
+      "global: css fix"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "09f0352",
+    "date": "2025-05-07",
+    "msg": [
+      "storybook: build"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "30bfced",
+    "date": "2025-05-07",
+    "msg": [
+      "css-challenges: fixing shadows"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "80a75c3",
+    "date": "2025-05-07",
+    "msg": [
+      "css-challenge: window"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "49fb149",
+    "date": "2025-05-07",
+    "msg": [
+      "css-challenge: minivan"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "269d489",
+    "date": "2025-05-07",
+    "msg": [
+      "css-challenge: pills"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "6e40a02",
+    "date": "2025-05-07",
+    "msg": [
+      "challenges-js: palindrome"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "563b4e0",
+    "date": "2025-05-06",
+    "msg": [
+      "challenge: string reverse"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "503ebde",
+    "date": "2025-05-06",
+    "msg": [
+      "challenge: fizzbuzz"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "bee1105",
+    "date": "2025-05-06",
+    "msg": [
+      "anagram: removing spaces in words"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "99d97f1",
+    "date": "2025-05-06",
+    "msg": [
+      "storybook: chanllenges: anagram checker"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "3927d5c",
+    "date": "2025-05-06",
+    "msg": [
+      "lom: fix korean dates"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "1e194b3",
+    "date": "2025-05-06",
+    "msg": [
+      "lom: add temporal servers to korean region"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "14d6f78",
+    "date": "2025-05-06",
+    "msg": [
+      "lom: adding power and level for a few top players"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "f91b191",
+    "date": "2025-05-06",
+    "msg": [
+      "lom: adding support for korean names"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "c84b882",
+    "date": "2025-05-06",
+    "msg": [
+      "global: vh to svh unit"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "72161f3",
+    "date": "2025-05-06",
+    "msg": [
+      "global: fix mobile layout to exclude the navbar from heigh calculation"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "7645142",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: fix user sorting for position = null",
+      "now instead of going to the top the go to the end of the list"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "7ec477d",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: db refactor",
+      "- avoid using numeric lang value unless is for sorting",
+      "- replace server array for string",
+      "- avoid infinity position",
+      "- allow expanding on conditions based languages like espt and tr"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "9b568f2",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: am db update",
+      "- users sort by position, verify, rank, lang, server, id",
+      "- refactor user class so when is taking the min value for the position is avoiding null, undefined and nan"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "13d86c8",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: am top 80-100"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "9ff082e",
+    "date": "2025-05-05",
+    "msg": [
+      "global: improving accesibility"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "732ad56",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: adding tw merges (wip)"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "7801699",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: prepair color codes  for all the regions"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "b99a89a",
+    "date": "2025-05-05",
+    "msg": [
+      "lom: taiwanese servers"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "b600b8e",
+    "date": "2025-05-04",
+    "msg": [
+      "gitlog: fixing script",
+      "now instead of generating the whole html is just generating a js file with all the commits and a web component is handling the data and creating the html"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
     "id": "4b26d99",
-    "dateIso": "2025-05-04T05:48:33.000Z",
-    "dateLocal": "03/05/2025, 22:48:33",
+    "date": "2025-05-04",
     "msg": [
       "storybook: fix build"
     ]
@@ -11,8 +282,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ecd60ac",
-    "dateIso": "2025-05-04T05:35:45.000Z",
-    "dateLocal": "03/05/2025, 22:35:45",
+    "date": "2025-05-04",
     "msg": [
       "storybook: fixing build"
     ]
@@ -20,8 +290,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "846da0a",
-    "dateIso": "2025-05-04T05:34:50.000Z",
-    "dateLocal": "03/05/2025, 22:34:50",
+    "date": "2025-05-04",
     "msg": [
       "vite: config",
       "remove storybook"
@@ -30,8 +299,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "a91950d",
-    "dateIso": "2025-05-04T04:48:56.000Z",
-    "dateLocal": "03/05/2025, 21:48:56",
+    "date": "2025-05-04",
     "msg": [
       "github-log: polishing report"
     ]
@@ -39,8 +307,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e0c2bc5",
-    "dateIso": "2025-05-04T03:59:06.000Z",
-    "dateLocal": "03/05/2025, 20:59:06",
+    "date": "2025-05-04",
     "msg": [
       "gitlog: adding a script for generating a commits report"
     ]
@@ -48,8 +315,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "09c43e2",
-    "dateIso": "2025-05-04T03:50:00.000Z",
-    "dateLocal": "03/05/2025, 20:50:00",
+    "date": "2025-05-04",
     "msg": [
       "storybook: change build directory"
     ]
@@ -57,8 +323,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3715738",
-    "dateIso": "2025-05-04T01:04:17.000Z",
-    "dateLocal": "03/05/2025, 18:04:17",
+    "date": "2025-05-04",
     "msg": [
       "global: external apps builds"
     ]
@@ -66,8 +331,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "4dcb92c",
-    "dateIso": "2025-05-04T00:49:53.000Z",
-    "dateLocal": "03/05/2025, 17:49:53",
+    "date": "2025-05-04",
     "msg": [
       "vitest: adding users test"
     ]
@@ -75,8 +339,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "345cbd7",
-    "dateIso": "2025-05-03T12:46:38.000Z",
-    "dateLocal": "03/05/2025, 05:46:38",
+    "date": "2025-05-03",
     "msg": [
       "storybook: build"
     ]
@@ -84,8 +347,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7090d77",
-    "dateIso": "2025-05-03T12:44:09.000Z",
-    "dateLocal": "03/05/2025, 05:44:09",
+    "date": "2025-05-03",
     "msg": [
       "hiding dr logic"
     ]
@@ -93,8 +355,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "951822b",
-    "dateIso": "2025-05-03T12:43:06.000Z",
-    "dateLocal": "03/05/2025, 05:43:06",
+    "date": "2025-05-03",
     "msg": [
       "global: mix",
       "- add vitest report",
@@ -105,8 +366,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "a5b0da5",
-    "dateIso": "2025-05-03T12:14:45.000Z",
-    "dateLocal": "03/05/2025, 05:14:45",
+    "date": "2025-05-03",
     "msg": [
       "ci: fix broken test"
     ]
@@ -114,8 +374,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6480bdb",
-    "dateIso": "2025-05-03T12:13:50.000Z",
-    "dateLocal": "03/05/2025, 05:13:50",
+    "date": "2025-05-03",
     "msg": [
       "ci: test broken test"
     ]
@@ -123,8 +382,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3d65118",
-    "dateIso": "2025-05-03T12:12:13.000Z",
-    "dateLocal": "03/05/2025, 05:12:13",
+    "date": "2025-05-03",
     "msg": [
       "ci: fix workflow"
     ]
@@ -132,8 +390,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6221816",
-    "dateIso": "2025-05-03T12:11:15.000Z",
-    "dateLocal": "03/05/2025, 05:11:15",
+    "date": "2025-05-03",
     "msg": [
       "ci: test"
     ]
@@ -141,8 +398,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ca11fa5",
-    "dateIso": "2025-05-03T12:10:10.000Z",
-    "dateLocal": "03/05/2025, 05:10:10",
+    "date": "2025-05-03",
     "msg": [
       "Merge branch 'drlogic'"
     ]
@@ -150,8 +406,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "027236f",
-    "dateIso": "2025-05-03T12:08:16.000Z",
-    "dateLocal": "03/05/2025, 05:08:16",
+    "date": "2025-05-03",
     "msg": [
       "git_ci: add job for unittest"
     ]
@@ -159,8 +414,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "df35325",
-    "dateIso": "2025-05-03T12:04:29.000Z",
-    "dateLocal": "03/05/2025, 05:04:29",
+    "date": "2025-05-03",
     "msg": [
       "vitest: fix test"
     ]
@@ -168,8 +422,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5c91066",
-    "dateIso": "2025-05-03T11:53:14.000Z",
-    "dateLocal": "03/05/2025, 04:53:14",
+    "date": "2025-05-03",
     "msg": [
       "vitest: adding configuration and first test"
     ]
@@ -177,8 +430,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2a15f1e",
-    "dateIso": "2025-05-02T07:04:52.000Z",
-    "dateLocal": "02/05/2025, 00:04:52",
+    "date": "2025-05-02",
     "msg": [
       "update resume"
     ]
@@ -186,8 +438,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "9148c80",
-    "dateIso": "2025-05-02T04:23:50.000Z",
-    "dateLocal": "01/05/2025, 21:23:50",
+    "date": "2025-05-02",
     "msg": [
       "drlogic: home view"
     ]
@@ -195,8 +446,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "147f20c",
-    "dateIso": "2025-05-01T16:00:51.000Z",
-    "dateLocal": "01/05/2025, 09:00:51",
+    "date": "2025-05-01",
     "msg": [
       "lom: update db"
     ]
@@ -204,8 +454,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "4a1ec8e",
-    "dateIso": "2025-05-01T00:21:52.000Z",
-    "dateLocal": "30/04/2025, 17:21:52",
+    "date": "2025-05-01",
     "msg": [
       "2025: adding react to skills"
     ]
@@ -213,8 +462,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2a7a038",
-    "dateIso": "2025-05-01T00:11:57.000Z",
-    "dateLocal": "30/04/2025, 17:11:57",
+    "date": "2025-05-01",
     "msg": [
       "storybook: fixing build"
     ]
@@ -222,8 +470,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "da1458d",
-    "dateIso": "2025-04-30T23:46:38.000Z",
-    "dateLocal": "30/04/2025, 16:46:38",
+    "date": "2025-04-30",
     "msg": [
       "lom: fix merged view"
     ]
@@ -231,8 +478,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5670ed2",
-    "dateIso": "2025-04-30T22:51:27.000Z",
-    "dateLocal": "30/04/2025, 15:51:27",
+    "date": "2025-04-30",
     "msg": [
       "adding lang to apps"
     ]
@@ -240,8 +486,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ebcf2ae",
-    "dateIso": "2025-04-30T22:44:27.000Z",
-    "dateLocal": "30/04/2025, 15:44:27",
+    "date": "2025-04-30",
     "msg": [
       "2025: adding storybook link to the research section"
     ]
@@ -249,8 +494,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e4b9132",
-    "dateIso": "2025-04-30T22:35:10.000Z",
-    "dateLocal": "30/04/2025, 15:35:10",
+    "date": "2025-04-30",
     "msg": [
       "storybook: build"
     ]
@@ -258,8 +502,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ce8ec69",
-    "dateIso": "2025-04-30T22:32:25.000Z",
-    "dateLocal": "30/04/2025, 15:32:25",
+    "date": "2025-04-30",
     "msg": [
       "storybook: adding the icons section"
     ]
@@ -267,8 +510,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7325cd3",
-    "dateIso": "2025-04-30T22:08:47.000Z",
-    "dateLocal": "30/04/2025, 15:08:47",
+    "date": "2025-04-30",
     "msg": [
       "storybook: adding favicon",
       "- adding custom build folder"
@@ -277,8 +519,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "0404711",
-    "dateIso": "2025-04-30T21:53:23.000Z",
-    "dateLocal": "30/04/2025, 14:53:23",
+    "date": "2025-04-30",
     "msg": [
       "Delete node_modules directory"
     ]
@@ -286,8 +527,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f9a6c80",
-    "dateIso": "2025-04-30T21:52:05.000Z",
-    "dateLocal": "30/04/2025, 14:52:05",
+    "date": "2025-04-30",
     "msg": [
       "removing old docs app",
       "- adding gitignore"
@@ -296,8 +536,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3468620",
-    "dateIso": "2025-04-30T21:39:31.000Z",
-    "dateLocal": "30/04/2025, 14:39:31",
+    "date": "2025-04-30",
     "msg": [
       "storybook: removing extra docs page"
     ]
@@ -305,8 +544,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "0e93930",
-    "dateIso": "2025-04-30T21:35:43.000Z",
-    "dateLocal": "30/04/2025, 14:35:43",
+    "date": "2025-04-30",
     "msg": [
       "moving docs to storybook",
       "- cleaning default storybook files"
@@ -315,8 +553,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f8853a1",
-    "dateIso": "2025-04-29T22:51:00.000Z",
-    "dateLocal": "29/04/2025, 15:51:00",
+    "date": "2025-04-29",
     "msg": [
       "adding storybook"
     ]
@@ -324,8 +561,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5960ac4",
-    "dateIso": "2025-04-29T22:05:03.000Z",
-    "dateLocal": "29/04/2025, 15:05:03",
+    "date": "2025-04-29",
     "msg": [
       "fix typo"
     ]
@@ -333,8 +569,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5fa4b2a",
-    "dateIso": "2025-04-29T21:47:16.000Z",
-    "dateLocal": "29/04/2025, 14:47:16",
+    "date": "2025-04-29",
     "msg": [
       "lom: top 100 eu",
       "- removing duplicated entries"
@@ -343,8 +578,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "706c591",
-    "dateIso": "2025-04-28T18:39:16.000Z",
-    "dateLocal": "28/04/2025, 11:39:16",
+    "date": "2025-04-28",
     "msg": [
       "lom: updating users filters"
     ]
@@ -352,8 +586,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "0cadf65",
-    "dateIso": "2025-04-28T18:37:25.000Z",
-    "dateLocal": "28/04/2025, 11:37:25",
+    "date": "2025-04-28",
     "msg": [
       "lom: fixing servers nesting on the merged list"
     ]
@@ -361,8 +594,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "08b7fda",
-    "dateIso": "2025-04-28T13:45:34.000Z",
-    "dateLocal": "28/04/2025, 06:45:34",
+    "date": "2025-04-28",
     "msg": [
       "lom: add sea users"
     ]
@@ -370,8 +602,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "51f45fa",
-    "dateIso": "2025-04-28T10:07:08.000Z",
-    "dateLocal": "28/04/2025, 03:07:08",
+    "date": "2025-04-28",
     "msg": [
       "lom: verifying am users"
     ]
@@ -379,8 +610,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "bcfeeea",
-    "dateIso": "2025-04-27T19:48:32.000Z",
-    "dateLocal": "27/04/2025, 12:48:32",
+    "date": "2025-04-27",
     "msg": [
       "lom: warning for old data"
     ]
@@ -388,8 +618,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3af7033",
-    "dateIso": "2025-04-27T19:02:01.000Z",
-    "dateLocal": "27/04/2025, 12:02:01",
+    "date": "2025-04-27",
     "msg": [
       "lom: more verifications"
     ]
@@ -397,8 +626,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "c9a869e",
-    "dateIso": "2025-04-27T17:53:32.000Z",
-    "dateLocal": "27/04/2025, 10:53:32",
+    "date": "2025-04-27",
     "msg": [
       "lom: verifying elite warriors / part 1"
     ]
@@ -406,8 +634,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f766c23",
-    "dateIso": "2025-04-27T10:13:48.000Z",
-    "dateLocal": "27/04/2025, 03:13:48",
+    "date": "2025-04-27",
     "msg": [
       "wip"
     ]
@@ -415,8 +642,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f441f92",
-    "dateIso": "2025-04-27T09:48:59.000Z",
-    "dateLocal": "27/04/2025, 02:48:59",
+    "date": "2025-04-27",
     "msg": [
       "wip"
     ]
@@ -424,8 +650,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ad8acb8",
-    "dateIso": "2025-04-27T09:36:43.000Z",
-    "dateLocal": "27/04/2025, 02:36:43",
+    "date": "2025-04-27",
     "msg": [
       "lom: validating countryCodes in the gap tracker"
     ]
@@ -433,8 +658,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f4c55ba",
-    "dateIso": "2025-04-27T09:19:35.000Z",
-    "dateLocal": "27/04/2025, 02:19:35",
+    "date": "2025-04-27",
     "msg": [
       "lom : extract validateCountryCode"
     ]
@@ -442,8 +666,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e32648b",
-    "dateIso": "2025-04-27T06:19:32.000Z",
-    "dateLocal": "26/04/2025, 23:19:32",
+    "date": "2025-04-27",
     "msg": [
       "lom: adding filters for users view"
     ]
@@ -451,8 +674,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2746284",
-    "dateIso": "2025-04-26T14:10:30.000Z",
-    "dateLocal": "26/04/2025, 07:10:30",
+    "date": "2025-04-26",
     "msg": [
       "lom: verifying database"
     ]
@@ -460,8 +682,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "14045ab",
-    "dateIso": "2025-04-25T17:59:07.000Z",
-    "dateLocal": "25/04/2025, 10:59:07",
+    "date": "2025-04-25",
     "msg": [
       "lom: remove user duplication"
     ]
@@ -469,8 +690,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3e58aec",
-    "dateIso": "2025-04-25T17:55:19.000Z",
-    "dateLocal": "25/04/2025, 10:55:19",
+    "date": "2025-04-25",
     "msg": [
       "lom: users section",
       "- creator tag"
@@ -479,8 +699,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "504c816",
-    "dateIso": "2025-04-25T04:30:05.000Z",
-    "dateLocal": "24/04/2025, 21:30:05",
+    "date": "2025-04-25",
     "msg": [
       "lom: fix en gaps"
     ]
@@ -488,8 +707,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d33b480",
-    "dateIso": "2025-04-25T04:22:27.000Z",
-    "dateLocal": "24/04/2025, 21:22:27",
+    "date": "2025-04-25",
     "msg": [
       "lom: refactoring filters"
     ]
@@ -497,8 +715,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6b22c91",
-    "dateIso": "2025-04-25T01:26:39.000Z",
-    "dateLocal": "24/04/2025, 18:26:39",
+    "date": "2025-04-25",
     "msg": [
       "lom: db merges refactor",
       "- adding users to merge entries"
@@ -507,8 +724,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "924b0b4",
-    "dateIso": "2025-04-24T11:13:29.000Z",
-    "dateLocal": "24/04/2025, 04:13:29",
+    "date": "2025-04-24",
     "msg": [
       "lom: fix overwriting merges in similar dates in both regions"
     ]
@@ -516,8 +732,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "53f2a2b",
-    "dateIso": "2025-04-23T23:05:32.000Z",
-    "dateLocal": "23/04/2025, 16:05:32",
+    "date": "2025-04-23",
     "msg": [
       "lom: tracking sea servers"
     ]
@@ -525,8 +740,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "19937bd",
-    "dateIso": "2025-04-23T21:01:32.000Z",
-    "dateLocal": "23/04/2025, 14:01:32",
+    "date": "2025-04-23",
     "msg": [
       "lom2: add sea merges"
     ]
@@ -534,8 +748,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7323984",
-    "dateIso": "2025-04-21T03:42:33.000Z",
-    "dateLocal": "20/04/2025, 20:42:33",
+    "date": "2025-04-21",
     "msg": [
       "drlogic: initial template"
     ]
@@ -543,8 +756,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6a53147",
-    "dateIso": "2025-04-20T00:21:29.000Z",
-    "dateLocal": "19/04/2025, 17:21:29",
+    "date": "2025-04-20",
     "msg": [
       "avatar: create app"
     ]
@@ -552,8 +764,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6a10f25",
-    "dateIso": "2025-04-19T22:33:15.000Z",
-    "dateLocal": "19/04/2025, 15:33:15",
+    "date": "2025-04-19",
     "msg": [
       "calendar: add header for day of the week"
     ]
@@ -561,8 +772,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "a7df0a1",
-    "dateIso": "2025-04-19T22:04:29.000Z",
-    "dateLocal": "19/04/2025, 15:04:29",
+    "date": "2025-04-19",
     "msg": [
       "cube: create a separate section for the app"
     ]
@@ -570,8 +780,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "a9cc719",
-    "dateIso": "2025-04-19T19:57:02.000Z",
-    "dateLocal": "19/04/2025, 12:57:02",
+    "date": "2025-04-19",
     "msg": [
       "calendar: fix getting the right month on the month view"
     ]
@@ -579,8 +788,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d0aa7ce",
-    "dateIso": "2025-04-19T19:47:13.000Z",
-    "dateLocal": "19/04/2025, 12:47:13",
+    "date": "2025-04-19",
     "msg": [
       "global: changing tags"
     ]
@@ -588,8 +796,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "69d4f32",
-    "dateIso": "2025-04-19T18:20:29.000Z",
-    "dateLocal": "19/04/2025, 11:20:29",
+    "date": "2025-04-19",
     "msg": [
       "calendar: stating the calendar on march 20 (spring)"
     ]
@@ -597,8 +804,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d305f3e",
-    "dateIso": "2025-04-19T17:49:04.000Z",
-    "dateLocal": "19/04/2025, 10:49:04",
+    "date": "2025-04-19",
     "msg": [
       "calendar: reset button"
     ]
@@ -606,8 +812,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "697e2aa",
-    "dateIso": "2025-04-19T17:20:12.000Z",
-    "dateLocal": "19/04/2025, 10:20:12",
+    "date": "2025-04-19",
     "msg": [
       "calendar: fixing infinite week and month navigation",
       "- changing the orientation of the navigation so -1 move you backward instead of forward"
@@ -616,8 +821,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "daf9844",
-    "dateIso": "2025-04-19T17:08:10.000Z",
-    "dateLocal": "19/04/2025, 10:08:10",
+    "date": "2025-04-19",
     "msg": [
       "calendar: fix month's controls"
     ]
@@ -625,8 +829,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "280f08f",
-    "dateIso": "2025-04-19T16:51:05.000Z",
-    "dateLocal": "19/04/2025, 09:51:05",
+    "date": "2025-04-19",
     "msg": [
       "global: fixing tooltip padding and z-index"
     ]
@@ -634,8 +837,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "4e77ffc",
-    "dateIso": "2025-04-19T16:48:04.000Z",
-    "dateLocal": "19/04/2025, 09:48:04",
+    "date": "2025-04-19",
     "msg": [
       "global: remove empty tags section"
     ]
@@ -643,8 +845,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f839ee8",
-    "dateIso": "2025-04-19T16:45:19.000Z",
-    "dateLocal": "19/04/2025, 09:45:19",
+    "date": "2025-04-19",
     "msg": [
       "global: adding tags/pill for the routes"
     ]
@@ -652,8 +853,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "b9a7160",
-    "dateIso": "2025-04-19T16:04:56.000Z",
-    "dateLocal": "19/04/2025, 09:04:56",
+    "date": "2025-04-19",
     "msg": [
       "calendar: addingg and stylizing week and month view",
       "- wip: making calendar reactive so we could switch between years when subtracting weeks and months"
@@ -662,8 +862,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5707722",
-    "dateIso": "2025-04-19T14:22:13.000Z",
-    "dateLocal": "19/04/2025, 07:22:13",
+    "date": "2025-04-19",
     "msg": [
       "calendar: making preparations for other calendar views"
     ]
@@ -671,8 +870,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "41deaa3",
-    "dateIso": "2025-04-19T03:48:42.000Z",
-    "dateLocal": "18/04/2025, 20:48:42",
+    "date": "2025-04-19",
     "msg": [
       "small fix"
     ]
@@ -680,8 +878,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2aafd85",
-    "dateIso": "2025-04-19T03:19:02.000Z",
-    "dateLocal": "18/04/2025, 20:19:02",
+    "date": "2025-04-19",
     "msg": [
       "calendar: fixing reactivity"
     ]
@@ -689,8 +886,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e8a64d9",
-    "dateIso": "2025-04-19T01:26:13.000Z",
-    "dateLocal": "18/04/2025, 18:26:13",
+    "date": "2025-04-19",
     "msg": [
       "calendar: fix leap year"
     ]
@@ -698,8 +894,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "291a2d2",
-    "dateIso": "2025-04-19T00:56:37.000Z",
-    "dateLocal": "18/04/2025, 17:56:37",
+    "date": "2025-04-19",
     "msg": [
       "global: adding react to the tools / skills"
     ]
@@ -707,8 +902,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "91be300",
-    "dateIso": "2025-04-19T00:40:14.000Z",
-    "dateLocal": "18/04/2025, 17:40:14",
+    "date": "2025-04-19",
     "msg": [
       "calendar: adding events"
     ]
@@ -716,8 +910,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "fa723c7",
-    "dateIso": "2025-04-18T23:43:39.000Z",
-    "dateLocal": "18/04/2025, 16:43:39",
+    "date": "2025-04-18",
     "msg": [
       "calendar: new ui",
       "- wip: switching years"
@@ -726,8 +919,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e751050",
-    "dateIso": "2025-04-18T18:34:51.000Z",
-    "dateLocal": "18/04/2025, 11:34:51",
+    "date": "2025-04-18",
     "msg": [
       "global: add babel locally"
     ]
@@ -735,8 +927,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5f90539",
-    "dateIso": "2025-04-18T18:19:08.000Z",
-    "dateLocal": "18/04/2025, 11:19:08",
+    "date": "2025-04-18",
     "msg": [
       "global: removing theme toggle"
     ]
@@ -744,8 +935,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f94d7c9",
-    "dateIso": "2025-04-18T18:16:45.000Z",
-    "dateLocal": "18/04/2025, 11:16:45",
+    "date": "2025-04-18",
     "msg": [
       "global: adding react client support"
     ]
@@ -753,8 +943,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3e2fff1",
-    "dateIso": "2025-04-18T17:24:03.000Z",
-    "dateLocal": "18/04/2025, 10:24:03",
+    "date": "2025-04-18",
     "msg": [
       "global: global.js -> global_helper.js"
     ]
@@ -762,8 +951,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "554e220",
-    "dateIso": "2025-04-18T15:38:45.000Z",
-    "dateLocal": "18/04/2025, 08:38:45",
+    "date": "2025-04-18",
     "msg": [
       "global: threejs simplified import"
     ]
@@ -771,8 +959,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "b32215b",
-    "dateIso": "2025-04-17T10:39:42.000Z",
-    "dateLocal": "17/04/2025, 03:39:42",
+    "date": "2025-04-17",
     "msg": [
       "global: refactor file names"
     ]
@@ -780,8 +967,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e942399",
-    "dateIso": "2025-04-17T07:05:36.000Z",
-    "dateLocal": "17/04/2025, 00:05:36",
+    "date": "2025-04-17",
     "msg": [
       "global: reorganizing files",
       "- using underscore to separate layers and hyphens to separate words within the names of the files",
@@ -793,8 +979,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "895b61d",
-    "dateIso": "2025-04-16T12:28:43.000Z",
-    "dateLocal": "16/04/2025, 05:28:43",
+    "date": "2025-04-16",
     "msg": [
       "2025: reorganizing css"
     ]
@@ -802,8 +987,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "1f4e9f2",
-    "dateIso": "2025-04-16T07:12:54.000Z",
-    "dateLocal": "16/04/2025, 00:12:54",
+    "date": "2025-04-16",
     "msg": [
       "2025: adding prettier"
     ]
@@ -811,8 +995,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "82c4892",
-    "dateIso": "2025-04-15T15:47:05.000Z",
-    "dateLocal": "15/04/2025, 08:47:05",
+    "date": "2025-04-15",
     "msg": [
       "2025: update email"
     ]
@@ -820,8 +1003,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "735054b",
-    "dateIso": "2025-04-14T10:57:55.000Z",
-    "dateLocal": "14/04/2025, 03:57:55",
+    "date": "2025-04-14",
     "msg": [
       "2025: fix print"
     ]
@@ -829,8 +1011,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "de416e5",
-    "dateIso": "2025-04-14T10:47:34.000Z",
-    "dateLocal": "14/04/2025, 03:47:34",
+    "date": "2025-04-14",
     "msg": [
       "2025: mobile fix"
     ]
@@ -838,8 +1019,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "1f2cc49",
-    "dateIso": "2025-04-12T22:54:28.000Z",
-    "dateLocal": "12/04/2025, 15:54:28",
+    "date": "2025-04-12",
     "msg": [
       "2025: adding palumba to the illustration"
     ]
@@ -847,8 +1027,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3d4bd5e",
-    "dateIso": "2025-04-12T07:21:46.000Z",
-    "dateLocal": "12/04/2025, 00:21:46",
+    "date": "2025-04-12",
     "msg": [
       "2025: new header"
     ]
@@ -856,8 +1035,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "c7f3bb7",
-    "dateIso": "2025-04-10T21:28:24.000Z",
-    "dateLocal": "10/04/2025, 14:28:24",
+    "date": "2025-04-10",
     "msg": [
       "2025: adding illustration for header"
     ]
@@ -865,8 +1043,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5ac25b7",
-    "dateIso": "2025-04-10T14:45:51.000Z",
-    "dateLocal": "10/04/2025, 07:45:51",
+    "date": "2025-04-10",
     "msg": [
       "lom: db merges update"
     ]
@@ -874,8 +1051,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ef82f5f",
-    "dateIso": "2025-04-03T03:35:23.000Z",
-    "dateLocal": "02/04/2025, 20:35:23",
+    "date": "2025-04-03",
     "msg": [
       "lom: adding master rank"
     ]
@@ -883,8 +1059,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "a8a5188",
-    "dateIso": "2025-03-31T20:37:12.000Z",
-    "dateLocal": "31/03/2025, 13:37:12",
+    "date": "2025-03-31",
     "msg": [
       "lom: fix code extraction"
     ]
@@ -892,8 +1067,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "dcff44c",
-    "dateIso": "2025-03-30T22:43:38.000Z",
-    "dateLocal": "30/03/2025, 15:43:38",
+    "date": "2025-03-30",
     "msg": [
       "lom: getting server tag from utils"
     ]
@@ -901,8 +1075,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5e3d624",
-    "dateIso": "2025-03-30T20:25:51.000Z",
-    "dateLocal": "30/03/2025, 13:25:51",
+    "date": "2025-03-30",
     "msg": [
       "lom: gaps tracker"
     ]
@@ -910,8 +1083,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "b3f0c69",
-    "dateIso": "2025-03-30T15:29:52.000Z",
-    "dateLocal": "30/03/2025, 08:29:52",
+    "date": "2025-03-30",
     "msg": [
       "lom: removing honor mentions"
     ]
@@ -919,8 +1091,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "27bd54a",
-    "dateIso": "2025-03-30T14:56:14.000Z",
-    "dateLocal": "30/03/2025, 07:56:14",
+    "date": "2025-03-30",
     "msg": [
       "lom: changing icon for pill tag"
     ]
@@ -928,8 +1099,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "cf16d6c",
-    "dateIso": "2025-03-29T22:48:01.000Z",
-    "dateLocal": "29/03/2025, 15:48:01",
+    "date": "2025-03-29",
     "msg": [
       "lom: mix",
       "- adding elite champions db",
@@ -940,8 +1110,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "8d6ff63",
-    "dateIso": "2025-03-28T07:20:33.000Z",
-    "dateLocal": "28/03/2025, 00:20:33",
+    "date": "2025-03-28",
     "msg": [
       "lom: fix mush labels"
     ]
@@ -949,8 +1118,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "b6f3c56",
-    "dateIso": "2025-03-28T06:59:31.000Z",
-    "dateLocal": "27/03/2025, 23:59:31",
+    "date": "2025-03-28",
     "msg": [
       "lom: db update"
     ]
@@ -958,8 +1126,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ed3688f",
-    "dateIso": "2025-03-26T10:49:30.000Z",
-    "dateLocal": "26/03/2025, 03:49:30",
+    "date": "2025-03-26",
     "msg": [
       "lom: db update"
     ]
@@ -967,8 +1134,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2b70a12",
-    "dateIso": "2025-03-26T10:39:49.000Z",
-    "dateLocal": "26/03/2025, 03:39:49",
+    "date": "2025-03-26",
     "msg": [
       "lom: db update, master filter, remove honor filter"
     ]
@@ -976,8 +1142,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5ebebdb",
-    "dateIso": "2025-03-25T11:33:49.000Z",
-    "dateLocal": "25/03/2025, 04:33:49",
+    "date": "2025-03-25",
     "msg": [
       "lom: db update"
     ]
@@ -985,8 +1150,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "c7244e3",
-    "dateIso": "2025-03-25T03:57:33.000Z",
-    "dateLocal": "24/03/2025, 20:57:33",
+    "date": "2025-03-25",
     "msg": [
       "lom: db update"
     ]
@@ -994,8 +1158,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d703adc",
-    "dateIso": "2025-03-19T17:13:28.000Z",
-    "dateLocal": "19/03/2025, 10:13:28",
+    "date": "2025-03-19",
     "msg": [
       "2025: initialized web components as block elements"
     ]
@@ -1003,8 +1166,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7b9c774",
-    "dateIso": "2025-03-19T15:58:08.000Z",
-    "dateLocal": "19/03/2025, 08:58:08",
+    "date": "2025-03-19",
     "msg": [
       "2025: fixing favicons"
     ]
@@ -1012,8 +1174,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "612bfd3",
-    "dateIso": "2025-03-19T15:44:20.000Z",
-    "dateLocal": "19/03/2025, 08:44:20",
+    "date": "2025-03-19",
     "msg": [
       "2025: fixing scroll navigation issue"
     ]
@@ -1021,8 +1182,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "04afaa2",
-    "dateIso": "2025-03-19T15:37:30.000Z",
-    "dateLocal": "19/03/2025, 08:37:30",
+    "date": "2025-03-19",
     "msg": [
       "2025: fixing missing favicon"
     ]
@@ -1030,8 +1190,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d94d80d",
-    "dateIso": "2025-03-18T19:46:12.000Z",
-    "dateLocal": "18/03/2025, 12:46:12",
+    "date": "2025-03-18",
     "msg": [
       "family db update"
     ]
@@ -1039,8 +1198,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "68ffc67",
-    "dateIso": "2025-03-17T21:16:42.000Z",
-    "dateLocal": "17/03/2025, 14:16:42",
+    "date": "2025-03-17",
     "msg": [
       "db update"
     ]
@@ -1048,8 +1206,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "1c6228b",
-    "dateIso": "2025-03-02T20:31:40.000Z",
-    "dateLocal": "02/03/2025, 12:31:40",
+    "date": "2025-03-02",
     "msg": [
       "lom: adding thanos"
     ]
@@ -1057,8 +1214,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5a97cb0",
-    "dateIso": "2025-03-02T20:17:49.000Z",
-    "dateLocal": "02/03/2025, 12:17:49",
+    "date": "2025-03-02",
     "msg": [
       "Merge pull request #1 from jmiguelrivas/lom-add-new-filters",
       "lom: adding new filters (honor and elite)"
@@ -1067,8 +1223,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ea05d52",
-    "dateIso": "2025-03-02T20:16:47.000Z",
-    "dateLocal": "02/03/2025, 12:16:47",
+    "date": "2025-03-02",
     "msg": [
       "lom: update eu players db"
     ]
@@ -1076,8 +1231,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "835c3f5",
-    "dateIso": "2025-03-02T16:08:03.000Z",
-    "dateLocal": "02/03/2025, 08:08:03",
+    "date": "2025-03-02",
     "msg": [
       "lom: adding new filters (honor and elite)"
     ]
@@ -1085,8 +1239,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "4cba89c",
-    "dateIso": "2025-03-02T01:33:07.000Z",
-    "dateLocal": "01/03/2025, 17:33:07",
+    "date": "2025-03-02",
     "msg": [
       "lom: fix server timeline",
       "currently the merge array was overriden by the latest"
@@ -1095,8 +1248,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7c947a7",
-    "dateIso": "2025-03-01T20:00:08.000Z",
-    "dateLocal": "01/03/2025, 12:00:08",
+    "date": "2025-03-01",
     "msg": [
       "lom: updating players db, adding elite and honor mention players"
     ]
@@ -1104,8 +1256,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f4a59ff",
-    "dateIso": "2025-02-27T23:16:48.000Z",
-    "dateLocal": "27/02/2025, 15:16:48",
+    "date": "2025-02-27",
     "msg": [
       "2025: mobile header overflow fix"
     ]
@@ -1113,8 +1264,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "b952bce",
-    "dateIso": "2025-02-27T23:08:47.000Z",
-    "dateLocal": "27/02/2025, 15:08:47",
+    "date": "2025-02-27",
     "msg": [
       "2025: fixing css nesting for mobile"
     ]
@@ -1122,8 +1272,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "c5b5fde",
-    "dateIso": "2025-02-27T18:50:17.000Z",
-    "dateLocal": "27/02/2025, 10:50:17",
+    "date": "2025-02-27",
     "msg": [
       "global: fixing favicon background"
     ]
@@ -1131,8 +1280,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "0910d5b",
-    "dateIso": "2025-02-27T18:46:27.000Z",
-    "dateLocal": "27/02/2025, 10:46:27",
+    "date": "2025-02-27",
     "msg": [
       "global: updating favicon"
     ]
@@ -1140,8 +1288,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7499525",
-    "dateIso": "2025-02-27T17:31:04.000Z",
-    "dateLocal": "27/02/2025, 09:31:04",
+    "date": "2025-02-27",
     "msg": [
       "2025: adding header design"
     ]
@@ -1149,8 +1296,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "72b4587",
-    "dateIso": "2025-02-27T11:48:28.000Z",
-    "dateLocal": "27/02/2025, 03:48:28",
+    "date": "2025-02-27",
     "msg": [
       "lom: update db"
     ]
@@ -1158,8 +1304,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "8330561",
-    "dateIso": "2025-02-26T15:52:09.000Z",
-    "dateLocal": "26/02/2025, 07:52:09",
+    "date": "2025-02-26",
     "msg": [
       "adding favicon to other sections"
     ]
@@ -1167,8 +1312,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3e32f63",
-    "dateIso": "2025-02-26T15:44:47.000Z",
-    "dateLocal": "26/02/2025, 07:44:47",
+    "date": "2025-02-26",
     "msg": [
       "adding favicon"
     ]
@@ -1176,8 +1320,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "1b8a9af",
-    "dateIso": "2025-02-24T08:39:25.000Z",
-    "dateLocal": "24/02/2025, 00:39:25",
+    "date": "2025-02-24",
     "msg": [
       "lom: adding server size next to the label"
     ]
@@ -1185,8 +1328,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "530d81f",
-    "dateIso": "2025-02-20T19:59:08.000Z",
-    "dateLocal": "20/02/2025, 11:59:08",
+    "date": "2025-02-20",
     "msg": [
       "2025: cube: stopping animation loop when the details is closed"
     ]
@@ -1194,8 +1336,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e75cac4",
-    "dateIso": "2025-02-20T19:29:48.000Z",
-    "dateLocal": "20/02/2025, 11:29:48",
+    "date": "2025-02-20",
     "msg": [
       "2025: preventing cube for activating when the details are hidden, details animation"
     ]
@@ -1203,8 +1344,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6ca0865",
-    "dateIso": "2025-02-20T07:03:47.000Z",
-    "dateLocal": "19/02/2025, 23:03:47",
+    "date": "2025-02-20",
     "msg": [
       "lom: fix mush condition"
     ]
@@ -1212,8 +1352,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "6df67f4",
-    "dateIso": "2025-02-20T06:54:09.000Z",
-    "dateLocal": "19/02/2025, 22:54:09",
+    "date": "2025-02-20",
     "msg": [
       "2025: fix palumba hover state"
     ]
@@ -1221,8 +1360,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "9c049f2",
-    "dateIso": "2025-02-20T06:53:48.000Z",
-    "dateLocal": "19/02/2025, 22:53:48",
+    "date": "2025-02-20",
     "msg": [
       "lom: db update"
     ]
@@ -1230,8 +1368,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "fb77ab9",
-    "dateIso": "2025-02-20T00:53:50.000Z",
-    "dateLocal": "19/02/2025, 16:53:50",
+    "date": "2025-02-20",
     "msg": [
       "lom: adding feature for expanding nested users into the main server tooltip"
     ]
@@ -1239,8 +1376,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "80899a5",
-    "dateIso": "2025-02-19T21:42:40.000Z",
-    "dateLocal": "19/02/2025, 13:42:40",
+    "date": "2025-02-19",
     "msg": [
       "add lom db correction"
     ]
@@ -1248,8 +1384,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "fd44666",
-    "dateIso": "2025-02-19T21:20:15.000Z",
-    "dateLocal": "19/02/2025, 13:20:15",
+    "date": "2025-02-19",
     "msg": [
       "small fix"
     ]
@@ -1257,8 +1392,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "bd3931e",
-    "dateIso": "2025-02-19T13:45:10.000Z",
-    "dateLocal": "19/02/2025, 05:45:10",
+    "date": "2025-02-19",
     "msg": [
       "updating lom database"
     ]
@@ -1266,8 +1400,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "a988731",
-    "dateIso": "2025-02-14T07:08:54.000Z",
-    "dateLocal": "13/02/2025, 23:08:54",
+    "date": "2025-02-14",
     "msg": [
       "2025: refactoring docs styles"
     ]
@@ -1275,8 +1408,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "50f9d08",
-    "dateIso": "2025-02-14T03:37:38.000Z",
-    "dateLocal": "13/02/2025, 19:37:38",
+    "date": "2025-02-14",
     "msg": [
       "2025: fixing resume readability"
     ]
@@ -1284,8 +1416,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "11008b8",
-    "dateIso": "2025-02-14T00:42:28.000Z",
-    "dateLocal": "13/02/2025, 16:42:28",
+    "date": "2025-02-14",
     "msg": [
       "2025: fix modal width"
     ]
@@ -1293,8 +1424,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "605a358",
-    "dateIso": "2025-02-14T00:26:34.000Z",
-    "dateLocal": "13/02/2025, 16:26:34",
+    "date": "2025-02-14",
     "msg": [
       "portfolio 2025: embedding readme file"
     ]
@@ -1302,8 +1432,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "022cc65",
-    "dateIso": "2025-02-13T20:51:24.000Z",
-    "dateLocal": "13/02/2025, 12:51:24",
+    "date": "2025-02-13",
     "msg": [
       "bounce range: fix documentation"
     ]
@@ -1311,8 +1440,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "494aa44",
-    "dateIso": "2025-02-13T20:31:17.000Z",
-    "dateLocal": "13/02/2025, 12:31:17",
+    "date": "2025-02-13",
     "msg": [
       "bounce range: fix tables output"
     ]
@@ -1320,8 +1448,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2c46d3e",
-    "dateIso": "2025-02-13T20:26:56.000Z",
-    "dateLocal": "13/02/2025, 12:26:56",
+    "date": "2025-02-13",
     "msg": [
       "small fix"
     ]
@@ -1329,8 +1456,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f2d0e2d",
-    "dateIso": "2025-02-13T20:26:22.000Z",
-    "dateLocal": "13/02/2025, 12:26:22",
+    "date": "2025-02-13",
     "msg": [
       "adding bounce documentation"
     ]
@@ -1338,8 +1464,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "c940bc0",
-    "dateIso": "2025-02-13T19:52:41.000Z",
-    "dateLocal": "13/02/2025, 11:52:41",
+    "date": "2025-02-13",
     "msg": [
       "updating readme file and adding link to the research"
     ]
@@ -1347,8 +1472,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "07090fd",
-    "dateIso": "2025-02-13T19:30:08.000Z",
-    "dateLocal": "13/02/2025, 11:30:08",
+    "date": "2025-02-13",
     "msg": [
       "updating readme file"
     ]
@@ -1356,8 +1480,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "24f9e1a",
-    "dateIso": "2025-02-12T11:20:01.000Z",
-    "dateLocal": "12/02/2025, 03:20:01",
+    "date": "2025-02-12",
     "msg": [
       "fixing email in resume"
     ]
@@ -1365,8 +1488,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ef3fe89",
-    "dateIso": "2025-02-09T23:58:43.000Z",
-    "dateLocal": "09/02/2025, 15:58:43",
+    "date": "2025-02-09",
     "msg": [
       "portfolio 2025 / first working draft"
     ]
@@ -1374,8 +1496,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "cc49f74",
-    "dateIso": "2025-02-06T08:58:02.000Z",
-    "dateLocal": "06/02/2025, 00:58:02",
+    "date": "2025-02-06",
     "msg": [
       "fixing navigation"
     ]
@@ -1383,8 +1504,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e1aa86e",
-    "dateIso": "2025-02-06T07:05:43.000Z",
-    "dateLocal": "05/02/2025, 23:05:43",
+    "date": "2025-02-06",
     "msg": [
       "fixing print resume"
     ]
@@ -1392,8 +1512,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "0a3b491",
-    "dateIso": "2025-02-05T18:29:32.000Z",
-    "dateLocal": "05/02/2025, 10:29:32",
+    "date": "2025-02-05",
     "msg": [
       "2025: refactor lists"
     ]
@@ -1401,8 +1520,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "1d2be52",
-    "dateIso": "2025-02-05T18:14:41.000Z",
-    "dateLocal": "05/02/2025, 10:14:41",
+    "date": "2025-02-05",
     "msg": [
       "3d cube: orbit controllers"
     ]
@@ -1410,8 +1528,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "955e106",
-    "dateIso": "2025-02-05T14:44:04.000Z",
-    "dateLocal": "05/02/2025, 06:44:04",
+    "date": "2025-02-05",
     "msg": [
       "3d cube: adding controllers for toggle guide and grid"
     ]
@@ -1419,8 +1536,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ade6f11",
-    "dateIso": "2025-02-05T12:27:11.000Z",
-    "dateLocal": "05/02/2025, 04:27:11",
+    "date": "2025-02-05",
     "msg": [
       "3d cube: fixing background color"
     ]
@@ -1428,8 +1544,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e171fcb",
-    "dateIso": "2025-02-05T12:05:07.000Z",
-    "dateLocal": "05/02/2025, 04:05:07",
+    "date": "2025-02-05",
     "msg": [
       "3d cube with wikipedia colors"
     ]
@@ -1437,8 +1552,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5fccd1f",
-    "dateIso": "2025-02-05T09:27:53.000Z",
-    "dateLocal": "05/02/2025, 01:27:53",
+    "date": "2025-02-05",
     "msg": [
       "adding three js support and initial scene for the 3d cube",
       "- also adding skill section part 1"
@@ -1447,8 +1561,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f1f3e85",
-    "dateIso": "2025-02-04T17:54:35.000Z",
-    "dateLocal": "04/02/2025, 09:54:35",
+    "date": "2025-02-04",
     "msg": [
       "wip"
     ]
@@ -1456,8 +1569,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "890e78e",
-    "dateIso": "2025-02-03T11:47:03.000Z",
-    "dateLocal": "03/02/2025, 03:47:03",
+    "date": "2025-02-03",
     "msg": [
       "adding skills section"
     ]
@@ -1465,8 +1577,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "dfcd243",
-    "dateIso": "2025-01-31T16:14:21.000Z",
-    "dateLocal": "31/01/2025, 08:14:21",
+    "date": "2025-01-31",
     "msg": [
       "wip"
     ]
@@ -1474,8 +1585,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "11a7fa5",
-    "dateIso": "2025-01-25T08:42:21.000Z",
-    "dateLocal": "25/01/2025, 00:42:21",
+    "date": "2025-01-25",
     "msg": [
       "adding portfolio section"
     ]
@@ -1483,8 +1593,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "4854703",
-    "dateIso": "2025-01-11T17:03:20.000Z",
-    "dateLocal": "11/01/2025, 09:03:20",
+    "date": "2025-01-11",
     "msg": [
       "lom: updating ranking"
     ]
@@ -1492,8 +1601,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "58bedc7",
-    "dateIso": "2025-01-10T12:43:14.000Z",
-    "dateLocal": "10/01/2025, 04:43:14",
+    "date": "2025-01-10",
     "msg": [
       "merge update"
     ]
@@ -1501,8 +1609,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "f3335c2",
-    "dateIso": "2025-01-09T17:31:47.000Z",
-    "dateLocal": "09/01/2025, 09:31:47",
+    "date": "2025-01-09",
     "msg": [
       "amend commit"
     ]
@@ -1510,8 +1617,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "ceb4c50",
-    "dateIso": "2025-01-09T12:24:22.000Z",
-    "dateLocal": "09/01/2025, 04:24:22",
+    "date": "2025-01-09",
     "msg": [
       "lom: new merge"
     ]
@@ -1519,8 +1625,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "bd61e36",
-    "dateIso": "2025-01-08T10:27:13.000Z",
-    "dateLocal": "08/01/2025, 02:27:13",
+    "date": "2025-01-08",
     "msg": [
       "disabling entry with wrong data"
     ]
@@ -1528,8 +1633,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "45e9032",
-    "dateIso": "2025-01-08T05:09:52.000Z",
-    "dateLocal": "07/01/2025, 21:09:52",
+    "date": "2025-01-08",
     "msg": [
       "lom: updating db"
     ]
@@ -1537,8 +1641,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "971b09c",
-    "dateIso": "2025-01-03T15:32:49.000Z",
-    "dateLocal": "03/01/2025, 07:32:49",
+    "date": "2025-01-03",
     "msg": [
       "adding bounce docs"
     ]
@@ -1546,8 +1649,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "fcba82b",
-    "dateIso": "2024-12-29T21:06:24.000Z",
-    "dateLocal": "29/12/2024, 13:06:24",
+    "date": "2024-12-29",
     "msg": [
       "adding parking table"
     ]
@@ -1555,8 +1657,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "afed2f4",
-    "dateIso": "2024-12-28T14:14:29.000Z",
-    "dateLocal": "28/12/2024, 06:14:29",
+    "date": "2024-12-28",
     "msg": [
       "refactoring spirit code"
     ]
@@ -1564,8 +1665,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "78d7a96",
-    "dateIso": "2024-12-28T13:40:11.000Z",
-    "dateLocal": "28/12/2024, 05:40:11",
+    "date": "2024-12-28",
     "msg": [
       "adding docs section"
     ]
@@ -1573,8 +1673,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "cda0045",
-    "dateIso": "2024-12-15T23:39:11.000Z",
-    "dateLocal": "15/12/2024, 15:39:11",
+    "date": "2024-12-15",
     "msg": [
       "updating lom db and family db"
     ]
@@ -1582,8 +1681,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2b7a919",
-    "dateIso": "2024-12-15T09:41:59.000Z",
-    "dateLocal": "15/12/2024, 01:41:59",
+    "date": "2024-12-15",
     "msg": [
       "fixing family module"
     ]
@@ -1591,8 +1689,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "c2d85ed",
-    "dateIso": "2024-12-15T09:27:51.000Z",
-    "dateLocal": "15/12/2024, 01:27:51",
+    "date": "2024-12-15",
     "msg": [
       "adding family tree module"
     ]
@@ -1600,8 +1697,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "8c96d92",
-    "dateIso": "2024-12-12T15:13:23.000Z",
-    "dateLocal": "12/12/2024, 07:13:23",
+    "date": "2024-12-12",
     "msg": [
       "lom: adding new merge"
     ]
@@ -1609,8 +1705,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e28e858",
-    "dateIso": "2024-12-11T12:06:41.000Z",
-    "dateLocal": "11/12/2024, 04:06:41",
+    "date": "2024-12-11",
     "msg": [
       "updating db"
     ]
@@ -1618,8 +1713,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d9d65e8",
-    "dateIso": "2024-12-09T12:50:55.000Z",
-    "dateLocal": "09/12/2024, 04:50:55",
+    "date": "2024-12-09",
     "msg": [
       "lom updating db top"
     ]
@@ -1627,8 +1721,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "0ca8ecb",
-    "dateIso": "2024-12-08T15:26:19.000Z",
-    "dateLocal": "08/12/2024, 07:26:19",
+    "date": "2024-12-08",
     "msg": [
       "fixing console errors"
     ]
@@ -1636,8 +1729,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2476c35",
-    "dateIso": "2024-12-08T15:20:20.000Z",
-    "dateLocal": "08/12/2024, 07:20:20",
+    "date": "2024-12-08",
     "msg": [
       "small fix"
     ]
@@ -1645,8 +1737,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "097e5f6",
-    "dateIso": "2024-12-08T15:08:51.000Z",
-    "dateLocal": "08/12/2024, 07:08:51",
+    "date": "2024-12-08",
     "msg": [
       "adding minimum height for cells"
     ]
@@ -1654,8 +1745,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "784f45e",
-    "dateIso": "2024-12-08T14:48:30.000Z",
-    "dateLocal": "08/12/2024, 06:48:30",
+    "date": "2024-12-08",
     "msg": [
       "cleaning"
     ]
@@ -1663,8 +1753,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "54891c5",
-    "dateIso": "2024-12-08T14:40:07.000Z",
-    "dateLocal": "08/12/2024, 06:40:07",
+    "date": "2024-12-08",
     "msg": [
       "lom: replace user tooltip for dropdown"
     ]
@@ -1672,8 +1761,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "e3d58ea",
-    "dateIso": "2024-12-08T08:07:45.000Z",
-    "dateLocal": "08/12/2024, 00:07:45",
+    "date": "2024-12-08",
     "msg": [
       "lom: fixing filters for top users in the simple version"
     ]
@@ -1681,8 +1769,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "275a451",
-    "dateIso": "2024-12-08T07:42:02.000Z",
-    "dateLocal": "07/12/2024, 23:42:02",
+    "date": "2024-12-08",
     "msg": [
       "lom: adding icon for help component"
     ]
@@ -1690,8 +1777,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d5c2d01",
-    "dateIso": "2024-12-08T04:12:32.000Z",
-    "dateLocal": "07/12/2024, 20:12:32",
+    "date": "2024-12-08",
     "msg": [
       "adding tooltip component"
     ]
@@ -1699,8 +1785,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "472acf7",
-    "dateIso": "2024-12-03T16:11:31.000Z",
-    "dateLocal": "03/12/2024, 08:11:31",
+    "date": "2024-12-03",
     "msg": [
       "family tree start"
     ]
@@ -1708,8 +1793,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7f76455",
-    "dateIso": "2024-12-03T06:01:43.000Z",
-    "dateLocal": "02/12/2024, 22:01:43",
+    "date": "2024-12-03",
     "msg": [
       "cleaning lom styles"
     ]
@@ -1717,8 +1801,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "28d8385",
-    "dateIso": "2024-12-03T05:43:07.000Z",
-    "dateLocal": "02/12/2024, 21:43:07",
+    "date": "2024-12-03",
     "msg": [
       "fix createNode function",
       "innerHtml was removing the textnode"
@@ -1727,8 +1810,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "01d1de1",
-    "dateIso": "2024-12-03T05:09:02.000Z",
-    "dateLocal": "02/12/2024, 21:09:02",
+    "date": "2024-12-03",
     "msg": [
       "linting"
     ]
@@ -1736,8 +1818,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "5fca995",
-    "dateIso": "2024-12-03T05:05:52.000Z",
-    "dateLocal": "02/12/2024, 21:05:52",
+    "date": "2024-12-03",
     "msg": [
       "lom simple table to web component"
     ]
@@ -1745,8 +1826,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "07f1367",
-    "dateIso": "2024-12-03T02:30:49.000Z",
-    "dateLocal": "02/12/2024, 18:30:49",
+    "date": "2024-12-03",
     "msg": [
       "converting lom-expanded table into web component"
     ]
@@ -1754,8 +1834,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "bab9a83",
-    "dateIso": "2024-12-03T00:34:09.000Z",
-    "dateLocal": "02/12/2024, 16:34:09",
+    "date": "2024-12-03",
     "msg": [
       "adding iconos section",
       "- renaming global folder so it goes to the top of the list"
@@ -1764,8 +1843,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "1c9e2c5",
-    "dateIso": "2024-12-02T20:59:41.000Z",
-    "dateLocal": "02/12/2024, 12:59:41",
+    "date": "2024-12-02",
     "msg": [
       "fix redirect"
     ]
@@ -1773,8 +1851,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "87762e2",
-    "dateIso": "2024-12-02T20:54:35.000Z",
-    "dateLocal": "02/12/2024, 12:54:35",
+    "date": "2024-12-02",
     "msg": [
       "fixing redirect"
     ]
@@ -1782,8 +1859,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "2086ea3",
-    "dateIso": "2024-12-02T20:52:39.000Z",
-    "dateLocal": "02/12/2024, 12:52:39",
+    "date": "2024-12-02",
     "msg": [
       "navigate to new route without loosing params"
     ]
@@ -1791,8 +1867,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "7b7c7b8",
-    "dateIso": "2024-12-02T20:19:29.000Z",
-    "dateLocal": "02/12/2024, 12:19:29",
+    "date": "2024-12-02",
     "msg": [
       "adding hidden projects, lom server index"
     ]
@@ -1800,8 +1875,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "8eb2f0e",
-    "dateIso": "2024-12-02T17:48:11.000Z",
-    "dateLocal": "02/12/2024, 09:48:11",
+    "date": "2024-12-02",
     "msg": [
       "adding boilerplate project"
     ]
@@ -1809,8 +1883,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "d295444",
-    "dateIso": "2024-12-02T03:04:57.000Z",
-    "dateLocal": "01/12/2024, 19:04:57",
+    "date": "2024-12-02",
     "msg": [
       "scroll-area"
     ]
@@ -1818,8 +1891,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "4873c36",
-    "dateIso": "2024-12-02T00:05:59.000Z",
-    "dateLocal": "01/12/2024, 16:05:59",
+    "date": "2024-12-02",
     "msg": [
       "fix url"
     ]
@@ -1827,8 +1899,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "59134f0",
-    "dateIso": "2024-12-02T00:04:13.000Z",
-    "dateLocal": "01/12/2024, 16:04:13",
+    "date": "2024-12-02",
     "msg": [
       "fix redirect url"
     ]
@@ -1836,8 +1907,7 @@ export default [
   {
     "author": "Miguel Rivas",
     "id": "3c108c8",
-    "dateIso": "2024-12-02T00:03:00.000Z",
-    "dateLocal": "01/12/2024, 16:03:00",
+    "date": "2024-12-02",
     "msg": [
       "2025 initial commit"
     ]

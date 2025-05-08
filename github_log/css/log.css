@@ -8,7 +8,7 @@
     font-size: 3rem;
     margin-block: 3rem;
   }
-  
+
   ul {
     display: flex;
     gap: 1rem;
@@ -16,34 +16,38 @@
     flex-direction: column;
     list-style: none;
   }
-  
+
   .main-list {
     max-width: 900px;
     margin: auto;
     padding: 1rem;
     font-size: 10px;
-  
+
     strong {
       color: var(--accent-color-2);
     }
-  
+
     time {
       color: var(--accent-color);
     }
-  
+
     em {
       font-style: normal;
       background-color: var(--color-foreground);
       color: #202028;
       padding: 2px 4px;
       border-radius: 5px;
+      width: 70px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 1rem;
     }
-  
+
     .msg {
       margin: 0;
       padding: 0;
       gap: .5rem;
-  
+
       li {
         font-size: 12px;
         background-color: #30303c;

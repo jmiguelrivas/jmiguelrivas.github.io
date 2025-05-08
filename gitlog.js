@@ -50,15 +50,13 @@ function generateJSON(commits) {
   return commits.map(c => {
     const author = c.commit.author.name
     const id = c.sha.slice(0, 7)
-    const dateIso = new Date(c.commit.author.date).toISOString()
-    const dateLocal = new Date(c.commit.author.date).toLocaleString()
+    const date = new Date(c.commit.author.date).toISOString().substr(0, 10)
     const msg = c.commit.message.split('\n').filter(Boolean)
 
     return {
       author,
       id,
-      dateIso,
-      dateLocal,
+      date,
       msg,
     }
   })
