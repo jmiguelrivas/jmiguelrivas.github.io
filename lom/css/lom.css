@@ -343,7 +343,8 @@
 
   .nav {
     position: sticky;
-    top: 0;
+    inset: 0 0 auto 0;
+    width: 100%;
     z-index: 1;
     background: #222;
     padding: 1rem 0;
