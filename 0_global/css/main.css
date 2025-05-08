@@ -19,7 +19,6 @@ body {
   color: var(--color-foreground);
   background-color: #202028;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  overflow: hidden;
   color-scheme: dark;
 }
 

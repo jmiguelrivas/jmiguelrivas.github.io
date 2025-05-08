@@ -162,6 +162,7 @@
 
   table {
     border-spacing: 2px .5rem;
+    /* max-width: 100%; */
 
     th {
       background: rgb(255 255 255 / 12%);
@@ -407,6 +408,18 @@
 
       &.missing {
         opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  mr-users {
+    > span {
+      flex-direction: column;
+
+      > button {
+        width: 100% !important;
       }
     }
   }
