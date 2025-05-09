@@ -12,7 +12,7 @@ class User {
     this.langNumber = countryCodes[serverParts[0]]
     this.lang = serverParts[0].toLowerCase()
     this.server = server
-    
+
     // Find the most recent entry for each rank
     const latestByRank = new Map()
     for (const entry of ranks) {
@@ -24,12 +24,14 @@ class User {
 
     this.ranks = Array.from(latestByRank.values())
 
-    this.lastVerify = ranks
-      .map(item => item.date)
-      .sort((a, b) => new Date(b) - new Date(a))[0]
     this.maxRank =
       rankEnum[this.ranks.map(r => rankEnum[r.rank]).sort((a, b) => a - b)[0]]
 
+    this.lastVerify = ranks
+      .filter(r => r.rank === this.maxRank)
+      .map(item => item?.date)
+      .sort((a, b) => new Date(b) - new Date(a))[0]
+ 
     // Get top position (lowest number)
     const positions = this.ranks.map(r => r?.position).filter(Boolean)
     this.maxPosition = positions.length ? Math.min(...positions) : null
@@ -47,6 +49,6 @@ class User {
   }
 }
 
-const user = (...args) => new User(...args);
+const user = (...args) => new User(...args)
 
 export { user }

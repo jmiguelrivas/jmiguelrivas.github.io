@@ -27,9 +27,9 @@ const users = [...am, ...eu, ...sea, ...kr].sort((a, b) => {
   if (a.server[0] !== b.server[0]) {
     return a.server[0].localeCompare(b.server[0])
   }
-  if (a.id !== b.id) {
-    return a.id.localeCompare(b.id)
-  }
+  // if (a.id !== b.id) {
+  //   return a.id.localeCompare(b.id)
+  // }
 
   return 0
 })

@@ -4,7 +4,7 @@ import { countryCodes } from './enum_country-codes.js'
 function getTooltip(item, group = 0) {
   const names = item?.users
     ?.map(user => {
-      const warning = !user?.lastVerify
+      const warning = !user?.lastVerify && user.maxRank === 'top'
         ? `
           <nn-icono class="exclamation pill sunglow" title="Old Entry"></nn-icono>
         `
