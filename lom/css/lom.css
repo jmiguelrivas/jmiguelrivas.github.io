@@ -467,6 +467,13 @@
     max-width: 680px;
     margin: auto;
     font-size: 14px;
+
+    ul {
+      padding-inline-start: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
   }
 
   .base {
