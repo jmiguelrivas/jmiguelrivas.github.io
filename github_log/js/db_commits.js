@@ -1,6 +1,129 @@
 export default [
   {
     "author": "Miguel Rivas",
+    "id": "14538fa",
+    "date": "2025-05-09",
+    "msg": [
+      "lom: db update"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "69ce553",
+    "date": "2025-05-09",
+    "msg": [
+      "lom: only showing old entry warning when is missing a position in the top ranking"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "1081aeb",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: updating am db"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "6a31851",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: taiwan merges db"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "d594938",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: user responsive table"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "639af61",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: leading server tags in one column for mobile"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "64a84c2",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: mr-user dropdown mobile version"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "faf9b2b",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: navbar mobile fix"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "83596b6",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: multiple updates",
+      "- hiding taiwanese and korean servers until we get more data",
+      "- adding indexes to each server now that we have gap after the merges, each index works individual per language group (EUEN and MUSH, ESPT and PT, ME and TR  share counters)"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "8a442c5",
+    "date": "2025-05-08",
+    "msg": [
+      "vitest: build update"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "15c8c9e",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: fix db deep merge"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "fbea582",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: merges db update"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "89ba337",
+    "date": "2025-05-08",
+    "msg": [
+      "lom: update top 100 am"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "60c1586",
+    "date": "2025-05-08",
+    "msg": [
+      "nope"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
+    "id": "446efdf",
+    "date": "2025-05-08",
+    "msg": [
+      "gitlog: updating ui",
+      "- removing unused data"
+    ]
+  },
+  {
+    "author": "Miguel Rivas",
     "id": "d013b1c",
     "date": "2025-05-07",
     "msg": [

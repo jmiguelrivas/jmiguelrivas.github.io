@@ -1278,6 +1278,7 @@ export const am = [
   user(['Dai'], 'AMEN_419', 'C060A', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['n17'], 'PT_178', 'C0400', [{ rank: 'elite', date: '2025-03-09' }]),
   user(['Gogeta'], 'PT_178', '2190B', [{ rank: 'elite', date: '2025-01-26' }]),
+  user(['Pocher'], 'ES_010', '01B06', [{ rank: 'elite', date: '2025-05-09' }]),
 
   // ------------------------------- elite unverified ↓
 
