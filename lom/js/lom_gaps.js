@@ -7,9 +7,9 @@ import { createFilters, langs } from './component_filters.js'
 import { countryCodes } from './enum_country-codes.js'
 
 const template = `
-  <nn-caja padding="4">
+  <nn-caja padding="4" class="base">
     ${createFilters(['tr', 'espt', 'mush'])}
-    <div id="all-servers"></div>
+    <div id="all-servers" class="base"></div>
   </nn-caja>
 `
 const data = {

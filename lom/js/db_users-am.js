@@ -800,7 +800,7 @@ export const am = [
   user(['Rafiki'], 'AMEN_215', 'B040D', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
-  user(['Maylit²'], 'AMEN_172', '70602', [
+  user(['Maylit²'], 'PT_116', '70602', [
     { rank: 'elite', date: '2025-04-25' },
   ]), //AMEN-032 -> ES-032
   user(['Sung JinWoo'], 'AMEN_321', '01802', [

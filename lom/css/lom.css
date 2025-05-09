@@ -137,7 +137,7 @@
   h2 {
     font-size: 3rem;
     text-align: center;
-    margin-block: 5rem 3rem;
+    margin: 0;
   }
 
   table,
@@ -146,13 +146,10 @@
     width: 100%;
   }
 
-  .merged-table {
-
-    td,
-    th {
-      &:first-child {
-        width: 25%;
-      }
+  td,
+  th {
+    &:first-child {
+      width: 25%;
     }
   }
 
@@ -197,7 +194,7 @@
 
       nn-pilar {
         padding: 1rem;
-        
+
         &:first-child {
           font-weight: 700;
           color: #fff;
@@ -404,7 +401,6 @@
     z-index: 1;
     background: #222;
     padding: 1rem 0;
-    margin-block-end: 2rem;
     display: flex;
     flex-flow: column;
     gap: 2px;
@@ -465,6 +461,24 @@
         opacity: 0.5;
       }
     }
+  }
+
+  blockquote {
+    max-width: 680px;
+    margin: auto;
+    font-size: 14px;
+  }
+
+  .base {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .title-disclaimer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
   }
 }
 

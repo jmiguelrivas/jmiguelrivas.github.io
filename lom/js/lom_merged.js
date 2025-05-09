@@ -1,8 +1,5 @@
 import '../../0_global/js/index.js'
-import {
-  getTooltip,
-  getCountryCode,
-} from './utils.js'
+import { getTooltip, getCountryCode } from './utils.js'
 import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { createFilters, langs } from './component_filters.js'
 import './component_users.js'
@@ -11,13 +8,13 @@ import mergesSea from './db_merges_sea.js'
 import mergesTW from './db_merges_tw.js'
 
 function mapToTableRows(inputs) {
-  const merged = {};
+  const merged = {}
 
   // Step 1: Merge all inputs by date
   for (const input of inputs) {
     for (const [date, entries] of Object.entries(input)) {
-      merged[date] ??= {};
-      Object.assign(merged[date], entries);
+      merged[date] ??= {}
+      Object.assign(merged[date], entries)
     }
   }
 
@@ -27,27 +24,26 @@ function mapToTableRows(inputs) {
     servers: Object.entries(servers).map(([key, values]) => ({
       key: getCountryCode(key),
       values: values.map(getCountryCode),
-    }))
-  }));
+    })),
+  }))
 
   // Step 3: Sort the rows by date descending
-  rows.sort((a, b) => new Date(b.date) - new Date(a.date));
+  rows.sort((a, b) => new Date(b.date) - new Date(a.date))
 
   // Step 4: Sort servers inside each row by numericId
   for (const row of rows) {
-    row.servers.sort((a, b) => a.key.numericId - b.key.numericId);
+    row.servers.sort((a, b) => a.key.numericId - b.key.numericId)
   }
 
-  return rows;
+  return rows
 }
-
 
 const mergesArray = mapToTableRows([mergesGlobal, mergesSea, mergesTW])
 
 const template = `
-  <nn-caja padding="4">
+  <nn-caja padding="4" class="base">
     ${createFilters()}
-    <div id="merged-list" class="merged-table"></div>
+    <div id="merged-list" class="base"></div>
   </nn-caja>
 `
 const data = {

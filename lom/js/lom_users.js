@@ -5,9 +5,22 @@ import { createFilters, langs } from './component_filters.js'
 
 class Users extends HTMLElement {
   static template = /*html*/ `
-<nn-caja padding="4">
+<nn-caja padding="4" class="base">
   ${createFilters()}
-  <h2>Users</h2>
+
+  <div class="title-disclaimer">
+    <h2>Users</h2>
+    <blockquote>
+      If you believe your user should be listed here or that any data needs correction, feel free to send an email to 
+      <a href="mailto:pombo.9g7ku@simplelogin.fr">pombo.9g7ku@simplelogin.fr</a> with the following:
+      <ul>
+        <li>A screenshot of your user profile, ideally showing your original server.</li>
+        <li>Screenshots showing your presence in the Elite Champion, Legendary Champion, Eternal Champion, Supreme Champion, and Apex Champion tiers.</li>
+        <li>The date when you were ranked in one of these tiers.</li>
+      </ul>
+    </blockquote>
+  </div>
+
   <div class="table">
     <nn-fila break="sm" class="table-header">
       <nn-pilar size="20%">Server</nn-pilar>

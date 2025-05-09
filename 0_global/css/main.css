@@ -139,6 +139,13 @@ img {
   max-width: 100%;
 }
 
+blockquote {
+  background-color: hsl(218 10% 22% / 1);
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
 /* -------------- layers */
 
 nn-ayuda,
