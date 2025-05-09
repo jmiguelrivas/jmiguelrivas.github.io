@@ -641,4 +641,9 @@ export const eu = [
   user(['GoblinSlayer'], 'DE_061', '4010F', [
     { rank: 'top', position: null, date: null },
   ]),
+
+  //------------------------------- scouts
+  user(['Ipek'], 'FR_264', '90E0E', [
+    { rank: 'detective', date: '2025-04-25' },
+  ]),
 ]

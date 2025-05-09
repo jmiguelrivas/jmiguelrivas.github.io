@@ -21,6 +21,10 @@
   --jp: hsl(330deg 55% 40%);
   --ru: hsl(330deg 55% 35%);
 
+  --detective: linear-gradient(131deg, rgb(202 155 31) 0%, rgb(246 216 83) 100%);
+  /* linear-gradient(131deg, rgb(214, 184, 255) 0%, rgb(176, 241, 255) 100%); */
+  /* linear-gradient(131deg, rgb(202 155 31) 0%, rgb(246 216 83) 100%); */
+  /* linear-gradient(131deg, rgb(126 25 219) 0%, rgb(223 33 189) 100%); */
   --creator: linear-gradient(131deg, rgb(212, 49, 185) 0%, rgb(14 173 145) 100%);
   --vmod: linear-gradient(131deg, rgb(97 31 202) 0%, rgb(14 173 145) 100%);
 
@@ -35,103 +39,108 @@
   --master: linear-gradient(131deg, rgb(174 39 122) 0%, rgb(212 64 154) 100%);
 
   .cn {
-    background: var(--cn)
+    background: var(--cn);
   }
 
   .tw {
-    background: var(--tw)
+    background: var(--tw);
   }
 
   .kr {
-    background: var(--kr)
+    background: var(--kr);
   }
 
   .jp {
-    background: var(--jp)
+    background: var(--jp);
   }
 
   .vn {
-    background: var(--vn)
+    background: var(--vn);
   }
 
   .id {
-    background: var(--id)
+    background: var(--id);
   }
 
   .th {
-    background: var(--th)
+    background: var(--th);
   }
 
   .en {
-    background: var(--en)
+    background: var(--en);
   }
 
   .amen {
-    background: var(--amen)
+    background: var(--amen);
   }
 
   .es {
-    background: var(--es)
+    background: var(--es);
   }
 
   .espt {
-    background: var(--espt)
+    background: var(--espt);
   }
 
   .pt {
-    background: var(--pt)
+    background: var(--pt);
   }
 
   .euen {
-    background: var(--euen)
+    background: var(--euen);
   }
 
   .mush {
-    background: var(--mush)
+    background: var(--mush);
   }
 
   .de {
-    background: var(--de)
+    background: var(--de);
   }
 
   .fr {
-    background: var(--fr)
+    background: var(--fr);
   }
 
   .me {
-    background: var(--me)
+    background: var(--me);
   }
 
   .tr {
-    background: var(--tr)
+    background: var(--tr);
   }
 
   .ru {
-    background: var(--ru)
+    background: var(--ru);
   }
 
   .honor {
-    background: var(--mention)
+    background: var(--mention);
   }
 
   .master {
-    background: var(--master)
+    background: var(--master);
+  }
+
+  .detective {
+    background: var(--detective);
+    color: #482802 !important
   }
 
   .elite {
-    background: var(--elite)
+    background: var(--elite);
   }
 
   .top {
-    background: var(--top)
+    background: var(--top);
   }
 
   .creator {
-    background: var(--creator)
+    background: var(--creator);
   }
 
   .vmod {
-    background: var(--vmod)
+    background: var(--vmod);
   }
 
   h2 {

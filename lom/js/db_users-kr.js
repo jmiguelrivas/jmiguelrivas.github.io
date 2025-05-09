@@ -308,19 +308,9 @@ export const kr = [
   user(['우주 (Uju)'], 'KR_2206', '6090D', [
     { rank: 'top', position: 100, date: '2025-05-06' },
   ]),
+
+  //------------------------------- scouts
+  user(['Bahar'], 'KR_2530', '4090C', [
+    { rank: 'detective', date: '2025-04-25' },
+  ]),
 ]
-
-// function convertListToObject(ids, date = '2023-12-01') {
-//   const result = {
-//     [date]: {},
-//   }
-
-//   ids.forEach(id => {
-//     result[date][id] = []
-//   })
-
-//   return result
-// }
-
-// export const tmpKoreanServers = convertListToObject(kr.map(user => user.server))
-// console.log(tmpKoreanServers)

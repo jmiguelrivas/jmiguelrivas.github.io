@@ -310,4 +310,9 @@ export const sea = [
   // user(['(?)'], [''], '', [
   //   { rank: 'top', position: , date: '2025-04-28' },
   // ]),
+  
+  //------------------------------- scouts
+  user(['Ibar'], 'EN_475', '7040E', [
+    { rank: 'detective', date: '2025-04-25' },
+  ]),
 ]
