@@ -15,7 +15,7 @@ class Users extends HTMLElement {
       <a href="mailto:pombo.9g7ku@simplelogin.fr">pombo.9g7ku@simplelogin.fr</a> with the following:
       <ul>
         <li>A screenshot of your user profile, ideally showing your original server.</li>
-        <li>Screenshots showing your presence in the Elite Champion, Legendary Champion, Eternal Champion, Supreme Champion, and Apex Champion tiers.</li>
+        <li>Screenshots showing your presence in the Elite Champion or above.</li>
         <li>The date when you were ranked in one of these tiers.</li>
       </ul>
     </blockquote>
