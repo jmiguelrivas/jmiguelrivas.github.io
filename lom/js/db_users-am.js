@@ -1161,6 +1161,9 @@ export const am = [
   user(['GeneralOrey'], 'AMEN_461', '80805', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
+  user(['Camoledor'], 'ES_005', 'B050F', [
+    { rank: 'elite', date: '2025-05-08' },
+  ]),
   user(['Oozaru'], 'AMEN_001', '21A0A', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
@@ -1435,6 +1438,9 @@ export const am = [
   user(['DemonicSoul'], 'AMEN_369', '5030D', [{ rank: 'elite', date: null }]),
   user(['Dazie'], 'AMEN_639', '01602', [{ rank: 'elite', date: null }]),
 
+  user(['Maylit'], 'ES_032', '60908', [
+    { rank: 'creator', date: '2025-05-08' },
+  ]),
   user(['DKiingG7'], 'PT_042', 'B0C09', [
     { rank: 'creator', date: '2025-04-14' },
   ]),
