@@ -1,5 +1,6 @@
 import { countryCodes } from './enum_country-codes.js'
 import { rank as rankEnum } from './enum_rank.js'
+import '../../0_global/modules/dayjs.min.js'
 
 class User {
   constructor(names, server, id, ranks = []) {
@@ -31,7 +32,9 @@ class User {
       .filter(r => r.rank === this.maxRank)
       .map(item => item?.date)
       .sort((a, b) => new Date(b) - new Date(a))[0]
- 
+
+    this.verifiedMonth = dayjs().diff(dayjs(this.lastVerify), 'month')
+
     // Get top position (lowest number)
     const positions = ranks.map(r => r?.position).filter(Boolean)
     this.maxPosition = positions.length ? Math.min(...positions) : null
