@@ -192,6 +192,7 @@ export const am = [
     { rank: 'top', position: 97, date: '2025-04-28' },
     { rank: 'top', position: 33, date: '2025-05-01' },
     { rank: 'top', position: 30, date: '2025-05-05' },
+    { rank: 'vmod', date: '2025-05-09' },
   ]),
   user(['Feeshy'], 'AMEN_003', '50305', [
     { rank: 'top', position: 34, date: '2025-04-25' },
@@ -256,7 +257,7 @@ export const am = [
     { rank: 'top', position: 82, date: '2025-05-01' },
     { rank: 'top', position: 41, date: '2025-05-05' },
   ]),
-  user(['Ravs Alt', 'Drew P Bauls', '49', 'Holo'], 'AMEN_282', '90504', [
+  user(['Ravs Alt', 'Drew P Bauls', '49', 'Holo'], 'AMEN_287', '90504', [
     { rank: 'top', position: 28, date: '2025-04-25' },
     { rank: 'top', position: 36, date: '2025-04-28' },
     { rank: 'top', position: 27, date: '2025-05-01' },
@@ -1165,6 +1166,7 @@ export const am = [
   ]),
   user(['Camoledor'], 'ES_005', 'B050F', [
     { rank: 'elite', date: '2025-05-08' },
+    { rank: 'vmod', date: '2025-05-09' },
   ]),
   user(['Oozaru'], 'AMEN_001', '21A0A', [
     { rank: 'elite', date: '2025-04-25' },
@@ -1459,6 +1461,9 @@ export const am = [
 
   // ------------------------------- top unverified ↓
 
+  user(['JO'], 'AMEN_005', '70803', [
+    { rank: 'top', position: null, date: '2024-09-02' },
+  ]),
   user(['Mocha'], 'AMEN_121', '8030E', [
     { rank: 'top', position: null, date: null },
   ]),
@@ -1525,7 +1530,7 @@ export const am = [
   user(['Remi'], 'AMEN_173', 'C0F0B', [
     { rank: 'top', position: null, date: null },
   ]),
-  user(['moose'], 'AMEN_170', 'E0908', [
+  user(['moose'], 'AMEN_193', 'E0908', [
     { rank: 'top', position: null, date: null },
   ]),
   user(['Algor'], 'AMEN_111', 'E050F', [
