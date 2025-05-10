@@ -258,7 +258,7 @@ export const am = [
     { rank: 'top', position: 82, date: '2025-05-01' },
     { rank: 'top', position: 41, date: '2025-05-05' },
   ]),
-  user(['Ravs Alt', 'Drew P Bauls', '49', 'Holo'], 'AMEN_287', '90504', [
+  user(['Ravs Alt', 'Drew P Bauls', '49', 'Holo'], 'AMEN_282', '90504', [
     { rank: 'top', position: 28, date: '2025-04-25' },
     { rank: 'top', position: 36, date: '2025-04-28' },
     { rank: 'top', position: 27, date: '2025-05-01' },
