@@ -382,6 +382,7 @@ export const am = [
     { rank: 'top', position: 27, date: '2025-04-28' },
     { rank: 'top', position: 36, date: '2025-05-01' },
     { rank: 'top', position: 62, date: '2025-05-05' },
+    { rank: 'vmod', date: '2025-05-09' },
   ]),
   user(['MathsDebating'], 'AMEN_310', 'C050D', [
     { rank: 'top', position: 70, date: '2025-04-25' },
@@ -652,7 +653,7 @@ export const am = [
     { rank: 'top', position: 99, date: '2025-04-28' },
   ]),
   user(['Matty'], 'AMEN_218', '8070F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'top', position: 100, date: '2025-05-01' },
   ]),
   user(['JustANobody', 'ZzBLAZE'], 'AMEN_215', '80F09', [
@@ -879,7 +880,7 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Yasama'], 'ES_119', 'C0603', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Tambay'], 'AMEN_033', 'C0706', [
@@ -904,7 +905,7 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Rytired', 'Ry'], 'AMEN_030', '11C0A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['JujuMia'], 'AMEN_107', 'C050D', [
@@ -932,7 +933,7 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Power'], 'AMEN_001', '01B06', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Ostra'], 'AMEN_172', '60205', [{ rank: 'elite', date: '2025-04-25' }]),
@@ -1078,7 +1079,7 @@ export const am = [
   user(['Bloo'], 'AMEN_354', 'B0F08', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['Orfeo'], 'AMEN_310', '40904', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['Harfle'], 'AMEN_254', '90F0D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['F2pFleasMonkey'], 'AMEN_537', 'F0800', [
@@ -1108,7 +1109,7 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Debo'], 'AMEN_111', 'B0509', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Arkeon'], 'AMEN_250', 'A0109', [
@@ -1126,13 +1127,13 @@ export const am = [
   ]),
   user(['Asyu'], 'AMEN_024', '8010A', [
     { rank: 'elite', date: '2025-04-25' },
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['(?)'], 'AMEN_404', 'A0901', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['Poll'], 'AMEN_035', '50702', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['Verde'], 'AMEN_033', 'D0005', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['Goddess', 'Starmist', 'Nimbus', 'Vegeta'], 'PT_178', '4040C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['Acecube911'], 'AMEN_310', '70000', [
@@ -1163,7 +1164,7 @@ export const am = [
   user(['Xytos'], 'AMEN_355', '41900', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['bbmoo'], 'AMEN_388', 'F0D06', [{ rank: 'elite', date: '2025-04-25' }]),
   user(['Enchantress'], 'AMEN_173', '40F00', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['GeneralOrey'], 'AMEN_461', '80805', [
@@ -1271,7 +1272,7 @@ export const am = [
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['DraunTrager'], 'AMEN_117', 'C0C0D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'elite', date: '2025-04-25' },
   ]),
   user(['ManuViz'], 'AMEN_006', 'AD80B', [
@@ -1291,161 +1292,355 @@ export const am = [
 
   // ------------------------------- elite unverified ↓
 
-  user(['Okarun'], 'AMEN_323', 'C0B0F', [{ rank: 'elite', date: null }]),
-  user(['DaniloLima'], 'AMEN_183', 'B0500', [{ rank: 'elite', date: null }]),
-  user(['Furybound'], 'AMEN_388', 'C010A', [{ rank: 'elite', date: null }]),
-  user(['Wolfman'], 'AMEN_388', '8010D', [{ rank: 'elite', date: null }]),
-  user(['Savage'], 'PT_169', 'C0800', [{ rank: 'elite', date: null }]),
-  user(['Skull'], 'PT_169', '11F08', [{ rank: 'elite', date: null }]),
-  user(['ERROR404'], 'PT_169', 'A0107', [{ rank: 'elite', date: null }]),
-  user(['Virus'], 'PT_169', 'C0508', [{ rank: 'elite', date: null }]),
-  user(['Benimaru'], 'PT_173', '81302', [{ rank: 'elite', date: null }]),
-  user(['Luffy'], 'PT_173', '8010A', [{ rank: 'elite', date: null }]),
+  user(['Okarun'], 'AMEN_323', 'C0B0F', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['DaniloLima'], 'AMEN_183', 'B0500', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Furybound'], 'AMEN_388', 'C010A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Wolfman'], 'AMEN_388', '8010D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Savage'], 'PT_169', 'C0800', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Skull'], 'PT_169', '11F08', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['ERROR404'], 'PT_169', 'A0107', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Virus'], 'PT_169', 'C0508', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Benimaru'], 'PT_173', '81302', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Luffy'], 'PT_173', '8010A', [{ rank: 'elite', date: '2024-12-07' }]),
   user(['LimRabei', 'Pomba', 'Escanor'], 'PT_174', '90709', [
-    { rank: 'elite', date: null },
+    { rank: 'elite', date: '2024-12-07' },
   ]),
   user(['Ummabel', 'hashirama'], 'PT_174', '8090b', [
-    { rank: 'elite', date: null },
+    { rank: 'elite', date: '2024-12-07' },
   ]),
-  user(['Fenix', 'Jack'], 'PT_174', '31003', [{ rank: 'elite', date: null }]),
+  user(['Fenix', 'Jack'], 'PT_174', '31003', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
   user(['Migatte', 'ZeroTwo', '(blank)'], 'PT_176', 'B0D03', [
-    { rank: 'elite', date: null },
+    { rank: 'elite', date: '2024-12-07' },
   ]),
-  user(['Colt75'], 'PT_176', '71B0B', [{ rank: 'elite', date: null }]),
+  user(['Colt75'], 'PT_176', '71B0B', [{ rank: 'elite', date: '2024-12-07' }]),
   user(['Pluton', 'Mutiris', 'Instinct', 'Bulma'], 'PT_178', '40501', [
-    { rank: 'elite', date: null },
+    { rank: 'elite', date: '2024-12-07' },
   ]),
-  user(['Kroonos'], 'PT_222', '50103', [{ rank: 'elite', date: null }]),
-  user(['Azeroth'], 'PT_223', 'B0604', [{ rank: 'elite', date: null }]),
-  user(['Pegasus'], 'PT_222', 'A090B', [{ rank: 'elite', date: null }]),
-  user(['KingKurt99'], 'AMEN_353', 'C0603', [{ rank: 'elite', date: null }]),
-  user(['HornyGoat'], 'AMEN_030', '21601', [{ rank: 'elite', date: null }]),
-  user(['jessica'], 'AMEN_170', 'D020C', [{ rank: 'elite', date: null }]),
-  user(['RQ201'], 'AMEN_013', 'B0F0A', [{ rank: 'elite', date: null }]),
-  user(['QualityLovin'], 'AMEN_024', '2140A', [{ rank: 'elite', date: null }]),
-  user(['JubileuBR'], 'AMEN_182', '50805', [{ rank: 'elite', date: null }]),
-  user(['Ledreams'], 'AMEN_013', '61109', [{ rank: 'elite', date: null }]),
-  user(['AKSO'], 'AMEN_404', '60C07', [{ rank: 'elite', date: null }]),
-  user(['Sklari'], 'AMEN_004', '5140E', [{ rank: 'elite', date: null }]),
-  user(['Kite'], 'AMEN_355', '80703', [{ rank: 'elite', date: null }]),
-  user(['MagnusBWulf'], 'AMEN_531', 'D090A', [{ rank: 'elite', date: null }]),
-  user(['Lord_Aku'], 'AMEN_169', '40707', [{ rank: 'elite', date: null }]),
-  user(['Rynwell'], 'AMEN_310', 'D090B', [{ rank: 'elite', date: null }]),
-  user(['Curalvin'], 'AMEN_107', '5060D', [{ rank: 'elite', date: null }]),
-  user(['HACS'], 'AMEN_433', '90F09', [{ rank: 'elite', date: null }]),
-  user(['Thewife'], 'AMEN_354', '4080B', [{ rank: 'elite', date: null }]),
-  user(['half'], 'AMEN_108', '40E03', [{ rank: 'elite', date: null }]),
-  user(['GoatedCole?'], 'AMEN_030', '60400', [{ rank: 'elite', date: null }]),
-  user(['EmÇ_GabriF'], 'AMEN_121', '60E0A', [{ rank: 'elite', date: null }]),
-  user(['Boof'], 'AMEN_117', 'E0A0B', [{ rank: 'elite', date: null }]),
-  user(['GrimPickle'], 'AMEN_549', '80403', [{ rank: 'elite', date: null }]),
-  user(['MrFatJoe'], 'AMEN_114', '40108', [{ rank: 'elite', date: null }]),
-  user(['Shion'], 'AMEN_034', 'C0B07', [{ rank: 'elite', date: null }]),
-  user(['hilich'], 'AMEN_339', '50205', [{ rank: 'elite', date: null }]),
-  user(['Durian'], 'AMEN_183', 'A0C06', [{ rank: 'elite', date: null }]),
-  user(['DezzyBlois'], 'AMEN_404', '50A04', [{ rank: 'elite', date: null }]),
-  user(['Nay'], 'AMEN_172', '71F07', [{ rank: 'elite', date: null }]),
-  user(['Breathless'], 'AMEN_310', '60807', [{ rank: 'elite', date: null }]),
-  user(['Dusty_Nuts'], 'AMEN_032', '80E0D', [{ rank: 'elite', date: null }]),
-  user(['Yina'], 'AMEN_024', '70A06', [{ rank: 'elite', date: null }]),
-  user(['Incidentz'], 'AMEN_604', '40708', [{ rank: 'elite', date: null }]),
-  user(['ZaKhE'], 'AMEN_033', 'F0C0B', [{ rank: 'elite', date: null }]),
-  user(['Galin'], 'AMEN_122', '61E09', [{ rank: 'elite', date: null }]),
-  user(['molah'], 'AMEN_659', '50B0E', [{ rank: 'elite', date: null }]),
-  user(['Sung'], 'AMEN_433', '4010E', [{ rank: 'elite', date: null }]),
-  user(['Slacker'], 'AMEN_113', 'A0A08', [{ rank: 'elite', date: null }]),
-  user(['Eriviren'], 'AMEN_354', '70C0D', [{ rank: 'elite', date: null }]),
-  user(['Infektid'], 'AMEN_111', 'D0202', [{ rank: 'elite', date: null }]),
-  user(['apexFELTER'], 'AMEN_253', '50A0E', [{ rank: 'elite', date: null }]),
-  user(['OSCAR'], 'AMEN_173', '6190F', [{ rank: 'elite', date: null }]),
-  user(['Goku'], 'AMEN_032', 'C0105', [{ rank: 'elite', date: null }]),
-  user(['kevin'], 'AMEN_180', '70B0D', [{ rank: 'elite', date: null }]),
-  user(['Shiitake'], 'AMEN_173', 'F0800', [{ rank: 'elite', date: null }]),
-  user(['vKingSace'], 'AMEN_604', 'C0F0C', [{ rank: 'elite', date: null }]),
-  user(['Cos'], 'AMEN_250', 'D090C', [{ rank: 'elite', date: null }]),
-  user(['Siperko'], 'AMEN_035', '01F04', [{ rank: 'elite', date: null }]),
-  user(['Zloth'], 'ES_119', '50F0F', [{ rank: 'elite', date: null }]),
-  user(['Sunraku'], 'AMEN_421', '70608', [{ rank: 'elite', date: null }]),
-  user(['Jeremy'], 'AMEN_182', '41C09', [{ rank: 'elite', date: null }]),
-  user(['Shrek'], 'AMEN_005', '90304', [{ rank: 'elite', date: null }]),
-  user(['MekaDragon'], 'AMEN_502', 'E0403', [{ rank: 'elite', date: null }]),
-  user(['Coin'], 'AMEN_180', '11700', [{ rank: 'elite', date: null }]),
-  user(['SanguineMask'], 'AMEN_031', '80A07', [{ rank: 'elite', date: null }]),
-  user(['Scheme'], 'AMEN_353', 'E0203', [{ rank: 'elite', date: null }]),
-  user(['Morpheus'], 'AMEN_122', 'C0402', [{ rank: 'elite', date: null }]),
-  user(['Yeti'], 'AMEN_310', '90B0E', [{ rank: 'elite', date: null }]),
-  user(['ThePigg'], 'AMEN_021', '70B09', [{ rank: 'elite', date: null }]),
-  user(['Luisitoproxx2'], 'AMEN_281', '5070A', [{ rank: 'elite', date: null }]),
-  user(['SlumberJack'], 'AMEN_502', '40202', [{ rank: 'elite', date: null }]),
-  user(['Jenna'], 'AMEN_215', '70E02', [{ rank: 'elite', date: null }]),
-  user(['Monarch'], 'AMEN_551', 'B010F', [{ rank: 'elite', date: null }]),
-  user(['Miumiu'], 'AMEN_108', 'A090E', [{ rank: 'elite', date: null }]),
-  user(['Loki'], 'AMEN_032', '60D0F', [{ rank: 'elite', date: null }]),
-  user(['Ikki'], 'AMEN_001', '31A06', [{ rank: 'elite', date: null }]),
-  user(['Kakaru'], 'AMEN_450', '60603', [{ rank: 'elite', date: null }]),
-  user(['rikrdu'], 'AMEN_005', 'D060E', [{ rank: 'elite', date: null }]),
-  user(['ClearTy'], 'AMEN_112', 'E020D', [{ rank: 'elite', date: null }]),
-  user(['Locust61'], 'AMEN_122', '60808', [{ rank: 'elite', date: null }]),
-  user(['Yahiko'], 'AMEN_323', '60D0E', [{ rank: 'elite', date: null }]),
-  user(['Mashle'], 'AMEN_310', '60C07', [{ rank: 'elite', date: null }]),
-  user(['Atait'], 'AMEN_386', 'F0D01', [{ rank: 'elite', date: null }]),
-  user(['MrMouse'], 'AMEN_531', '7000B', [{ rank: 'elite', date: null }]),
-  user(['Matty'], 'AMEN_218', '11F0B', [{ rank: 'elite', date: null }]),
-  user(['momo'], 'AMEN_182', 'B0303', [{ rank: 'elite', date: null }]),
-  user(['dyKsTrA'], 'PT_151', 'E030D', [{ rank: 'elite', date: null }]),
-  user(['Devil'], 'AMEN_004', 'A000A', [{ rank: 'elite', date: null }]),
-  user(['darkblitz'], 'AMEN_121', '01408', [{ rank: 'elite', date: null }]),
-  user(['Zoodomizer'], 'AMEN_122', '21007', [{ rank: 'elite', date: null }]),
-  user(['MushBooM'], 'AMEN_113', '61805', [{ rank: 'elite', date: null }]),
-  user(['Venandi'], 'AMEN_006', '11B03', [{ rank: 'elite', date: null }]),
-  user(['ColdPillow'], 'AMEN_006', '11901', [{ rank: 'elite', date: null }]),
-  user(['Puchu'], 'AMEN_433', '60905', [{ rank: 'elite', date: null }]),
-  user(['AhsokaTano'], 'AMEN_172', '70805', [{ rank: 'elite', date: null }]),
-  user(['Harder'], 'AMEN_114', '4030A', [{ rank: 'elite', date: null }]),
-  user(['Pencilgon'], 'AMEN_421', 'C060D', [{ rank: 'elite', date: null }]),
-  user(['Nippy'], 'AMEN_111', 'A020F', [{ rank: 'elite', date: null }]),
-  user(['KalamityJane'], 'AMEN_013', 'D0509', [{ rank: 'elite', date: null }]),
-  user(['Balangateta'], 'AMEN_421', 'C0F06', [{ rank: 'elite', date: null }]),
-  user(['Brochachin'], 'AMEN_561', 'A0202', [{ rank: 'elite', date: null }]),
-  user(['Hunter'], 'AMEN_404', '40506', [{ rank: 'elite', date: null }]),
-  user(['KnullnVoid'], 'AMEN_550', '6050C', [{ rank: 'elite', date: null }]),
-  user(['Satsao'], 'AMEN_310', 'F0F0D', [{ rank: 'elite', date: null }]),
-  user(['jessica3'], 'AMEN_170', '7030C', [{ rank: 'elite', date: null }]),
-  user(['Matty_'], 'AMEN_218', '01C06', [{ rank: 'elite', date: null }]),
-  user(['BaronNehro'], 'AMEN_121', '40508', [{ rank: 'elite', date: null }]),
-  user(['Moon'], 'AMEN_183', 'C0F06', [{ rank: 'elite', date: null }]),
-  user(['Marreco'], 'AMEN_251', 'A0B0E', [{ rank: 'elite', date: null }]),
-  user(['Eviscerated'], 'AMEN_121', 'C0E0A', [{ rank: 'elite', date: null }]),
-  user(['Lexhyr'], 'AMEN_031', '11F01', [{ rank: 'elite', date: null }]),
-  user(['Xusobavi'], 'AMEN_216', 'E0501', [{ rank: 'elite', date: null }]),
-  user(['Daphne'], 'AMEN_404', '70D04', [{ rank: 'elite', date: null }]),
-  user(['GodsendJay'], 'AMEN_386', '70302', [{ rank: 'elite', date: null }]),
-  user(['MrKoalas'], 'AMEN_173', '6080E', [{ rank: 'elite', date: null }]),
-  user(['(?)'], 'AMEN_321', '90D01', [{ rank: 'elite', date: null }]),
-  user(['Solano'], 'AMEN_180', 'C0009', [{ rank: 'elite', date: null }]),
-  user(['Sa1tySt3ak'], 'AMEN_403', '80C0F', [{ rank: 'elite', date: null }]),
-  user(['Ehzze'], 'AMEN_173', '40B0C', [{ rank: 'elite', date: null }]),
-  user(['Snurgg'], 'AMEN_215', '80108', [{ rank: 'elite', date: null }]),
-  user(['patru'], 'AMEN_250', '7120A', [{ rank: 'elite', date: null }]),
-  user(['deaniks'], 'AMEN_323', '5060B', [{ rank: 'elite', date: null }]),
-  user(['DaddyGuppy'], 'AMEN_435', '60E0D', [{ rank: 'elite', date: null }]),
-  user(['Tsunami'], 'AMEN_113', '5070F', [{ rank: 'elite', date: null }]),
-  user(['Guixvhz'], 'AMEN_281', '32003', [{ rank: 'elite', date: null }]),
-  user(['KnowMorelz'], 'AMEN_169', '70405', [{ rank: 'elite', date: null }]),
-  user(['Moody'], 'AMEN_019', 'A090A', [{ rank: 'elite', date: null }]),
-  user(['StarGazer'], 'AMEN_585', '40B01', [{ rank: 'elite', date: null }]),
-  user(['Monstz'], 'AMEN_513', 'F0B00', [{ rank: 'elite', date: null }]),
-  user(['Maru'], 'AMEN_403', 'D0D01', [{ rank: 'elite', date: null }]),
-  user(['ElectricMan'], 'AMEN_501', '5030F', [{ rank: 'elite', date: null }]),
-  user(['Phantom'], 'AMEN_578', '40E06', [{ rank: 'elite', date: null }]),
-  user(['Mullet'], 'AMEN_595', '60708', [{ rank: 'elite', date: null }]),
-  user(['Francesco'], 'AMEN_578', 'A0E0D', [{ rank: 'elite', date: null }]),
-  user(['Kaylana'], 'AMEN_493', '70207', [{ rank: 'elite', date: null }]),
-  user(['Zombie'], 'AMEN_114', '60C0D', [{ rank: 'elite', date: null }]),
-  user(['Elijah'], 'AMEN_633', 'D0209', [{ rank: 'elite', date: null }]),
-  user(['ZFighter'], 'AMEN_370', 'C0A01', [{ rank: 'elite', date: null }]),
-  user(['DemonicSoul'], 'AMEN_369', '5030D', [{ rank: 'elite', date: null }]),
-  user(['Dazie'], 'AMEN_639', '01602', [{ rank: 'elite', date: null }]),
+  user(['Kroonos'], 'PT_222', '50103', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Azeroth'], 'PT_223', 'B0604', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Pegasus'], 'PT_222', 'A090B', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['KingKurt99'], 'AMEN_353', 'C0603', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['HornyGoat'], 'AMEN_030', '21601', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['jessica'], 'AMEN_170', 'D020C', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['RQ201'], 'AMEN_013', 'B0F0A', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['QualityLovin'], 'AMEN_024', '2140A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['JubileuBR'], 'AMEN_182', '50805', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Ledreams'], 'AMEN_013', '61109', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['AKSO'], 'AMEN_404', '60C07', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Sklari'], 'AMEN_004', '5140E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Kite'], 'AMEN_355', '80703', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['MagnusBWulf'], 'AMEN_531', 'D090A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Lord_Aku'], 'AMEN_169', '40707', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Rynwell'], 'AMEN_310', 'D090B', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Curalvin'], 'AMEN_107', '5060D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['HACS'], 'AMEN_433', '90F09', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Thewife'], 'AMEN_354', '4080B', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['half'], 'AMEN_108', '40E03', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['GoatedCole?'], 'AMEN_030', '60400', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['EmÇ_GabriF'], 'AMEN_121', '60E0A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Boof'], 'AMEN_117', 'E0A0B', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['GrimPickle'], 'AMEN_549', '80403', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['MrFatJoe'], 'AMEN_114', '40108', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Shion'], 'AMEN_034', 'C0B07', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['hilich'], 'AMEN_339', '50205', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Durian'], 'AMEN_183', 'A0C06', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['DezzyBlois'], 'AMEN_404', '50A04', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Nay'], 'AMEN_172', '71F07', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Breathless'], 'AMEN_310', '60807', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Dusty_Nuts'], 'AMEN_032', '80E0D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Yina'], 'AMEN_024', '70A06', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Incidentz'], 'AMEN_604', '40708', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['ZaKhE'], 'AMEN_033', 'F0C0B', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Galin'], 'AMEN_122', '61E09', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['molah'], 'AMEN_659', '50B0E', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Sung'], 'AMEN_433', '4010E', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Slacker'], 'AMEN_113', 'A0A08', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Eriviren'], 'AMEN_354', '70C0D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Infektid'], 'AMEN_111', 'D0202', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['apexFELTER'], 'AMEN_253', '50A0E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['OSCAR'], 'AMEN_173', '6190F', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Goku'], 'AMEN_032', 'C0105', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['kevin'], 'AMEN_180', '70B0D', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Shiitake'], 'AMEN_173', 'F0800', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['vKingSace'], 'AMEN_604', 'C0F0C', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Cos'], 'AMEN_250', 'D090C', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Siperko'], 'AMEN_035', '01F04', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Zloth'], 'ES_119', '50F0F', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Sunraku'], 'AMEN_421', '70608', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Jeremy'], 'AMEN_182', '41C09', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Shrek'], 'AMEN_005', '90304', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['MekaDragon'], 'AMEN_502', 'E0403', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Coin'], 'AMEN_180', '11700', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['SanguineMask'], 'AMEN_031', '80A07', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Scheme'], 'AMEN_353', 'E0203', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Morpheus'], 'AMEN_122', 'C0402', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Yeti'], 'AMEN_310', '90B0E', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['ThePigg'], 'AMEN_021', '70B09', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Luisitoproxx2'], 'AMEN_281', '5070A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['SlumberJack'], 'AMEN_502', '40202', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Jenna'], 'AMEN_215', '70E02', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Monarch'], 'AMEN_551', 'B010F', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Miumiu'], 'AMEN_108', 'A090E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Loki'], 'AMEN_032', '60D0F', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Ikki'], 'AMEN_001', '31A06', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Kakaru'], 'AMEN_450', '60603', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['rikrdu'], 'AMEN_005', 'D060E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['ClearTy'], 'AMEN_112', 'E020D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Locust61'], 'AMEN_122', '60808', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Yahiko'], 'AMEN_323', '60D0E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Mashle'], 'AMEN_310', '60C07', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Atait'], 'AMEN_386', 'F0D01', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['MrMouse'], 'AMEN_531', '7000B', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Matty'], 'AMEN_218', '11F0B', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['momo'], 'AMEN_182', 'B0303', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['dyKsTrA'], 'PT_151', 'E030D', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Devil'], 'AMEN_004', 'A000A', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['darkblitz'], 'AMEN_121', '01408', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Zoodomizer'], 'AMEN_122', '21007', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['MushBooM'], 'AMEN_113', '61805', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Venandi'], 'AMEN_006', '11B03', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['ColdPillow'], 'AMEN_006', '11901', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Puchu'], 'AMEN_433', '60905', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['AhsokaTano'], 'AMEN_172', '70805', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Harder'], 'AMEN_114', '4030A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Pencilgon'], 'AMEN_421', 'C060D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Nippy'], 'AMEN_111', 'A020F', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['KalamityJane'], 'AMEN_013', 'D0509', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Balangateta'], 'AMEN_421', 'C0F06', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Brochachin'], 'AMEN_561', 'A0202', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Hunter'], 'AMEN_404', '40506', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['KnullnVoid'], 'AMEN_550', '6050C', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Satsao'], 'AMEN_310', 'F0F0D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['jessica3'], 'AMEN_170', '7030C', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Matty_'], 'AMEN_218', '01C06', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['BaronNehro'], 'AMEN_121', '40508', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Moon'], 'AMEN_183', 'C0F06', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Marreco'], 'AMEN_251', 'A0B0E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Eviscerated'], 'AMEN_121', 'C0E0A', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Lexhyr'], 'AMEN_031', '11F01', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Xusobavi'], 'AMEN_216', 'E0501', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Daphne'], 'AMEN_404', '70D04', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['GodsendJay'], 'AMEN_386', '70302', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['MrKoalas'], 'AMEN_173', '6080E', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['(?)'], 'AMEN_321', '90D01', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Solano'], 'AMEN_180', 'C0009', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Sa1tySt3ak'], 'AMEN_403', '80C0F', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Ehzze'], 'AMEN_173', '40B0C', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['Snurgg'], 'AMEN_215', '80108', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['patru'], 'AMEN_250', '7120A', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['deaniks'], 'AMEN_323', '5060B', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['DaddyGuppy'], 'AMEN_435', '60E0D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Tsunami'], 'AMEN_113', '5070F', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Guixvhz'], 'AMEN_281', '32003', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['KnowMorelz'], 'AMEN_169', '70405', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Moody'], 'AMEN_019', 'A090A', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['StarGazer'], 'AMEN_585', '40B01', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Monstz'], 'AMEN_513', 'F0B00', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Maru'], 'AMEN_403', 'D0D01', [{ rank: 'elite', date: '2024-12-07' }]),
+  user(['ElectricMan'], 'AMEN_501', '5030F', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Phantom'], 'AMEN_578', '40E06', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Mullet'], 'AMEN_595', '60708', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Francesco'], 'AMEN_578', 'A0E0D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Kaylana'], 'AMEN_493', '70207', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Zombie'], 'AMEN_114', '60C0D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Elijah'], 'AMEN_633', 'D0209', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['ZFighter'], 'AMEN_370', 'C0A01', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['DemonicSoul'], 'AMEN_369', '5030D', [
+    { rank: 'elite', date: '2024-12-07' },
+  ]),
+  user(['Dazie'], 'AMEN_639', '01602', [{ rank: 'elite', date: '2024-12-07' }]),
 
   user(['Maylit'], 'ES_032', '60908', [
     { rank: 'creator', date: '2025-05-08' },
@@ -1466,167 +1661,168 @@ export const am = [
 
   // ------------------------------- top unverified ↓
 
-  user(['JO'], 'AMEN_005', '70803', [
-    { rank: 'top', position: null, date: '2024-09-02' },
+  user(['Eremi'], 'AMEN_080', '7030A', [
+    { rank: 'top', position: 100, date: '2024-11-29' },
   ]),
+  user(['JO'], 'AMEN_005', '70803', [
+    { rank: 'top', position: 100, date: '2024-09-02' },
+  ]),
+
   user(['Mocha'], 'AMEN_121', '8030E', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Squonk'], 'AMEN_182', 'E0004', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Morji'], 'AMEN_004', '2130F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Crusher'], 'AMEN_474', 'B0F07', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['ShroomieC090C'], 'AMEN_121', 'C090C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Helly'], 'AMEN_024', '01B0D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Cheng'], 'AMEN_003', '21206', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['(?)'], 'AMEN_473', 'E0108', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Dahlia'], 'AMEN_403', 'A0807', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['iRETIRED'], 'AMEN_215', 'F0B00', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Phemto'], 'AMEN_281', '50502', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Oogie'], 'AMEN_026', '50F0F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['johnny'], 'AMEN_388', '90402', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['ShaiLx'], 'AMEN_019', '21404', [
-    { rank: 'top', position: null, date: null },
-  ]),
-  user(['Eremi'], 'AMEN_080', '7030A', [
-    { rank: 'top', position: null, date: '2024-11-29' }
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Diamonds'], 'AMEN_121', '40207', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Ramos'], 'PT_180', 'E050F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Callous'], 'AMEN_321', '90E0B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['chobop'], 'AMEN_302', 'D0F02', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Enel'], 'AMEN_302', '80107', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Raven'], 'AMEN_019', 'F0002', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Remi'], 'AMEN_173', 'C0F0B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Algor'], 'AMEN_111', 'E050F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Salt'], 'AMEN_109', 'A0602', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Mojikon'], 'AMEN_006', '1190A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Kobe'], 'AMEN_031', 'E0D04', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Balmung'], 'AMEN_005', '40A0E', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Dex'], 'AMEN_008', '4150A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['mako'], 'AMEN_182', 'C0A01', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['shroomdada'], 'AMEN_005', '80901', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['McFudge'], 'AMEN_111', '90601', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Butgobbler'], 'AMEN_008', '6000B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Benimaru'], 'AMEN_403', '60607', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Sonic'], 'AMEN_027', 'B0507', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['InigoMontoya'], 'AMEN_031', 'A0505', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['uhh'], 'AMEN_034', 'A0709', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Halfstep'], 'AMEN_111', 'B0C08', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Darkoslord'], 'AMEN_122', '60402', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['DixieNormus'], 'AMEN_217', 'C0A02', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['AznRdnk'], 'AMEN_310', '21105', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Pavii'], 'AMEN_216', '11209', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['jett'], 'AMEN_005', '1140F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Beachy'], 'AMEN_111', '90505', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['ap33zy'], 'AMEN_109', '9090C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Shroomish'], 'AMEN_339', '90F08', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Sura0116'], 'AMEN_032', '70302', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Doc'], 'AMEN_021', 'C0D0D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Simcraft'], 'AMEN_302', '0120C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['GingerKing'], 'AMEN_033', '50F0A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Xyz', 'Ray'], 'AMEN_031', 'D0D0D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['captTeemo'], 'AMEN_280', 'C0B04', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Sol'], 'AMEN_304', '90807', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['YodaNBeer'], 'AMEN_386', '60A03', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
 
   // user(['Evos Phoenix'], 'PT_174', '7150F', [{ rank: 'master' }]),

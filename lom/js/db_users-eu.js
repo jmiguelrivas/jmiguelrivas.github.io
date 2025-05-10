@@ -396,7 +396,7 @@ export const eu = [
     { rank: 'top', position: 100, date: '2025-04-25' },
   ]),
   user(['Haruashi'], 'DE_040', '80F0B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
     { rank: 'top', position: 81, date: '2025-04-28' },
   ]),
   user(['Ezi'], 'EUEN_051', '70F09', [
@@ -458,188 +458,189 @@ export const eu = [
     { rank: 'top', position: 100, date: '2025-04-28' },
   ]),
 
+  //----------------------------------------------------------------------------
   user(['Preséphone'], 'FR_133', '4030B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Amithon'], 'EUEN_036', '60C08', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Lucas7'], 'EUEN_065', '3170D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Baxia'], 'DE_003', 'A0608', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Cryptux'], 'EUEN_008', '40B06', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Luna'], 'EUEN_125', '80A0D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Hades'], 'FR_133', '50D01', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['4d4m'], 'EUEN_097', '4030F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Neokro'], 'FR_072', '11F09', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Garingo'], 'DE_061', '0130A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Paradize'], 'EUEN_065', 'C070B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['freedom'], 'DE_117', '0170D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Jethro'], 'EUEN_042', 'A0908', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Wity'], 'EUEN_077', '31F09', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['NIBUS_2000'], 'EUEN_077', '4050D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['LaGigaFraude'], 'EUEN_036', '4190A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['FLASHBIRD'], 'DE_036', 'A050B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Nova'], 'EUEN_054', '2160C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Chopper'], 'FR_073', '41905', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Lavax'], 'DE_079', '9030E', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Ozan'], 'EUEN_008', '11304', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Ado'], 'FR_073', '2110E', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Gribnik'], 'EUEN_054', '2110B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['MuhQ'], 'DE_036', 'C000D', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['JackSporerow', 'Wet Dream'], 'DE_040', '80305', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['F2P_DritZen'], 'FR_073', 'E0B0B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Nouvo'], 'EUEN_027', 'A1300', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Leme'], 'DE_002', '01905', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Bluez'], 'FR_073', '70E0A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Reigen'], 'FR_120', '50705', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Catom'], 'EUEN_053', '2190A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Rapunzel'], 'DE_001', '70F08', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Arkyen'], 'EUEN_035', 'D020E', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Ced'], 'FR_072', 'A0002', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Lazy'], 'EUEN_054', '50C0C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Alice', 'Elemental_XII'], 'FR_001', '71104', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Kagibi'], 'FR_100', '31005', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Sharleen'], 'EUEN_020', 'B0307', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Calimero'], 'FR_008', 'A0A08', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Iris'], 'EUEN_040', '21F09', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['t'], 'EUEN_027', '4110E', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Awyy'], 'DE_001', 'A0D05', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['HeraTheCool'], 'EUEN_008', '21508', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['SnowTime'], 'DE_066', 'D0D02', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Akho'], 'EUEN_053', '31107', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Poly'], 'DE_066', 'D0C03', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Caliban'], 'DE_122', 'C0E0C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Petit_panda'], 'FR_002', '01007', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Tiny'], 'DE_003', 'E050C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Otto'], 'EUEN_008', '6060C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Arsian'], 'FR_005', '0130B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Rex'], 'EUEN_078', '80506', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['PJ'], 'DE_002', '90806', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Týr', 'WosTheys'], 'FR_001', '2190F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Aslang'], 'EUEN_054', '40C0C', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Vasanti'], 'EUEN_053', 'F090A', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Xel'], 'EUEN_097', '90A00', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['7000B', '15xRAE'], 'DE_015', '7000B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['ShanksLeRoux'], 'EUEN_097', 'A0C08', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['Freya'], 'FR_132', '4090B', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
   user(['GoblinSlayer'], 'DE_061', '4010F', [
-    { rank: 'top', position: null, date: null },
+    { rank: 'top', position: 100, date: '2024-12-07' },
   ]),
 
   //------------------------------- scouts
