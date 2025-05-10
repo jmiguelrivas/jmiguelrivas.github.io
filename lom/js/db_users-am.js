@@ -774,6 +774,9 @@ export const am = [
   user(['Moogen'], 'AMEN_370', 'A050F', [
     { rank: 'top', position: 100, date: '2025-05-08' },
   ]),
+  user(['Lollipop', 'Barbie', 'Legolamb', 'You_Go_Girl'], 'AMEN_282', 'B0401', [
+    { rank: 'top', position: 42, date: '2024-11-29' },
+  ]),
   // ------------------------------- elite ↓
   user(['BabaYaga'], 'PT_173', 'E0F0B', [
     { rank: 'elite', date: '2025-04-25' },
@@ -801,9 +804,7 @@ export const am = [
   user(['Rafiki'], 'AMEN_215', 'B040D', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
-  user(['Maylit²'], 'PT_116', '70602', [
-    { rank: 'elite', date: '2025-04-25' },
-  ]), //AMEN-032 -> ES-032
+  user(['Maylit²'], 'PT_116', '70602', [{ rank: 'elite', date: '2025-04-25' }]), //AMEN-032 -> ES-032
   user(['Sung JinWoo'], 'AMEN_321', '01802', [
     { rank: 'elite', date: '2025-04-25' },
   ]),
@@ -1333,7 +1334,6 @@ export const am = [
   user(['GrimPickle'], 'AMEN_549', '80403', [{ rank: 'elite', date: null }]),
   user(['MrFatJoe'], 'AMEN_114', '40108', [{ rank: 'elite', date: null }]),
   user(['Shion'], 'AMEN_034', 'C0B07', [{ rank: 'elite', date: null }]),
-  user(['Eremi'], 'AMEN_033', '7030A', [{ rank: 'elite', date: null }]),
   user(['hilich'], 'AMEN_339', '50205', [{ rank: 'elite', date: null }]),
   user(['Durian'], 'AMEN_183', 'A0C06', [{ rank: 'elite', date: null }]),
   user(['DezzyBlois'], 'AMEN_404', '50A04', [{ rank: 'elite', date: null }]),
@@ -1471,9 +1471,6 @@ export const am = [
   user(['Crusher'], 'AMEN_474', 'B0F07', [
     { rank: 'top', position: null, date: null },
   ]),
-  user(['Barbie'], 'AMEN_282', 'B0401', [
-    { rank: 'top', position: null, date: null },
-  ]),
   user(['ShroomieC090C'], 'AMEN_121', 'C090C', [
     { rank: 'top', position: null, date: null },
   ]),
@@ -1503,6 +1500,9 @@ export const am = [
   ]),
   user(['ShaiLx'], 'AMEN_019', '21404', [
     { rank: 'top', position: null, date: null },
+  ]),
+  user(['Eremi'], 'AMEN_080', '7030A', [
+    { rank: 'top', position: null, date: '2024-11-29' }
   ]),
   user(['Diamonds'], 'AMEN_121', '40207', [
     { rank: 'top', position: null, date: null },
@@ -1745,4 +1745,3 @@ export const am = [
 // user(['Max'], 'PT_323', null, ['friend']),
 // user(['Mandy'], 'PT_323', null, ['friend']),
 // user(['Magneto'], 'PT_323', null, ['friend']),
-
