@@ -1297,6 +1297,9 @@ export const am = [
   user(['Perrone'], 'ES_102', '81101', [
     { rank: 'elite', date: '2025-05-10' },
   ]),
+  user(['VictorArMo29'], 'ES_102', '12C03', [
+    { rank: 'elite', date: '2025-05-10' },
+  ]),
   user(['Okarun'], 'AMEN_323', 'C0B0F', [
     { rank: 'elite', date: '2024-12-07' },
   ]),
