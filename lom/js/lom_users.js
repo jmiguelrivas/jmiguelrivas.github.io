@@ -140,7 +140,7 @@ class Users extends HTMLElement {
           createNode({
             type: 'span',
             parent: ranks,
-            innerHTML: [rank?.rank, rank?.position, rank?.date]
+            innerHTML: [rank?.rank, rank?.rank === 'top' && user?.maxPosition, rank?.date]
               .filter(Boolean)
               .join(' :: '),
             attrs: {

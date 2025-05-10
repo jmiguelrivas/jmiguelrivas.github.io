@@ -33,7 +33,7 @@ class User {
       .sort((a, b) => new Date(b) - new Date(a))[0]
  
     // Get top position (lowest number)
-    const positions = this.ranks.map(r => r?.position).filter(Boolean)
+    const positions = ranks.map(r => r?.position).filter(Boolean)
     this.maxPosition = positions.length ? Math.min(...positions) : null
 
     const powers = this.ranks.map(r => r?.power).filter(Boolean)
