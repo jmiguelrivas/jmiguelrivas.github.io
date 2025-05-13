@@ -30,38 +30,32 @@ const s2025 = [
   // },
 ]
 
-const sLOM = [
-  {
-    name: 'LOM Merged Servers Timeline',
-    url: 'lom/timeline',
-    icon: 'gamepad',
-    hidden: true,
-  },
-  {
-    name: 'LOM Merged Servers',
-    url: 'lom/merged',
-    icon: 'gamepad',
-    hidden: true,
-  },
-  {
-    name: 'LOM Merged Gaps Tracker',
-    url: 'lom/gaps',
-    icon: 'gamepad',
-    hidden: true,
-  },
-  {
-    name: 'LOM Users',
-    url: 'lom/users',
-    icon: 'gamepad',
-    hidden: true,
-  },
-  // {
-  //   name: 'LOM Parking',
-  //   url: 'lom/parking',
-  //   icon: 'gamepad',
-  //   hidden: true,
-  // },
-]
+// const sLOM = [
+//   {
+//     name: 'LOM Merged Servers Timeline',
+//     url: 'lom/timeline',
+//     icon: 'gamepad',
+//     hidden: true,
+//   },
+//   {
+//     name: 'LOM Merged Servers',
+//     url: 'lom/merged',
+//     icon: 'gamepad',
+//     hidden: true,
+//   },
+//   {
+//     name: 'LOM Merged Gaps Tracker',
+//     url: 'lom/gaps',
+//     icon: 'gamepad',
+//     hidden: true,
+//   },
+//   {
+//     name: 'LOM Users',
+//     url: 'lom/users',
+//     icon: 'gamepad',
+//     hidden: true,
+//   },
+// ]
 
 const sFamily = [
   {
@@ -100,7 +94,7 @@ const queryString = window.location.search
 const routes = [
   s2025,
   others,
-  sLOM,
+  // sLOM,
   // sFamily,
   // {
   //   name: 'Vitest',
