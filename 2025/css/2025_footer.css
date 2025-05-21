@@ -60,10 +60,10 @@ footer.page-footer {
 
 @keyframes beating-heart {
   0% {
-    rotate: 45deg) scale(1;
+    scale: 1;
   }
 
   100% {
-    rotate: 45deg) scale(1.15;
+    scale: 1.15;
   }
 }
