@@ -9,6 +9,7 @@ import './component_tm-dvc.js'
 import './component_cube.js'
 import './component_formability.js'
 import './component_drlogic.js'
+import './component_apap.js'
 
 import './section_header.js'
 import './section_resume.js'
