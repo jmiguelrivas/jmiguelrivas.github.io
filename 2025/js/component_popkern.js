@@ -64,6 +64,8 @@ const template = /*html*/ `
 
 <p>Popkern is a shared component and style library built with Vue2, SCSS, Ruby on Rails, as a Node module, designed to streamline design consistency across multiple applications within an organization.</p>
 
+<img src="./img/popkern_colors.png" alt="color's section">
+
 <h4>Key Features</h4>
 
 <ul>
@@ -107,6 +109,8 @@ const template = /*html*/ `
 <h3>3D Cube</h3>
 
 <p>The 3D Cube is a visualization tool created to help designers better understand and manage the colors used in the application. By rendering colors in a 3D space, the cube provides an intuitive overview of color distribution and usage.</p>
+
+<nn-video url="./videos/cube.mp4"></nn-video>
 
 <mr-cube></mr-cube>
 
