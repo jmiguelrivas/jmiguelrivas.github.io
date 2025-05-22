@@ -1,0 +1,6 @@
+nn-video {
+  display: block;
+  video {
+    width: 100%;
+  }
+}
