@@ -25,7 +25,7 @@ const template = `
   ${tools}
 </ul>
 
-<img src="./img/instructorhourswhatsnew2.gif" alt="instructor's table with filter">
+<nn-video url="./videos/instructors.mp4"></nn-video>
 
 <h4>Key Features</h4>
 
