@@ -12,7 +12,7 @@ customElements.define(
       attrs: [],
     }
 
-    #tools = [tool.css, tool.webComponents, tool.three]
+    #tools = [tool.css, tool.webComponents, tool.three, tool.vitest]
       .map(t => `<li>${t}</li>`)
       .join('')
 
@@ -28,17 +28,36 @@ customElements.define(
       <h3>My Role</h3>
 
       <ul>
-        <li>Build frontend.</li>
         <li>
-          Developed a script for characters extractions from leaderboards (OCR).
+          Designed the full user experience, including layout, flow, and
+          visuals using Inkscape and custom animations.
         </li>
         <li>
-          Developed a tool for converting spreadsheet data into a valid javascript format.
+          Built the frontend from scratch using Web Components to
+          encapsulate and reuse custom elements.
         </li>
         <li>
-          Gather and organized all the data from the list of merges and the leaderboards so it can be visualized in different ways.
+          Created an interactive 3D graph to visualize leaderboard and
+          server merge data dynamically.
         </li>
-      </ul>`
+        <li>
+          Developed an OCR tool to automatically extract character data
+          from leaderboard images.
+        </li>
+        <li>
+          Implemented a data transformation pipeline to convert
+          spreadsheet exports into a structured JavaScript format.
+        </li>
+        <li>
+          Collected, cleaned, and organized raw leaderboard and merge data
+          to support multiple views and analysis modes.
+        </li>
+        <li>
+          Wrote unit tests with Vitest to ensure reliability of data
+          processing tools and components.
+        </li>
+      </ul>
+    `
 
     connectedCallback() {
       this.innerHTML = this.#template
