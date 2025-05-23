@@ -8,11 +8,7 @@ customElements.define(
       super()
     }
 
-    #data = {
-      attrs: [],
-    }
-
-    #tools = [tool.css, tool.webComponents, tool.three, tool.vitest]
+    #tools = [tool.css, tool.webComponents, tool.three, tool.vitest, tool.inkscape]
       .map(t => `<li>${t}</li>`)
       .join('')
 
@@ -24,6 +20,7 @@ customElements.define(
       </ul>
 
       <nn-video url="./videos/lom.mp4"></nn-video>
+      <img src="./img/lom.png" alt="lom ui been edited on inkscape">
 
       <h3>My Role</h3>
 

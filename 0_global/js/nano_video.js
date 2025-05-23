@@ -3,25 +3,50 @@ import { getPrefix } from './nano_helpers.js'
 window.customElements.define(
   getPrefix('video'),
   class extends HTMLElement {
-    constructor() {
-      super()
+    static get observedAttributes() {
+      return ['url', 'format', 'width']
     }
 
-    #template = `
-  <video controls width="1920">
-    <source />
-  </video>
-  `
+    constructor() {
+      super()
+      this.attachShadow({ mode: 'open' })
+      this.shadowRoot.innerHTML = `
+        <style>
+          :host {
+            display: block;
+            max-width: 100%;
+          }
+
+          video {
+            width: 100%;
+            height: auto;
+          }
+        </style>
+        <video controls>
+          <source />
+          Your browser does not support the video tag.
+        </video>
+      `
+      this.$video = this.shadowRoot.querySelector('video')
+      this.$source = this.shadowRoot.querySelector('source')
+    }
 
     connectedCallback() {
-      this.innerHTML = this.#template
-      const video = this.querySelector('source')
+      this.#update()
+    }
 
-      const format = this.getAttribute('format') || 'video/mp4'
-      video.setAttribute('type', format)
+    attributeChangedCallback() {
+      this.#update()
+    }
 
+    #update() {
       const url = this.getAttribute('url')
-      video.setAttribute('src', url)
+      const format = this.getAttribute('format') || 'video/mp4'
+      const width = this.getAttribute('width')
+
+      if (url) this.$source.src = url
+      this.$source.type = format
+      if (width) this.$video.width = width
     }
   }
 )

@@ -12,6 +12,8 @@ import './component_drlogic.js'
 import './component_apap.js'
 import './component_descubria.js'
 import './component_lom.js'
+import './component_phaser.js'
+import './component_map.js'
 
 import './section_header.js'
 import './section_resume.js'

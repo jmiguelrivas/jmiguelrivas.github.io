@@ -8,10 +8,6 @@ customElements.define(
       super()
     }
 
-    #data = {
-      attrs: [],
-    }
-
     #tools = [tool.css, tool.jQuery, tool.html]
       .map(t => `<li>${t}</li>`)
       .join('')
