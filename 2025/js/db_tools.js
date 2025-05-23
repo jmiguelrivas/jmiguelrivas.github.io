@@ -11,7 +11,8 @@ export const tool = {
   canvas: 'Canvas',
   svg: 'SVG',
 
-  css: 'CSS/SCSS/UnoCSS',
+  css: 'CSS',
+  cssFull: 'CSS/SCSS/UnoCSS',
   sass: 'SCSS',
   scss: 'SCSS',
   less: 'Less',

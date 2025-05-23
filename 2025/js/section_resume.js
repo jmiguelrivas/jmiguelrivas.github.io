@@ -25,7 +25,7 @@ const data = {
   attrs: [],
   skills: [
     tool.html,
-    tool.css,
+    tool.cssFull,
     tool.javascript,
     tool.vue,
     tool.react,

@@ -11,6 +11,7 @@ import './component_formability.js'
 import './component_drlogic.js'
 import './component_apap.js'
 import './component_descubria.js'
+import './component_lom.js'
 
 import './section_header.js'
 import './section_resume.js'
