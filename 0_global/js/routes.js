@@ -8,26 +8,26 @@ const s2025 = [
     name: 'Home',
     url: '2025/index',
     icon: 'home',
-    // id: 'header',
+    id: 'header',
   },
-  // {
-  //   name: 'Skills',
-  //   url: '2025/index',
-  //   icon: 'wrench',
-  //   id: 'skills',
-  // },
-  // {
-  //   name: 'Portfolio',
-  //   url: '2025/index',
-  //   icon: 'book',
-  //   id: 'portfolio',
-  // },
-  // {
-  //   name: 'Resume',
-  //   url: '2025/index',
-  //   icon: 'drivers-license',
-  //   id: 'resume',
-  // },
+  {
+    name: 'Skills',
+    url: '2025/index',
+    icon: 'wrench',
+    id: 'skills',
+  },
+  {
+    name: 'Portfolio',
+    url: '2025/index',
+    icon: 'book',
+    id: 'portfolio',
+  },
+  {
+    name: 'Resume',
+    url: '2025/index',
+    icon: 'drivers-license',
+    id: 'resume',
+  },
 ]
 
 // const sLOM = [
@@ -93,7 +93,7 @@ const queryString = window.location.search
 
 const routes = [
   s2025,
-  others,
+  // others,
   // sLOM,
   // sFamily,
   // {
