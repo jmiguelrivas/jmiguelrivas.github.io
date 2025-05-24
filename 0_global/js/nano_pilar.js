@@ -7,19 +7,15 @@ customElements.define(
       super()
     }
 
-    #data = {
-      attrs: [
-        {
-          name: 'size',
-        },
-      ],
+    static get observedAttributes() {
+      return ['size']
     }
 
     #updateSize() {
       const attr = this.getAttribute('size')
       if (attr) {
-        const isCalc = /[-+*]/g.test(attr)
-        this.style = isCalc ? `--size: calc(${attr})` : `--size: ${attr}`
+        const isCalc = /[-+*/]/.test(attr)
+        this.style.setProperty('--size', isCalc ? `calc(${attr})` : attr)
       }
     }
 
@@ -27,15 +23,9 @@ customElements.define(
       this.#updateSize()
     }
 
-    observedAttributes() {
-      return this.#data.attrs.map(attr => attr.name)
-    }
-
-    attributeChangedCallback(prop) {
-      switch (prop) {
-        case 'size':
-          this.#updateSize()
-          break
+    attributeChangedCallback(name) {
+      if (name === 'size') {
+        this.#updateSize()
       }
     }
   }

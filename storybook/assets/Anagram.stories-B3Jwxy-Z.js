@@ -1,4 +1,4 @@
-import{S as o}from"./main-DjYwuoDZ.js";/* empty css             */const $={parameters:{layout:"fullscreen"},args:{str1:"a gentleman",str2:"elegant man"},argTypes:{str1:{control:"text"},str2:{control:"text"}}};function s(t){return t.split("").sort().join("").toLowerCase().replace(/\s*/,"")}function d(t,n){const r=s(t),e=s(n);return r===e}const c=t=>{const{str1:n,str2:r}=t,e=document.createElement("section");return e.classList.add("workarea"),e.innerHTML=`
+import{S as o}from"./main-DHuDOF0U.js";/* empty css             */const $={parameters:{layout:"fullscreen"},args:{str1:"a gentleman",str2:"elegant man"},argTypes:{str1:{control:"text"},str2:{control:"text"}}};function s(t){return t.split("").sort().join("").toLowerCase().replace(/\s*/,"")}function d(t,n){const r=s(t),e=s(n);return r===e}const c=t=>{const{str1:n,str2:r}=t,e=document.createElement("section");return e.classList.add("workarea"),e.innerHTML=`
 <nn-caja padding="1rem" max-width="1200px">
   <h1>Anagram Checker</h1>
 

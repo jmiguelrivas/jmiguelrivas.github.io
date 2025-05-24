@@ -22,7 +22,7 @@ window.customElements.define(
             height: auto;
           }
         </style>
-        <video controls>
+        <video controls preload="metadata" loading="lazy">
           <source />
           Your browser does not support the video tag.
         </video>

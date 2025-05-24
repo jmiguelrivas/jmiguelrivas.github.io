@@ -1,15 +1,23 @@
-export const getCases = label => {
+export const getCases = (label) => {
   const spinalCase = label
-
-  const titleCase = label
-    .replace(/_/g, ' ')
-    .replace(/(?:^\w|[A-Z]|\b\w)/g, word => {
-      return word.toUpperCase()
-    })
     .trim()
-    .replace(/-/g, ' ')
+    .toLowerCase()
+    .replace(/\s+/g, '-')       // spaces to hyphen
+    .replace(/_/g, '-')         // underscore to hyphen
+    .replace(/-+/g, '-')        // multiple hyphens to single hyphen
 
-  const pascalCase = titleCase.replace(/[ ]/g, '')
+  const words = label
+    .replace(/[_-]/g, ' ')
+    .trim()
+    .split(/\s+/)
+
+  const titleCase = words
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ')
+
+  const pascalCase = words
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join('')
 
   const camelCase = pascalCase.charAt(0).toLowerCase() + pascalCase.slice(1)
 
@@ -17,16 +25,21 @@ export const getCases = label => {
 }
 
 export class gColor {
+  #cases
   label
   hex
 
   constructor(label, hex) {
     this.label = label
     this.hex = hex.toUpperCase()
+    this.#cases = getCases(label)
   }
 
   get opacity() {
-    return parseInt(this.hex.substr(7, 2), 16) * (100 / 255) || 100
+    if (this.hex.length === 9) { // #RRGGBBAA format
+      return Math.round((parseInt(this.hex.substr(7, 2), 16) / 255) * 100)
+    }
+    return 100
   }
 
   get red() {
@@ -41,57 +54,53 @@ export class gColor {
     return parseInt(this.hex.substr(5, 2), 16)
   }
 
-  HSL() {
-    const r = this.red / 255,
-      g = this.green / 255,
-      b = this.blue / 255,
-      cmin = Math.min(r, g, b),
-      cmax = Math.max(r, g, b),
-      delta = cmax - cmin
+  get hsl() {
+    const { hue, saturation, lightness } = this.#computeHSL()
+    return `hsl(${hue}deg ${saturation}% ${lightness}% / ${this.opacity}%)`
+  }
 
-    let h = 0,
-      s = 0,
-      l = 0
+  #computeHSL() {
+    const r = this.red / 255
+    const g = this.green / 255
+    const b = this.blue / 255
 
-    if (delta === 0) {
-      h = 0
-    } else if (cmax === r) {
-      h = ((g - b) / delta) % 6
-    } else if (cmax === g) {
-      h = (b - r) / delta + 2
-    } else {
-      h = (r - g) / delta + 4
+    const cmin = Math.min(r, g, b)
+    const cmax = Math.max(r, g, b)
+    const delta = cmax - cmin
+
+    let h = 0, s = 0, l = (cmax + cmin) / 2
+
+    if (delta !== 0) {
+      if (cmax === r) {
+        h = ((g - b) / delta) % 6
+      } else if (cmax === g) {
+        h = (b - r) / delta + 2
+      } else {
+        h = (r - g) / delta + 4
+      }
+      h = Math.round(h * 60)
+      if (h < 0) h += 360
+
+      s = delta / (1 - Math.abs(2 * l - 1))
     }
 
-    h = Math.round(h * 60)
-
-    if (h < 0) {
-      h += 360
+    return {
+      hue: h,
+      saturation: +(s * 100).toFixed(1),
+      lightness: +(l * 100).toFixed(1)
     }
-
-    l = (cmax + cmin) / 2
-    s = delta === 0 ? 0 : delta / (1 - Math.abs(2 * l - 1))
-
-    s = +(s * 100)
-    l = +(l * 100)
-
-    return { hue: h, saturation: s, lightness: l }
   }
 
   get hue() {
-    return this.HSL().hue
+    return this.#computeHSL().hue
   }
 
   get saturation() {
-    return this.HSL().saturation
+    return this.#computeHSL().saturation
   }
 
   get lightness() {
-    return this.HSL().lightness
-  }
-
-  get hsl() {
-    return `hsl(${this.hue}deg ${this.saturation}% ${this.lightness}% / ${this.opacity}%)`
+    return this.#computeHSL().lightness
   }
 
   get rgb() {
@@ -99,18 +108,18 @@ export class gColor {
   }
 
   get spinalCase() {
-    return this.label
+    return this.#cases.spinalCase
   }
 
   get pascalCase() {
-    return getCases(this.label).pascalCase
+    return this.#cases.pascalCase
   }
 
   get camelCase() {
-    return getCases(this.label).camelCase
+    return this.#cases.camelCase
   }
 
   get titleCase() {
-    return getCases(this.label).titleCase
+    return this.#cases.titleCase
   }
 }

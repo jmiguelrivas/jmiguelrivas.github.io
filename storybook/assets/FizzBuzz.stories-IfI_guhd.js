@@ -1,4 +1,4 @@
-import{S as o}from"./main-DjYwuoDZ.js";/* empty css             */const f={parameters:{layout:"fullscreen"},args:{n:19},argTypes:{n:{control:"number"}}},r=c=>{const{n:t}=c,e=document.createElement("section");e.classList.add("workarea");const s=Array.from({length:t}).map((z,u)=>{const n=u+1;return n%5===0&&n%3===0?"FizzBuzz":n%3===0?"Fizz":n%5===0?"Buzz":n}).join(`
+import{S as o}from"./main-DHuDOF0U.js";/* empty css             */const f={parameters:{layout:"fullscreen"},args:{n:19},argTypes:{n:{control:"number"}}},r=c=>{const{n:t}=c,e=document.createElement("section");e.classList.add("workarea");const s=Array.from({length:t}).map((z,u)=>{const n=u+1;return n%5===0&&n%3===0?"FizzBuzz":n%3===0?"Fizz":n%5===0?"Buzz":n}).join(`
 `);return e.innerHTML=`
 <nn-caja padding="1rem" max-width="1200px">
   <h1>FizzBuzz</h1>

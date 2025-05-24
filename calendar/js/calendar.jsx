@@ -196,7 +196,7 @@ const Controls = ({
               className="btn sunglow"
               onClick={() => changeWeek(-1)}
             >
-              <nn-icono class="arrow-chevron left" />
+              <nn-icono class="arrow-chevron" direction="left" />
             </button>
             <h1>{currentWeekNumber}</h1>
             <button
@@ -204,7 +204,7 @@ const Controls = ({
               className="btn sunglow"
               onClick={() => changeWeek(1)}
             >
-              <nn-icono class="arrow-chevron right" />
+              <nn-icono class="arrow-chevron" direction="right" />
             </button>
           </div>
         </>
@@ -217,7 +217,7 @@ const Controls = ({
               className="btn sunglow"
               onClick={() => changeMonth(-1)}
             >
-              <nn-icono class="arrow-chevron left" />
+              <nn-icono class="arrow-chevron" direction="left" />
             </button>
             <h1>{currentMonthName}</h1>
             <button
@@ -225,7 +225,7 @@ const Controls = ({
               className="btn sunglow"
               onClick={() => changeMonth(1)}
             >
-              <nn-icono class="arrow-chevron right" />
+              <nn-icono class="arrow-chevron" direction="right" />
             </button>
           </div>
         </>
@@ -237,7 +237,7 @@ const Controls = ({
           className="btn sunglow"
           onClick={() => changeYear(-1)}
         >
-          <nn-icono class="arrow-chevron left" />
+          <nn-icono class="arrow-chevron" direction="left" />
         </button>
         <h1>{date.year()}</h1>
         <button
@@ -245,7 +245,7 @@ const Controls = ({
           className="btn sunglow"
           onClick={() => changeYear(1)}
         >
-          <nn-icono class="arrow-chevron right" />
+          <nn-icono class="arrow-chevron" direction="right" />
         </button>
       </div>
     </div>

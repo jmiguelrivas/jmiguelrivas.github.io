@@ -1,4 +1,4 @@
-import{S as r}from"./main-DjYwuoDZ.js";/* empty css             */const u={parameters:{layout:"fullscreen"},args:{str:"abcdefedcba"},argTypes:{str:{control:"text"}}};function d(e){return e.split("").map((n,o)=>n===e[e.length-o-1]).reduce((n,o)=>n&&o)}const t=e=>{const{str:s}=e,n=document.createElement("section");return n.classList.add("workarea"),n.innerHTML=`
+import{S as r}from"./main-DHuDOF0U.js";/* empty css             */const u={parameters:{layout:"fullscreen"},args:{str:"abcdefedcba"},argTypes:{str:{control:"text"}}};function d(e){return e.split("").map((n,o)=>n===e[e.length-o-1]).reduce((n,o)=>n&&o)}const t=e=>{const{str:s}=e,n=document.createElement("section");return n.classList.add("workarea"),n.innerHTML=`
 <nn-caja padding="1rem" max-width="1200px">
   <h1>Palindrome Checker</h1>
   

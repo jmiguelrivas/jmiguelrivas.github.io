@@ -1,4 +1,4 @@
-import{S as i}from"./main-DjYwuoDZ.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},o=`
+import{S as i}from"./main-DHuDOF0U.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},o=`
 nn-caja.preview {
   background: #b28256;
   display: flex;

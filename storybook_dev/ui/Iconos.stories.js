@@ -489,16 +489,16 @@ function generateIcons() {
         </nn-pilar>
     
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d0"></nn-icono>
+          <nn-icono class="${icono}" rotate="0"></nn-icono>
         </nn-pilar>
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d45"></nn-icono>
+          <nn-icono class="${icono}" rotate="45"></nn-icono>
         </nn-pilar>
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d90"></nn-icono>
+          <nn-icono class="${icono}" rotate="90"></nn-icono>
         </nn-pilar>
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d135"></nn-icono>
+          <nn-icono class="${icono}" rotate="135"></nn-icono>
         </nn-pilar>
     
         <nn-pilar size="25%" class="key">
@@ -515,16 +515,16 @@ function generateIcons() {
         </nn-pilar>
     
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d180"></nn-icono>
+          <nn-icono class="${icono}" rotate="180"></nn-icono>
         </nn-pilar>
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d225"></nn-icono>
+          <nn-icono class="${icono}" rotate="225"></nn-icono>
         </nn-pilar>
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d270"></nn-icono>
+          <nn-icono class="${icono}" rotate="270"></nn-icono>
         </nn-pilar>
         <nn-pilar size="25%" class="value">
-          <nn-icono class="${icono} d315"></nn-icono>
+          <nn-icono class="${icono}" rotate="315"></nn-icono>
         </nn-pilar>
       </nn-fila>
     </li>

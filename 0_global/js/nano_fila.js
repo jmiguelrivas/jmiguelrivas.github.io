@@ -7,40 +7,29 @@ customElements.define(
       super()
     }
 
-    #data = {
-      attrs: [
-        {
-          name: 'gap',
-        },
-        {
-          name: 'padding-inline',
-        },
-      ],
+    static attrs = ['gap', 'padding-inline']
+
+    static get observedAttributes() {
+      return this.attrs
     }
 
     #updateAttrs() {
-      const values = this.#data.attrs
-        .map(attr => {
-          const value = this.getAttribute(attr.name)
-          return value ? `--${attr.name}: ${value}` : null
-        })
-        .filter(Boolean)
-        .join(';')
-
-      this.style = values
+      for (const name of this.constructor.attrs) {
+        const value = this.getAttribute(name)
+        if (value !== null) {
+          this.style.setProperty(`--${name}`, value)
+        }
+      }
     }
 
     connectedCallback() {
       this.#updateAttrs()
     }
 
-    observedAttributes() {
-      return this.#data.attrs.map(attr => attr.name)
-    }
-
-    attributeChangedCallback(prop) {
-      const attr = this.#data.attrs.find(attr => attr.name === prop)?.[0]
-      attr && this.#updateAttrs()
+    attributeChangedCallback(name) {
+      if (this.constructor.attrs.includes(name)) {
+        this.#updateAttrs()
+      }
     }
   }
 )

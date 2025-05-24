@@ -1,4 +1,4 @@
-import{S as t}from"./main-DjYwuoDZ.js";/* empty css             */const m={parameters:{layout:"fullscreen"},args:{str:"abcdefghijklmnopqrstuvwxyz"},argTypes:{str:{control:"text"}}},n=a=>{const{str:r}=a,e=document.createElement("section");e.classList.add("workarea");const p=r.split("").sort(()=>-1).join("");return e.innerHTML=`
+import{S as t}from"./main-DHuDOF0U.js";/* empty css             */const m={parameters:{layout:"fullscreen"},args:{str:"abcdefghijklmnopqrstuvwxyz"},argTypes:{str:{control:"text"}}},n=a=>{const{str:r}=a,e=document.createElement("section");e.classList.add("workarea");const p=r.split("").sort(()=>-1).join("");return e.innerHTML=`
 <nn-caja padding="1rem" max-width="1200px">
   <h1>String Reverse</h1>
 

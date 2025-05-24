@@ -1,4 +1,4 @@
-import{S as u}from"./main-DjYwuoDZ.js";/* empty css             */const b={args:{min:50,max:150},argTypes:{min:{control:"number"},max:{control:"number"}},parameters:{layout:"fullscreen"}};function p({min:a,max:n,value:i}){const t=Math.PI/180;return Math.abs(Math.sin(i*t))*(n-a)+a}function g(a,n){const i=90/(n-1);let t="";for(let o=a,e=a;o<n;o++,e+=i){const s=e*(Math.PI/180),m=Math.sin(s),r=p({min:a,max:n,value:e});t+=`
+import{S as u}from"./main-DHuDOF0U.js";/* empty css             */const b={args:{min:50,max:150},argTypes:{min:{control:"number"},max:{control:"number"}},parameters:{layout:"fullscreen"}};function p({min:a,max:n,value:i}){const t=Math.PI/180;return Math.abs(Math.sin(i*t))*(n-a)+a}function g(a,n){const i=90/(n-1);let t="";for(let o=a,e=a;o<n;o++,e+=i){const s=e*(Math.PI/180),m=Math.sin(s),r=p({min:a,max:n,value:e});t+=`
       <tr>
         <td>${o-a}</td>
         <td>${e.toFixed(2)}</td>

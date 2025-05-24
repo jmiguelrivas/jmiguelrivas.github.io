@@ -1,4 +1,4 @@
-import{S as a}from"./main-DjYwuoDZ.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},t=`
+import{S as a}from"./main-DHuDOF0U.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},t=`
 nn-caja.preview {
   --doorColor: #04aaea;
   --hingeColor: #8e760e;
