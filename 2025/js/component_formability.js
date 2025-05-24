@@ -18,7 +18,7 @@ const template = `
 
 <p>Formability is a modern, centralized web application built with Vue2, SCSS, Cucumber, and Ruby on Rails, designed to revolutionize how agencies streamline public services.</p>
 
-<img src="./img/wide/formability.webp" alt="preview of the form builder">
+<nn-video url="./videos/formability.mp4"></nn-video>
 
 <h4>Key Features</h4>
 
@@ -32,6 +32,10 @@ const template = `
   <li>Access in-system reporting and analytics for process optimization.</li>
   <li>Ensure compliance with 508 and WCAG2 accessibility standards.</li>
 </ul>
+
+<h4>Form Builder</h4>
+
+<nn-video url="./videos/formability-2.mp4"></nn-video>
 
 <h3>My Role</h3>
 
