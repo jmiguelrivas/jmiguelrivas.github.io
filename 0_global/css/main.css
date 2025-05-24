@@ -146,6 +146,14 @@ blockquote {
   border-radius: 10px;
 }
 
+.block-separator {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.5rem 0;
+  align-items: center;
+}
+
 /* -------------- layers */
 
 nn-ayuda,

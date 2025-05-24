@@ -42,12 +42,6 @@ aside.paper {
 
 nn-pilar.workarea {
   --bk-color: rgb(39 39 49);
-
-  section {
-    >nn-caja>h2 {
-      margin: 0 0 2rem;
-    }
-  }
 }
 
 /* ------------------------------- Media */
