@@ -13,19 +13,19 @@ const tools = [
   .map(t => `<li>${t}</li>`)
   .join('')
 
-  const contributions = [
-    'DSIcon',
-    'DSLineClamp',
-    'DSDateRangeInput',
-    'DSNumberInput',
-    'DSPersonComboboxInput',
-    'DSTimeInput',
-    'Time::FormKit',
-    'Checkbox::FormKit (select all implementation)',
-    'SpiritCode::WebComponent',
-  ]
-    .map(t => `<li>${t}</li>`)
-    .join('')
+const contributions = [
+  'DSIcon',
+  'DSLineClamp',
+  'DSDateRangeInput',
+  'DSNumberInput',
+  'DSPersonComboboxInput',
+  'DSTimeInput',
+  'Time::FormKit',
+  'Checkbox::FormKit (select all implementation)',
+  'SpiritCode::WebComponent',
+]
+  .map(t => `<li>${t}</li>`)
+  .join('')
 
 const features = [
   [
@@ -132,20 +132,16 @@ ${compressText(vitest)}
   ${contributions}
 </ul>
 `
-const data = {
-  attrs: [],
-}
 
-class TMDVC extends HTMLElement {
-  constructor() {
-    super()
+customElements.define(
+  getPrefix('tm-dvc'),
+  class extends HTMLElement {
+    constructor() {
+      super()
+    }
+
+    connectedCallback() {
+      this.innerHTML = template
+    }
   }
-
-  connectedCallback() {
-    this.innerHTML = template
-  }
-}
-
-window.customElements.define(getPrefix('tm-dvc'), TMDVC)
-
-export { data }
+)

@@ -74,20 +74,16 @@ const template = `
   ${contributions}
 </ul>
 `
-const data = {
-  attrs: [],
-}
 
-class TMConsumer extends HTMLElement {
-  constructor() {
-    super()
+customElements.define(
+  getPrefix('tm-consumer'),
+  class extends HTMLElement {
+    constructor() {
+      super()
+    }
+
+    connectedCallback() {
+      this.innerHTML = template
+    }
   }
-
-  connectedCallback() {
-    this.innerHTML = template
-  }
-}
-
-window.customElements.define(getPrefix('tm-consumer'), TMConsumer)
-
-export { data }
+)

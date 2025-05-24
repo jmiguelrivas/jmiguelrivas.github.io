@@ -8,11 +8,7 @@ customElements.define(
       super()
     }
 
-    #data = {
-      attrs: [],
-    }
-
-    #tools = [tool.sass, tool.jQuery, tool.jade]
+    #tools = [tool.sass, tool.jQuery, tool.jade, tool.grunt]
       .map(t => `<li>${t}</li>`)
       .join('')
 
@@ -32,12 +28,9 @@ customElements.define(
       <h3>My Role</h3>
 
       <ul>
-        <li>Build and animate the frontend.</li>
-        <li>
-          Optimized and resized all the images to the minimum width &
-          height.
-        </li>
-        <li>Designed missing elements like loading.</li>
+        <li>Set the environment to work with GruntJs.</li>
+        <li>Designed missing elements like OG image (Facebook preview) and loading.</li>
+        <li>Build and animated the frontend.</li>
       </ul>`
 
     connectedCallback() {

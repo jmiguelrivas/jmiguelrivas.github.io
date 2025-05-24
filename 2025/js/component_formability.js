@@ -49,20 +49,15 @@ const template = `
 
 // <p>OneStop is the central hub for Maryland State licenses, forms, certificates, permits, applications, and registrations.</p>
 
-const data = {
-  attrs: [],
-}
+customElements.define(
+  getPrefix('formability'),
+  class extends HTMLElement {
+    constructor() {
+      super()
+    }
 
-class Formability extends HTMLElement {
-  constructor() {
-    super()
+    connectedCallback() {
+      this.innerHTML = template
+    }
   }
-
-  connectedCallback() {
-    this.innerHTML = template
-  }
-}
-
-window.customElements.define(getPrefix('formability'), Formability)
-
-export { data }
+)

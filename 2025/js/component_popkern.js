@@ -1,12 +1,6 @@
-import {
-  getPrefix
-} from '../../0_global/js/global_helpers.js'
-import {
-  gColor
-} from '../../0_global/js/class_gcolor.js'
-import {
-  tool
-} from './db_tools.js'
+import { getPrefix } from '../../0_global/js/global_helpers.js'
+import { gColor } from '../../0_global/js/class_gcolor.js'
+import { tool } from './db_tools.js'
 
 const color = new gColor('purple-heart', '#7d32b0')
 
@@ -15,39 +9,39 @@ const tools = [tool.vue2, tool.sass, tool.rails, tool.nodeModule]
   .join('')
 
 const features = [
-    [
-      'Centralized Component Library',
-      'Provides reusable Vue components and styles to ensure a consistent look and feel across apps.',
-    ],
-    [
-      'Visual Documentation',
-      'Integrated as a Ruby Gem, Popkern offers built-in visual documentation to showcase and preview components, making it easier for developers and designers to collaborate.',
-    ],
-    [
-      'Node Module Distribution',
-      'All code is packaged into a Node module, ensuring easy integration and updates across projects.',
-    ],
-    [
-      'Color Database with Contrast Testing',
-      'Includes a robust color database that dynamically tests contrast ratios for accessibility across six different backgrounds (three for light mode and three for dark mode), ensuring compliance with WCAG standards and delivering an inclusive user experience.',
-    ],
-    [
-      'Serves as the backbone for unified design and development workflows, enhancing productivity and accessibility across the organization’s ecosystem.',
-    ],
-  ]
+  [
+    'Centralized Component Library',
+    'Provides reusable Vue components and styles to ensure a consistent look and feel across apps.',
+  ],
+  [
+    'Visual Documentation',
+    'Integrated as a Ruby Gem, Popkern offers built-in visual documentation to showcase and preview components, making it easier for developers and designers to collaborate.',
+  ],
+  [
+    'Node Module Distribution',
+    'All code is packaged into a Node module, ensuring easy integration and updates across projects.',
+  ],
+  [
+    'Color Database with Contrast Testing',
+    'Includes a robust color database that dynamically tests contrast ratios for accessibility across six different backgrounds (three for light mode and three for dark mode), ensuring compliance with WCAG standards and delivering an inclusive user experience.',
+  ],
+  [
+    'Serves as the backbone for unified design and development workflows, enhancing productivity and accessibility across the organization’s ecosystem.',
+  ],
+]
   .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
   .join('')
 
 const cubeFeatures = [
-    ['Enables designers to visualize the current color palette within the app.'],
-    ['Highlights unused colors to assist in defining new, balanced color sets.'],
-    [
-      'Offers an interactive preview to make color selection and refinement more efficient.',
-    ],
-    [
-      'This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.',
-    ],
-  ]
+  ['Enables designers to visualize the current color palette within the app.'],
+  ['Highlights unused colors to assist in defining new, balanced color sets.'],
+  [
+    'Offers an interactive preview to make color selection and refinement more efficient.',
+  ],
+  [
+    'This tool is particularly useful when introducing new colors, ensuring that all additions are thoughtfully integrated into the existing palette.',
+  ],
+]
   .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
   .join('')
 
@@ -64,7 +58,7 @@ const template = /*html*/ `
 
 <p>Popkern is a shared component and style library built with Vue2, SCSS, Ruby on Rails, as a Node module, designed to streamline design consistency across multiple applications within an organization.</p>
 
-<img src="./img/popkern_colors.png" alt="color's section">
+<nn-video url="./videos/popkern.mp4"></nn-video>
 
 <h4>Key Features</h4>
 
@@ -124,22 +118,16 @@ const template = /*html*/ `
 
 <p>I created the node module and gem to actively maintained consistency across the organization's frontend and keep all the components visually documented.</p>
 `
-const data = {
-  attrs: [],
-}
 
-class Popkern extends HTMLElement {
-  constructor() {
-    super()
+customElements.define(
+  getPrefix('popkern'),
+  class extends HTMLElement {
+    constructor() {
+      super()
+    }
+
+    connectedCallback() {
+      this.innerHTML = template
+    }
   }
-
-  connectedCallback() {
-    this.innerHTML = template
-  }
-}
-
-window.customElements.define(getPrefix('popkern'), Popkern)
-
-export {
-  data
-}
+)

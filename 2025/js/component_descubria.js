@@ -14,7 +14,7 @@ customElements.define(
 
     #template = `
       <blockquote>
-        Avante is a multidisciplinary creative agency based in Santo Domingo, Dominican Republic. the agency brings together artists, designers, and strategists to bridge the gap between creativity and business. Their work spans advertising, marketing strategy, and SEO, serving a diverse clientele that includes brands, cities, and NGOs.
+        Descubria was an interactive children's park where young minds could step into the shoes of grown-ups and explore the world of work through play. In a vibrant, mini-city environment, kids took on roles like chefs, firefighters, builders, and healthcare workers—earning play money for their efforts and discovering new passions along the way. Through hands-on experiences and realistic job simulations, Descubria offered a fun and educational glimpse into adult life, inspiring curiosity, responsibility, and imagination.
       </blockquote>
 
       <h3>Descubria</h3>
@@ -28,11 +28,7 @@ customElements.define(
       <h3>My Role</h3>
 
       <ul>
-        <li>Build and animate the frontend.</li>
-        <li>
-          Optimized and resized all the images to the minimum width &
-          height.
-        </li>
+        <li>Build and animated the frontend.</li>
       </ul>`
 
     connectedCallback() {

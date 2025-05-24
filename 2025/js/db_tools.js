@@ -20,6 +20,7 @@ export const tool = {
   rails: 'Ruby on Rails',
   php: 'PHP',
   python: 'Python',
+  facebook: 'Facebook App',
 
   javascript: 'Javascript',
   vue: 'Vue2/Vue3',
