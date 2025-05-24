@@ -14,7 +14,7 @@ nn-fila {
       flex-direction: column;
 
       nn-pilar {
-        --size: 100%;
+        --size: 100% !important;
       }
     }
   }
@@ -26,7 +26,7 @@ nn-fila {
       flex-direction: column;
 
       nn-pilar {
-        --size: 100%;
+        --size: 100% !important;
       }
     }
   }
@@ -38,7 +38,7 @@ nn-fila {
       flex-direction: column;
 
       nn-pilar {
-        --size: 100%;
+        --size: 100% !important;
       }
     }
   }
@@ -50,7 +50,7 @@ nn-fila {
       flex-direction: column;
 
       nn-pilar {
-        --size: 100%;
+        --size: 100% !important;
       }
     }
   }
