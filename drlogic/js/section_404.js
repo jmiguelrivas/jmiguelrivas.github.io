@@ -1,5 +1,5 @@
 export default {
-  template: /*html*/ `
+  template: `
 <section id="error404">
   <div class="info">
     <h1>Error</h1>

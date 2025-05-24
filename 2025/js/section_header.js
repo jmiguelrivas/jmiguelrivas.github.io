@@ -2,7 +2,7 @@ import {
   getPrefix
 } from '../../0_global/js/global_helpers.js'
 
-const readme = /*html*/ `
+const readme = `
 <h2>Portfolio 2025</h2>
 
 <ul class="btn-group">
@@ -53,7 +53,7 @@ const banner = 'SPOKANE,WA'
   .map((l, i) => `<span class="letter letter-${i + 1}">${l}</span>`)
   .join('')
 
-const template = /*html*/ `
+const template = `
 <mr-mountain class="mountain-01">
   <div class="banner">
     ${banner}

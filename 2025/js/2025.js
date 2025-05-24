@@ -1,7 +1,8 @@
 import '../../0_global/js/index.js'
 
-import './component_palumba.js'
-import './component_mountain.js'
+import './svg_palumba.js'
+import './svg_mountain.js'
+
 import './component_popkern.js'
 import './component_tm-provider.js'
 import './component_tm-consumer.js'

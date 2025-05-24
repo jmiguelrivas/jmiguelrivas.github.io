@@ -1,5 +1,5 @@
 export default {
-  template: /*html*/ `
+  template: `
 <section class="call-us" :class="color">
   <div class="container">
     <nn-fila break="md">

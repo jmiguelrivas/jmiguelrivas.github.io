@@ -12,7 +12,7 @@ import {
   OrbitControls
 } from '../../0_global/modules/OrbitControls.js'
 
-const template = /*html*/ `
+const template = `
 <div class="controls">
   <button id="grid" role="button" class="btn shamrock" data-color="hsl(149deg, 61%, 51%)">
     Toggle Grid

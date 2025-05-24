@@ -4,7 +4,7 @@ export default {
   components: {
     Footer,
   },
-  template: /*html*/ `
+  template: `
 <nn-scroll-area nn-color="royal-purple">
   <section id="contact">
     <section class="intro">

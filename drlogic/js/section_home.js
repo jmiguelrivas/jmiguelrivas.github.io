@@ -7,7 +7,7 @@ export default {
     Footer,
     CallUs,
   },
-  template: /*html*/ `
+  template: `
 <section id="home">
   <section class="intro home">
     <div class="copywrite">

@@ -45,7 +45,7 @@ const cubeFeatures = [
   .map(li => `<li><strong>${li[0]}${li?.[1] && ':'}</strong> ${li[1]}</li>`)
   .join('')
 
-const template = /*html*/ `
+const template = `
 <blockquote>
   Enovational is a data-driven web and app development company that span a wide spectrum of audiences, technologies, and platforms, from consumer facing mobile apps to large government and enterprise custom web applications.
 </blockquote>

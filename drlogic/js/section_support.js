@@ -6,7 +6,7 @@ export default {
     Footer,
     CallUs,
   },
-  template: /*html*/ `
+  template: `
 <nn-scroll-area nn-color="royal-purple">
   <section id="services">
     <section class="intro">

@@ -1,5 +1,5 @@
 export default {
-  template: /*html*/ `
+  template: `
 <footer>
   <div class="social-networks">
     <nn-icono class="twitter" />

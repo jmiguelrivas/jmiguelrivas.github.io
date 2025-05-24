@@ -6,7 +6,7 @@ import {
   routes
 } from './routes.js'
 
-const template = /*html*/ `
+const template = `
 <nn-fila>
   <nn-pilar size="50px" class="navigation">
     <nav></nav>

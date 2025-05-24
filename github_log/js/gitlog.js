@@ -45,7 +45,7 @@ class Log extends HTMLElement {
 `
   }).join(' ')
 
-  static template = /*html*/ `
+  static template = `
 <nn-caja padding="4">
   <h1>Github Log</h1>
   <ul class="main-list">

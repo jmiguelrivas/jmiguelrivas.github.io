@@ -13,7 +13,7 @@ const App = {
     // Contact,
     Home,
   },
-  template: /*html*/ `
+  template: `
 <div>
   <!-- <Contact /> -->
   <Home />
