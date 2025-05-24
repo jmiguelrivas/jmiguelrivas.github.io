@@ -1,13 +1,13 @@
-import{c as o}from"./main-CGAxX0ND.js";/* empty css             */const f={parameters:{layout:"fullscreen"},args:{n:19},argTypes:{n:{control:"number"}}},r=s=>{const{n:t}=s,e=document.createElement("section");e.classList.add("workarea");const z=Array.from({length:t}).map((u,a)=>{const n=a+1;return n%5===0&&n%3===0?"FizzBuzz":n%3===0?"Fizz":n%5===0?"Buzz":n}).join(`
+import{S as o}from"./main-DjYwuoDZ.js";/* empty css             */const f={parameters:{layout:"fullscreen"},args:{n:19},argTypes:{n:{control:"number"}}},r=c=>{const{n:t}=c,e=document.createElement("section");e.classList.add("workarea");const s=Array.from({length:t}).map((z,u)=>{const n=u+1;return n%5===0&&n%3===0?"FizzBuzz":n%3===0?"Fizz":n%5===0?"Buzz":n}).join(`
 `);return e.innerHTML=`
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>FizzBuzz</h1>
   
   <p>Input</p>
   <nn-code>Number of items: ${t}</nn-code>
 
   <p>Solution</p>
-  <nn-code>${o(`Array.from({
+  <nn-code>${o.compressText(`Array.from({
   length: n,
 })
 .map((n, i) => {
@@ -20,9 +20,9 @@ import{c as o}from"./main-CGAxX0ND.js";/* empty css             */const f={param
 .join('')`)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${o(`${z}`)}</nn-code>
+  <nn-code>${o.compressText(`${s}`)}</nn-code>
 </nn-caja>
-`,e};var i,c,p;r.parameters={...r.parameters,docs:{...(i=r.parameters)==null?void 0:i.docs,source:{originalSource:`args => {
+`,e};var i,p,a;r.parameters={...r.parameters,docs:{...(i=r.parameters)==null?void 0:i.docs,source:{originalSource:`args => {
   const {
     n
   } = args;
@@ -38,14 +38,14 @@ import{c as o}from"./main-CGAxX0ND.js";/* empty css             */const f={param
     return p;
   }).join('\\n');
   container.innerHTML = \`
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>FizzBuzz</h1>
   
   <p>Input</p>
   <nn-code>Number of items: \${n}</nn-code>
 
   <p>Solution</p>
-  <nn-code>\${compressText(\`Array.from({
+  <nn-code>\${Spirit.compressText(\`Array.from({
   length: n,
 })
 .map((n, i) => {
@@ -58,8 +58,8 @@ import{c as o}from"./main-CGAxX0ND.js";/* empty css             */const f={param
 .join('')\`)}</nn-code>
 
   <p>Output</p>
-  <nn-code>\${compressText(\`\${result}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${result}\`)}</nn-code>
 </nn-caja>
 \`;
   return container;
-}`,...(p=(c=r.parameters)==null?void 0:c.docs)==null?void 0:p.source}}};const l=["FizzBuzz"];export{r as FizzBuzz,l as __namedExportsOrder,f as default};
+}`,...(a=(p=r.parameters)==null?void 0:p.docs)==null?void 0:a.source}}};const l=["FizzBuzz"];export{r as FizzBuzz,l as __namedExportsOrder,f as default};

@@ -1,12 +1,12 @@
-import{c as r}from"./main-CGAxX0ND.js";/* empty css             */const p={parameters:{layout:"fullscreen"},args:{str:"abcdefedcba"},argTypes:{str:{control:"text"}}};function l(e){return e.split("").map((n,o)=>n===e[e.length-o-1]).reduce((n,o)=>n&&o)}const t=e=>{const{str:s}=e,n=document.createElement("section");return n.classList.add("workarea"),n.innerHTML=`
-<nn-caja padding="4" size="1200">
+import{S as r}from"./main-DjYwuoDZ.js";/* empty css             */const u={parameters:{layout:"fullscreen"},args:{str:"abcdefedcba"},argTypes:{str:{control:"text"}}};function d(e){return e.split("").map((n,o)=>n===e[e.length-o-1]).reduce((n,o)=>n&&o)}const t=e=>{const{str:s}=e,n=document.createElement("section");return n.classList.add("workarea"),n.innerHTML=`
+<nn-caja padding="1rem" max-width="1200px">
   <h1>Palindrome Checker</h1>
   
   <p>Input</p>
-  <nn-code>${r(`[str]: ${s}`)}</nn-code>
+  <nn-code>${r.compressText(`[str]: ${s}`)}</nn-code>
 
   <p>Solution 1</p>
-  <nn-code>${r(`
+  <nn-code>${r.compressText(`
 function isPalindrome(str) {
   let result = true
   for (let c = 0; c < str.length; c++) {
@@ -19,7 +19,7 @@ function isPalindrome(str) {
 `)}</nn-code>
 
 <p>Solution 2</p>
-  <nn-code>${r(`
+  <nn-code>${r.compressText(`
 function isPalindrome(str) {
   const result = str
     .split('')
@@ -31,7 +31,7 @@ function isPalindrome(str) {
 `)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${r(`${l(s)}`)}</nn-code>
+  <nn-code>${r.compressText(`${d(s)}`)}</nn-code>
 </nn-caja>
 `,n};var c,a,i;t.parameters={...t.parameters,docs:{...(c=t.parameters)==null?void 0:c.docs,source:{originalSource:`args => {
   const {
@@ -40,14 +40,14 @@ function isPalindrome(str) {
   const container = document.createElement('section');
   container.classList.add('workarea');
   container.innerHTML = \`
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>Palindrome Checker</h1>
   
   <p>Input</p>
-  <nn-code>\${compressText(\`[str]: \${str}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`[str]: \${str}\`)}</nn-code>
 
   <p>Solution 1</p>
-  <nn-code>\${compressText(\`
+  <nn-code>\${Spirit.compressText(\`
 function isPalindrome(str) {
   let result = true
   for (let c = 0; c < str.length; c++) {
@@ -60,7 +60,7 @@ function isPalindrome(str) {
 \`)}</nn-code>
 
 <p>Solution 2</p>
-  <nn-code>\${compressText(\`
+  <nn-code>\${Spirit.compressText(\`
 function isPalindrome(str) {
   const result = str
     .split('')
@@ -72,8 +72,8 @@ function isPalindrome(str) {
 \`)}</nn-code>
 
   <p>Output</p>
-  <nn-code>\${compressText(\`\${isPalindrome(str)}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${isPalindrome(str)}\`)}</nn-code>
 </nn-caja>
 \`;
   return container;
-}`,...(i=(a=t.parameters)==null?void 0:a.docs)==null?void 0:i.source}}};const m=["Palindrome"];export{t as Palindrome,m as __namedExportsOrder,p as default};
+}`,...(i=(a=t.parameters)==null?void 0:a.docs)==null?void 0:i.source}}};const m=["Palindrome"];export{t as Palindrome,m as __namedExportsOrder,u as default};

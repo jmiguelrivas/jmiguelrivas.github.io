@@ -1,7 +1,7 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import { compressText } from '../../0_global/js/nano_spirit.js'
+import Spirit from '../../0_global/js/nano_spirit.js'
 
 export default {
   parameters: {
@@ -32,14 +32,14 @@ export const Palindrome = args => {
   container.classList.add('workarea')
 
   container.innerHTML = `
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>Palindrome Checker</h1>
   
   <p>Input</p>
-  <nn-code>${compressText(`[str]: ${str}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`[str]: ${str}`)}</nn-code>
 
   <p>Solution 1</p>
-  <nn-code>${compressText(`
+  <nn-code>${Spirit.compressText(`
 function isPalindrome(str) {
   let result = true
   for (let c = 0; c < str.length; c++) {
@@ -52,7 +52,7 @@ function isPalindrome(str) {
 `)}</nn-code>
 
 <p>Solution 2</p>
-  <nn-code>${compressText(`
+  <nn-code>${Spirit.compressText(`
 function isPalindrome(str) {
   const result = str
     .split('')
@@ -64,7 +64,7 @@ function isPalindrome(str) {
 `)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${compressText(`${isPalindrome(str)}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`${isPalindrome(str)}`)}</nn-code>
 </nn-caja>
 `
   return container

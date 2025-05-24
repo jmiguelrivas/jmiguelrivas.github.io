@@ -2,7 +2,7 @@ import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
 
 const template = `
-  <nn-caja padding="4" size="900">
+  <nn-caja padding="1rem" max-width="900px">
     <header>
       <h1>Miguel Rivas</h1>
       <p>Frontend Developer</p>

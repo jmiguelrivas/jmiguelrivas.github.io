@@ -102,7 +102,7 @@ const template = `
 
 <dialog>
   <nn-desplazador>
-    <nn-caja padding="8">
+    <nn-caja padding="2rem">
       ${readme}
     </nn-caja>
   </nn-desplazador>

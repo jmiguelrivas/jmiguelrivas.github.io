@@ -1,9 +1,7 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import {
-  compressText
-} from '../../0_global/js/nano_spirit.js'
+import Spirit from '../../0_global/js/nano_spirit.js'
 
 export default {
   parameters: {
@@ -19,9 +17,7 @@ export default {
   },
 }
 export const StringReverse = args => {
-  const {
-    str
-  } = args
+  const { str } = args
   const container = document.createElement('section')
   container.classList.add('workarea')
 
@@ -31,20 +27,20 @@ export const StringReverse = args => {
     .join('')
 
   container.innerHTML = `
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>String Reverse</h1>
 
   <p>Input</p>
-  <nn-code>${compressText(`${str}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`${str}`)}</nn-code>
   
   <p>Solution</p>
-  <nn-code>${compressText(`str
+  <nn-code>${Spirit.compressText(`str
  .split('')
  .sort(() => -1)
  .join('')`)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${compressText(`${result}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`${result}`)}</nn-code>
 </nn-caja>
 `
   return container

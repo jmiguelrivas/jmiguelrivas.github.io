@@ -1,4 +1,4 @@
-import{c as o}from"./main-CGAxX0ND.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},a=`
+import{S as i}from"./main-DjYwuoDZ.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},o=`
 nn-caja.preview {
   background: #b28256;
   display: flex;
@@ -120,31 +120,31 @@ nn-caja.preview {
     &.c01 {
       top: -5px;
       left: 60px;
-      transform: rotate(-80deg);
+      rotate: -80deg;
     }
 
     &.c02 {
       bottom: 0px;
       left: 8px;
-      transform: rotate(-20deg);
+      rotate: -20deg;
     }
 
     &.c03 {
       bottom: 8px;
       left: 43px;
-      transform: rotate(-10deg);
+      rotate: -10deg;
     }
 
     &.c04 {
       bottom: 0px;
       right: 10px;
-      transform: rotate(20deg);
+      rotate: 20deg;
     }
 
     &.c05 {
       top: 5px;
       left: 10px;
-      transform: rotate(-20deg);
+      rotate: -20deg;
     }
   }
 
@@ -178,42 +178,42 @@ nn-caja.preview {
 
   20% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   30% {
     top: -40px;
-    transform: rotate(-10deg);
+    rotate: -10deg;
   }
 
   40% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   50% {
     top: -20px;
-    transform: rotate(6deg);
+    rotate: 6deg;
   }
 
   60% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   70% {
     top: 0px;
-    transform: rotate(-2deg);
+    rotate: -2deg;
   }
 
   80% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   90% {
     top: 0px;
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 }
 
@@ -284,13 +284,13 @@ nn-caja.preview {
     opacity: 1;
   }
 }
-`,p=Array.from({length:15}).map(d=>'<div class="crack"></div>').join(""),i=`
-<nn-caja padding="4" class="preview">
+`,r=Array.from({length:15}).map(d=>'<div class="crack"></div>').join(""),a=`
+<nn-caja padding="1rem" class="preview">
   <div class="box">
     <div class="shadow"></div>
     <div class="bottle">
       <div class="cap">
-        ${p}
+        ${r}
         <div class="level"></div>
       </div>
       <div class="inner_bottle">
@@ -306,30 +306,30 @@ nn-caja.preview {
     </div>
   </div>
 </nn-caja>`,t=d=>{const e=document.createElement("section");return e.classList.add("workarea"),e.innerHTML+=`
-<style>${a}</style>
-${i}
+<style>${o}</style>
+${a}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>${o(`${a}`)}</nn-code>
+  <nn-code>${i.compressText(`${o}`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>${o(`${i}`)}</nn-code>
+  <nn-code>${i.compressText(`${a}`)}</nn-code>
   </nn-caja>
-`,e};var s,n,r;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`args => {
+`,e};var s,n,p;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`args => {
   const container = document.createElement('section');
   container.classList.add('workarea');
   container.innerHTML += \`
 <style>\${style}</style>
 \${html}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>\${compressText(\`\${style}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${style}\`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>\${compressText(\`\${html}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${html}\`)}</nn-code>
   </nn-caja>
 \`;
   return container;
-}`,...(r=(n=t.parameters)==null?void 0:n.docs)==null?void 0:r.source}}};const g=["Pills"];export{t as Pills,g as __namedExportsOrder,h as default};
+}`,...(p=(n=t.parameters)==null?void 0:n.docs)==null?void 0:p.source}}};const g=["Pills"];export{t as Pills,g as __namedExportsOrder,h as default};

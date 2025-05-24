@@ -1,7 +1,7 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import { compressText } from '../../0_global/js/nano_spirit.js'
+import Spirit from '../../0_global/js/nano_spirit.js'
 
 export default {
   args: {
@@ -63,7 +63,7 @@ export const BounceRange = args => {
   container.classList.add('workarea')
 
   container.innerHTML = `
-  <nn-caja padding="4" size="1200">
+  <nn-caja padding="1rem" max-width="1200px">
     <h2>Bounce Range</h2>
     <p>This experiment simplifies a range that oscillates between a minimum and maximum value using sine functions.</p>
 
@@ -76,7 +76,7 @@ export const BounceRange = args => {
 
     <canvas id="bounce-canvas" height="300" style="width: 100%; margin-bottom: 1rem;"></canvas>
 
-    <nn-code>${compressText(`
+    <nn-code>${Spirit.compressText(`
 function limitBounce({ min, max, value }) {
   const degreesToRadians = Math.PI / 180
 
@@ -99,7 +99,7 @@ function limitBounce({ min, max, value }) {
 
       <p>For example, if the maximum is 1200, it will take 1200 steps to reach the limit.</p>
 
-      <nn-code>${compressText(`
+      <nn-code>${Spirit.compressText(`
 const max = ${max}
 const min = ${min}
 /* 90 is the peak value for the sine function; beyond that, it begins to decrease. */

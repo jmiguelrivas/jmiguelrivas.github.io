@@ -1,9 +1,7 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import {
-  compressText
-} from '../../0_global/js/nano_spirit.js'
+import Spirit from '../../0_global/js/nano_spirit.js'
 
 export default {
   parameters: {
@@ -34,23 +32,20 @@ function isAnagram(str1, str2) {
 }
 
 export const Anagram = args => {
-  const {
-    str1,
-    str2
-  } = args
+  const { str1, str2 } = args
   const container = document.createElement('section')
   container.classList.add('workarea')
 
   container.innerHTML = `
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>Anagram Checker</h1>
 
   <p>Input</p>
-  <nn-code>${compressText(`[str1]: "${str1}" = "${processWord(str1)}"`)}</nn-code>
-  <nn-code>${compressText(`[str2]: "${str2}" = "${processWord(str2)}"`)}</nn-code>
+  <nn-code>${Spirit.compressText(`[str1]: "${str1}" = "${processWord(str1)}"`)}</nn-code>
+  <nn-code>${Spirit.compressText(`[str2]: "${str2}" = "${processWord(str2)}"`)}</nn-code>
   
   <p>Solution</p>
-  <nn-code>${compressText(`
+  <nn-code>${Spirit.compressText(`
 function processWord(str) {
   return str
     .split('')
@@ -68,7 +63,7 @@ function isAnagram(str1, str2) {
     `)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${compressText(`"${processWord(str1)}" = "${processWord(str2)}" = ${isAnagram(str1, str2)}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`"${processWord(str1)}" = "${processWord(str2)}" = ${isAnagram(str1, str2)}`)}</nn-code>
 </nn-caja>
 `
   return container

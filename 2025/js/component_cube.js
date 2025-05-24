@@ -6,7 +6,7 @@ import { OrbitControls } from '../../0_global/modules/OrbitControls.js'
 
 const template = `
 <div id="cube"></div>
-<nn-fila gap="2">
+<nn-fila gap=".5rem">
   <nn-pilar>
     <button id="grid" role="button" class="btn shamrock" data-color="hsl(149deg, 61%, 51%)">
       Toggle Grid

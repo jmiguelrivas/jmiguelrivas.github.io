@@ -1,5 +1,5 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
-import { compressText } from '../../0_global/js/nano_spirit.js'
+import Spirit from '../../0_global/js/nano_spirit.js'
 import { tool } from './db_tools.js'
 
 const tools = [
@@ -114,7 +114,7 @@ ${features}
 <p>This web component provides a visually appealing and interactive way to display code snippets for JavaScript, HTML, and CSS. Designed to enhance the standard code tag, it adds syntax highlighting with vibrant colors, making code easier to read and understand at a glance.</p>
 
 <nn-code>
-${compressText(vitest)}
+${Spirit.compressText(vitest)}
 </nn-code>
 
 <h4>Key Features</h4>

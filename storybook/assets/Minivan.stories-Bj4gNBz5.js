@@ -1,4 +1,4 @@
-import{c as i}from"./main-CGAxX0ND.js";/* empty css             */const l={parameters:{layout:"fullscreen"},controls:{disable:!0}},n=`
+import{S as o}from"./main-DjYwuoDZ.js";/* empty css             */const l={parameters:{layout:"fullscreen"},controls:{disable:!0}},n=`
 nn-caja.preview {
   background: #224157;
   display: flex;
@@ -229,7 +229,7 @@ nn-caja.preview {
   }
 }
 `,p=Array.from({length:8}).map((d,t)=>`<div class="air_dust dust0${t+1}"></div>`).join(""),e=`
-<nn-caja padding="4" class="preview">
+<nn-caja padding="1rem" class="preview">
   <div id="minibus">
     <div class="window w01"></div>
     <div class="window w03">
@@ -248,31 +248,31 @@ nn-caja.preview {
     <div class="bumper back"></div>
     <div class="shadow"></div>
   </div>
-</nn-caja>`,o=d=>{const t=document.createElement("section");return t.classList.add("workarea"),t.innerHTML+=`
+</nn-caja>`,i=d=>{const t=document.createElement("section");return t.classList.add("workarea"),t.innerHTML+=`
 <style>${n}</style>
 ${e}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>${i(`${n}`)}</nn-code>
+  <nn-code>${o.compressText(`${n}`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>${i(`${e}`)}</nn-code>
+  <nn-code>${o.compressText(`${e}`)}</nn-code>
 </nn-caja>
-`,t};var r,s,a;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`args => {
+`,t};var r,s,a;i.parameters={...i.parameters,docs:{...(r=i.parameters)==null?void 0:r.docs,source:{originalSource:`args => {
   const container = document.createElement('section');
   container.classList.add('workarea');
   container.innerHTML += \`
 <style>\${style}</style>
 \${html}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>\${compressText(\`\${style}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${style}\`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>\${compressText(\`\${html}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${html}\`)}</nn-code>
 </nn-caja>
 \`;
   return container;
-}`,...(a=(s=o.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};const h=["Minivan"];export{o as Minivan,h as __namedExportsOrder,l as default};
+}`,...(a=(s=i.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};const m=["Minivan"];export{i as Minivan,m as __namedExportsOrder,l as default};

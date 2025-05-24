@@ -1,7 +1,7 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import { compressText } from '../../0_global/js/nano_spirit.js'
+import Spirit from '../../0_global/js/nano_spirit.js'
 
 export default {
   parameters: {
@@ -373,7 +373,7 @@ const holes = Array.from({
   .join('')
 
 const html = `
-<nn-caja padding="4" class="preview">
+<nn-caja padding="1rem" class="preview">
   <div id="background">
     <div class="stripe"></div>
     <div class="stripe"></div>
@@ -480,12 +480,12 @@ export const Window = args => {
 <style>${style}</style>
 ${html}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>${compressText(`${style}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`${style}`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>${compressText(`${html}`)}</nn-code>
+  <nn-code>${Spirit.compressText(`${html}`)}</nn-code>
 </nn-caja>
 `
   return container

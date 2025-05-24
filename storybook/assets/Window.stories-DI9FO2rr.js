@@ -1,4 +1,4 @@
-import{c as a}from"./main-CGAxX0ND.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},t=`
+import{S as a}from"./main-DjYwuoDZ.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},t=`
 nn-caja.preview {
   --doorColor: #04aaea;
   --hingeColor: #8e760e;
@@ -351,7 +351,7 @@ nn-caja.preview {
   }
 }
 `,r=Array.from({length:18}).map(c=>'<div class="hole"></div>').join(""),e=`
-<nn-caja padding="4" class="preview">
+<nn-caja padding="1rem" class="preview">
   <div id="background">
     <div class="stripe"></div>
     <div class="stripe"></div>
@@ -452,12 +452,12 @@ nn-caja.preview {
 <style>${t}</style>
 ${e}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>${a(`${t}`)}</nn-code>
+  <nn-code>${a.compressText(`${t}`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>${a(`${e}`)}</nn-code>
+  <nn-code>${a.compressText(`${e}`)}</nn-code>
 </nn-caja>
 `,i};var s,d,n;o.parameters={...o.parameters,docs:{...(s=o.parameters)==null?void 0:s.docs,source:{originalSource:`args => {
   const container = document.createElement('section');
@@ -466,12 +466,12 @@ ${e}
 <style>\${style}</style>
 \${html}
 
-<nn-caja padding="4" size="1200">
+<nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>\${compressText(\`\${style}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${style}\`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>\${compressText(\`\${html}\`)}</nn-code>
+  <nn-code>\${Spirit.compressText(\`\${html}\`)}</nn-code>
 </nn-caja>
 \`;
   return container;

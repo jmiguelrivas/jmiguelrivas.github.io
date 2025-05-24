@@ -538,7 +538,7 @@ export const Iconos = args => {
   const container = document.createElement('section')
   container.classList.add('workarea')
   container.innerHTML = `
-  <nn-caja padding="4">
+  <nn-caja padding="1rem">
     <ul>
       ${generateIcons()}
     </ul>
