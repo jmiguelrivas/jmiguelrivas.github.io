@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.konva, tool.blender, tool.inkscape, tool.vue2]
-      .map(t => `<li>${t}</li>`)
+      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
       .join('')
 
     #template = `
@@ -19,7 +19,7 @@ customElements.define(
         This prototype blends 3D design with 2D performance techniques to create a lightweight, immersive experience showcasing all the places where I’ve worked and studied, as detailed in my résumé.
       </blockquote>
 
-      <ul class="pill-container">
+      <ul class="flex-row">
       ${this.#tools}
       </ul>
 

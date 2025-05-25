@@ -16,6 +16,9 @@ dialog {
 
     li {
       flex-grow: 1;
+      > * {
+        width: 100%;
+      }
     }
   }
 
@@ -67,12 +70,6 @@ dialog {
 
   nn-desplazador {
     max-height: calc(100vh - 205px);
-
-    nn-caja {
-      display: flex;
-      flex-flow: column;
-      gap: 2rem;
-    }
   }
 
   &::backdrop {

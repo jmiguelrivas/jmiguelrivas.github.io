@@ -2,7 +2,7 @@ import { getPrefix } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
 
 const tools = [tool.vue3, tool.unoCss, tool.storybook]
-  .map(t => `<li>${t}</li>`)
+  .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
   .join('')
 
 const contributions = [
@@ -21,7 +21,7 @@ const template = `
 </blockquote>
 
 <h3>Provider App</h3>
-<ul class="pill-container">
+<ul class="flex-row">
   ${tools}
 </ul>
 

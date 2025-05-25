@@ -5,7 +5,7 @@ import { tool } from './db_tools.js'
 const color = new gColor('purple-heart', '#7d32b0')
 
 const tools = [tool.vue2, tool.sass, tool.rails, tool.nodeModule]
-  .map(t => `<li>${t}</li>`)
+  .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
   .join('')
 
 const features = [
@@ -52,7 +52,7 @@ const template = `
 
 <h3>Popkern</h3>
 
-<ul class="pill-container">
+<ul class="flex-row">
   ${tools}
 </ul>
 

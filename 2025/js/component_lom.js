@@ -8,14 +8,20 @@ customElements.define(
       super()
     }
 
-    #tools = [tool.css, tool.webComponents, tool.three, tool.vitest, tool.inkscape]
-      .map(t => `<li>${t}</li>`)
+    #tools = [
+      tool.css,
+      tool.webComponents,
+      tool.three,
+      tool.vitest,
+      tool.inkscape,
+    ]
+      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
       .join('')
 
     #template = `
       <h3>Legend of Mushroom :: Charts and Tools</h3>
 
-      <ul class="pill-container">
+      <ul class="flex-row">
       ${this.#tools}
       </ul>
 

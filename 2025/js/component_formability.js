@@ -2,7 +2,7 @@ import { getPrefix } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
 
 const tools = [tool.vue2, tool.sass, tool.rails, tool.cucumber]
-  .map(t => `<li>${t}</li>`)
+  .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
   .join('')
 
 const template = `
@@ -12,7 +12,7 @@ const template = `
 
 <h3>Formability</h3>
 
-<ul class="pill-container">
+<ul class="flex-row">
   ${tools}
 </ul>
 

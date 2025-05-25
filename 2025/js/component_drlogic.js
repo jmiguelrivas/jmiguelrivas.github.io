@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.bootstrap, tool.sass, tool.rails, tool.jQuery, tool.haml]
-      .map(t => `<li>${t}</li>`)
+      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
       .join('')
 
     #features = [
@@ -44,7 +44,7 @@ customElements.define(
 
       <h3>DrLogic</h3>
 
-      <ul class="pill-container">
+      <ul class="flex-row">
       ${this.#tools}
       </ul>
 

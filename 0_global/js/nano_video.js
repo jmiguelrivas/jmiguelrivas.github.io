@@ -11,17 +11,7 @@ window.customElements.define(
       super()
       this.attachShadow({ mode: 'open' })
       this.shadowRoot.innerHTML = `
-        <style>
-          :host {
-            display: block;
-            max-width: 100%;
-          }
-
-          video {
-            width: 100%;
-            height: auto;
-          }
-        </style>
+        <link rel="stylesheet" href="/0_global/css/nano_video.css">
         <video controls preload="metadata" loading="lazy">
           <source />
           Your browser does not support the video tag.

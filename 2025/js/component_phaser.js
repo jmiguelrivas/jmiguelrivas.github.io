@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.phaser, tool.inkscape]
-      .map(t => `<li>${t}</li>`)
+      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
       .join('')
 
     #template = `
@@ -19,7 +19,7 @@ customElements.define(
         This was a solo prototype focused on gameplay and visual design exploration.
       </blockquote>
 
-      <ul class="pill-container">
+      <ul class="flex-row">
       ${this.#tools}
       </ul>
 

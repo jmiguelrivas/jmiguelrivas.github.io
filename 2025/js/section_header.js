@@ -1,49 +1,48 @@
-import {
-  getPrefix
-} from '../../0_global/js/global_helpers.js'
+import { getPrefix } from '../../0_global/js/global_helpers.js'
 
 const readme = `
 <h2>Portfolio 2025</h2>
 
 <ul class="btn-group">
   <li>
-    <a
-      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+    <nn-btn
+      color="hsl(149deg, 61%, 51%)"
       href="/storybook/"
       target="_blank"
       >Storybook Documentation</a
     >
   </li>
   <li>
-    <a
-      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+    <nn-btn
+      color="hsl(149deg, 61%, 51%)"
       href="/vitest/"
       target="_blank"
       >Vitest Report</a
     >
   </li>
   <li>
-    <a
-      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+    <nn-btn
+      color="hsl(149deg, 61%, 51%)"
       href="/github_log"
       target="_self"
       >Commit Log</a
     >
   </li>
   <li>
-    <a
-      class="btn shamrock" data-color="hsl(149deg, 61%, 51%)"
+    <nn-btn
+      color="hsl(149deg, 61%, 51%)"
       href="https://github.com/jmiguelrivas/jmiguelrivas.github.io"
       target="_blank"
       >Github</a
     >
   </li>
 </ul>
-<button autofocus class="btn sunglow hide-dialog-btn" data-color="hsl(47deg, 100%, 57%)">Close Dialog</button>
+<nn-btn autofocus class="hide-dialog-btn" color="hsl(47deg, 100%, 57%)">Close Dialog</nn-btn>
 `
 
-const trees = Array.from({
-    length: 200
+const trees = Array.from(
+  {
+    length: 200,
   },
   (_, i) => `<img src="./img/tree.svg" class="tree t${i + 1}"></img>`
 ).join('')
@@ -97,12 +96,12 @@ const template = `
   </h2>
   <p>Passionate frontend developer with a strong focus on building custom web applications mostly using <em>Vue2</em> and <em>Vue3</em> with deep knowledge about <em>React</em> and <em>Web Components</em>.</p>
   <p>With years of experience across various industries, I've contributed to UI libraries, optimized performance, and collaborated closely with cross functional teams to deliver seamless user experiences. My expertise includes modern frontend frameworks, component-driven development, and testing methodologies using tools like <em>Storybook</em> and <em>Vitest</em>.</p>
-  <button class="btn show-dialog-btn sunglow" data-color="hsl(47deg, 100%, 57%)">Research behind this website</button>
+  <nn-btn class="show-dialog-btn" color="hsl(47deg, 100%, 57%)">Research behind this website</nn-btn>
 </div>
 
 <dialog>
   <nn-desplazador>
-    <nn-caja padding="2rem">
+    <nn-caja padding="2rem" class="block-separator">
       ${readme}
     </nn-caja>
   </nn-desplazador>
@@ -135,6 +134,4 @@ class Header extends HTMLElement {
 
 window.customElements.define(getPrefix('header'), Header)
 
-export {
-  data
-}
+export { data }

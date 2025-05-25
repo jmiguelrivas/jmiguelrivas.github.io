@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.sass, tool.jQuery, tool.jade, tool.facebook, tool.grunt]
-      .map(t => `<li>${t}</li>`)
+      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
       .join('')
 
     #template = `
@@ -19,7 +19,7 @@ customElements.define(
 
       <h3>Presidente :: Destapa El Coro</h3>
 
-      <ul class="pill-container">
+      <ul class="flex-row">
       ${this.#tools}
       </ul>
 

@@ -1,5 +1,5 @@
-@import url("./nano.css");
-@import url("./iconos.css");
+@import url('./nano.css');
+@import url('./iconos.css');
 @import url('../fonts/Montserrat/Montserrat.css');
 @import url('../fonts/Icomoon/Icomoon.css');
 /* @import url('../fonts/Quicksand/Quicksand.css'); */
@@ -34,7 +34,7 @@ mr-app {
   display: block;
   height: 100svh;
 
-  >nn-fila {
+  > nn-fila {
     height: 100%;
   }
 
@@ -79,7 +79,7 @@ mr-app {
   padding: 0;
   margin: 0;
   background-color: transparent;
-  color: hsla(0, 0%, 100%, .4);
+  color: hsla(0, 0%, 100%, 0.4);
   text-decoration: none;
   width: 35px;
   height: 35px;
@@ -89,7 +89,7 @@ mr-app {
   position: relative;
 
   nn-icono,
-  &>.tooltip {
+  & > .tooltip {
     pointer-events: none;
   }
 
@@ -103,13 +103,13 @@ mr-app {
     padding: 8px;
     display: flex;
     visibility: hidden;
-    gap: .5rem;
+    gap: 0.5rem;
     align-items: center;
     flex-direction: column;
 
     .tags {
       display: flex;
-      gap: .5rem;
+      gap: 0.5rem;
 
       &:empty {
         display: none;
@@ -118,13 +118,13 @@ mr-app {
   }
 
   &:hover {
-    >.tooltip {
+    > .tooltip {
       visibility: visible;
     }
 
     &:not(div) {
       cursor: pointer;
-      background-color: hsla(0, 0%, 100%, .1);
+      background-color: hsla(0, 0%, 100%, 0.1);
       color: #fff;
     }
   }
@@ -152,6 +152,25 @@ blockquote {
   gap: 3rem;
   padding: 1.5rem 0;
   align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
 }
 
 /* -------------- layers */

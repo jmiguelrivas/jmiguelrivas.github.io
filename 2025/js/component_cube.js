@@ -8,14 +8,14 @@ const template = `
 <div id="cube"></div>
 <nn-fila gap=".5rem">
   <nn-pilar>
-    <button id="grid" role="button" class="btn shamrock" data-color="hsl(149deg, 61%, 51%)">
+    <nn-btn id="grid" color="hsl(149deg, 61%, 51%)">
       Toggle Grid
-    </button>
+    </nn-btn>
   </nn-pilar>
   <nn-pilar>
-    <button id="guides" role="button" class="btn sunglow" data-color="hsl(47deg, 100%, 57%)">
+    <nn-btn id="guides" color="hsl(47deg, 100%, 57%)">
       Toggle Guides
-    </button>
+    </nn-btn>
   </nn-pilar>
 </nn-fila>
 `
