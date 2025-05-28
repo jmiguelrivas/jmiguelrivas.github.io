@@ -1,10 +1,3 @@
 import './app.js'
-import './nano_pilar.js'
-import './nano_fila.js'
-import './nano_caja.js'
-import './nano_icono.js'
-import './nano_desplazador.js'
-import './nano_spirit.js'
-import './nano_video.js'
-import './nano_btn.js'
-import './nano_pill.js'
+
+import "https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.0.0/nano-grid.js"

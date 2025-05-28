@@ -167,7 +167,7 @@ const input = `
 </svg>
   
   `
-console.log(nanoSVG.parse(input))
+// console.log(nanoSVG.parse(input))
 
 // const obj = {
 //   tag: 'g',

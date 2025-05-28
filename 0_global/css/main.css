@@ -1,8 +1,8 @@
-@import url('./nano.css');
+@import url('https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.0.0/nano-grid.css');
+
 @import url('./iconos.css');
 @import url('../fonts/Montserrat/Montserrat.css');
 @import url('../fonts/Icomoon/Icomoon.css');
-/* @import url('../fonts/Quicksand/Quicksand.css'); */
 
 html,
 body {

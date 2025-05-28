@@ -1,6 +1,6 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
-import Spirit from '../../0_global/js/nano_spirit.js'
 import { tool } from './db_tools.js'
+import { nnCode } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.0.0/nano-grid.js'
 
 const tools = [
   tool.vue3,
@@ -114,7 +114,7 @@ ${features}
 <p>This web component provides a visually appealing and interactive way to display code snippets for JavaScript, HTML, and CSS. Designed to enhance the standard code tag, it adds syntax highlighting with vibrant colors, making code easier to read and understand at a glance.</p>
 
 <nn-code>
-${Spirit.compressText(vitest)}
+${nnCode.compressText(vitest)}
 </nn-code>
 
 <h4>Key Features</h4>
