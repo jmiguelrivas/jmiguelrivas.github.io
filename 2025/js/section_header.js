@@ -9,6 +9,7 @@ const readme = `
       color="hsl(149deg, 61%, 51%)"
       href="/storybook/"
       target="_blank"
+      link
       >Storybook Documentation</a
     >
   </li>
@@ -17,6 +18,7 @@ const readme = `
       color="hsl(149deg, 61%, 51%)"
       href="/vitest/"
       target="_blank"
+      link
       >Vitest Report</a
     >
   </li>
@@ -25,12 +27,14 @@ const readme = `
       color="hsl(149deg, 61%, 51%)"
       href="/github_log"
       target="_self"
+      link
       >Commit Log</a
     >
   </li>
   <li>
     <nn-btn
       color="hsl(149deg, 61%, 51%)"
+      link
       href="https://github.com/jmiguelrivas/jmiguelrivas.github.io"
       target="_blank"
       >Github</a
