@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.bootstrap, tool.sass, tool.rails, tool.jQuery, tool.haml]
-      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
+      .map(t => `<li><nn-pill color="#88e2b4">${t}</nn-pill></li>`)
       .join('')
 
     #features = [

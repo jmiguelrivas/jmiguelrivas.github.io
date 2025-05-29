@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.sass, tool.jQuery, tool.jade, tool.facebook, tool.grunt]
-      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
+      .map(t => `<li><nn-pill color="#88e2b4">${t}</nn-pill></li>`)
       .join('')
 
     #template = `

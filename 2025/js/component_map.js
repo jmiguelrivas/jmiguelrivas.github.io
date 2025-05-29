@@ -9,7 +9,7 @@ customElements.define(
     }
 
     #tools = [tool.konva, tool.blender, tool.inkscape, tool.vue2]
-      .map(t => `<li><nn-pill color="var(--accent-color)">${t}</nn-pill></li>`)
+      .map(t => `<li><nn-pill color="#88e2b4">${t}</nn-pill></li>`)
       .join('')
 
     #template = `
