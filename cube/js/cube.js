@@ -14,10 +14,10 @@ import {
 
 const template = `
 <div class="controls">
-  <button id="grid" role="button" class="btn shamrock" data-color="hsl(149deg, 61%, 51%)">
+  <button id="grid" role="button" class="btn shamrock" data-color="#36ce80">
     Toggle Grid
   </button>
-  <button id="guides" role="button" class="btn sunglow" data-color="hsl(47deg, 100%, 57%)">
+  <button id="guides" role="button" class="btn sunglow" data-color="#FFCC33">
     Toggle Guides
   </button>
 </div>

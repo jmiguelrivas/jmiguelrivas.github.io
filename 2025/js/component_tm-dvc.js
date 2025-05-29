@@ -1,6 +1,6 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
-import { nnCode } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.0.0/nano-grid.js'
+import { nnCode } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.2.1/dist/nano-grid.js'
 
 const tools = [
   tool.vue3,

@@ -6,7 +6,7 @@ const readme = `
 <ul class="btn-group">
   <li>
     <nn-btn
-      color="hsl(149deg, 61%, 51%)"
+      color="#36ce80"
       href="/storybook/"
       target="_blank"
       link
@@ -15,7 +15,7 @@ const readme = `
   </li>
   <li>
     <nn-btn
-      color="hsl(149deg, 61%, 51%)"
+      color="#36ce80"
       href="/vitest/"
       target="_blank"
       link
@@ -24,7 +24,7 @@ const readme = `
   </li>
   <li>
     <nn-btn
-      color="hsl(149deg, 61%, 51%)"
+      color="#36ce80"
       href="/github_log"
       target="_self"
       link
@@ -33,7 +33,7 @@ const readme = `
   </li>
   <li>
     <nn-btn
-      color="hsl(149deg, 61%, 51%)"
+      color="#36ce80"
       link
       href="https://github.com/jmiguelrivas/jmiguelrivas.github.io"
       target="_blank"
@@ -41,7 +41,7 @@ const readme = `
     >
   </li>
 </ul>
-<nn-btn autofocus class="hide-dialog-btn" color="hsl(47deg, 100%, 57%)">Close Dialog</nn-btn>
+<nn-btn autofocus class="hide-dialog-btn" color="#FFCC33">Close Dialog</nn-btn>
 `
 
 const trees = Array.from(
@@ -100,10 +100,10 @@ const template = `
   </h2>
   <p>Passionate frontend developer with a strong focus on building custom web applications mostly using <em>Vue2</em> and <em>Vue3</em> with deep knowledge about <em>React</em> and <em>Web Components</em>.</p>
   <p>With years of experience across various industries, I've contributed to UI libraries, optimized performance, and collaborated closely with cross functional teams to deliver seamless user experiences. My expertise includes modern frontend frameworks, component-driven development, and testing methodologies using tools like <em>Storybook</em> and <em>Vitest</em>.</p>
-  <nn-btn class="show-dialog-btn" color="hsl(47deg, 100%, 57%)">Research behind this website</nn-btn>
+  <nn-btn class="show-dialog-btn" color="#FFCC33">Research behind this website</nn-btn>
 </div>
 
-<dialog>
+<dialog closedby="any">
   <nn-desplazador>
     <nn-caja padding="2rem" class="block-separator">
       ${readme}
