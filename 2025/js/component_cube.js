@@ -1,7 +1,6 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
 import * as THREE from '../../0_global/modules/three.module.min.js'
-import { wikiColors } from '../../0_global/js/db_wiki-colors.js'
-
+import { gColors } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.2.2/dist/gcolors.js'
 import { OrbitControls } from '../../0_global/modules/OrbitControls.js'
 
 const template = `
@@ -29,7 +28,7 @@ const data = {
   camera: undefined,
   scene: undefined,
   renderer: undefined,
-  colors: Object.values(wikiColors),
+  colors: Object.values(gColors),
   linesGroup: undefined,
   gridHelper: undefined,
   gridToggle: false,

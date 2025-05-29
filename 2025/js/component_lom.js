@@ -1,5 +1,6 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
+import { gColors } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.2.2/dist/gcolors.js'
 
 customElements.define(
   getPrefix('lom'),
@@ -15,7 +16,7 @@ customElements.define(
       tool.vitest,
       tool.inkscape,
     ]
-      .map(t => `<li><nn-pill color="#88e2b4">${t}</nn-pill></li>`)
+      .map(t => `<li><nn-pill color="${gColors.canary.hex}">${t}</nn-pill></li>`)
       .join('')
 
     #template = `

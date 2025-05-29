@@ -1,11 +1,11 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
-import { gColor } from '../../0_global/js/class_gcolor.js'
 import { tool } from './db_tools.js'
+import { gColors } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.2.2/dist/gcolors.js'
 
-const color = new gColor('purple-heart', '#7d32b0')
-
+const color = gColors['canary']
+console.log(gColors)
 const tools = [tool.vue2, tool.sass, tool.rails, tool.nodeModule]
-  .map(t => `<li><nn-pill color="#88e2b4">${t}</nn-pill></li>`)
+  .map(t => `<li><nn-pill color="${gColors.canary.hex}">${t}</nn-pill></li>`)
   .join('')
 
 const features = [
