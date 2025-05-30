@@ -1,6 +1,6 @@
 import { getPrefix } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
-import { gColors } from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@5.2.2/dist/gcolors.js'
+import gColors from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/gcolors.js'
 
 customElements.define(
   getPrefix('drlogic'),
