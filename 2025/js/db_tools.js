@@ -1,7 +1,7 @@
 import Enumerator from './class_enumerator.js'
 
 export const tool = {
-  html: 'HTML',
+  html: 'HTML5',
   erb: 'HTML/ERB',
   pug: 'Pug',
   jade: 'Pug',
@@ -11,7 +11,7 @@ export const tool = {
   canvas: 'Canvas',
   svg: 'SVG',
 
-  css: 'CSS',
+  css: 'CSS3',
   cssFull: 'CSS/SCSS/UnoCSS',
   sass: 'SCSS',
   scss: 'SCSS',
@@ -23,7 +23,7 @@ export const tool = {
   facebook: 'Facebook App',
 
   javascript: 'Javascript',
-  vue: 'Vue2/Vue3',
+  vue: 'Vue',
   vue2: 'Vue2',
   vue3: 'Vue3',
   angular: 'Angular',

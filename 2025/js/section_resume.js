@@ -1,31 +1,47 @@
 import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
 import { tool } from './db_tools.js'
+// import gColors from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/gcolors.js'
 
 const template = `
-  <nn-caja padding="1rem" max-width="900px">
-    <header>
+  <nn-caja padding="2rem" max-width="900px">
+    <section class="header">
       <h1>Miguel Rivas</h1>
       <p>Frontend Developer</p>
-    </header>
-    <nn-fila>
-      <nn-pilar size="30%" class="skills">
-        <h2>Contact</h2>
-        <address>
-          <dl></dl>
-        </address>
-        <h2>Skills</h2>
-        <ul></ul>
-      </nn-pilar>
-      <nn-pilar size="70%" class="experience">
-        <h2>Experience</h2>
-    </nn-fila>
-  </nn-caja>
+    </section>
+
+    <section>
+      <h2>SUMMARY</h2>  
+      <p>
+        Frontend Developer with 10+ years of experience building modern, performant web apps using Vue, React, and native Web Components. Strong background in UI systems, testing, and cross-team collaboration.
+      </p>
+    </section>
+
+    <section class="body">
+      
+      <h2>CONTACT</h2>
+      <ul class="contact"></ul>
+
+      <h2>SKiLLS</h2>
+      <ul class="skills"></ul>
+
+      <h2>EXPERIENCE</h2>
+      <div class="experience"></div>
+      
+      <h2>EDUCATION</h2>
+      <div class="education"></div>
+
+      <h2>PROJECTS</h2>
+      <div class="projects"></div>
+
+  </section>
 `
 const data = {
   attrs: [],
   skills: [
     tool.html,
-    tool.cssFull,
+    tool.css,
+    tool.sass,
+    tool.unoCss,
     tool.javascript,
     tool.vue,
     tool.react,
@@ -37,28 +53,40 @@ const data = {
   ],
   contact: {
     location: {
+      // icon: 'globe',
       label: 'Spokane, WA',
-      url: 'https://www.google.com/maps/place/Spokane,+WA/@47.7080732,-117.6633178,10z',
+      // url: 'https://www.google.com/maps/place/Spokane,+WA/@47.7080732,-117.6633178,10z',
     },
     email: {
+      // icon: 'envelope-o',
       label: 'miguelrivas57@proton.me',
       url: 'mailto:miguelrivas57@proton.me',
     },
-    'cell-phone': { label: '202-983-0839', url: 'tel:2029830839' },
+    'cell-phone': {
+      // icon: 'phone',/
+      label: '202-983-0839',
+      url: 'tel:2029830839',
+    },
     website: {
+      // icon: 'user',
       label: 'jmiguelrivas.github.io',
       url: 'https://jmiguelrivas.github.io',
     },
-    github: { label: 'jmiguelrivas', url: 'https://github.com/jmiguelrivas' },
+    github: {
+      // icon: 'github',
+      label: 'github@jmiguelrivas',
+      url: 'https://github.com/jmiguelrivas',
+    },
     linkedin: {
-      label: 'jemiguelrivas',
+      // icon: 'linkedin',
+      label: 'linkedin@jemiguelrivas',
       url: 'https://www.linkedin.com/in/jemiguelrivas/',
     },
   },
   experience: [
     {
       date: '2022/09/19',
-      company: 'Teamup',
+      name: 'Teamup',
       position: 'Frontend Developer',
       description: [
         // 'Implement foundational product design & design system concepts for reuse across the platform.',
@@ -70,7 +98,7 @@ const data = {
         // 'Developed tools to boost frontend development productivity and minimize friction.',
 
         'Developed elegant, responsive user interfaces utilizing modern frontend technologies, including Vue3 and UnoCSS, to deliver seamless user experiences.',
-        'Consuming a RESTful API with frontend components.',
+        'Integrated RESTful APIs using Vue 3 components to fetch and display dynamic data.',
         'Contributed to the creation of a UI frontend library used across the organization, promoting consistency and reusability in design and development.',
         'Performed comprehensive component testing and validation using Storybook and Vitest, achieving high reliability and consistency across features.',
         'Collaborated cross-functionally with Product Managers, UX Designers, and backend developers to simplify and enhance the user experience for non-technical audiences.',
@@ -78,7 +106,7 @@ const data = {
     },
     {
       date: '2018/04/01',
-      company: 'Enovational',
+      name: 'Enovational',
       position: 'Frontend Developer',
       description: [
         // `Build government apps with ${tool.html}/${tool.slim}, ${tool.sass}, ${tool.bootstrap} and ${tool.jQuery}/${tool.vue} on a ${tool.rails} environment with ${tool.webpack}.`,
@@ -93,7 +121,7 @@ const data = {
     },
     {
       date: '2017/07/01',
-      company: 'Plant Therapy',
+      name: 'Plant Therapy',
       position: 'Frontend Developer',
       noPrint: true,
       description: [
@@ -107,7 +135,7 @@ const data = {
     },
     {
       date: '2016/01/01',
-      company: 'Pixel Perfect Tree',
+      name: 'Pixel Perfect Tree',
       position: 'Frontend Developer',
       description: [
         // `Design and develop applications with ${tool.haml}, ${tool.sass}, ${tool.bootstrap}, ${tool.jQuery}/${tool.react} on a ${tool.rails} environment with ${tool.webpack}.`,
@@ -119,8 +147,9 @@ const data = {
     },
     {
       date: '2014/05/01',
-      company: 'Capital',
+      name: 'Capital',
       position: 'Frontend Developer',
+      noPrint: true,
       description: [
         // `Build applications with ${tool.pug}, ${tool.sass}, ${tool.jQuery} on a ${tool.php} environment with ${tool.grunt}.`,
         // `Create wireframes and users flow with ${tool.illustrator}.`,
@@ -135,7 +164,7 @@ const data = {
     },
     {
       date: '2013/07/15',
-      company: 'Avante Group',
+      name: 'Avante Group',
       position: 'Frontend Developer',
       noPrint: true,
       description: [
@@ -146,7 +175,7 @@ const data = {
     },
     {
       date: '2013/05/01',
-      company: 'Several Solutions',
+      name: 'Several Solutions',
       position: 'Graphic designer/Web Designer',
       noPrint: true,
       description: [
@@ -160,9 +189,11 @@ const data = {
         'Developed social media assets, including graphics and layouts, using Adobe Illustrator, Adobe Photoshop, and Adobe InDesign.',
       ],
     },
+  ],
+  education: [
     {
       date: '2009/09/01',
-      company: 'ITLA',
+      name: 'ITLA',
       position: 'Asociates of Art, Multimedia',
       description: [
         // 'Digital Illustration',
@@ -180,6 +211,23 @@ const data = {
       ],
     },
   ],
+  projects: [
+    {
+      date: '2021/03/17',
+      name: 'Nano Grid',
+      position: 'Creator/Maintainer',
+      link: 'https://nano-grid.github.io',
+      linkTitle: 'Nano Grid :: Website',
+      description: [
+        // 'Nano Grid is a lightweight set of custom elements designed to provide minimal yet powerful UI primitives without relying on any framework. Each component is built using native Web Components and encapsulates its behavior and styling, making it easy to drop into any project (React, Vue, Svelte, plain HTML, or otherwise).',
+        // 'These components embrace progressive enhancement, low overhead, and modern browser standards. They are declarative, styleable via CSS variables, and interoperable with design systems.',
+
+        'A lightweight set of native Web Components that serve as minimal yet powerful UI primitives. Built without any framework, Nano Grid components are encapsulated, framework-agnostic, and easily integrable into projects using React, Vue, Svelte, or plain HTML.',
+        'Designed component APIs and styling with performance and usability in mind.',
+        'Continuously maintained and updated.',
+      ],
+    },
+  ],
 }
 
 class Resume extends HTMLElement {
@@ -188,84 +236,97 @@ class Resume extends HTMLElement {
   }
 
   generateContact() {
-    const contact = this.querySelector('.skills dl')
+    const contact = this.querySelector('.contact')
+    const entries = Object.entries(data.contact)
 
-    Object.entries(data.contact).forEach(([key, value]) => {
-      createNode({
-        type: 'dt',
-        parent: contact,
-        text: key,
-      })
-
-      const dd = createNode({
-        type: 'dd',
+    entries.forEach(([key, value], index) => {
+      const li = createNode({
+        type: 'li',
         parent: contact,
       })
 
+      if (value.url) {
+        createNode({
+          type: 'a',
+          parent: li,
+          text: value.label,
+          attrs: {
+            target: '_blank',
+            href: value.url,
+          },
+        })
+      } else {
+        createNode({
+          type: 'span',
+          parent: li,
+          text: value.label,
+        })
+      }
+
+      if (index < entries.length - 1) {
+        createNode({
+          type: 'span',
+          parent: contact,
+          text: '•',
+          attrs: {
+            class: 'separator',
+            'aria-hidden': true,
+          },
+        })
+      }
+    })
+  }
+
+  generateSkills() {
+    const skills = this.querySelector('.skills')
+
+    data.skills.forEach(skill => {
+      const li = createNode({
+        type: 'li',
+        parent: skills,
+      })
+
       createNode({
-        type: 'a',
-        parent: dd,
-        text: value.label,
+        type: 'nn-pill',
+        parent: li,
+        text: skill,
         attrs: {
-          target: '_blank',
-          href: value.url,
+          color: '#cfe0eb',
         },
       })
     })
   }
 
-  generateSkills() {
-    const skills = this.querySelector('.skills ul')
+  generateArticles(selector, data) {
+    const experience = this.querySelector(selector)
 
-    data.skills.forEach(skill => {
-      createNode({
-        type: 'li',
-        parent: skills,
-        text: skill,
-      })
-    })
-  }
-
-  generateExperience() {
-    const experience = this.querySelector('.experience')
-
-    data.experience.forEach(exp => {
+    data.forEach(exp => {
       const article = createNode({
         type: 'article',
         parent: experience,
         attrs: {
-          class: exp.noPrint ? 'no-print' : ''
-        }
-      })
-
-      const icono = createNode({
-        type: 'nn-icono',
-        parent: article,
-        attrs: {
-          class: 'circle-o',
+          class: exp.noPrint ? 'no-print' : '',
         },
       })
 
       const h3 = createNode({
         type: 'h3',
         parent: article,
-        text: exp.company,
+        text: `${exp.position.toUpperCase()} - ${exp.name.toUpperCase()} | ${exp.date.split('/')[0]}`,
       })
 
-      const h4 = createNode({
-        type: 'h4',
-        parent: article,
-        text: exp.position,
-      })
-
-      const time = createNode({
-        type: 'time',
-        parent: h3,
-        text: `(${exp.date.split('/')[0]})`,
-        attrs: {
-          datetime: exp.date,
-        },
-      })
+      if (exp.link) {
+        createNode({
+          type: 'a',
+          parent: article,
+          text: exp.link,
+          attrs: {
+            href: exp.link,
+            target: '_BLANK',
+            class: 'website',
+          },
+        })
+      }
 
       const ul = createNode({
         type: 'ul',
@@ -284,9 +345,11 @@ class Resume extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = template
-    this.generateSkills()
-    this.generateExperience()
     this.generateContact()
+    this.generateSkills()
+    this.generateArticles('.experience', data.experience)
+    this.generateArticles('.education', data.education)
+    this.generateArticles('.projects', data.projects)
   }
 }
 
