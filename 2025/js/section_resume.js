@@ -9,14 +9,11 @@ const template = `
       <p>Frontend Developer</p>
     </section>
 
-    <section>
+    <section class="body">
       <h2>SUMMARY</h2>  
       <p>
         Frontend Developer with 10+ years of experience building modern, performant web apps using Vue, React, and native Web Components. Strong background in UI systems, testing, and cross-team collaboration.
       </p>
-    </section>
-
-    <section class="body">
       
       <h2>CONTACT</h2>
       <ul class="contact"></ul>
@@ -142,7 +139,7 @@ const data = {
         // `Collaborate with Full Stack Developers and Project Managers to improve usability.`,
 
         'Designed and developed applications with Haml, SCSS, Bootstrap, and jQuery/React on Ruby on Rails with Webpack.',
-        'Collaborated with Full Stack Developers and Project Managers to improve usability.',
+        // 'Collaborated with Full Stack Developers and Project Managers to improve usability.',
       ],
     },
     {
@@ -222,9 +219,18 @@ const data = {
         // 'Nano Grid is a lightweight set of custom elements designed to provide minimal yet powerful UI primitives without relying on any framework. Each component is built using native Web Components and encapsulates its behavior and styling, making it easy to drop into any project (React, Vue, Svelte, plain HTML, or otherwise).',
         // 'These components embrace progressive enhancement, low overhead, and modern browser standards. They are declarative, styleable via CSS variables, and interoperable with design systems.',
 
-        'A lightweight set of native Web Components that serve as minimal yet powerful UI primitives. Built without any framework, Nano Grid components are encapsulated, framework-agnostic, and easily integrable into projects using React, Vue, Svelte, or plain HTML.',
-        'Designed component APIs and styling with performance and usability in mind.',
-        'Continuously maintained and updated.',
+        // 'A lightweight set of native Web Components that serve as minimal yet powerful UI primitives. Built without any framework, Nano Grid components are encapsulated, framework-agnostic, and easily integrable into projects using React, Vue, Svelte, or plain HTML.',
+        // 'Designed component APIs and styling with performance and usability in mind.',
+        // 'Continuously maintained and updated.',
+
+        'A lightweight UI library of custom elements designed for framework-agnostic integration. Built with modern CSS standards and intended for maximum flexibility across multiple projects, including jmiguelrivas.github.io, lomdb.github.io, and Storybook documentation.',
+        // 'Developed 10 reusable Web Components without Shadow DOM, allowing global theming and consistent styling across projects.',
+        // 'Leveraged modern CSS features to simplify layout and responsiveness.',
+        'Leveraged modern CSS features such as nesting, variables, and logical properties to streamline structure and responsiveness.',
+        'Preparing for integration of upcoming features like :attr(), CSS mixins, and custom functions as browser support stabilizes.',
+        'Designed for easy integration in React, Vue, and plain HTML environments.',
+        'Structured for portability and minimal runtime overhead by avoiding framework lock-in and redundant styling.',
+        'Continuously iterating based on evolving CSS specs and browser support.',
       ],
     },
   ],
