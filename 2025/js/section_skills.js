@@ -1,4 +1,4 @@
-import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
+import { getPrefix, createNode } from './head.js'
 
 const template = `
   <ul></ul>

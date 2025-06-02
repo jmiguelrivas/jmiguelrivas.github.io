@@ -1,4 +1,4 @@
-import { getPrefix } from '../../0_global/js/global_helpers.js'
+import { getPrefix } from './head.js'
 
 customElements.define(
   getPrefix('palumba'),

@@ -1,7 +1,4 @@
-import { getPrefix } from '../../0_global/js/global_helpers.js'
-import { tool } from './db_tools.js'
-import gColors from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/gcolors.js'
-import nano from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/nanogrid.js'
+import { gColors, getPrefix, tool, nano } from './head.js'
 
 const { nnCode } = nano
 

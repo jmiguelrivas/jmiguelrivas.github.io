@@ -1,6 +1,4 @@
-import { getPrefix, createNode } from '../../0_global/js/global_helpers.js'
-import { tool } from './db_tools.js'
-// import gColors from 'https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/gcolors.js'
+import { getPrefix, tool, createNode } from './head.js'
 
 const template = `
   <nn-caja padding="2rem" max-width="900px">
