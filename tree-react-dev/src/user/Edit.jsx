@@ -1,7 +1,45 @@
 import 'nano-grid/dist/nanogrid.js'
 import gColors from 'nano-grid/dist/gcolors.js'
+import { useForm, useFieldArray } from 'react-hook-form'
 
 function Edit() {
+  const { register, handleSubmit, control } = useForm({
+    defaultValues: {
+      names: [{ value: '' }],
+      family_names: [{ value: '' }],
+      relationships: [{ value: '' }],
+    },
+  })
+
+  const {
+    fields: nameFields,
+    append: appendName,
+    remove: removeName,
+  } = useFieldArray({
+    control,
+    name: 'names',
+  })
+
+  const {
+    fields: familyNameFields,
+    append: appendFamilyName,
+    remove: removeFamilyName,
+  } = useFieldArray({
+    control,
+    name: 'family_names',
+  })
+
+  const {
+    fields: relationshipsFields,
+    append: appendRelationship,
+    remove: removeRelationship,
+  } = useFieldArray({
+    control,
+    name: 'relationships',
+  })
+
+  const onSubmit = data => console.log(data)
+
   return (
     <section className="edit">
       <nn-caja
@@ -9,34 +47,47 @@ function Edit() {
         max-width="600px"
       >
         <h1>Add / Edit User</h1>
-        <form action="">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <fieldset>
             <legend>Names</legend>
 
             <ul className="repeater">
-              <li>
-                <nn-fila>
-                  <nn-pilar
-                    size="35px"
-                    className="index"
-                  >
-                    1
-                  </nn-pilar>
-                  <nn-pilar size="100% - 35px * 2">
-                    <input
-                      type="text"
-                      name="name"
-                      autoComplete="off"
-                    />
-                  </nn-pilar>
-                  <nn-pilar size="35px">
-                    <nn-btn color="#ff5555">X</nn-btn>
-                  </nn-pilar>
-                </nn-fila>
-              </li>
+              {nameFields.map((field, index) => (
+                <li key={field.id}>
+                  <nn-fila>
+                    <nn-pilar
+                      size="35px"
+                      className="index"
+                    >
+                      {index + 1}
+                    </nn-pilar>
+                    <nn-pilar size="100% - 35px * 2">
+                      <input
+                        autoComplete="off"
+                        {...register(`names.${index}.value`, {
+                          required: true,
+                        })}
+                      />
+                    </nn-pilar>
+                    <nn-pilar size="35px">
+                      <nn-btn
+                        color="#ff5555"
+                        type="button"
+                        onClick={() => removeName(index)}
+                      >
+                        X
+                      </nn-btn>
+                    </nn-pilar>
+                  </nn-fila>
+                </li>
+              ))}
             </ul>
 
-            <nn-btn color={gColors['spanish-green'].hex}>
+            <nn-btn
+              type="button"
+              color={gColors['spanish-green'].hex}
+              onClick={() => appendName({ value: '' })}
+            >
               + Add Another Name
             </nn-btn>
           </fieldset>
@@ -45,29 +96,42 @@ function Edit() {
             <legend>Family Names</legend>
 
             <ul className="repeater">
-              <li>
-                <nn-fila>
-                  <nn-pilar
-                    size="35px"
-                    className="index"
-                  >
-                    1
-                  </nn-pilar>
-                  <nn-pilar size="100% - 35px * 2">
-                    <input
-                      type="text"
-                      name="family_name"
-                      autoComplete="off"
-                    />
-                  </nn-pilar>
-                  <nn-pilar size="35px">
-                    <nn-btn color="#ff5555">X</nn-btn>
-                  </nn-pilar>
-                </nn-fila>
-              </li>
+              {familyNameFields.map((field, index) => (
+                <li key={field.id}>
+                  <nn-fila>
+                    <nn-pilar
+                      size="35px"
+                      className="index"
+                    >
+                      {index + 1}
+                    </nn-pilar>
+                    <nn-pilar size="100% - 35px * 2">
+                      <input
+                        autoComplete="off"
+                        {...register(`family_names.${index}.value`, {
+                          required: true,
+                        })}
+                      />
+                    </nn-pilar>
+                    <nn-pilar size="35px">
+                      <nn-btn
+                        color="#ff5555"
+                        type="button"
+                        onClick={() => removeFamilyName(index)}
+                      >
+                        X
+                      </nn-btn>
+                    </nn-pilar>
+                  </nn-fila>
+                </li>
+              ))}
             </ul>
 
-            <nn-btn color={gColors['spanish-green'].hex}>
+            <nn-btn
+              type="button"
+              color={gColors['spanish-green'].hex}
+              onClick={() => appendFamilyName({ value: '' })}
+            >
               + Add Another Family Name
             </nn-btn>
           </fieldset>
@@ -85,8 +149,8 @@ function Edit() {
           <fieldset>
             <label htmlFor="parent_a">Guardian/Parent A</label>
             <select
-              name="parent_a"
               id="parent_a"
+              {...register('parent_a')}
             >
               <option value="1">1</option>
             </select>
@@ -95,8 +159,8 @@ function Edit() {
           <fieldset>
             <label htmlFor="parent_b">Guardian/Parent B</label>
             <select
-              name="parent_b"
               id="parent_b"
+              {...register('parent_b')}
             >
               <option value="1">1</option>
             </select>
@@ -105,8 +169,8 @@ function Edit() {
           <fieldset>
             <label htmlFor="lead_family_name">Lead Family Name</label>
             <select
-              name="lead_family_name"
               id="lead_family_name"
+              {...register('lead_family_name')}
             >
               <option value="1">Parent A</option>
             </select>
@@ -116,27 +180,43 @@ function Edit() {
             <legend>Relationships</legend>
 
             <ul className="repeater">
-              <li>
-                <nn-fila>
-                  <nn-pilar
-                    size="35px"
-                    className="index"
-                  >
-                    1
-                  </nn-pilar>
-                  <nn-pilar size="100% - 35px * 2">
-                    <select name="relationship">
-                      <option value="1">1</option>
-                    </select>
-                  </nn-pilar>
-                  <nn-pilar size="35px">
-                    <nn-btn color="#ff5555">X</nn-btn>
-                  </nn-pilar>
-                </nn-fila>
-              </li>
+              {relationshipsFields.map((field, index) => (
+                <li key={field.id}>
+                  <nn-fila>
+                    <nn-pilar
+                      size="35px"
+                      className="index"
+                    >
+                      {index + 1}
+                    </nn-pilar>
+                    <nn-pilar size="100% - 35px * 2">
+                      <select
+                        {...register(`relationships.${index}.value`, {
+                          required: true,
+                        })}
+                      >
+                        <option value="1">1</option>
+                      </select>
+                    </nn-pilar>
+                    <nn-pilar size="35px">
+                      <nn-btn
+                        color="#ff5555"
+                        type="button"
+                        onClick={() => removeRelationship(index)}
+                      >
+                        X
+                      </nn-btn>
+                    </nn-pilar>
+                  </nn-fila>
+                </li>
+              ))}
             </ul>
 
-            <nn-btn color={gColors['spanish-green'].hex}>
+            <nn-btn
+              type="button"
+              color={gColors['spanish-green'].hex}
+              onClick={() => appendRelationship({ value: '' })}
+            >
               + Add Another Relationship
             </nn-btn>
           </fieldset>

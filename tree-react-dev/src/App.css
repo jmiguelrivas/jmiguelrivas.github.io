@@ -76,7 +76,7 @@ form {
     width: 100%;
 
     padding-inline: 10px;
-    cursor: text;
+    /* cursor: text; */
     border-radius: 0;
     --nn-input-color-active: color-mix(
       in srgb,
