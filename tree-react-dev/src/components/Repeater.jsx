@@ -15,7 +15,7 @@ export default function Repeater({
           const isOnlyChild = fields.length === 1
 
           return (
-            <li key={field.id}>
+            <li key={`${namePrefix}${index}${field.id}`}>
               <nn-fila>
                 {!isOnlyChild && (
                   <nn-pilar
