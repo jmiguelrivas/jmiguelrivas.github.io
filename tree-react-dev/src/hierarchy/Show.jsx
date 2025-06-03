@@ -1,9 +1,3 @@
-function Show() {
-  return (
-    <section className="show">
-      Show
-    </section>
-  )
+export default function () {
+  return <section className="show">Show</section>
 }
-
-export default Show

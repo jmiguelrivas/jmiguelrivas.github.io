@@ -2,7 +2,37 @@ import 'nano-grid/dist/nanogrid.js'
 import gColors from 'nano-grid/dist/gcolors.js'
 import { useForm, useFieldArray } from 'react-hook-form'
 
-function Edit() {
+const users = [
+  {
+    id: 1,
+    full_name: 'Joan Manuel Serrat',
+  },
+  {
+    id: 2,
+    full_name: 'Juana La Cubana',
+  },
+  {
+    id: 3,
+    full_name: 'Marcela Duran',
+  },
+]
+
+const family_names = [
+  {
+    id: 1,
+    family_name: 'Santos',
+  },
+  {
+    id: 2,
+    family_name: 'Rivas',
+  },
+  {
+    id: 3,
+    family_name: 'Solis',
+  },
+]
+
+export default function () {
   const { register, handleSubmit, control } = useForm({
     defaultValues: {
       names: [{ value: '' }],
@@ -52,35 +82,42 @@ function Edit() {
             <legend>Names</legend>
 
             <ul className="repeater">
-              {nameFields.map((field, index) => (
-                <li key={field.id}>
-                  <nn-fila>
-                    <nn-pilar
-                      size="35px"
-                      className="index"
-                    >
-                      {index + 1}
-                    </nn-pilar>
-                    <nn-pilar size="100% - 35px * 2">
-                      <input
-                        autoComplete="off"
-                        {...register(`names.${index}.value`, {
-                          required: true,
-                        })}
-                      />
-                    </nn-pilar>
-                    <nn-pilar size="35px">
-                      <nn-btn
-                        color="#ff5555"
-                        type="button"
-                        onClick={() => removeName(index)}
+              {nameFields.map((field, index) => {
+                const isOnlychild = !(nameFields.length > 1)
+                return (
+                  <li key={field.id}>
+                    <nn-fila>
+                      <nn-pilar
+                        size="35px"
+                        className="index"
                       >
-                        X
-                      </nn-btn>
-                    </nn-pilar>
-                  </nn-fila>
-                </li>
-              ))}
+                        {index + 1}
+                      </nn-pilar>
+                      <nn-pilar
+                        size={isOnlychild ? '100% - 35px' : '100% - 35px * 2'}
+                      >
+                        <input
+                          autoComplete="off"
+                          {...register(`names.${index}.value`, {
+                            required: true,
+                          })}
+                        />
+                      </nn-pilar>
+                      {!isOnlychild && (
+                        <nn-pilar size="35px">
+                          <nn-btn
+                            color="#ff5555"
+                            type="button"
+                            onClick={() => removeName(index)}
+                          >
+                            X
+                          </nn-btn>
+                        </nn-pilar>
+                      )}
+                    </nn-fila>
+                  </li>
+                )
+              })}
             </ul>
 
             <nn-btn
@@ -106,12 +143,20 @@ function Edit() {
                       {index + 1}
                     </nn-pilar>
                     <nn-pilar size="100% - 35px * 2">
-                      <input
-                        autoComplete="off"
+                      <select
                         {...register(`family_names.${index}.value`, {
                           required: true,
                         })}
-                      />
+                      >
+                        {family_names.map(name => (
+                          <option
+                            key={name.id}
+                            value={name.id}
+                          >
+                            {name.family_name}
+                          </option>
+                        ))}
+                      </select>
                     </nn-pilar>
                     <nn-pilar size="35px">
                       <nn-btn
@@ -152,7 +197,14 @@ function Edit() {
               id="parent_a"
               {...register('parent_a')}
             >
-              <option value="1">1</option>
+              {users.map(user => (
+                <option
+                  key={user.id}
+                  value={user.id}
+                >
+                  {user.full_name}
+                </option>
+              ))}
             </select>
           </fieldset>
 
@@ -162,7 +214,14 @@ function Edit() {
               id="parent_b"
               {...register('parent_b')}
             >
-              <option value="1">1</option>
+              {users.map(user => (
+                <option
+                  key={user.id}
+                  value={user.id}
+                >
+                  {user.full_name}
+                </option>
+              ))}
             </select>
           </fieldset>
 
@@ -172,7 +231,14 @@ function Edit() {
               id="lead_family_name"
               {...register('lead_family_name')}
             >
-              <option value="1">Parent A</option>
+              {users.map(user => (
+                <option
+                  key={user.id}
+                  value={user.id}
+                >
+                  {user.full_name}
+                </option>
+              ))}
             </select>
           </fieldset>
 
@@ -195,7 +261,14 @@ function Edit() {
                           required: true,
                         })}
                       >
-                        <option value="1">1</option>
+                        {users.map(user => (
+                          <option
+                            key={user.id}
+                            value={user.id}
+                          >
+                            {user.full_name}
+                          </option>
+                        ))}
                       </select>
                     </nn-pilar>
                     <nn-pilar size="35px">
@@ -232,5 +305,3 @@ function Edit() {
     </section>
   )
 }
-
-export default Edit

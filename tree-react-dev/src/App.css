@@ -44,7 +44,7 @@ form {
     display: flex;
     flex-direction: column;
   }
-  
+
   label,
   fieldset {
     gap: var(--space-between-block-items);
@@ -97,9 +97,12 @@ form {
   }
 
   .repeater {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
     list-style: none;
+    gap: .5rem;
 
     .index {
       display: flex;
@@ -121,4 +124,21 @@ section.edit {
 h1 {
   text-align: center;
   text-transform: uppercase;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: end;
+
+    a {
+      padding: 1rem;
+      display: inline-block;
+    }
+  }
 }
