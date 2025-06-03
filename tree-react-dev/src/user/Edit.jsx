@@ -76,7 +76,18 @@ export default function () {
     return users.find(u => +u.id === +id)
   }
 
-  const parents = [getUser(parentA), getUser(parentB)].filter(Boolean)
+  function removeDuplicated(arr) {
+    const seen = new Set()
+    return arr.filter(item => {
+      if (seen.has(item.id)) return false
+      seen.add(item.id)
+      return true
+    })
+  }
+
+  const parents = removeDuplicated(
+    [getUser(parentA), getUser(parentB)].filter(Boolean)
+  )
 
   const onSubmit = data => console.log(data)
 
@@ -132,7 +143,7 @@ export default function () {
           </fieldset>
 
           <fieldset>
-            <label htmlFor='DOB'>Date of Birth</label>
+            <label htmlFor="DOB">Date of Birth</label>
             <input
               type="date"
               id="DOB"
