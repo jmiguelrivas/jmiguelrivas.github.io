@@ -1,6 +1,7 @@
 import 'nano-grid/dist/nanogrid.js'
 import gColors from 'nano-grid/dist/gcolors.js'
 import { useForm, useFieldArray } from 'react-hook-form'
+import Repeater from '../components/Repeater'
 
 const users = [
   {
@@ -33,7 +34,7 @@ const family_names = [
 ]
 
 export default function () {
-  const { register, handleSubmit, control } = useForm({
+  const { register, handleSubmit, control, watch } = useForm({
     defaultValues: {
       names: [{ value: '' }],
       family_names: [{ value: '' }],
@@ -68,6 +69,15 @@ export default function () {
     name: 'relationships',
   })
 
+  const parentA = watch('parent_a')
+  const parentB = watch('parent_b')
+
+  function getUser(id) {
+    return users.find(u => +u.id === +id)
+  }
+
+  const parents = [getUser(parentA), getUser(parentB)].filter(Boolean)
+
   const onSubmit = data => console.log(data)
 
   return (
@@ -81,111 +91,60 @@ export default function () {
           <fieldset>
             <legend>Names</legend>
 
-            <ul className="repeater">
-              {nameFields.map((field, index) => {
-                const isOnlychild = !(nameFields.length > 1)
-                return (
-                  <li key={field.id}>
-                    <nn-fila>
-                      <nn-pilar
-                        size="35px"
-                        className="index"
-                      >
-                        {index + 1}
-                      </nn-pilar>
-                      <nn-pilar
-                        size={isOnlychild ? '100% - 35px' : '100% - 35px * 2'}
-                      >
-                        <input
-                          autoComplete="off"
-                          {...register(`names.${index}.value`, {
-                            required: true,
-                          })}
-                        />
-                      </nn-pilar>
-                      {!isOnlychild && (
-                        <nn-pilar size="35px">
-                          <nn-btn
-                            color="#ff5555"
-                            type="button"
-                            onClick={() => removeName(index)}
-                          >
-                            X
-                          </nn-btn>
-                        </nn-pilar>
-                      )}
-                    </nn-fila>
-                  </li>
-                )
-              })}
-            </ul>
-
-            <nn-btn
-              type="button"
-              color={gColors['spanish-green'].hex}
-              onClick={() => appendName({ value: '' })}
+            <Repeater
+              fields={nameFields}
+              append={appendName}
+              remove={removeName}
+              register={register}
+              namePrefix="names"
             >
-              + Add Another Name
-            </nn-btn>
+              <nn-btn
+                type="button"
+                color={gColors['spanish-green'].hex}
+                onClick={() => appendName({ value: '' })}
+              >
+                + Add Another Name
+              </nn-btn>
+            </Repeater>
           </fieldset>
 
           <fieldset>
             <legend>Family Names</legend>
 
-            <ul className="repeater">
-              {familyNameFields.map((field, index) => (
-                <li key={field.id}>
-                  <nn-fila>
-                    <nn-pilar
-                      size="35px"
-                      className="index"
-                    >
-                      {index + 1}
-                    </nn-pilar>
-                    <nn-pilar size="100% - 35px * 2">
-                      <select
-                        {...register(`family_names.${index}.value`, {
-                          required: true,
-                        })}
-                      >
-                        {family_names.map(name => (
-                          <option
-                            key={name.id}
-                            value={name.id}
-                          >
-                            {name.family_name}
-                          </option>
-                        ))}
-                      </select>
-                    </nn-pilar>
-                    <nn-pilar size="35px">
-                      <nn-btn
-                        color="#ff5555"
-                        type="button"
-                        onClick={() => removeFamilyName(index)}
-                      >
-                        X
-                      </nn-btn>
-                    </nn-pilar>
-                  </nn-fila>
-                </li>
-              ))}
-            </ul>
-
-            <nn-btn
-              type="button"
-              color={gColors['spanish-green'].hex}
-              onClick={() => appendFamilyName({ value: '' })}
+            <Repeater
+              fields={familyNameFields}
+              append={appendFamilyName}
+              remove={removeFamilyName}
+              register={register}
+              namePrefix="family_names"
+              options={family_names}
+              labelProp="family_name"
+              valueProp="id"
             >
-              + Add Another Family Name
-            </nn-btn>
+              <nn-btn
+                type="button"
+                color={gColors['spanish-green'].hex}
+                onClick={() => appendFamilyName({ value: '' })}
+              >
+                + Add Another Family Name
+              </nn-btn>
+            </Repeater>
+          </fieldset>
+
+          <fieldset>
+            <label htmlFor='DOB'>Date of Birth</label>
+            <input
+              type="date"
+              id="DOB"
+              {...register('DOB')}
+            />
           </fieldset>
 
           <fieldset>
             <label>
               <input
                 type="checkbox"
-                name="adopted"
+                {...register('adopted')}
               />
               <span>Adopted</span>
             </label>
@@ -231,7 +190,7 @@ export default function () {
               id="lead_family_name"
               {...register('lead_family_name')}
             >
-              {users.map(user => (
+              {parents.map(user => (
                 <option
                   key={user.id}
                   value={user.id}
@@ -245,53 +204,24 @@ export default function () {
           <fieldset>
             <legend>Relationships</legend>
 
-            <ul className="repeater">
-              {relationshipsFields.map((field, index) => (
-                <li key={field.id}>
-                  <nn-fila>
-                    <nn-pilar
-                      size="35px"
-                      className="index"
-                    >
-                      {index + 1}
-                    </nn-pilar>
-                    <nn-pilar size="100% - 35px * 2">
-                      <select
-                        {...register(`relationships.${index}.value`, {
-                          required: true,
-                        })}
-                      >
-                        {users.map(user => (
-                          <option
-                            key={user.id}
-                            value={user.id}
-                          >
-                            {user.full_name}
-                          </option>
-                        ))}
-                      </select>
-                    </nn-pilar>
-                    <nn-pilar size="35px">
-                      <nn-btn
-                        color="#ff5555"
-                        type="button"
-                        onClick={() => removeRelationship(index)}
-                      >
-                        X
-                      </nn-btn>
-                    </nn-pilar>
-                  </nn-fila>
-                </li>
-              ))}
-            </ul>
-
-            <nn-btn
-              type="button"
-              color={gColors['spanish-green'].hex}
-              onClick={() => appendRelationship({ value: '' })}
+            <Repeater
+              fields={relationshipsFields}
+              append={appendRelationship}
+              remove={removeRelationship}
+              register={register}
+              namePrefix="relationships"
+              options={users}
+              labelProp="full_name"
+              valueProp="id"
             >
-              + Add Another Relationship
-            </nn-btn>
+              <nn-btn
+                type="button"
+                color={gColors['spanish-green'].hex}
+                onClick={() => appendRelationship({ value: '' })}
+              >
+                + Add Another Relationship
+              </nn-btn>
+            </Repeater>
           </fieldset>
 
           <nn-btn

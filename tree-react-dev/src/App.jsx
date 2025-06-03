@@ -1,6 +1,7 @@
 import 'nano-grid/dist/nanogrid_styles.css'
 import './App.css'
-import Edit from './user/Edit'
+import EditUser from './user/Edit'
+import EditFamilyName from './family-name/Edit'
 import Hierarchy from './hierarchy/Show'
 import Navbar from './components/Navbar'
 
@@ -18,7 +19,11 @@ export default function () {
           />
           <Route
             path="/user/edit"
-            element={<Edit />}
+            element={<EditUser />}
+          />
+          <Route
+            path="/family-name/edit"
+            element={<EditFamilyName />}
           />
         </Routes>
       </Router>

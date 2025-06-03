@@ -10,6 +10,9 @@ export default function () {
         <li>
           <Link to="/user/edit">Add User</Link>
         </li>
+        <li>
+          <Link to="/family-name/edit">Add Family Name</Link>
+        </li>
       </ul>
     </nav>
   )
