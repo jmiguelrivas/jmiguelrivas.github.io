@@ -1,0 +1,124 @@
+html,
+body {
+  --accent-color: #88e2b4;
+  --accent-color-2: #d5e288;
+  --color-foreground: #eee;
+  --space-between-block-items: 1rem;
+  --space-between-inline-items: 0.5rem;
+  --border-color: #eee;
+
+  padding: 0;
+  margin: 0;
+  color: var(--color-foreground);
+  background-color: #202028;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  background-color: hsl(218deg 20.77% 18.25%);
+  gap: 1.5rem;
+
+  fieldset {
+    all: unset;
+    background-color: hsl(218deg 21.54% 15.55%);
+  }
+
+  &,
+  fieldset {
+    border: 0;
+    padding: var(--space-between-block-items);
+  }
+
+  &,
+  label,
+  fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label,
+  fieldset {
+    gap: var(--space-between-block-items);
+  }
+
+  label {
+    &:has([type='radio']),
+    &:has([type='checkbox']) {
+      flex-direction: row;
+      gap: var(--space-between-inline-items);
+      align-items: baseline;
+    }
+  }
+
+  legend {
+    all: unset;
+    display: block;
+    padding: 0;
+    float: left;
+  }
+
+  --nn-input-color: #3d3d60;
+  --nn-input-text-color: #eee;
+
+  input:not([type='checkbox']),
+  select {
+    min-height: 35px;
+    border: 0;
+    width: 100%;
+
+    padding-inline: 10px;
+    cursor: text;
+    border-radius: 0;
+    --nn-input-color-active: color-mix(
+      in srgb,
+      black 15%,
+      var(--nn-input-color)
+    );
+    --nn-input-color-active-shadow: color-mix(
+      in srgb,
+      black 30%,
+      var(--nn-input-color)
+    );
+    color: var(--nn-input-text-color);
+    background-color: var(--nn-input-color);
+    box-shadow: 0 3px 0 var(--nn-input-color-active);
+
+    display: inline flex;
+    align-items: center;
+  }
+
+  .repeater {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .index {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2b2d42;
+      font-weight: bold;
+    }
+  }
+}
+
+section.edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
