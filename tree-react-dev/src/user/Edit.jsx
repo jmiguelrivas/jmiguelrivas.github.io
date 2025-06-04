@@ -26,6 +26,7 @@ export default function () {
   const { register, handleSubmit, control, setValue } = useForm({
     defaultValues: {
       names: [{ value: '' }],
+      family_names: [{ value: '' }],
       parents: [{ value: '' }],
       relationships: [{ value: '' }],
     },
@@ -38,6 +39,15 @@ export default function () {
   } = useFieldArray({
     control,
     name: 'names',
+  })
+
+  const {
+    fields: familyNameFields,
+    append: appendFamilyName,
+    remove: removeFamilyName,
+  } = useFieldArray({
+    control,
+    name: 'family_names',
   })
 
   const {
@@ -151,6 +161,29 @@ export default function () {
                 onClick={() => appendParent({ value: '' })}
               >
                 + Add Another Parent
+              </nn-btn>
+            </Repeater>
+          </fieldset>
+
+          <fieldset>
+            <legend data-tooltip="only use if they are no parents">
+              Family Names
+            </legend>
+
+            <Repeater
+              fields={familyNameFields}
+              append={appendFamilyName}
+              setValue={setValue}
+              remove={removeFamilyName}
+              register={register}
+              namePrefix="family_names"
+            >
+              <nn-btn
+                type="button"
+                color={gColors['spanish-green'].hex}
+                onClick={() => appendFamilyName({ value: '' })}
+              >
+                + Add Another Family Name
               </nn-btn>
             </Repeater>
           </fieldset>
