@@ -16,28 +16,17 @@ const users = [
     id: 3,
     full_name: 'Marcela Duran',
   },
-]
-
-const family_names = [
-  {
-    id: 1,
-    family_name: 'Santos',
-  },
-  {
-    id: 2,
-    family_name: 'Rivas',
-  },
-  {
-    id: 3,
-    family_name: 'Solis',
-  },
-]
+].map(({ id, full_name }) => ({
+  id,
+  value: id,
+  label: full_name,
+}))
 
 export default function () {
-  const { register, handleSubmit, control, watch } = useForm({
+  const { register, handleSubmit, control, setValue } = useForm({
     defaultValues: {
       names: [{ value: '' }],
-      family_names: [{ value: '' }],
+      parents: [{ value: '' }],
       relationships: [{ value: '' }],
     },
   })
@@ -52,12 +41,12 @@ export default function () {
   })
 
   const {
-    fields: familyNameFields,
-    append: appendFamilyName,
-    remove: removeFamilyName,
+    fields: parentsFields,
+    append: appendParent,
+    remove: removeParent,
   } = useFieldArray({
     control,
-    name: 'family_names',
+    name: 'parents',
   })
 
   const {
@@ -68,26 +57,6 @@ export default function () {
     control,
     name: 'relationships',
   })
-
-  const parentA = watch('parent_a')
-  const parentB = watch('parent_b')
-
-  function getUser(id) {
-    return users.find(u => +u.id === +id)
-  }
-
-  function removeDuplicated(arr) {
-    const seen = new Set()
-    return arr.filter(item => {
-      if (seen.has(item.id)) return false
-      seen.add(item.id)
-      return true
-    })
-  }
-
-  const parents = removeDuplicated(
-    [getUser(parentA), getUser(parentB)].filter(Boolean)
-  )
 
   const onSubmit = data => console.log(data)
 
@@ -105,6 +74,7 @@ export default function () {
             <Repeater
               fields={nameFields}
               append={appendName}
+              setValue={setValue}
               remove={removeName}
               register={register}
               namePrefix="names"
@@ -120,35 +90,33 @@ export default function () {
           </fieldset>
 
           <fieldset>
-            <legend>Family Names</legend>
-
-            <Repeater
-              fields={familyNameFields}
-              append={appendFamilyName}
-              remove={removeFamilyName}
-              register={register}
-              namePrefix="family_names"
-              options={family_names}
-              labelProp="family_name"
-              valueProp="id"
-            >
-              <nn-btn
-                type="button"
-                color={gColors['spanish-green'].hex}
-                onClick={() => appendFamilyName({ value: '' })}
-              >
-                + Add Another Family Name
-              </nn-btn>
-            </Repeater>
+            <label>
+              <span>Prefered Name</span>
+              <input
+                type="text"
+                {...register('p_name')}
+              />
+            </label>
           </fieldset>
 
           <fieldset>
-            <label htmlFor="DOB">Date of Birth</label>
-            <input
-              type="date"
-              id="DOB"
-              {...register('DOB')}
-            />
+            <label>
+              <span>Nickname</span>
+              <input
+                type="text"
+                {...register('nickname')}
+              />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label>
+              <span>Date of Birth</span>
+              <input
+                type="date"
+                {...register('DOB')}
+              />
+            </label>
           </fieldset>
 
           <fieldset>
@@ -162,54 +130,29 @@ export default function () {
           </fieldset>
 
           <fieldset>
-            <label htmlFor="parent_a">Guardian/Parent A</label>
-            <select
-              id="parent_a"
-              {...register('parent_a')}
-            >
-              {users.map(user => (
-                <option
-                  key={user.id}
-                  value={user.id}
-                >
-                  {user.full_name}
-                </option>
-              ))}
-            </select>
-          </fieldset>
+            <legend data-tooltip="Sort by family name order">Parents</legend>
 
-          <fieldset>
-            <label htmlFor="parent_b">Guardian/Parent B</label>
-            <select
-              id="parent_b"
-              {...register('parent_b')}
+            <Repeater
+              fields={parentsFields}
+              append={appendParent}
+              remove={removeParent}
+              setValue={setValue}
+              register={register}
+              check={true}
+              checkLabel="Ignore this family name"
+              namePrefix="parents"
+              options={users}
+              labelProp="full_name"
+              valueProp="id"
             >
-              {users.map(user => (
-                <option
-                  key={user.id}
-                  value={user.id}
-                >
-                  {user.full_name}
-                </option>
-              ))}
-            </select>
-          </fieldset>
-
-          <fieldset>
-            <label htmlFor="lead_family_name">Lead Family Name</label>
-            <select
-              id="lead_family_name"
-              {...register('lead_family_name')}
-            >
-              {parents.map(user => (
-                <option
-                  key={user.id}
-                  value={user.id}
-                >
-                  {user.full_name}
-                </option>
-              ))}
-            </select>
+              <nn-btn
+                type="button"
+                color={gColors['spanish-green'].hex}
+                onClick={() => appendParent({ value: '' })}
+              >
+                + Add Another Parent
+              </nn-btn>
+            </Repeater>
           </fieldset>
 
           <fieldset>
@@ -219,6 +162,7 @@ export default function () {
               fields={relationshipsFields}
               append={appendRelationship}
               remove={removeRelationship}
+              setValue={setValue}
               register={register}
               namePrefix="relationships"
               options={users}

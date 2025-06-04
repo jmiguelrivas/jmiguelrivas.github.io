@@ -56,6 +56,8 @@ form {
       flex-direction: row;
       gap: var(--space-between-inline-items);
       align-items: baseline;
+      min-height: 35px;
+      align-items: center;
     }
   }
 
@@ -69,11 +71,16 @@ form {
   --nn-input-color: #3d3d60;
   --nn-input-text-color: #eee;
 
+  nn-combobox {
+    width: 100%;
+  }
+
   input:not([type='checkbox']),
   select {
     min-height: 35px;
     border: 0;
     width: 100%;
+    font-size: 1rem;
 
     padding-inline: 10px;
     border-radius: 0;
@@ -101,7 +108,7 @@ form {
     padding: 0;
     margin: 0;
     list-style: none;
-    gap: .5rem;
+    gap: 1rem;
 
     .index {
       display: flex;

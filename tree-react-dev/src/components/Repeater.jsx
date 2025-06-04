@@ -1,18 +1,23 @@
-export default function Repeater({
+import Combobox from './Combobox'
+
+export default function ({
   fields,
   remove,
   register,
+  setValue,
   namePrefix,
   options = null,
-  labelProp = 'label',
-  valueProp = 'value',
   children,
+  check,
+  checkLabel,
 }) {
   return (
     <>
       <ul className="repeater">
         {fields.map((field, index) => {
           const isOnlyChild = fields.length === 1
+          const name = `${namePrefix}.${index}.value`
+          const inputSize = isOnlyChild ? '100%' : '100% - 35px * 2'
 
           return (
             <li key={`${namePrefix}${index}${field.id}`}>
@@ -26,31 +31,25 @@ export default function Repeater({
                   </nn-pilar>
                 )}
 
-                <nn-pilar size={isOnlyChild ? '100%' : '100% - 35px * 2'}>
+                <nn-pilar size={inputSize}>
                   {options ? (
-                    <select
-                      {...register(`${namePrefix}.${index}.value`, {
-                        required: true,
-                      })}
-                    >
-                      {options.map(opt => (
-                        <option
-                          key={opt[valueProp]}
-                          value={opt[valueProp]}
-                        >
-                          {opt[labelProp]}
-                        </option>
-                      ))}
-                    </select>
+                    <Combobox
+                      name={name}
+                      label="Select an option"
+                      setValue={setValue}
+                      register={register}
+                      options={options}
+                    ></Combobox>
                   ) : (
                     <input
                       autoComplete="off"
-                      {...register(`${namePrefix}.${index}.value`, {
-                        required: true,
+                      {...register(name, {
+                        // required: true,
                       })}
                     />
                   )}
                 </nn-pilar>
+
                 {!isOnlyChild && (
                   <nn-pilar size="35px">
                     <nn-btn
@@ -60,6 +59,20 @@ export default function Repeater({
                     >
                       X
                     </nn-btn>
+                  </nn-pilar>
+                )}
+
+                {check && (
+                  <nn-pilar size="100%">
+                    <label>
+                      <input
+                        type="checkbox"
+                        {...register(`${namePrefix}.${index}.ignore`, {
+                          // required: true,
+                        })}
+                      />
+                      <span>{checkLabel}</span>
+                    </label>
                   </nn-pilar>
                 )}
               </nn-fila>
