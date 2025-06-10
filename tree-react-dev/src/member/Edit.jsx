@@ -77,7 +77,13 @@ export default function () {
     name: 'parents',
   })
 
-  const onSubmit = data => console.log(data)
+  const onSubmit = data => {
+    console.log(data)
+    // members.push({
+    //   id: 12,
+    //   label: [data.names, data.family_names].flat().join(' ')
+    // })
+  }
 
   return (
     <section className="edit">
@@ -254,7 +260,7 @@ export default function () {
             padding="1rem"
             max-width="600px"
           >
-            <h2>Family Members</h2>
+            <h2>Members</h2>
             <nn-desplazador>
               <ul className="repeater list">
                 {members.map(name => (

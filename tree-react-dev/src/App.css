@@ -137,9 +137,9 @@ ul.repeater {
   list-style: none;
   gap: 1rem;
 
-  &.list {
+  /* &.list {
     padding-block: 1rem;
-  }
+  } */
 
   .index,
   .preview {
