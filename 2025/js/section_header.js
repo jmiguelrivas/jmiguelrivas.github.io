@@ -44,13 +44,6 @@ const readme = `
 <nn-btn autofocus class="hide-dialog-btn" color="#FFCC33">Close Dialog</nn-btn>
 `
 
-const trees = Array.from(
-  {
-    length: 200,
-  },
-  (_, i) => `<img src="./img/tree.webp" class="tree t${i + 1}"></img>`
-).join('')
-
 const banner = 'SPOKANE,WA'
   .split('')
   .map((l, i) => `<span class="letter letter-${i + 1}">${l}</span>`)
@@ -61,7 +54,6 @@ const template = `
   <div class="banner">
     ${banner}
   </div>
-  ${trees}
   <mr-palumba direction="left"></mr-palumba>
 </mr-mountain>
 
