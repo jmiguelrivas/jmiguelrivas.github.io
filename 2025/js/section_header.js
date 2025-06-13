@@ -48,7 +48,7 @@ const trees = Array.from(
   {
     length: 200,
   },
-  (_, i) => `<img src="./img/tree.svg" class="tree t${i + 1}"></img>`
+  (_, i) => `<img src="./img/tree.webp" class="tree t${i + 1}"></img>`
 ).join('')
 
 const banner = 'SPOKANE,WA'
