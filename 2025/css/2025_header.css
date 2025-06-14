@@ -154,6 +154,7 @@ header.header {
     g.banner {
       scale: 0.27;
       translate: 254px 107px;
+      pointer-events: none;
 
       text {
         fill: #eee;
