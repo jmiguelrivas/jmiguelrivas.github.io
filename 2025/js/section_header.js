@@ -44,16 +44,8 @@ const readme = `
 <nn-btn autofocus class="hide-dialog-btn" color="#FFCC33">Close Dialog</nn-btn>
 `
 
-const banner = 'SPOKANE,WA'
-  .split('')
-  .map((l, i) => `<span class="letter letter-${i + 1}">${l}</span>`)
-  .join('')
-
 const template = `
 <mr-mountain class="mountain-01">
-  <div class="banner">
-    ${banner}
-  </div>
   <mr-palumba direction="left"></mr-palumba>
 </mr-mountain>
 
