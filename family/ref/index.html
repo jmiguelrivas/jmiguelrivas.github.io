@@ -1,0 +1,259 @@
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        background: #222;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="output"></pre>
+    <script>
+      console.clear()
+
+      const familyEntries = [
+        {
+          id: 0,
+          name: ['Papa'],
+          family_name: ['Familia 1', 'Familia 2'],
+          spouses: [1],
+          root: true,
+        },
+        {
+          id: 1,
+          name: ['Mama'],
+          family_name: ['Familia 3', 'Familia 4'],
+        },
+        {
+          id: 2,
+          name: ['Hijo 1'],
+          parents: [0, 1],
+        },
+        {
+          id: 3,
+          name: ['Hijo Otro Apellido'],
+          family_name: ['Familia 5'],
+          parents: [0, 1],
+        },
+        {
+          id: 7,
+          name: ['Hermano'],
+          parents: [0, 1],
+        },
+        {
+          id: 4,
+          alias: 'Apodo',
+          name: ['Hijo acogido sin apellido'],
+          foster_parents: [0, 1],
+        },
+        {
+          id: 5,
+          name: ['Hijo de un padre'],
+          prefered_name: 'Nombre Cool',
+          parents: [0],
+        },
+        {
+          id: 6,
+          name: ['Sobrino'],
+          parents: [2],
+        },
+        {
+          id: 7,
+          name: ['Hijo Sobrino'],
+          parents: [6],
+        },
+      ]
+
+      function getPerson(id) {
+        return familyEntries.filter(item => item.id === id)[0]
+      }
+
+      function getFamilyName(familyName, parents) {
+        const hasOneParent = parents?.length < 2
+        const hasParents = parents?.length > 0
+
+        if (familyName) {
+          return familyName
+        } else if (!familyName && hasOneParent) {
+          return getPerson(parents[0])?.family_name
+        } else if (!familyName && hasParents) {
+          return parents.map(parent => {
+            return getPerson(parent)?.family_name?.[0]
+          })
+        } else {
+          return []
+        }
+      }
+
+      function getChildren(id) {
+        let result = familyEntries
+          .filter(person => {
+            const hasCurrentPersonAsParent = person?.parents?.some(
+              parent => parent === id
+            )
+            return hasCurrentPersonAsParent
+          })
+          .map(person => spreadData(person))
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getFosterChildren(id) {
+        let result = familyEntries
+          .filter(person => {
+            const hasCurrentPersonAsFosterParent = person?.foster_parents?.some(
+              parent => parent === id
+            )
+            return hasCurrentPersonAsFosterParent
+          })
+          .map(person => spreadData(person))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getSiblings(id, parents) {
+        let result = familyEntries
+          .filter(person => {
+            const isSamePerson = person?.id === id
+            const hasSameParents =
+              person?.parents?.toString() === parents?.toString()
+            const hasParents = person?.parents?.length > 0
+            return !isSamePerson && hasSameParents && hasParents
+          })
+          .map(person => spreadData(person, false))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getHalfSiblings(id, currentPersonParents) {
+        const result = familyEntries
+          .filter(person => {
+            const isSamePerson = person?.id === id
+            const hasSameParents =
+              person?.parents?.toString() === currentPersonParents?.toString()
+            const hasOneParent = person?.parents?.some(parent =>
+              currentPersonParents?.some(
+                currentPersonParent => currentPersonParent === parent
+              )
+            )
+            return !isSamePerson && !hasSameParents && hasOneParent
+          })
+          .map(person => spreadData(person, false))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getSpouses(spouses) {
+        const result = spouses
+          ?.map(getPerson)
+          .map(person => spreadData(person, false))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getParents(parents) {
+        const result = parents
+          ?.map(getPerson)
+          .map(person => spreadData(person, false))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getFosterParents(parents) {
+        const result = parents
+          ?.map(getPerson)
+          .map(person => spreadData(person, false))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function getNephewsAndNieces(siblings) {
+        const result = familyEntries
+          .filter(person =>
+            siblings?.some(sibling =>
+              person?.parents?.some(parent => parent === sibling.id)
+            )
+          )
+          .map(nephew_niece => {
+            const family_name = siblings.filter(sibling =>
+              nephew_niece?.parents.some(parent => {
+                return sibling.id === parent
+              })
+            )[0].family_name
+
+            return {
+              name: nephew_niece?.name,
+              family_name,
+            }
+          })
+        // unreachable last name since the entries doesn't actually have them
+        // .map(person => spreadData(person, false))
+
+        return result?.length > 0 ? result : undefined
+      }
+
+      function spreadData(person, deep = true) {
+        const spouses = getSpouses(person?.spouses)
+        const parents = getParents(person?.parents)
+        const foster_parents = getFosterParents(person?.foster_parents)
+        const family_name = getFamilyName(person?.family_name, person?.parents)
+        let children, siblings, half_siblings, foster_children, nephews_nieces
+
+        if (deep) {
+          siblings = getSiblings(person?.id, person?.parents)
+          nephews_nieces = getNephewsAndNieces(siblings)
+          half_siblings = getHalfSiblings(person?.id, person?.parents)
+          children = getChildren(person?.id)
+          foster_children = getFosterChildren(person?.id)
+        }
+
+        return {
+          id: person?.id,
+          name: person?.name,
+          ...(person?.prefered_name && { prefered_name: person.prefered_name }),
+          family_name,
+          ...(person?.root && { root: person.root }),
+          ...(person?.alias && { alias: person.alias }),
+          ...(deep && {
+            relationships: {
+              ...(spouses && { spouses }),
+              ...(parents && { parents }),
+              ...(foster_parents && { foster_parents }),
+              ...(foster_children && { foster_children }),
+              ...(children && { children }),
+              ...(siblings && { siblings }),
+              ...(half_siblings && { half_siblings }),
+              ...(nephews_nieces && { nephews_nieces }),
+              // uncles_aunts,
+              // first_cousins,
+              // second_cousins,
+              // parents_first_cousins,
+              // parents_second_cousins,
+              // grandparents,
+              // granduncle_grandaunt,
+              // greatgrandparents,
+              // greatduncle_greataunt
+            },
+          }),
+        }
+      }
+
+      const familyBase = familyEntries.map(person => spreadData(person))
+
+      function getRoot(familyBase) {
+        return familyBase.filter(person => person?.root)
+      }
+
+      const family = getRoot(familyBase)
+
+      console.log(family[0])
+
+      document.getElementById('output').innerHTML = JSON.stringify(
+        family,
+        null,
+        4
+      )
+    </script>
+  </body>
+</html>
