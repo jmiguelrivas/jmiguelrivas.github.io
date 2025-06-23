@@ -59,6 +59,8 @@ customElements.define(
           processing tools and components.
         </li>
       </ul>
+
+      <nn-btn href="https://lomdb.github.io/" color="#36ce80" link target="_BLANK">Visit site</nn-btn>
     `
 
     connectedCallback() {
