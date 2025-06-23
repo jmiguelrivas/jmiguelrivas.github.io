@@ -123,7 +123,60 @@
           max-width="1200px"
           class="block-separator"
         >
-          <h2 id="portfolio">Portfolio</h2>
+          <h2 id="portfolio">Current Projects</h2>
+
+          <div class="accordion">
+            <details name="portfolio-details">
+              <summary>Ancestry Atlas</summary>
+
+              <div>
+                <ul class="flex-row">
+                  <li><nn-pill color="#FFFF99">nodejs</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">express</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">axios</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">react</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">react hook forms</nn-pill></li>
+                </ul>
+
+                <img
+                  src="./img/ancestry.webp"
+                  alt="ancestry app preview"
+                />
+
+                <h3>My Role</h3>
+                <ul>
+                  <li>
+                    Created a RESTful API using Express and Node.js to serve and
+                    manage family data dynamically.
+                  </li>
+                  <li>
+                    Handled frontend-backend communication using Axios for
+                    efficient, structured API requests.
+                  </li>
+                  <li>
+                    Designed the UI with a focus on clarity and hierarchy,
+                    balancing modern aesthetics with genealogical detail.
+                  </li>
+                  <li>
+                    Built the interface using React, with modular components and
+                    dynamic views for timelines, relationships, and ancestry
+                    paths.
+                  </li>
+                  <li>
+                    Developed custom rendering logic to visualize complex family
+                    trees and merge data across generations.
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Legend of Mushrooms</summary>
+              <mr-lom></mr-lom>
+            </details>
+          </div>
+
+          <h2>Portfolio</h2>
 
           <div class="accordion">
             <details name="portfolio-details">
@@ -196,11 +249,6 @@
 
           <div class="accordion">
             <details name="portfolio-details">
-              <summary>Community Contribution / Legend of Mushroom</summary>
-              <mr-lom></mr-lom>
-            </details>
-
-            <details name="portfolio-details">
               <summary>Experiment / Bird Rescuer</summary>
               <mr-phaser></mr-phaser>
             </details>
@@ -208,39 +256,6 @@
             <details name="portfolio-details">
               <summary>Experiment / 3D Map</summary>
               <mr-map></mr-map>
-            </details>
-
-            <details name="portfolio-details">
-              <summary>Right Now / Ancestry Atlas</summary>
-
-              <div>
-                <img src="./img/ancestry.webp" alt="ancestry app preview">
-
-                <h3>My Role</h3>
-                <ul>
-                  <li>
-                    Created a RESTful API using Express and Node.js to serve and
-                    manage family data dynamically.
-                  </li>
-                  <li>
-                    Handled frontend-backend communication using Axios for
-                    efficient, structured API requests.
-                  </li>
-                  <li>
-                    Designed the UI with a focus on clarity and hierarchy,
-                    balancing modern aesthetics with genealogical detail.
-                  </li>
-                  <li>
-                    Built the interface using React, with modular components and
-                    dynamic views for timelines, relationships, and ancestry
-                    paths.
-                  </li>
-                  <li>
-                    Developed custom rendering logic to visualize complex family
-                    trees and merge data across generations.
-                  </li>
-                </ul>
-              </div>
             </details>
           </div>
         </nn-caja>

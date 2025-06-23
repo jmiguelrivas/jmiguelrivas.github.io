@@ -18,7 +18,7 @@ customElements.define(
       .join('')
 
     #template = `
-      <h3>Legend of Mushroom :: Charts and Tools</h3>
+      <h3>Legend of Mushrooms :: Charts and Tools</h3>
 
       <ul class="flex-row">
       ${this.#tools}
