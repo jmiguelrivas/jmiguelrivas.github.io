@@ -38,6 +38,7 @@ const data = {
     tool.sass,
     tool.unoCss,
     tool.javascript,
+    tool.node,
     tool.vue,
     tool.react,
     tool.redux,
