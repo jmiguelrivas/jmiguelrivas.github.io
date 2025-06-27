@@ -1,7 +1,9 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import Spirit from '../../0_global/js/nano_spirit.js'
+import { nano } from '../assets/head.js'
+
+const { nnCode } = nano
 
 export default {
   parameters: {
@@ -31,16 +33,16 @@ export const StringReverse = args => {
   <h1>String Reverse</h1>
 
   <p>Input</p>
-  <nn-code>${Spirit.compressText(`${str}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`${str}`)}</nn-code>
   
   <p>Solution</p>
-  <nn-code>${Spirit.compressText(`str
+  <nn-code>${nnCode.compressText(`str
  .split('')
  .sort(() => -1)
  .join('')`)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${Spirit.compressText(`${result}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`${result}`)}</nn-code>
 </nn-caja>
 `
   return container

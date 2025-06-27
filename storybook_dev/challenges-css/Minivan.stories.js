@@ -1,7 +1,9 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import Spirit from '../../0_global/js/nano_spirit.js'
+import { nano } from '../assets/head.js'
+
+const { nnCode } = nano
 
 export default {
   parameters: {
@@ -282,10 +284,10 @@ ${html}
 
 <nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>${Spirit.compressText(`${style}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`${style}`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>${Spirit.compressText(`${html}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`${html}`)}</nn-code>
 </nn-caja>
 `
   return container

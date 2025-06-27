@@ -1,4 +1,4 @@
-import{j as n,M as r}from"./index-DFkTwBKu.js";import{useMDXComponents as l}from"./index-CIC70ir3.js";import"./iframe-CTUpXkAP.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Documentation/Portfolio 2025"}),`
+import{j as n,M as r}from"./index-C46F6Ba9.js";import{useMDXComponents as l}from"./index-jzjBw_Nm.js";import"./iframe--T9xqelr.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Documentation/Portfolio 2025"}),`
 `,n.jsx(e.h1,{id:"portfolio-2025",children:"Portfolio 2025"}),`
 `,n.jsx(e.h2,{id:"experiments",children:"Experiments"}),`
 `,n.jsx(e.p,{children:"This project aims to push the following boundaries:"}),`
@@ -122,4 +122,7 @@ nn-column [en] -> nn-pilar [es]
 `,n.jsx(e.h2,{id:"updates-20250430",children:"Updates (2025/04/30)"}),`
 `,n.jsx(e.p,{children:"Added storybook and migrated documentation to it."}),`
 `,n.jsx(e.h2,{id:"updates-20250503",children:"Updates (2025/05/03)"}),`
-`,n.jsx(e.p,{children:"Working in the integration of unit test and github actions to run tests every commit."})]})}function h(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(s,{...i})}):s(i)}export{h as default};
+`,n.jsx(e.p,{children:"Working in the integration of unit test and github actions to run tests every commit."}),`
+`,n.jsx(e.h2,{id:"updates-20250601",children:"Updates (2025/06/01)"}),`
+`,n.jsx(e.p,{children:"Split nano grid back into it's own project and documentation"}),`
+`,n.jsx(e.p,{children:"nano-grid.github.io"})]})}function h(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(s,{...i})}):s(i)}export{h as default};

@@ -1,4 +1,4 @@
-import{S as o}from"./main-DHuDOF0U.js";/* empty css             */const l={parameters:{layout:"fullscreen"},controls:{disable:!0}},n=`
+import"./main-BCPhkg1V.js";import p from"https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/nanogrid.js";/* empty css             */import"https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/gcolors.js";const{nnCode:n}=p,u={parameters:{layout:"fullscreen"},controls:{disable:!0}},i=`
 nn-caja.preview {
   background: #224157;
   display: flex;
@@ -228,12 +228,12 @@ nn-caja.preview {
     bottom: -55px;
   }
 }
-`,p=Array.from({length:8}).map((d,t)=>`<div class="air_dust dust0${t+1}"></div>`).join(""),e=`
+`,c=Array.from({length:8}).map((d,t)=>`<div class="air_dust dust0${t+1}"></div>`).join(""),e=`
 <nn-caja padding="1rem" class="preview">
   <div id="minibus">
     <div class="window w01"></div>
     <div class="window w03">
-      ${p}
+      ${c}
     </div>
     <div class="door_base">
       <div class="door">
@@ -248,18 +248,18 @@ nn-caja.preview {
     <div class="bumper back"></div>
     <div class="shadow"></div>
   </div>
-</nn-caja>`,i=d=>{const t=document.createElement("section");return t.classList.add("workarea"),t.innerHTML+=`
-<style>${n}</style>
+</nn-caja>`,o=d=>{const t=document.createElement("section");return t.classList.add("workarea"),t.innerHTML+=`
+<style>${i}</style>
 ${e}
 
 <nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>${o.compressText(`${n}`)}</nn-code>
+  <nn-code>${n.compressText(`${i}`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>${o.compressText(`${e}`)}</nn-code>
+  <nn-code>${n.compressText(`${e}`)}</nn-code>
 </nn-caja>
-`,t};var r,s,a;i.parameters={...i.parameters,docs:{...(r=i.parameters)==null?void 0:r.docs,source:{originalSource:`args => {
+`,t};var r,s,a;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`args => {
   const container = document.createElement('section');
   container.classList.add('workarea');
   container.innerHTML += \`
@@ -268,11 +268,11 @@ ${e}
 
 <nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>\${Spirit.compressText(\`\${style}\`)}</nn-code>
+  <nn-code>\${nnCode.compressText(\`\${style}\`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>\${Spirit.compressText(\`\${html}\`)}</nn-code>
+  <nn-code>\${nnCode.compressText(\`\${html}\`)}</nn-code>
 </nn-caja>
 \`;
   return container;
-}`,...(a=(s=i.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};const m=["Minivan"];export{i as Minivan,m as __namedExportsOrder,l as default};
+}`,...(a=(s=o.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};const b=["Minivan"];export{o as Minivan,b as __namedExportsOrder,u as default};

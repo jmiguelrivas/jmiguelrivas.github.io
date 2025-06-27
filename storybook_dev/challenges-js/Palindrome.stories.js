@@ -1,7 +1,9 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import Spirit from '../../0_global/js/nano_spirit.js'
+import { nano } from '../assets/head.js'
+
+const { nnCode } = nano
 
 export default {
   parameters: {
@@ -36,10 +38,10 @@ export const Palindrome = args => {
   <h1>Palindrome Checker</h1>
   
   <p>Input</p>
-  <nn-code>${Spirit.compressText(`[str]: ${str}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`[str]: ${str}`)}</nn-code>
 
   <p>Solution 1</p>
-  <nn-code>${Spirit.compressText(`
+  <nn-code>${nnCode.compressText(`
 function isPalindrome(str) {
   let result = true
   for (let c = 0; c < str.length; c++) {
@@ -52,7 +54,7 @@ function isPalindrome(str) {
 `)}</nn-code>
 
 <p>Solution 2</p>
-  <nn-code>${Spirit.compressText(`
+  <nn-code>${nnCode.compressText(`
 function isPalindrome(str) {
   const result = str
     .split('')
@@ -64,7 +66,7 @@ function isPalindrome(str) {
 `)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${Spirit.compressText(`${isPalindrome(str)}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`${isPalindrome(str)}`)}</nn-code>
 </nn-caja>
 `
   return container

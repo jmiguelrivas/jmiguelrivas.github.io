@@ -30,6 +30,12 @@ body {
   display: none;
 }
 
+math {
+  display: block;
+  padding: 1rem;
+  background-color: #463d64;
+}
+
 mr-app {
   display: block;
   height: 100svh;

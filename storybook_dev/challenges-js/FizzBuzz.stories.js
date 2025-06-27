@@ -1,7 +1,9 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import Spirit from '../../0_global/js/nano_spirit.js'
+import { nano } from '../assets/head.js'
+
+const { nnCode } = nano
 
 export default {
   parameters: {
@@ -42,7 +44,7 @@ export const FizzBuzz = args => {
   <nn-code>Number of items: ${n}</nn-code>
 
   <p>Solution</p>
-  <nn-code>${Spirit.compressText(`Array.from({
+  <nn-code>${nnCode.compressText(`Array.from({
   length: n,
 })
 .map((n, i) => {
@@ -55,7 +57,7 @@ export const FizzBuzz = args => {
 .join('')`)}</nn-code>
 
   <p>Output</p>
-  <nn-code>${Spirit.compressText(`${result}`)}</nn-code>
+  <nn-code>${nnCode.compressText(`${result}`)}</nn-code>
 </nn-caja>
 `
   return container

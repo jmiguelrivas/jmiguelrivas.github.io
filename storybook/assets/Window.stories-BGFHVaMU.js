@@ -1,4 +1,4 @@
-import{S as a}from"./main-DHuDOF0U.js";/* empty css             */const h={parameters:{layout:"fullscreen"},controls:{disable:!0}},t=`
+import"./main-BCPhkg1V.js";import l from"https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/nanogrid.js";/* empty css             */import"https://cdn.jsdelivr.net/gh/nano-grid/nano-grid@pombo_poderoso/dist/gcolors.js";const{nnCode:a}=l,f={parameters:{layout:"fullscreen"},controls:{disable:!0}},t=`
 nn-caja.preview {
   --doorColor: #04aaea;
   --hingeColor: #8e760e;
@@ -468,11 +468,11 @@ ${e}
 
 <nn-caja padding="1rem" max-width="1200px">
   <h1>CSS Output:</h1>
-  <nn-code>\${Spirit.compressText(\`\${style}\`)}</nn-code>
+  <nn-code>\${nnCode.compressText(\`\${style}\`)}</nn-code>
 
   <h1>HTML Output:</h1>
-  <nn-code>\${Spirit.compressText(\`\${html}\`)}</nn-code>
+  <nn-code>\${nnCode.compressText(\`\${html}\`)}</nn-code>
 </nn-caja>
 \`;
   return container;
-}`,...(n=(d=o.parameters)==null?void 0:d.docs)==null?void 0:n.source}}};const g=["Window"];export{o as Window,g as __namedExportsOrder,h as default};
+}`,...(n=(d=o.parameters)==null?void 0:d.docs)==null?void 0:n.source}}};const w=["Window"];export{o as Window,w as __namedExportsOrder,f as default};

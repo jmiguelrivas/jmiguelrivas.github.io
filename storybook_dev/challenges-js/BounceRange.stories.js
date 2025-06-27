@@ -1,7 +1,9 @@
 import '../../0_global/js/index.js'
 import '../../0_global/css/main.css'
 import '../assets/docs.css'
-import Spirit from '../../0_global/js/nano_spirit.js'
+import { nano } from '../assets/head.js'
+
+const { nnCode } = nano
 
 export default {
   args: {
@@ -38,7 +40,7 @@ function generateBounceTable(min, max) {
   const increment = 90 / (max - 1)
   let table = ''
 
-  for (let i = (min), deg = min; i < max; i++, deg += increment) {
+  for (let i = min, deg = min; i < max; i++, deg += increment) {
     const radians = deg * (Math.PI / 180)
     const sine = Math.sin(radians)
     const result = limitBounce({ min, max, value: deg })
@@ -76,7 +78,7 @@ export const BounceRange = args => {
 
     <canvas id="bounce-canvas" height="300" style="width: 100%; margin-bottom: 1rem;"></canvas>
 
-    <nn-code>${Spirit.compressText(`
+    <nn-code>${nnCode.compressText(`
 function limitBounce({ min, max, value }) {
   const degreesToRadians = Math.PI / 180
 
@@ -93,13 +95,49 @@ function limitBounce({ min, max, value }) {
 
   return Math.abs(Math.sin(value * degreesToRadians)) * (max - min) + min
 }
-      `)}</nn-code>
+      `)}
+    </nn-code>
+
+    <math>
+      <mrow>
+        <mo>&forall;</mo>
+        <mi>x</mi>
+        <mo>&#x2208;</mo>
+        <mi>&Qopf;</mi>
+      
+        <mo>;</mo>
+
+        <mo>|</mo>
+
+          <mi>sin</mi>
+          <mo>(</mo>
+            <mi>x</mi>
+            <mo>&#x22C5;</mo>
+            <mfrac>
+              <mi>&pi;</mi>
+              <mn>180</mn>
+            </mfrac>
+          <mo>)</mo>
+
+          <mo>&#x22C5;</mo>
+
+          <mo>(</mo>
+            <mi>max</mi>
+            <mo>-</mo>
+            <mi>min</mi>
+          <mo>)</mo>
+
+          <mo>+</mo>
+          <mi>min</mi>
+        <mo>|</mo>
+      </mrow>
+    </math>
 
      <p>I adjusted the counter to slow down how quickly it reaches the limits. Now, the number of steps required to reach the maximum value is equal to the maximum itself.</p>
 
       <p>For example, if the maximum is 1200, it will take 1200 steps to reach the limit.</p>
 
-      <nn-code>${Spirit.compressText(`
+      <nn-code>${nnCode.compressText(`
 const max = ${max}
 const min = ${min}
 /* 90 is the peak value for the sine function; beyond that, it begins to decrease. */
