@@ -12,6 +12,8 @@ customElements.define(
       tool.webComponents,
       tool.three,
       tool.vitest,
+      tool.node,
+      tool.svg,
       tool.inkscape,
     ]
       .map(t => `<li><nn-pill color="${gColors.canary.hex}">${t}</nn-pill></li>`)
@@ -25,7 +27,8 @@ customElements.define(
       </ul>
 
       <nn-video url="./videos/lom.mp4"></nn-video>
-      <img src="./img/lom.png" alt="lom ui been edited on inkscape">
+      <img src="./img/header-draco.svg" alt="lom ui been edited on inkscape">
+      <img src="./img/header-forest.svg" alt="lom ui been edited on inkscape">
 
       <h3>My Role</h3>
 

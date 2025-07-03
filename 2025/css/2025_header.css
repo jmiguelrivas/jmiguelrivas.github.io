@@ -79,7 +79,7 @@ dialog {
 
 header.header {
   padding-top: 80svh;
-  background-image: url(../img/pattern_stars.svg);
+  background-image: url(../img/pattern_stars.webp);
   background-position: 0 0;
   animation: stars 40s linear infinite;
   overflow: hidden;
