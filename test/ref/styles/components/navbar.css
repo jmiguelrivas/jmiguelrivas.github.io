@@ -1,0 +1,40 @@
+mr-navbar {
+  & nav {
+    border-bottom: 1px solid #ededed;
+    
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  & ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    & a {
+      padding: .5rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: var(--accent-color);
+      opacity: 1;
+
+      &[href] {
+        opacity: 0.5;
+      }
+
+      &[href]:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+
+    }
+  }
+}

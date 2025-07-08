@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+  <head>
+    <meta charset="utf-8">
+    <title>Fernando Rivas</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="256x256" href="img/favicon-256x256.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="img/favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="24x24" href="img/favicon-24x24.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180x180.png">
+    
+    <meta name="msapplication-TileImage" content="img/favicon-128x128.png">
+    <meta property="og:image" content="img/preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="stylesheet" href="styles/sections/portfolio.css">
+    <script type="module" src="scripts/portfolio.js"></script>
+  </head>
+  <body>
+    <mr-navbar mr-current-route="portfolio"></mr-navbar>
+    <main id="app"></main>
+    <script id="template" type="text/template">
+      <section class="portfolio">
+        <div class="container">
+          <div class="gallery">
+            {{#each projects}}
+              <a href="./project.html?id={{id}}" target="_self">
+                <img
+                  src="{{cover.thumbUrl}}"
+                  alt="{{cover.description}}"
+                >
+                <p class="title">
+                  {{name}}
+                </p>
+              </a>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+    </script>
+  </body>
+</html>

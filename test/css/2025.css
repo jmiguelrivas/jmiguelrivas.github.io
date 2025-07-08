@@ -1,0 +1,167 @@
+@import url("../../0_global/css/main.css");
+@import url("./2025_global.css");
+@import url("./2025_header.css");
+@import url("./2025_skills.css");
+@import url("./2025_portfolio.css");
+@import url("./2025_resume.css");
+@import url("./2025_footer.css");
+
+/* ------------------------------- Sections */
+
+aside.paper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: url('../img/paper.webp') center center repeat;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+nn-pilar.workarea {
+  --bk-color: rgb(39 39 49);
+}
+
+/* ------------------------------- Media */
+@media screen and (max-width: 576px) {
+  header.header {
+    .buildings-01 {
+      height: 50px;
+
+      >span {
+        &:nth-child(odd) {
+          height: 100px;
+        }
+
+        &:nth-child(even) {
+          height: 75px;
+        }
+      }
+    }
+
+    .buildings-02 {
+      height: 50px;
+
+      >span {
+        &:nth-child(odd) {
+          height: 125px;
+        }
+
+        &:nth-child(even) {
+          height: 150px;
+        }
+      }
+    }
+
+    .content {
+      top: 10svh;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  mr-skills {
+    padding: 0 1rem;
+  }
+
+  section.resume {
+    h2,
+    mr-resume {
+      display: none;
+    }
+  }
+}
+
+@media print {
+
+  .no-print {
+    display: none !important;
+  }
+
+  body,
+  html,
+  nn-desplazador {
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+
+    &,
+    .mr-app {
+      background-color: #fff;
+    }
+
+    overflow: auto;
+
+    aside.paper {
+      display: none;
+    }
+
+    mr-app {
+      .navigation {
+        display: none;
+      }
+
+      nn-pilar.workarea {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        flex-basis: 100%;
+        max-width: 100% !important;
+        background-color: transparent;
+
+
+        >nn-desplazador {
+          overflow: auto;
+          max-height: none;
+
+          main {
+
+            >header.header,
+            >section.skills,
+            >section.portfolio,
+            >section.resume>nn-caja>h2,
+            >footer {
+              display: none;
+            }
+
+            >section.resume {
+              >nn-caja {
+                padding: 0.25in;
+              }
+
+              nn-caja,
+              mr-resume {
+                width: 100%;
+                display: block;
+                padding: 0;
+              }
+
+              nn-caja {
+                max-width: 100%;
+              }
+
+              mr-resume>nn-caja {
+                box-shadow: none;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  @page {
+    size: 8.5in 11in;
+    margin: 5mm;
+  }
+}

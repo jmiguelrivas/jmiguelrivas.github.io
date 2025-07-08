@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Miguel Rivas Portfolio"
+    />
+    <title>Miguel Rivas</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-256x256.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-128x128.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-64x64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="24x24"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-24x24.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://jmiguelrivas.github.io/0_global/img/favicon-180x180.png"
+    />
+    <meta
+      name="msapplication-TileColor"
+      content="#e9c200"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://jmiguelrivas.github.io/0_global/img/favicon-128x128.png"
+    />
+    <meta
+      property="og:image"
+      content="https://jmiguelrivas.github.io/0_global/img/preview.webp"
+    />
+    <meta
+      property="og:image:type"
+      content="image/png"
+    />
+    <meta
+      property="og:image:width"
+      content="1200"
+    />
+    <meta
+      property="og:image:height"
+      content="630"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/2025.css"
+    />
+    <script
+      type="module"
+      src="./js/2025.js"
+    ></script>
+  </head>
+  <body>
+    <aside class="paper"></aside>
+    <mr-app route="Home">
+      <header
+        id="header"
+        class="header"
+      >
+        <mr-header></mr-header>
+      </header>
+
+      <section
+        id="skills"
+        class="skills"
+      >
+        <mr-skills></mr-skills>
+      </section>
+
+      <section class="portfolio">
+        <nn-caja
+          padding="1rem"
+          max-width="1200px"
+          class="block-separator"
+        >
+          <h2 id="portfolio">Current Projects</h2>
+
+          <div class="accordion">
+            <details name="portfolio-details">
+              <summary>LoM DB</summary>
+              <mr-lom></mr-lom>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Ancestry Atlas</summary>
+
+              <div>
+                <ul class="flex-row">
+                  <li><nn-pill color="#FFFF99">nodejs</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">express</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">axios</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">react</nn-pill></li>
+                  <li><nn-pill color="#FFFF99">react hook forms</nn-pill></li>
+                </ul>
+
+                <img
+                  src="./img/ancestry.webp"
+                  alt="ancestry app preview"
+                />
+
+                <h3>My Role</h3>
+                <ul>
+                  <li>
+                    Created a RESTful API using Express and Node.js to serve and
+                    manage family data dynamically.
+                  </li>
+                  <li>
+                    Handled frontend-backend communication using Axios for
+                    efficient, structured API requests.
+                  </li>
+                  <li>
+                    Designed the UI with a focus on clarity and hierarchy,
+                    balancing modern aesthetics with genealogical detail.
+                  </li>
+                  <li>
+                    Built the interface using React, with modular components and
+                    dynamic views for timelines, relationships, and ancestry
+                    paths.
+                  </li>
+                  <li>
+                    Developed custom rendering logic to visualize complex family
+                    trees and merge data across generations.
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <h2>Portfolio</h2>
+
+          <div class="accordion">
+            <details name="portfolio-details">
+              <summary>TeamUp / Provider App</summary>
+              <mr-tm-provider></mr-tm-provider>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>TeamUp / Consumer App</summary>
+              <mr-tm-consumer></mr-tm-consumer>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>TeamUp / DaysmartVueComponents</summary>
+              <mr-tm-dvc></mr-tm-dvc>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Enovational / Formability</summary>
+              <mr-formability></mr-formability>
+            </details>
+
+            <details
+              name="portfolio-details"
+              class="popkern-details"
+            >
+              <summary>Enovational / Popkern</summary>
+              <mr-popkern></mr-popkern>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Pixel Perfect Tree / DrLogic</summary>
+              <mr-drlogic></mr-drlogic>
+            </details>
+
+            <details
+              name="portfolio-details"
+              class="popkern-details"
+            >
+              <summary>Avante / Descubria</summary>
+              <mr-descubria></mr-descubria>
+            </details>
+
+            <!-- <details
+              name="portfolio-details"
+            >
+              <summary>Capital / Presidente :: Carnaval 2014</summary>
+            </details> -->
+
+            <details
+              name="portfolio-details"
+              class="popkern-details"
+            >
+              <summary>Capital / Apap :: Mineros</summary>
+              <mr-apap></mr-apap>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Capital / Presidente :: Retrobrindis</summary>
+              <mr-presidente-retro></mr-presidente-retro>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Capital / Presidente :: Destapa el Coro</summary>
+              <mr-presidente-destapa></mr-presidente-destapa>
+            </details>
+          </div>
+
+          <h2>Personal Projects</h2>
+
+          <div class="accordion">
+            <details name="portfolio-details">
+              <summary>Experiment / Bird Rescuer</summary>
+              <mr-phaser></mr-phaser>
+            </details>
+
+            <details name="portfolio-details">
+              <summary>Experiment / 3D Map</summary>
+              <mr-map></mr-map>
+            </details>
+          </div>
+        </nn-caja>
+      </section>
+
+      <section class="resume">
+        <nn-caja
+          padding="1rem"
+          class="block-separator"
+        >
+          <h2 id="resume">Resume</h2>
+          <mr-resume> </mr-resume>
+          <nn-btn
+            color="#FFCC33"
+            class="no-print"
+            href="./docs/MiguelRivas_Resume_2025.pdf"
+            link
+            download
+            >Download Resume</nn-btn
+          >
+        </nn-caja>
+      </section>
+
+      <footer class="page-footer">
+        <p>Built with <span class="heart"></span> by Miguel Rivas.</p>
+        <ul>
+          <li>
+            <a
+              href="/storybook/"
+              target="_blank"
+              >Storybook</a
+            >
+          </li>
+          <li>
+            <a
+              href="/vitest/"
+              target="_blank"
+              >Vitest</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/jmiguelrivas/jmiguelrivas.github.io"
+              target="_blank"
+              >Github</a
+            >
+          </li>
+          <li>
+            <a
+              href="/github_log"
+              target="_self"
+              >Log</a
+            >
+          </li>
+        </ul>
+        <time datetime="2025/05/03">2025.05.03</time>
+      </footer>
+    </mr-app>
+  </body>
+</html>
