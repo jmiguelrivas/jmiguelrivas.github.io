@@ -53,13 +53,13 @@ dialog {
     font-size: 16px;
   }
 
-  .bird-icon-preview {
+  /* .bird-icon-preview {
     font-size: 10rem;
     text-align: center;
     background-color: #171922;
     padding: 1rem;
     color: #ffcf24;
-  }
+  } */
 
   em {
     background-color: #1d2033;
@@ -78,12 +78,12 @@ dialog {
 }
 
 header.header {
-  padding-top: 80svh;
-  background-image: url(../img/pattern_stars.webp);
+  /* padding-top: 80svh; */
+  /* background-image: url(../img/pattern_stars.webp); */
   background-position: 0 0;
-  animation: stars 40s linear infinite;
-  overflow: hidden;
-  position: relative;
+  /* animation: stars 40s linear infinite; */
+  /* overflow: hidden; */
+  /* position: relative; */
 
   mr-header {
     height: calc(1190px - 90px);
@@ -295,7 +295,7 @@ header.header {
   }
 }
 
-@keyframes stars {
+/* @keyframes stars {
   0% {
     background-position: 0 0;
   }
@@ -303,4 +303,4 @@ header.header {
   100% {
     background-position: 500px 500px;
   }
-}
+} */
