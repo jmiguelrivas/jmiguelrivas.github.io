@@ -1,24 +1,11 @@
 @import url("../../0_global/css/main.css");
 @import url("./2025_global.css");
-@import url("./2025_header.css");
 @import url("./2025_skills.css");
 @import url("./2025_portfolio.css");
 @import url("./2025_resume.css");
 @import url("./2025_footer.css");
 
 /* ------------------------------- Sections */
-
-aside.paper {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background: url('../img/paper.webp') center center repeat;
-  opacity: 0.15;
-  pointer-events: none;
-}
 
 nn-pilar.workarea {
   --bk-color: rgb(39 39 49);
