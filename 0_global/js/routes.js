@@ -10,12 +10,12 @@ const s2025 = [
     icon: 'home',
     id: 'header',
   },
-  {
-    name: 'Skills',
-    url: '2025/index',
-    icon: 'wrench',
-    id: 'skills',
-  },
+  // {
+  //   name: 'Skills',
+  //   url: '2025/index',
+  //   icon: 'wrench',
+  //   id: 'skills',
+  // },
   {
     name: 'Portfolio',
     url: '2025/index',
