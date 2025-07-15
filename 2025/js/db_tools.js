@@ -62,6 +62,7 @@ export const tool = {
 
   markdown: 'Markdown',
   bootstrap: 'Bootstrap',
+  tailwind: 'Tailwind',
   unoCss: 'UnoCSS',
 
   git: 'Git',
