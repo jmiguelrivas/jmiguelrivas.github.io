@@ -140,6 +140,7 @@ section.resume mr-resume {
         gap: var(--space-between-inline-items);
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -148,6 +149,17 @@ section.resume mr-resume {
           display: flex;
           align-items: center;
           gap: var(--space-between-inline-items);
+        }
+      }
+
+      .skills {
+        li {
+          flex-grow: 1;
+          nn-pill {
+            width: 100%;
+            text-align: center;
+            padding-inline: 1rem;
+          }
         }
       }
 
