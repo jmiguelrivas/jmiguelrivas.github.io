@@ -2,28 +2,35 @@
   <metadata>
     Created by Miguel Rivas — Learn more at jmiguelrivas.github.io
   </metadata>
-
   <style>
-    .palumba:hover .eyes {
-      transform: translate(35px, 0);
-    }
-    .palumba:hover .peak {
-      transform: translate(1256px, 180.693px) scale(-1, 1);
-    }
-    .palumba .eyes,
-    .palumba .peak {
-      transition: transform 300ms ease;
-    }
+    <![CDATA[
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-    .tree {
-      transform-origin: 50% 100%;
-      transform-box: fill-box;
-      transition: transform 200ms ease;
-    }
+  text {
+    font-family: 'Montserrat', sans-serif;
+  }
 
-    .tree:hover {
-      transform: rotate(5deg);
-    }
+  .palumba:hover .eyes {
+    transform: translate(35px, 0);
+  }
+  .palumba:hover .peak {
+    transform: translate(1256px, 180.693px) scale(-1, 1);
+  }
+  .palumba .eyes,
+  .palumba .peak {
+    transition: transform 300ms ease;
+  }
+
+  .tree {
+    transform-origin: 50% 100%;
+    transform-box: fill-box;
+    transition: transform 200ms ease;
+  }
+
+  .tree:hover {
+    transform: rotate(5deg);
+  }
+]]>
   </style>
 
   <defs>
