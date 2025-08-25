@@ -27,8 +27,6 @@ customElements.define(
       </ul>
 
       <nn-video url="./videos/lom.mp4"></nn-video>
-      <img src="./img/header-draco.svg" alt="lom ui been edited on inkscape">
-      <img src="./img/header-forest.svg" alt="lom ui been edited on inkscape">
 
       <h3>My Role</h3>
 
