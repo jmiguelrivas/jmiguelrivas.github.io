@@ -62,7 +62,7 @@ class BounceRange extends HTMLElement {
     this.container.innerHTML = `
       <nn-caja padding="1rem" max-width="1200px">
         <h1>Bounce Range :: Sine-Based Oscillation</h1>
-        <p>This experiment simplifies a range that oscillates between a minimum and maximum value using sine functions.</p>
+        <p>This project aims to simplify how bouncing animations are calculated by removing the need for traditional conditional checks when an object reaches the edges of the screen. Instead, it uses a continuous filtering approach that naturally reverses direction, creating a smooth bounce effect without explicit boundary conditions. This technique can be applied to any scenario where an element needs to rebound (such as a ball moving around the screen or other looping, oscillating animations) making the underlying motion logic cleaner, more elegant, and easier to reuse in different programs.</p>
 
         <dl>
           <dt>Min:</dt><dd>${min}</dd>
@@ -72,6 +72,10 @@ class BounceRange extends HTMLElement {
         </dl>
 
         <canvas id="bounce-canvas" height="300" style="width: 100%; margin-bottom: 1rem;"></canvas>
+
+        <p>
+        Here, the counter simply increments from 0 to infinity, and the sine function naturally keeps the motion bounded, ensuring it never overflows.
+        </p>
 
         <nn-code>${nnCode.compressText(`
 function limitBounce({ min, max, value }) {
