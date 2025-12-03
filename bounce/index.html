@@ -2,111 +2,180 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
     <!-- Primary SEO -->
-    <title>Helix</title>
+    <title>Bounce Range - Sine-Based Oscillation</title>
     <meta
       name="description"
-      content="Explore our interactive Visualizer with a dynamic helix and graphics."
+      content="Interactive Bounce Range visualizer showing a sine-based oscillation between minimum and maximum values, including tables, charts, and animated examples."
     />
     <meta
       name="keywords"
-      content="Visualizer, helix, interactive graphics, spatial visualization"
+      content="bounce range, sine function, oscillation, animation, visualization, web components, math visualizer"
     />
-    <meta name="author" content="Miguel Rivas" />
+    <meta
+      name="author"
+      content="Miguel Rivas"
+    />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://jmiguelrivas.github.io/bounce/"
+    />
 
     <!-- Favicons -->
     <link
-      rel="icon"
-      type="image/svg+xml"
-      href="https://3d-visualizer.github.io/helix/img/favicon.svg"
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon.ico"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="256x256"
-      href="https://3d-visualizer.github.io/helix/img/favicon_256x256.png"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon-256x256.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="128x128"
-      href="https://3d-visualizer.github.io/helix/img/favicon_128x128.png"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon-128x128.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="64x64"
-      href="https://3d-visualizer.github.io/helix/img/favicon_64x64.png"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon-64x64.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="https://3d-visualizer.github.io/helix/img/favicon_32x32.png"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="https://3d-visualizer.github.io/helix/img/favicon_16x16.png"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon-16x16.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="https://3d-visualizer.github.io/helix/img/favicon_180x180.png"
+      href="https://jmiguelrivas.github.io/bounce/img/favicon-180x180.png"
     />
 
-    <meta name="msapplication-TileColor" content="#e9c200" />
+    <meta
+      name="msapplication-TileColor"
+      content="#e9c200"
+    />
     <meta
       name="msapplication-TileImage"
-      content="https://3d-visualizer.github.io/helix/img/favicon_128x128.png"
+      content="https://jmiguelrivas.github.io/bounce/img/favicon-128x128.png"
     />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <meta
+      name="theme-color"
+      content="#222222"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:type"
+      content="website"
+    />
     <meta
       property="og:title"
-      content="Visualizer – Interactive helix & Graphics"
+      content="Bounce Range – Sine Oscillation Visualizer"
     />
     <meta
       property="og:description"
-      content="Explore our interactive Visualizer with a dynamic helix and graphics."
+      content="A lightweight mathematical visualizer that demonstrates how sine-based oscillations map a value into a minimum/maximum range."
     />
-    <meta property="og:site_name" content="Visualizer" />
+    <meta
+      property="og:site_name"
+      content="Bounce Range"
+    />
+    <meta
+      property="og:url"
+      content="https://jmiguelrivas.github.io/bounce/"
+    />
     <meta
       property="og:image"
-      content="https://3d-visualizer.github.io/helix/img/visualizer-preview.webp"
+      content="./img/bounce-preview.webp"
     />
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:type"
+      content="image/webp"
+    />
+    <meta
+      property="og:image:width"
+      content="1200"
+    />
+    <meta
+      property="og:image:height"
+      content="630"
+    />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
     <meta
       name="twitter:title"
-      content="Visualizer – Interactive helix & Graphics"
+      content="Bounce Range – Sine Oscillation Visualizer"
     />
     <meta
       name="twitter:description"
-      content="Explore our interactive Visualizer with dynamic helixs and graphics."
+      content="Visual explanation of how sine functions create oscillating ranges using min/max constraints."
     />
     <meta
       name="twitter:image"
-      content="https://3d-visualizer.github.io/helix/img/helix-preview.webp"
+      content="./img/bounce-preview.webp"
     />
 
+    <!-- Structured Data: Project / Article -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Bounce Range – Sine Oscillation Visualizer",
+        "description": "Interactive web-based visualizer demonstrating sine-based range oscillation.",
+        "author": {
+          "@type": "Person",
+          "name": "Miguel Rivas"
+        },
+        "mainEntityOfPage": "https://jmiguelrivas.github.io/bounce/",
+        "image": "https://jmiguelrivas.github.io/bounce/img/bounce-preview.webp",
+        "keywords": "bounce range, sine wave, oscillation, web components, animation, math visualizer"
+      }
+    </script>
+
     <!-- CSS & JS -->
-    <link href="./css/bounce.css" rel="stylesheet" />
-    <script defer type="module" src="./js/bounce.js"></script>
+    <link
+      href="./css/bounce.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      type="module"
+      src="./js/bounce.js"
+    ></script>
   </head>
 
   <body>
     <main>
-      <section aria-label="bounce documentation">
+      <section aria-label="Bounce Range">
         <bounce-range></bounce-range>
       </section>
     </main>

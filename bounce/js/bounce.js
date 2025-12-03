@@ -61,7 +61,7 @@ class BounceRange extends HTMLElement {
 
     this.container.innerHTML = `
       <nn-caja padding="1rem" max-width="1200px">
-        <h2>Bounce Range</h2>
+        <h1>Bounce Range :: Sine-Based Oscillation</h1>
         <p>This experiment simplifies a range that oscillates between a minimum and maximum value using sine functions.</p>
 
         <dl>
@@ -100,6 +100,8 @@ const min = ${min}
 const maxSineValue = 90
 const increment = maxSineValue / (max - 1)
         `)}</nn-code>
+
+        <h2>Tests :: [ 0 .. 99 ]</h2>
 
         <table>
           <thead>
