@@ -48,7 +48,6 @@ const data = {
     tool.storybook,
     tool.git,
     tool.vue,
-    tool.react,
     tool.webComponents,
   ],
   contact: {
