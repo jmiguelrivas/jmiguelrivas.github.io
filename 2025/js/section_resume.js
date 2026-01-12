@@ -43,7 +43,6 @@ const data = {
     tool.bootstrap,
     tool.javascript,
     tool.node,
-    tool.redux,
     tool.vitest,
     tool.storybook,
     tool.git,
@@ -212,6 +211,17 @@ const data = {
   ],
   projects: [
     {
+      date: '2025/12/19',
+      name: 'Mako',
+      position: 'Creator/Maintainer',
+      link: 'https://github.com/jmiguelrivas/mako',
+      linkTitle: 'Mako :: Android App',
+      description: [
+        'Mako is a minimal, privacy-first Android launcher designed for focus, speed, and simplicity.',
+        'Built entirely in native Kotlin, Mako runs fully on-device, avoids tracking, and keeps distractions to a minimum by emphasizing clarity and intentional interaction.'
+      ],
+    },
+    {
       date: '2024/12/24',
       name: 'LoM DB',
       position: 'Creator/Maintainer',
@@ -229,31 +239,31 @@ const data = {
         // 'Continuously maintained and iterated based on community feedback, emerging web standards, and browser support.',
       ],
     },
-    {
-      date: '2021/03/17',
-      name: 'Nano Grid',
-      noPrint: true,
-      position: 'Creator/Maintainer',
-      link: 'https://nano-grid.github.io',
-      linkTitle: 'Nano Grid :: Website',
-      description: [
-        // 'Nano Grid is a lightweight set of custom elements designed to provide minimal yet powerful UI primitives without relying on any framework. Each component is built using native Web Components and encapsulates its behavior and styling, making it easy to drop into any project (React, Vue, Svelte, plain HTML, or otherwise).',
-        // 'These components embrace progressive enhancement, low overhead, and modern browser standards. They are declarative, styleable via CSS variables, and interoperable with design systems.',
+    // {
+    //   date: '2021/03/17',
+    //   name: 'Nano Grid',
+    //   noPrint: true,
+    //   position: 'Creator/Maintainer',
+    //   link: 'https://nano-grid.github.io',
+    //   linkTitle: 'Nano Grid :: Website',
+    //   description: [
+    //     // 'Nano Grid is a lightweight set of custom elements designed to provide minimal yet powerful UI primitives without relying on any framework. Each component is built using native Web Components and encapsulates its behavior and styling, making it easy to drop into any project (React, Vue, Svelte, plain HTML, or otherwise).',
+    //     // 'These components embrace progressive enhancement, low overhead, and modern browser standards. They are declarative, styleable via CSS variables, and interoperable with design systems.',
 
-        // 'A lightweight set of native Web Components that serve as minimal yet powerful UI primitives. Built without any framework, Nano Grid components are encapsulated, framework-agnostic, and easily integrable into projects using React, Vue, Svelte, or plain HTML.',
-        // 'Designed component APIs and styling with performance and usability in mind.',
-        // 'Continuously maintained and updated.',
+    //     // 'A lightweight set of native Web Components that serve as minimal yet powerful UI primitives. Built without any framework, Nano Grid components are encapsulated, framework-agnostic, and easily integrable into projects using React, Vue, Svelte, or plain HTML.',
+    //     // 'Designed component APIs and styling with performance and usability in mind.',
+    //     // 'Continuously maintained and updated.',
 
-        'A lightweight UI library of custom elements designed for framework-agnostic integration. Built with modern CSS standards and intended for maximum flexibility across multiple projects, including jmiguelrivas.github.io, lomdb.github.io, and Storybook documentation.',
-        // 'Developed 10 reusable Web Components without Shadow DOM, allowing global theming and consistent styling across projects.',
-        // 'Leveraged modern CSS features to simplify layout and responsiveness.',
-        'Leveraged modern CSS features such as nesting, variables, and logical properties to streamline structure and responsiveness.',
-        'Preparing for integration of upcoming features like :attr(), CSS mixins, and custom functions as browser support stabilizes.',
-        // 'Designed for easy integration in React, Vue, and plain HTML environments.',
-        'Structured for portability and minimal runtime overhead by avoiding framework lock-in and redundant styling.',
-        'Continuously iterating based on evolving CSS specs and browser support.',
-      ],
-    },
+    //     'A lightweight UI library of custom elements designed for framework-agnostic integration. Built with modern CSS standards and intended for maximum flexibility across multiple projects, including jmiguelrivas.github.io, lomdb.github.io, and Storybook documentation.',
+    //     // 'Developed 10 reusable Web Components without Shadow DOM, allowing global theming and consistent styling across projects.',
+    //     // 'Leveraged modern CSS features to simplify layout and responsiveness.',
+    //     'Leveraged modern CSS features such as nesting, variables, and logical properties to streamline structure and responsiveness.',
+    //     'Preparing for integration of upcoming features like :attr(), CSS mixins, and custom functions as browser support stabilizes.',
+    //     // 'Designed for easy integration in React, Vue, and plain HTML environments.',
+    //     'Structured for portability and minimal runtime overhead by avoiding framework lock-in and redundant styling.',
+    //     'Continuously iterating based on evolving CSS specs and browser support.',
+    //   ],
+    // },
   ],
 }
 
