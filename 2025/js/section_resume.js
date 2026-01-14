@@ -10,7 +10,7 @@ const template = `
     <section class="body">
       <h2>SUMMARY</h2>  
       <p>
-        Frontend Developer with 10+ years of experience building modern, performant web apps using Vue, React, and native Web Components. Strong background in UI systems, testing, and cross-team collaboration.
+        Frontend Developer with 10+ years of experience building modern, performant web apps using Vue and native Web Components. Strong background in UI systems, testing, and cross-team collaboration.
       </p>
       
       <h2>CONTACT</h2>
